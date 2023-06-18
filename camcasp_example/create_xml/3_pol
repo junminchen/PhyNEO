@@ -1,0 +1,7 @@
+<Polarize type="C1" polarizabilityXX="1.0029e-03" polarizabilityYY="1.0029e-03" polarizabilityZZ="1.0029e-03" thole="0.33"/>
+<Polarize type="H1" polarizabilityXX="3.8959e-04" polarizabilityYY="3.8959e-04" polarizabilityZZ="3.8959e-04" thole="0.33"/>
+<Polarize type="O1" polarizabilityXX="5.3797e-04" polarizabilityYY="5.3797e-04" polarizabilityZZ="5.3797e-04" thole="0.33"/>
+<Polarize type="C2" polarizabilityXX="1.1939e-03" polarizabilityYY="1.1939e-03" polarizabilityZZ="1.1939e-03" thole="0.33"/>
+<Polarize type="H2" polarizabilityXX="3.0174e-04" polarizabilityYY="3.0174e-04" polarizabilityZZ="3.0174e-04" thole="0.33"/>
+<Polarize type="O2" polarizabilityXX="9.0110e-04" polarizabilityYY="9.0110e-04" polarizabilityZZ="9.0110e-04" thole="0.33"/>
+<Polarize type="H3" polarizabilityXX="1.9884e-04" polarizabilityYY="1.9884e-04" polarizabilityZZ="1.9884e-04" thole="0.33"/>
