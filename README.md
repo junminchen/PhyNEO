@@ -1,2 +1,2 @@
 # PhyNEO
-For advanced physics-driven combined with neural network enhancement force field.
+For advanced physics-driven force field combined with neural network enhancement.
