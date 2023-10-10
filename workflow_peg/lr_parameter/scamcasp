@@ -1,0 +1,123 @@
+#!/bin/sh
+
+# Read in the arguements
+WD=`pwd`
+S_OPTIONS="-o out -e err"
+
+NCPUS=1
+NODES=0
+PPN=0  # processes per node
+NTHREADS=1
+MEM=10000
+SERIAL=0
+NPROC=1
+TIME=1:00:00
+PARTITION=Platinum9242 #free
+#PARTITION=gencpu #free
+CCPROOT=/share/home/kuangy/compile/camcasp6.1
+CCP_EXEC=runcamcasp.py
+FOLDER=default
+JOBNAME=default
+DEBUG=no
+RESTART=no
+SETUP=no
+SCFCODE=nwchem
+
+while [ $# -gt 0 ]
+do
+    case "$1" in
+    (-*np) NCPUS="$2"; shift;;
+    (-*c) NTHREADS="$2"; shift;;
+    (-*nodes) NODES="$2"; shift;;
+    (-*ppn) PPN="$2"; shift;;
+    (-*walltime) TIME="$2"; shift;;
+    (-*d) FOLDER="$2"; shift;;
+    (-*j) JOBNAME="$2"; shift;;
+    (-*mem) MEM="$2"; shift;;
+    (-*part) PARTITION="$2"; shift;;
+    (-*scfcode) SCFCODE="$2"; shift;;
+    (-*serial) SERIAL=1; NCPUS=32; NODES=1; NPROC=1; NTHREADS=32; PPN=1;;
+    (-*debug) DEBUG=yes;;
+    (-*restart) RESTART=yes;;
+    (-*setup) SETUP=yes;;
+    (-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
+    (*)  break;;
+    esac
+    shift
+done
+
+#check for (exclusive) serial jobs
+if [ $SERIAL -eq 0 ]
+then
+  if [ $NCPUS -gt 1 ]
+  then
+    NODES=$(($NCPUS/32))
+    if [ $(($NCPUS % 32)) -ne 0 ]; then NODES=$(($NODES+1)); fi
+    NPROC=$(($NCPUS/$NTHREADS))
+    PPN=$(($NPROC/$NODES))
+  elif [ $NODES -gt 0 ]
+  then
+    #if nodes and/or ppn are specified, use that
+    if [ $PPN -eq 0 ]
+    then
+      NCPUS=$((NODES*32))
+      NPROC=$(($NCPUS/$NTHREADS))
+      PPN=$(($NPROC/$NODES))
+    else
+      NPROC=$(($NODES*$PPN))
+      NCPUS=$(($NPROC*$NTHREADS))
+    fi
+  else
+    #default to (non-exclusive) serial
+    NODES=1
+    PPN=1
+  fi
+fi
+
+RESOURCES="-N $NODES -n $NPROC -t $TIME -c $NTHREADS"
+
+while [ "$1" ]
+do
+
+NAME=$1
+NAME=${NAME/.clt/}
+if [ $FOLDER == 'default' ]; then
+    FOLDER=$NAME
+fi
+if [ $JOBNAME == 'default' ]; then
+    JOBNAME=$NAME
+fi
+
+OPTS="--direct --ifexists save --scratch /tmp --scfcode $SCFCODE"
+if [ $DEBUG == 'yes' ]; then OPTS=`echo $OPTS --debug`; fi
+if [ $RESTART == 'yes' ]; then OPTS=`echo $OPTS --restart`; fi
+if [ $SETUP == 'yes' ]; then OPTS=`echo $OPTS --setup-only`; fi
+if [ $SETUP == 'yes' ]; then OPTS=`echo $OPTS --setup-only`; fi
+
+# Create the input file
+TARGET=run.$$.sh
+
+cat >> $TARGET << EOF
+#!/bin/bash
+#SBATCH --export=ALL
+#SBATCH --job-name=$JOBNAME
+#SBATCH -N $NODES -n $NPROC -t $TIME -c $NTHREADS
+#SBATCH --tasks-per-node=$PPN
+#SBATCH --mem=$MEM -p $PARTITION
+
+source $CCPROOT/env.sh
+export CORES=$NCPUS
+cd  \$SLURM_SUBMIT_DIR
+python $CCPROOT/bin/$CCP_EXEC $NAME -d $FOLDER --memory ${MEM/mb/} --cores $NCPUS --cores-camcasp $NCPUS $OPTS > logfile
+
+sleep 1
+ 
+EOF
+
+# Submit the input file to SLURM and clean up
+sbatch $S_OPTIONS $TARGET
+rm $TARGET
+sleep 1
+
+shift
+done
