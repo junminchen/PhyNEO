@@ -18,31 +18,43 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 ### Long-range Parameters
 
 Dependency: 
-
+`CAMCASP`: https://www-stone.ch.cam.ac.uk/programs.html
 `Tinker (for the Local frame generator POLEDIT or you can do it by yourself)`: https://dasher.wustl.edu/tinker/
 
-+ `package`: files for constructing packages or images, such as conda recipe and docker files.
-+ `tests`: unit tests.
-+ `worfl`: DMFF python codes
-+ `dmff/api`: source code of application programming interface of DMFF.
-+ `dmff/admp`: source code of automatic differentiable multipolar polarizable (ADMP) force field module.
-+ `dmff/classical`: source code of classical force field module.
-+ `dmff/common`: source code of common functions, such as neighbor list.
-+ `dmff/sgnn`: source of subgragh neural network force field model.
-+ `dmff/eann`: source of embedded atom neural network force field model.
-+ `dmff/generators`: source code of force generators.
-+ `dmff/operators`: source code of operators.
+Firstly, we need to use CAMCASP to do TD-DFT and ISA-pol calculation. See it in 'conf.DMC'.
+Then, we can use our scripts to generate XML force field file with the help of Tinker tool.
++ `worflow/lr_param/poledit`: Tinkder files for constructing local frame definition to 'localframe'. 
+```bash
+./poledit DMC.xyz
+```
++ `worflow/lr_param/1_gen_atype.py`: generate atom type definition to 'atype_data.pickle'.
+```bash
+1_gen_atype.py
+```
++ `worflow/lr_param/2_ff_gen.py`: generate PhyNEO forcefield by one step.
+```bash
+2_ff_gen.py > ff.xml
+```
 
 ### Short-range Parameters
 
+Dependency: 
+`Molpro (or you can use Psi4)`: https://www.molpro.net
+
 #### Data Preparation 
+
++ `worflow/sr_param/abinitio/run_md.py`: generate the trajectory of dimer by classical force field MD simulation
++ `worflow/sr_param/abinitio/geoms_op.py`: generate dimer scan Molpro input file to do SAPT calculation
++ `worflow/sr_param/abinitio/sapt/pack_data.py`: pack dimer scan data to 'data.pickle'
 
 #### Training 
 
-+ `dmff/api`: source code of application programming interface of DMFF.
++ `worflow/sr_param/remove_lr.py`: separate the long-range interaction energy to fitting short-range parameters 
++ `worflow/sr_param/fit_basepair.py`: fit the short-range parameters by dimer scan data, and save it in 'params.pickle', then plot it in 'test_deomp3.png'.
 
 ### sub-Graph Neural Networks for Bonding interaction
 
+To be continued.
 
 ## Support and Contribution
 
