@@ -39,14 +39,14 @@ def OPLS_LJ(system):
     return system
 
 # create system
-mol = PDBFile('cocco_dimer.pdb')
-forcefield = ForceField('cocco.xml')
+mol = PDBFile('pe6_dimer.pdb')
+forcefield = ForceField('pe.xml')
 system = forcefield.createSystem(mol.topology, nonbondedMethod=PME, nonbondedCutoff=1.0*nanometer, constraints=None, rigidWater=True, removeCMMotion=True)
 system = OPLS_LJ(system)
 
-# external confinement: move to the center of box
+# external confinement
 force = CustomExternalForce('10000*max(0, r-0.6)^2; r=sqrt((x-1.5)^2+(y-1.5)^2+(z-1.5)^2)')
-for i in [0, 8, 15, 21]:
+for i in [7, 10, 27, 30]:
     force.addParticle(i)
 system.addForce(force)
 

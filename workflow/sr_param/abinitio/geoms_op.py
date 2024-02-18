@@ -203,42 +203,43 @@ def clean_folder(i_frame, maindir):
 
 if __name__ == '__main__':
     # pick a frame and scan
-    for i_frame in range(0, 1000, 20):
-        # u, monA, monB = get_dimer('peg2_dimer.pdb', 'output.pdb')
-        u, monA, monB = get_dimer('cocco_dimer.pdb', 'output.pdb')
-        if i_frame == -1: # -1 means scan the dimer geometry provided in command line argument
-            i_frame = 0
-            u0 = mda.Universe(sys.argv[2])
-            pos_mon = u0.atoms.positions
-            shift = np.array([5.0, 0, 0])
-            u.atoms.positions = np.vstack((pos_mon, pos_mon + shift))
-        else:   # otherwise pick a frame in the trajectory output.pdb
-            ts = u.trajectory[i_frame]
-        u.dimensions = np.array([30, 30, 30, 90, 90, 90])
-        # IP, and HOMO energy for each monomer, at extended minimum geometries
-        ac_data = np.array([[0.36986356999873, -0.286797], [0.36986356999873, -0.286797]])
-        indices, positions = gen_scan(u, monA, monB)
-        n_data = len(indices)
-        folder_gjf = clean_folder(i_frame, 'gjfs')
-        folder_sapt = clean_folder(i_frame, 'sapt')
-        folder_mp2 = clean_folder(i_frame, 'mp2')
-        folder_pdb = clean_folder(i_frame, 'pdb')
-        for i_data in range(n_data):
-            pos = positions[i_data]
-            u.atoms.positions = pos
+    # i_frame = np.random.randint(1000) #int(sys.argv[1])
+    i_frame = int(sys.argv[1])
+    u, monA, monB = get_dimer('pe6_dimer.pdb', 'output.pdb')
+    if i_frame == -1: # -1 means scan the dimer geometry provided in command line argument
+        i_frame = 0
+        u0 = mda.Universe(sys.argv[2])
+        pos_mon = u0.atoms.positions
+        shift = np.array([5.0, 0, 0])
+        u.atoms.positions = np.vstack((pos_mon, pos_mon + shift))
+    else:   # otherwise pick a frame in the trajectory output.pdb
+        ts = u.trajectory[i_frame]
+    u.dimensions = np.array([30, 30, 30, 90, 90, 90])
+    # IP, and HOMO energy for each monomer, at extended minimum geometries
+    # ac_data = np.array([[0.220086, -0.139377], [0.220086, -0.139377]])
+    ac_data = np.array([[0.396796, -0.318417], [0.396796, -0.318417]])
+    indices, positions = gen_scan(u, monA, monB)
+    n_data = len(indices)
+    folder_gjf = clean_folder(i_frame, 'gjfs')
+    folder_sapt = clean_folder(i_frame, 'sapt')
+    folder_mp2 = clean_folder(i_frame, 'mp2')
+    folder_pdb = clean_folder(i_frame, 'pdb')
+    for i_data in range(n_data):
+        pos = positions[i_data]
+        u.atoms.positions = pos
 
-            # generate gjf files for visualization
-            ofn = folder_gjf + '/' + padding(i_data) + '.gjf'
-            gen_gjf(u, ofn)
+        # generate gjf files for visualization
+        ofn = folder_gjf + '/' + padding(i_data) + '.gjf'
+        gen_gjf(u, ofn)
 
-            # write pdb
-            ofn = folder_pdb + '/' + padding(i_data) + '.pdb'
-            u.atoms.write(ofn)
+        # write pdb
+        ofn = folder_pdb + '/' + padding(i_data) + '.pdb'
+        u.atoms.write(ofn)
 
-            # generate sapt file
-            ofn = folder_sapt + '/' + padding(i_data) + '.com'
-            gen_molpro_output(u, monA, monB, 'sapt_template.com', ac_data, ofn=ofn, label='shift= %.6f'%indices[i_data])
+        # generate sapt file
+        ofn = folder_sapt + '/' + padding(i_data) + '.com'
+        gen_molpro_output(u, monA, monB, 'sapt_template.com', ac_data, ofn=ofn, label='shift= %.6f'%indices[i_data])
 
-            # # generate mp2 file
-            ofn = folder_mp2 + '/' + padding(i_data) + '.com'
-            gen_molpro_output(u, monA, monB, 'mp2_template.com', ac_data, ofn=ofn, label='shift = %.6f'%indices[i_data])
+        # # generate mp2 file
+        ofn = folder_mp2 + '/' + padding(i_data) + '.com'
+        gen_molpro_output(u, monA, monB, 'mp2_template.com', ac_data, ofn=ofn, label='shift = %.6f'%indices[i_data])

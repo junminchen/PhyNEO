@@ -1,0 +1,83 @@
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  C00 TE1 M   1      16.000  13.500  15.000  0.00  1.00      SYST C
+ATOM      2  H01 TE1 M   1      16.378  13.499  13.973  0.00  1.00      SYST H
+ATOM      3  H02 TE1 M   1      16.391  12.612  15.508  0.00  1.00      SYST H
+ATOM      4  H03 TE1 M   1      16.391  14.389  15.505  0.00  1.00      SYST H
+ATOM      5  C00 IN1 M   2      14.480  13.500  15.000  0.00  1.00      SYST C
+ATOM      6  H01 IN1 M   2      14.121  12.617  14.459  0.00  1.00      SYST H
+ATOM      7  H02 IN1 M   2      14.121  14.383  14.459  0.00  1.00      SYST H
+ATOM      8  C00 IN1 M   3      13.921  13.500  16.423  0.00  1.00      SYST C
+ATOM      9  H01 IN1 M   3      14.287  14.384  16.960  0.00  1.00      SYST H
+ATOM     10  H02 IN1 M   3      14.289  12.618  16.961  0.00  1.00      SYST H
+ATOM     11  C00 IN1 M   4      12.392  13.498  16.420  0.00  1.00      SYST C
+ATOM     12  H01 IN1 M   4      12.027  12.615  15.881  0.00  1.00      SYST H
+ATOM     13  H02 IN1 M   4      12.025  14.381  15.882  0.00  1.00      SYST H
+ATOM     14  C00 IN1 M   5      11.833  13.496  17.843  0.00  1.00      SYST C
+ATOM     15  H01 IN1 M   5      12.191  14.380  18.384  0.00  1.00      SYST H
+ATOM     16  H02 IN1 M   5      12.195  12.614  18.383  0.00  1.00      SYST H
+ATOM     17  C00 TE1 M   6      10.313  13.493  17.843  0.00  1.00      SYST C
+ATOM     18  H01 TE1 M   6       9.920  14.380  17.335  0.00  1.00      SYST H
+ATOM     19  H02 TE1 M   6       9.935  13.493  18.870  0.00  1.00      SYST H
+ATOM     20  H03 TE1 M   6       9.924  12.604  17.335  0.00  1.00      SYST H
+ATOM     21  C00 TE1 M   1      16.000  18.500  15.000  0.00  1.00      SYST C
+ATOM     22  H01 TE1 M   1      16.378  18.499  13.973  0.00  1.00      SYST H
+ATOM     23  H02 TE1 M   1      16.391  17.612  15.508  0.00  1.00      SYST H
+ATOM     24  H03 TE1 M   1      16.391  19.389  15.505  0.00  1.00      SYST H
+ATOM     25  C00 IN1 M   2      14.480  18.500  15.000  0.00  1.00      SYST C
+ATOM     26  H01 IN1 M   2      14.121  17.617  14.459  0.00  1.00      SYST H
+ATOM     27  H02 IN1 M   2      14.121  19.383  14.459  0.00  1.00      SYST H
+ATOM     28  C00 IN1 M   3      13.921  18.500  16.423  0.00  1.00      SYST C
+ATOM     29  H01 IN1 M   3      14.287  19.384  16.960  0.00  1.00      SYST H
+ATOM     30  H02 IN1 M   3      14.289  17.618  16.961  0.00  1.00      SYST H
+ATOM     31  C00 IN1 M   4      12.392  18.498  16.420  0.00  1.00      SYST C
+ATOM     32  H01 IN1 M   4      12.027  17.615  15.881  0.00  1.00      SYST H
+ATOM     33  H02 IN1 M   4      12.025  19.381  15.882  0.00  1.00      SYST H
+ATOM     34  C00 IN1 M   5      11.833  18.496  17.843  0.00  1.00      SYST C
+ATOM     35  H01 IN1 M   5      12.191  19.380  18.384  0.00  1.00      SYST H
+ATOM     36  H02 IN1 M   5      12.195  17.614  18.383  0.00  1.00      SYST H
+ATOM     37  C00 TE1 M   6      10.313  18.493  17.843  0.00  1.00      SYST C
+ATOM     38  H01 TE1 M   6       9.920  19.380  17.335  0.00  1.00      SYST H
+ATOM     39  H02 TE1 M   6       9.935  18.493  18.870  0.00  1.00      SYST H
+ATOM     40  H03 TE1 M   6       9.924  17.604  17.335  0.00  1.00      SYST H
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1    6    7    8
+CONECT    6    5
+CONECT    7    5
+CONECT    8    5    9   10   11
+CONECT    9    8
+CONECT   10    8
+CONECT   11    8   12   13   14
+CONECT   12   11
+CONECT   13   11
+CONECT   14   11   15   16   17
+CONECT   15   14
+CONECT   16   14
+CONECT   17   14   18   19   20
+CONECT   18   17
+CONECT   19   17
+CONECT   20   17
+CONECT   21   22   23   24   25
+CONECT   22   21
+CONECT   23   21
+CONECT   24   21
+CONECT   25   21   26   27   28
+CONECT   26   25
+CONECT   27   25
+CONECT   28   25   29   30   31
+CONECT   29   28
+CONECT   30   28
+CONECT   31   28   32   33   34
+CONECT   32   31
+CONECT   33   31
+CONECT   34   31   35   36   37
+CONECT   35   34
+CONECT   36   34
+CONECT   37   34   38   39   40
+CONECT   38   37
+CONECT   39   37
+CONECT   40   37
+END
