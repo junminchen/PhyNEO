@@ -29,11 +29,11 @@ Then, we can use our scripts to generate XML force field file with the help of T
 ```
 + `worflow/lr_param/1_gen_atype.py`: generate atom type definition to 'atype_data.pickle'.
 ```bash
-1_gen_atype.py
+python 1_gen_atype.py
 ```
 + `worflow/lr_param/2_ff_gen.py`: generate PhyNEO forcefield by one step.
 ```bash
-2_ff_gen.py > ff.xml
+python 2_ff_gen.py > ff.xml
 ```
 
 ### Short-range Parameters
