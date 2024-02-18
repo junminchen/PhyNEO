@@ -1,10 +1,6 @@
-# 
-
-
-PEO[3] NPT Example: peo_cmd
 # PhyNEO
 
-[![DOI: 10.1021/acs.jctc.2c01297](https://img.shields.io/badge/DOI-10.1021%2Facs.jctc.2c01297-blue)](https://pubs.acs.org/doi/10.1021/acs.jctc.2c01297)
+[![DOI: 10.1021/acs.jctc.3c01045](https://img.shields.io/badge/DOI-10.1021%2Facs.jctc.3c01045-blue)](https://pubs.acs.org/doi/10.1021/acs.jctc.3c01045)
  
 ## About PhyNEO
 
@@ -17,15 +13,13 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 
 ## User Guide
 
-# Data Preparation
++ `md_example`: demos in papers interfaced i-Pi.
 
-The code is organized as follows:
+### Long-range Parameters
 
-+ `examples`: demos presented in Jupyter Notebook.
-+ `docs`: documentation.
 + `package`: files for constructing packages or images, such as conda recipe and docker files.
 + `tests`: unit tests.
-+ `dmff`: DMFF python codes
++ `worfl`: DMFF python codes
 + `dmff/api`: source code of application programming interface of DMFF.
 + `dmff/admp`: source code of automatic differentiable multipolar polarizable (ADMP) force field module.
 + `dmff/classical`: source code of classical force field module.
@@ -35,11 +29,15 @@ The code is organized as follows:
 + `dmff/generators`: source code of force generators.
 + `dmff/operators`: source code of operators.
 
-# Long-range Parameters
+### Short-range Parameters
 
-# Short-range Parameters
+#### Data Preparation 
 
-# sub-Graph Neural Networks for Bonding interaction
+#### Training 
+
++ `dmff/api`: source code of application programming interface of DMFF.
+
+### sub-Graph Neural Networks for Bonding interaction
 
 ## Support and Contribution
 
