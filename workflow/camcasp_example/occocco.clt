@@ -1,0 +1,49 @@
+! occocco properties calculation
+! ==========================
+
+Global
+  Units Angstrom Degrees
+  Overwrite Yes
+End
+
+Molecule occocco
+  I.P. 9.2511079827 eV
+  HOMO -0.269267
+  ! optimized with mp2-avdz
+ C01  6.0       2.3127000332     -0.1033300012      0.58853000402 Type C2
+ H02  1.0       2.0063600540     -0.9314399958      1.25074994563 Type H2
+ H03  1.0       3.1081399918      0.4816100001      1.08608996876 Type H2
+ O04  8.0       2.7617099285     -0.5915200114     -0.68458002813 Type O2
+ H05  1.0       3.4126698971     -1.2877999544     -0.52697002899 Type H3
+ C06  6.0      -1.1216700077      0.7987300158     -0.34869998690 Type C1
+ H07  1.0      -1.3579599857      1.5106500387      0.46696999675 Type H1
+ H08  1.0      -0.9034799933      1.3767000437     -1.26919996742 Type H1
+ O09  8.0       0.0000000000     -0.0059500001     -0.00000000009 Type O1
+ C10  6.0       1.1216700077      0.7987300158      0.34869998698 Type C1
+ H11  1.0       0.9034799933      1.3767000437      1.26919996748 Type H1
+ H12  1.0       1.3579599857      1.5106500387     -0.46696999678 Type H1
+ C13  6.0      -2.3127000332     -0.1033300012     -0.58853000404 Type C2
+ H14  1.0      -3.1081299782      0.4816100001     -1.08608996877 Type H2
+ H15  1.0      -2.0063600540     -0.9314399958     -1.25074994568 Type H2
+ O16  8.0      -2.7617099285     -0.5915200114      0.68458002819 Type O2
+ H17  1.0      -3.4126698971     -1.2877999544      0.52697002898 Type H3
+End
+
+Run-type properties
+  Molecule      occocco
+  File-prefix   occocco
+  Basis         aVTZ
+  Aux-Basis     aVTZ   Type  MC   Spherical   Use-ISA-Basis
+  AtomAux-Basis aVTZ   Type  MC   Spherical   Use-ISA-Basis
+  ISA-Basis     set2   Min-S-exp-H = 0.2
+  Func          PBE0
+  Kernel        ALDA+CHF
+  SCFcode       nwchem
+  task          isa-pol-from-isa-A+DF
+  ! Options  Tests
+  Orient        file
+  Process       file
+  Sites         file
+End
+
+Finish
