@@ -1,1 +1,0 @@
-../occocco/occocco_ref_wt3_L2iso_Cniso.pot

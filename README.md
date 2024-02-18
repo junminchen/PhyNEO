@@ -4,7 +4,7 @@
  
 ## About PhyNEO
 
-**PhyNEO** (**Phy**sics-driven and  **N**eural-Network **E**nhanced **O**rganic and polymer Force Field) is a force field development workflow, based on DMFF (Differentiable Molecular Force Field). PhyNEO features a hybrid approach that combines both the physics-driven and the data-driven methods and is able to generate a bulk potential with chemical accuracy using only quantum chemistry data of very small
+**PhyNEO** (**Phy**sics-driven and **N**eural-Network **E**nhanced **O**rganic and polymer Force Field) is a force field development workflow, based on [DMFF](https://github.com/deepmodeling/DMFF). PhyNEO features a hybrid approach that combines both the physics-driven and the data-driven methods and is able to generate a bulk potential with chemical accuracy using only quantum chemistry data of very small
 clusters. Careful separations of long-/short-range interactions and nonbonding/bonding interactions are the key to the success of PhyNEO. By such a strategy, PhyNEO mitigate the limitations of pure data-driven methods in long-range interactions, thus largely increasing the data efficiency and the scalability of machine learning models.
 
 ### License and credits
@@ -16,6 +16,10 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 + `md_example`: demos in papers interfaced i-Pi.
 
 ### Long-range Parameters
+
+Dependency: 
+
+`Tinker (for the Local frame generator POLEDIT or you can do it by yourself)`: https://dasher.wustl.edu/tinker/
 
 + `package`: files for constructing packages or images, such as conda recipe and docker files.
 + `tests`: unit tests.
@@ -38,6 +42,7 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 + `dmff/api`: source code of application programming interface of DMFF.
 
 ### sub-Graph Neural Networks for Bonding interaction
+
 
 ## Support and Contribution
 
