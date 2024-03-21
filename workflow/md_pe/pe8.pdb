@@ -1,0 +1,56 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  C00 TE1 1   1       1.000   1.000   0.000  0.00  1.00      SYST C  
+ATOM      2  H01 TE1 1   1       1.378   0.999  -1.027  0.00  1.00      SYST H  
+ATOM      3  H02 TE1 1   1       1.391   0.112   0.508  0.00  1.00      SYST H  
+ATOM      4  H03 TE1 1   1       1.391   1.889   0.505  0.00  1.00      SYST H  
+ATOM      5  C00 IN1 1   2      -0.520   1.000   0.000  0.00  1.00      SYST C  
+ATOM      6  H01 IN1 1   2      -0.879   0.117  -0.541  0.00  1.00      SYST H  
+ATOM      7  H02 IN1 1   2      -0.879   1.883  -0.541  0.00  1.00      SYST H  
+ATOM      8  C00 IN1 1   3      -1.079   1.000   1.423  0.00  1.00      SYST C  
+ATOM      9  H01 IN1 1   3      -0.713   1.884   1.960  0.00  1.00      SYST H  
+ATOM     10  H02 IN1 1   3      -0.711   0.118   1.961  0.00  1.00      SYST H  
+ATOM     11  C00 IN1 1   4      -2.608   0.998   1.419  0.00  1.00      SYST C  
+ATOM     12  H01 IN1 1   4      -2.973   0.113   0.883  0.00  1.00      SYST H  
+ATOM     13  H02 IN1 1   4      -2.975   1.880   0.880  0.00  1.00      SYST H  
+ATOM     14  C00 IN1 1   5      -3.167   1.000   2.843  0.00  1.00      SYST C  
+ATOM     15  H01 IN1 1   5      -2.801   1.884   3.380  0.00  1.00      SYST H  
+ATOM     16  H02 IN1 1   5      -2.801   0.117   3.382  0.00  1.00      SYST H  
+ATOM     17  C00 IN1 1   6      -4.696   1.000   2.838  0.00  1.00      SYST C  
+ATOM     18  H01 IN1 1   6      -5.061   0.116   2.302  0.00  1.00      SYST H  
+ATOM     19  H02 IN1 1   6      -5.061   1.881   2.297  0.00  1.00      SYST H  
+ATOM     20  C00 IN1 1   7      -5.256   1.004   4.261  0.00  1.00      SYST C  
+ATOM     21  H01 IN1 1   7      -4.896   1.887   4.800  0.00  1.00      SYST H  
+ATOM     22  H02 IN1 1   7      -4.898   0.121   4.803  0.00  1.00      SYST H  
+ATOM     23  C00 TE1 1   8      -6.776   1.005   4.259  0.00  1.00      SYST C  
+ATOM     24  H01 TE1 1   8      -7.166   1.892   3.749  0.00  1.00      SYST H  
+ATOM     25  H02 TE1 1   8      -7.155   1.009   5.286  0.00  1.00      SYST H  
+ATOM     26  H03 TE1 1   8      -7.168   0.117   3.753  0.00  1.00      SYST H  
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1    6    7    8
+CONECT    6    5
+CONECT    7    5
+CONECT    8    5    9   10   11
+CONECT    9    8
+CONECT   10    8
+CONECT   11    8   12   13   14
+CONECT   12   11
+CONECT   13   11
+CONECT   14   11   15   16   17
+CONECT   15   14
+CONECT   16   14
+CONECT   17   14   18   19   20
+CONECT   18   17
+CONECT   19   17
+CONECT   20   17   21   22   23
+CONECT   21   20
+CONECT   22   20
+CONECT   23   20   24   25   26
+CONECT   24   23
+CONECT   25   23
+CONECT   26   23
+END

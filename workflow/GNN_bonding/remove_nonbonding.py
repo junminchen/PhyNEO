@@ -30,7 +30,7 @@ L = box[0][0]
 
 rc = 2.4
 H = Hamiltonian('output.xml')
-pots = H.createPotential(mol.topology, nonbondedCutoff=rc*nanometer, nonbondedMethod=PME, ethresh=1e-4, step_pol=5)
+pots = H.createPotential(mol.topology, nonbondedCutoff=rc*nanometer, nonbondedMethod=CutoffPeriodic, ethresh=1e-4, step_pol=5)
 efunc_nb = pots.getPotentialFunc()
 params_nb = H.getParameters()
 

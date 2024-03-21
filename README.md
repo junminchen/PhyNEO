@@ -181,6 +181,7 @@ Dependency:
 + `worflow/sr_param/remove_lr.py`: separate the long-range interaction energy to fitting short-range parameters 
 + `worflow/sr_param/fit_basepair.py`: fit the short-range parameters by dimer scan data, and save it in 'params.pickle', then plot it in 'test_deomp3.png'.
 ![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/sr_param/test_decomp3.png)
+
 ### sub-Graph Neural Networks for Bonding interaction
 
 Dependency: 
@@ -204,8 +205,47 @@ python remove_nonbonding.py dataset_test.pickle pe8.pdb
 python remove_nonbonding.py dataset_test_pe16.pickle pe16.pdb
 ```
 + `worflow/GNN_bonding/train.py`: train the bonding parameters by pe8 monomer data, and save it in 'params_sgnn.pickle', then we can use 'plot_data.py' plot it in 'test_data.png'.
-+ `worflow/GNN_bonding/test_pe16.py`: test the bonding parameters by pe16 monomer data, and save it in 'test_data_pe16.xvg'. Then we can use 'plot_data.py' plot it in 'test_data_pe16.png', which shows the transferability in polymer. 
++ `worflow/GNN_bonding/test_pe16.py`: test the bonding parameters by pe16 monomer data, and save it in 'test_data_pe16.xvg'. Then we can use 'plot_data.py' plot it in 'test_data_pe16.png', which shows the **transferability** in polymer. 
 ![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/GNN_bonding/test_data.png)![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/GNN_bonding/test_data_pe16.png)
+
+
+### sub-Graph Neural Networks for Bonding interaction
+
+Dependency: 
+`DMFF`: https://github.com/deepmodeling/DMFF
+
+#### Data Preparation 
+
+As our paper mentioned, we generate 20000 monomer points at 300K and 600K, set training-testing ratio at 9:1. 
+
++ `worflow/GNN_bonding/abinitio_intra*/run_md.py`: generate the trajectory of monomer by classical force field MD simulation
++ `worflow/GNN_bonding/abinitio_intra*/gen_inputs.py`: generate monomer Molpro input file to do SAPT calculation
++ `worflow/GNN_bonding/abinitio_intra*/serialize.py`: serialize monomer data to 'set*.pickle'
+
+#### Training 
+
++ `worflow/GNN_bonding/creat_dataset.py`: integrate all the data to 'dataset_train.pickle', 'dataset_test.pickle' and 'dataset_test_pe16.pickle'
++ `worflow/GNN_bonding/remove_nonbonding.py`: separate the nonbonding interaction energy to fitting bonding parameters 
+```bash
+python remove_nonbonding.py dataset_train.pickle pe8.pdb
+python remove_nonbonding.py dataset_test.pickle pe8.pdb
+python remove_nonbonding.py dataset_test_pe16.pickle pe16.pdb
+```
++ `worflow/GNN_bonding/train.py`: train the bonding parameters by pe8 monomer data, and save it in 'params_sgnn.pickle', then we can use 'plot_data.py' plot it in 'test_data.png'.
++ `worflow/GNN_bonding/test_pe16.py`: test the bonding parameters by pe16 monomer data, and save it in 'test_data_pe16.xvg'. Then we can use 'plot_data.py' plot it in 'test_data_pe16.png', which shows the **transferability** in polymer. 
+![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/GNN_bonding/test_data.png)![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/GNN_bonding/test_data_pe16.png)
+
+
+### Molecular Dynamics Simulation by PhyNEO: PE Polymer
+
+Dependency: 
+`i-pi`: https://github.com/i-pi/i-pi
+`packmol`: https://m3g.github.io/packmol/
+
+#### Preparation and run simulation
+
++ `worflow/md_pe/bulk.inp.py`: we use **packmol** to generate the initial box before run simulation
++ `worflow/md_pe/client_dmff.py`: the client calulator with PhyNEO and DMFF to produce energy, force and virial. 
 
 ## Support and Contribution
 

@@ -1,0 +1,8 @@
+tolerance 2.00
+filetype pdb
+add_box_sides 1.5
+output bulk.pdb
+  structure pe8.pdb
+      number 50
+      inside cube 0. 0. 0. 30
+  end structure
