@@ -27,7 +27,7 @@ Then, we can use our scripts to generate XML force field file with the help of T
 ```bash
 ./poledit DMC.xyz
 ```
-Notes: JUST '<ENTER>' TO LAST QUESTIONS!!! All we need is copy the local frame definition to 'localframe' file.
+Notes: JUST PRESS 'ENTER' TO LAST QUESTIONS!!! All we need is copy the local frame definition to 'localframe' file.
 ```txt
 Local Frame Definition for Multipole Sites :
 
