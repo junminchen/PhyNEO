@@ -19,7 +19,7 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 
 Dependency: 
 `CAMCASP`: https://www-stone.ch.cam.ac.uk/programs.html
-`Tinker (for the Local frame generator POLEDIT or you can do it by yourself)`: https://dasher.wustl.edu/tinker/
+`Tinker (for the Local frame generator POLEDIT or we can do it by ourself)`: https://dasher.wustl.edu/tinker/
 
 Firstly, we need to use CAMCASP to do TD-DFT and ISA-pol calculation. See it in 'conf.DMC'.
 Then, we can use our scripts to generate XML force field file with the help of Tinker tool.
@@ -57,8 +57,9 @@ python 2_ff_gen.py > ff.xml
 
 ### Short-range Parameters
 
+Notes: In this part, it's a **different and independent** case from Long-range Parameters.
 Dependency: 
-`Molpro (or you can use Psi4)`: https://www.molpro.net
+`Molpro (or we can use Psi4)`: https://www.molpro.net
 
 #### Data Preparation 
 
