@@ -52,7 +52,7 @@ python 1_gen_atype.py
 ```
 + `worflow/lr_param/2_ff_gen.py`: generate PhyNEO forcefield by one step.
 ```bash
-python 2_ff_gen.py > ff.xml
+python 2_ff_gen.py > dmff_forcefield.xml
 ```
 
 ### Short-range Parameters
