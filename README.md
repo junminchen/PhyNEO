@@ -217,7 +217,7 @@ Dependency:
 
 #### Preparation and run simulation
 
-+ `worflow/md_pe/bulk.inp.py`: we use **packmol** to generate the initial box before run simulation
++ `worflow/md_pe/bulk.inp`: we use **packmol** to generate the initial box before run simulation
 + `worflow/md_pe/client_dmff.py`: the client calulator with PhyNEO and DMFF to produce energy, force and virial. 
 
 ## Support and Contribution
