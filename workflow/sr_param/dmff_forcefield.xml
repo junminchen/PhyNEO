@@ -99,10 +99,10 @@
    </SlaterDhfForce>
    <QqTtDampingForce
        mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" >
-       <Atom type="6" A="1" B="3.943734e+01" Q="-3.707494e-02" />    
-       <Atom type="7" A="1" B="4.598339e+01" Q="3.363521e-02" />    
-       <Atom type="8" A="1" B="3.736954e+01" Q="-3.217984e-01" />    
-       <Atom type="9" A="1" B="4.647681e+01" Q="8.749089e-02" />     
+       <Atom type="6" B="3.943734e+01" Q="-3.707494e-02" />    
+       <Atom type="7" B="4.598339e+01" Q="3.363521e-02" />    
+       <Atom type="8" B="3.736954e+01" Q="-3.217984e-01" />    
+       <Atom type="9" B="4.647681e+01" Q="8.749089e-02" />     
    </QqTtDampingForce>
    <SlaterDampingForce
        mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" >

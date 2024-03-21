@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <AtomTypes>
+    <Type class="HC" element="H" mass="1.008000" name="H3"/>
+    <Type class="HC" element="H" mass="1.008000" name="H4"/>
+    <Type class="CT" element="C" mass="12.011000" name="C3"/>
+    <Type class="CT" element="C" mass="12.011000" name="C4"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="TE1">
+      <Atom name="C00" type="C4"/>
+      <Atom name="H01" type="H4"/>
+      <Atom name="H02" type="H4"/>
+      <Atom name="H03" type="H4"/>
+      <Bond from="0" to="1"/>
+      <Bond from="0" to="2"/>
+      <Bond from="0" to="3"/>
+      <ExternalBond atomName="C00"/>
+    </Residue>
+    <Residue name="IN1">
+      <Atom name="C00" type="C3"/>
+      <Atom name="H01" type="H3"/>
+      <Atom name="H02" type="H3"/>
+      <Bond from="0" to="1"/>
+      <Bond from="0" to="2"/>
+      <ExternalBond atomName="C00"/>
+      <ExternalBond atomName="C00"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond class1="CT" class2="CT" k="224262.400000" length="0.152900"/>
+    <Bond class1="HC" class2="CT" k="284512.000000" length="0.109000"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="1.966986" class1="CT" class2="CT" class3="CT" k="488.272800"/>
+    <Angle angle="1.932079" class1="CT" class2="CT" class3="HC" k="313.800000"/>
+    <Angle angle="1.881465" class1="HC" class2="CT" class3="HC" k="276.144000"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper class1="CT" class2="CT" class3="CT" class4="CT" k1="2.719600" k2="-0.418400" k3="0.418400" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="HC" class2="CT" class3="CT" class4="CT" k1="0.000000" k2="0.000000" k3="0.627600" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="HC" class2="CT" class3="CT" class4="HC" k1="0.000000" k2="0.000000" k3="0.627600" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+    <Atom charge="-0.178900" epsilon="0.276144" sigma="0.350000" type="C3"/>
+    <Atom charge="0.080700" epsilon="0.125520" sigma="0.250000" type="H4"/>
+    <Atom charge="-0.238800" epsilon="0.276144" sigma="0.350000" type="C4"/>
+    <Atom charge="0.088600" epsilon="0.125520" sigma="0.250000" type="H3"/>
+  </NonbondedForce>
+</ForceField>
+
