@@ -27,6 +27,25 @@ Then, we can use our scripts to generate XML force field file with the help of T
 ```bash
 ./poledit DMC.xyz
 ```
+Notes: JUST <ENTER> TO LAST QUESTIONS!!! All we need is copy the local frame definition to 'localframe' file.
+```txt
+Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      C         Z-then-X         2       3       0
+       2      O         Z-then-X         3       1       0
+       3      C         Bisector         2       5       0
+       4      O         Z-Only           3       0       0
+       5      O         Z-then-X         3       6       0
+       6      C         Z-then-X         5       3       0
+       7      H         Z-then-X         1       2       0
+       8      H         Z-then-X         1       2       0
+       9      H         Z-then-X         1       2       0
+      10      H         Z-then-X         6       5       0
+      11      H         Z-then-X         6       5       0
+      12      H         Z-then-X         6       5       0
+```
 + `worflow/lr_param/1_gen_atype.py`: generate atom type definition to 'atype_data.pickle'.
 ```bash
 python 1_gen_atype.py
