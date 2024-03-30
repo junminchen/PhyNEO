@@ -37,7 +37,7 @@ def params_convert(params):
     params_dhf = {}
     params_dmp_es = {}  # electrostatic damping
     params_dmp_disp = {} # dispersion damping
-    for k in ['B', 'mScales']:
+    for k in ['B']:
         params_ex[k] = params[k]
         params_sr_es[k] = params[k]
         params_sr_pol[k] = params[k]
