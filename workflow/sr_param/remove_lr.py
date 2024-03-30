@@ -33,7 +33,7 @@ def params_convert(params):
     params_dhf = {}
     params_dmp_es = {}  # electrostatic damping
     params_dmp_disp = {} # dispersion damping
-    for k in ['B', 'mScales']:
+    for k in ['B']:
         params_ex[k] = params[k]
         params_sr_es[k] = params[k]
         params_sr_pol[k] = params[k]
@@ -81,7 +81,7 @@ class BasePairs:
         self.pos_B = jnp.array(pdb_B.positions._value) * 10
 
         self.box = jnp.array(pdb.topology.getPeriodicBoxVectors()._value) * 10
-        self.rc = 25
+        self.rc = 24
         self.nblist = nblist.NeighborList(self.box, self.rc, self.pots.meta['cov_map'])
         self.nblist_A = nblist.NeighborList(self.box, self.rc, self.pots_A.meta['cov_map'])
         self.nblist_B = nblist.NeighborList(self.box, self.rc, self.pots_B.meta['cov_map'])
