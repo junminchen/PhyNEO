@@ -39,7 +39,7 @@ def OPLS_LJ(system):
     return system
 
 # create system
-mol = PDBFile('pe8.pdb')
+mol = PDBFile('pe16.pdb')
 forcefield = ForceField('pe.xml')
 system = forcefield.createSystem(mol.topology, nonbondedMethod=PME, nonbondedCutoff=1.0*nanometer, constraints=None, rigidWater=True, removeCMMotion=True)
 system = OPLS_LJ(system)
