@@ -165,7 +165,7 @@ The force field is like:
 
 ### Short-range Parameters
 
-Notes: In this part, it's a **different and independent** case from Long-range Parameters.
+Notes: This part is a **different and independent** case from Long-range Parameters.
 
 Dependency: 
 `Molpro (or we can use Psi4)`: https://www.molpro.net
@@ -178,8 +178,8 @@ Dependency:
 
 #### Training 
 
-+ `worflow/sr_param/remove_lr.py`: separate the long-range interaction energy to fitting short-range parameters 
-+ `worflow/sr_param/fit_basepair.py`: fit the short-range parameters by dimer scan data, and save it in 'params.pickle', then plot it in 'test_deomp3.png'.
++ `worflow/sr_param/remove_lr.py`: separate the long-range interaction energy to fit short-range parameters 
++ `worflow/sr_param/fit_basepair.py`: fit the short-range parameters by dimer scan data, save it in 'params.pickle', then plot it in 'test_deomp3.png'.
 ![image](https://github.com/Jeremydream/PhyNEO/blob/main/workflow/sr_param/test_decomp3.png)
 
 ### sub-Graph Neural Networks for Bonding interaction
@@ -189,7 +189,7 @@ Dependency:
 
 #### Data Preparation 
 
-As our paper mentioned, we generate 20000 monomer points at 300K and 600K, set training-testing ratio at 9:1. 
+As our paper mentioned, we generate 20000 monomer points at 300K and 600K, and set training-testing ratio at 9:1. 
 
 + `worflow/GNN_bonding/abinitio_intra*/run_md.py`: generate the trajectory of monomer by classical force field MD simulation
 + `worflow/GNN_bonding/abinitio_intra*/gen_inputs.py`: generate monomer Molpro input file to do SAPT calculation
@@ -218,7 +218,7 @@ Dependency:
 #### Preparation and run simulation
 
 + `worflow/md_pe/bulk.inp`: we use **packmol** to generate the initial box before run simulation
-+ `worflow/md_pe/client_dmff.py`: the client calulator with PhyNEO and DMFF to produce energy, force and virial. 
++ `worflow/md_pe/client_dmff.py`: the client calculator with PhyNEO and DMFF to produce energy, force and virial. PS: Please note that your DMFF version.
 
 ## Support and Contribution
 
