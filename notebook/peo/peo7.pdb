@@ -1,0 +1,119 @@
+REMARK
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1 
+ATOM      1  C00 TER     1      -3.708   2.468   1.167
+ATOM      2  H01 TER     1      -4.778   2.470   1.166
+ATOM      3  H02 TER     1      -3.349   2.971   0.294
+ATOM      4  O03 TER     1      -3.234   1.119   1.168
+ATOM      5  C04 TER     1      -3.710   0.445   0.000
+ATOM      6  H05 TER     1      -3.354  -0.564   0.000
+ATOM      7  H06 TER     1      -3.354   0.949  -0.874
+ATOM      8  H07 TER     1      -4.780   0.445   0.000
+ATOM      9  C00 INT     2      -3.193   5.216   3.592
+ATOM     10  H01 INT     2      -2.123   5.214   3.594
+ATOM     11  H02 INT     2      -3.551   4.712   4.466
+ATOM     12  O03 INT     2      -3.669   4.542   2.424
+ATOM     13  C04 INT     2      -3.195   3.193   2.425
+ATOM     14  H05 INT     2      -2.125   3.191   2.426
+ATOM     15  H06 INT     2      -3.553   2.689   3.298
+ATOM     16  C00 INT     3      -3.702   8.692   4.758
+ATOM     17  H01 INT     3      -4.772   8.694   4.757
+ATOM     18  H02 INT     3      -3.343   9.195   3.885
+ATOM     19  O03 INT     3      -3.228   7.343   4.759
+ATOM     20  C04 INT     3      -3.704   6.669   3.591
+ATOM     21  H05 INT     3      -4.774   6.670   3.589
+ATOM     22  H06 INT     3      -3.345   7.172   2.717
+ATOM     23  C00 INT     4      -3.187  11.440   7.183
+ATOM     24  H01 INT     4      -2.117  11.438   7.185
+ATOM     25  H02 INT     4      -3.545  10.936   8.057
+ATOM     26  O03 INT     4      -3.663  10.766   6.015
+ATOM     27  C04 INT     4      -3.189   9.417   6.016
+ATOM     28  H05 INT     4      -2.119   9.415   6.017
+ATOM     29  H06 INT     4      -3.547   8.913   6.889
+ATOM     30  C00 INT     5      -3.696  14.915   8.349
+ATOM     31  H01 INT     5      -4.766  14.917   8.348
+ATOM     32  H02 INT     5      -3.337  15.419   7.476
+ATOM     33  O03 INT     5      -3.221  13.566   8.350
+ATOM     34  C04 INT     5      -3.698  12.892   7.182
+ATOM     35  H05 INT     5      -4.768  12.894   7.180
+ATOM     36  H06 INT     5      -3.339  13.396   6.308
+ATOM     37  C00 INT     6      -3.181  17.664  10.774
+ATOM     38  H01 INT     6      -2.111  17.662  10.776
+ATOM     39  H02 INT     6      -3.539  17.160  11.648
+ATOM     40  O03 INT     6      -3.657  16.990   9.606
+ATOM     41  C04 INT     6      -3.182  15.641   9.607
+ATOM     42  H05 INT     6      -2.112  15.639   9.608
+ATOM     43  H06 INT     6      -3.541  15.137  10.480
+ATOM     44  C00 INT     7      -3.690  21.139  11.940
+ATOM     45  H01 INT     7      -4.760  21.141  11.939
+ATOM     46  H02 INT     7      -3.331  21.643  11.067
+ATOM     47  O03 INT     7      -3.215  19.790  11.941
+ATOM     48  C04 INT     7      -3.692  19.116  10.773
+ATOM     49  H05 INT     7      -4.762  19.118  10.771
+ATOM     50  H06 INT     7      -3.333  19.620   9.899
+ATOM     51  C00 TER     8      -3.176  21.864  13.198
+ATOM     52  H01 TER     8      -2.106  21.863  13.199
+ATOM     53  H02 TER     8      -3.535  21.361  14.071
+ATOM     54  O03 TER     8      -3.651  23.214  13.197
+ATOM     55  C04 TER     8      -3.174  23.888  14.365
+ATOM     56  H05 TER     8      -2.104  23.886  14.367
+ATOM     57  H06 TER     8      -3.529  24.897  14.364
+ATOM     58  H07 TER     8      -3.533  23.384  15.239
+TER
+CONECT    5    6
+CONECT    5    7
+CONECT    5    8
+CONECT    5    4
+CONECT    4    1
+CONECT    1    2
+CONECT    1    3
+CONECT    1   13
+CONECT   13   14
+CONECT   13   15
+CONECT   13   12
+CONECT   12    9
+CONECT    9   10
+CONECT    9   11
+CONECT    9   20
+CONECT   20   21
+CONECT   20   22
+CONECT   20   19
+CONECT   19   16
+CONECT   16   17
+CONECT   16   18
+CONECT   16   27
+CONECT   27   28
+CONECT   27   29
+CONECT   27   26
+CONECT   26   23
+CONECT   23   24
+CONECT   23   25
+CONECT   23   34
+CONECT   34   35
+CONECT   34   36
+CONECT   34   33
+CONECT   33   30
+CONECT   30   31
+CONECT   30   32
+CONECT   30   41
+CONECT   41   42
+CONECT   41   43
+CONECT   41   40
+CONECT   40   37
+CONECT   37   38
+CONECT   37   39
+CONECT   37   48
+CONECT   48   49
+CONECT   48   50
+CONECT   48   47
+CONECT   47   44
+CONECT   44   45
+CONECT   44   46
+CONECT   44   51
+CONECT   51   52
+CONECT   51   53
+CONECT   51   54
+CONECT   54   55
+CONECT   55   56
+CONECT   55   57
+CONECT   55   58
+END

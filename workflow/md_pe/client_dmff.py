@@ -37,6 +37,7 @@ class DMFFDriver(driver.BaseDriver):
         
         # neighbor list
         self.nbl = nblist.NeighborList(box, rc, pots.meta['cov_map'])
+        self.nbl.capacity_multiplier = 5000000
         self.nbl.allocate(pos, box)
         pairs = self.nbl.pairs
         pots.getPotentialFunc()
