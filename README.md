@@ -13,7 +13,7 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 
 ## User Guide
 
-+ `md_example`: demos in papers interfaced i-Pi.
++ `md_example`: demos in papers interfaced i-Pi. backend: DMFF-devel branch
 
 ### Long-range Parameters
 
