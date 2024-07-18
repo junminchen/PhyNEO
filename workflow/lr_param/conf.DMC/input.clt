@@ -1,0 +1,45 @@
+! properties calculation
+! ==========================
+
+Global
+  Units Angstrom Degrees
+  Overwrite Yes
+End
+
+Molecule input
+  CHARGE 0.00 
+  I.P. 7.1071340415 eV
+  HOMO -0.1612110
+  ! optimized with mp2-avdz
+  C00   6.0      1.0069999695      1.0000000000      0.0070000002 Type C5
+  O01   8.0     -0.4420000017      0.9990000129     -0.0070000002 Type O3
+  C02   6.0     -0.9810000062      0.9990000129      1.2289999723 Type C4
+  O03   8.0     -0.3659999967      0.9990000129      2.2839999199 Type O2
+  O04   8.0     -2.3220000267      0.9980000257      1.0880000591 Type O3
+  C05   6.0     -3.0239999294      0.9969999790      2.3550000191 Type C5
+  H06   1.0      1.2970000505      1.0010000467     -1.0490000248 Type H1
+  H07   1.0      1.3819999695      0.1030000001      0.5159999728 Type H1
+  H08   1.0      1.3810000420      1.8980000019      0.5180000067 Type H1
+  H09   1.0     -4.0859999657      0.9950000048      2.0869998932 Type H1
+  H10   1.0     -2.7660000324      1.8949999809      2.9330000877 Type H1
+  H11   1.0     -2.7639999390      0.0989999995      2.9330000877 Type H1
+End
+
+Run-type properties
+  Molecule      input
+  File-prefix   input
+  Basis         aVTZ
+  Aux-Basis     aVTZ   Type  MC   Spherical   Use-ISA-Basis
+  AtomAux-Basis aVTZ   Type  MC   Spherical   Use-ISA-Basis
+  ISA-Basis     set2   Min-S-exp-H = 0.2
+  Func          PBE0
+  Kernel        ALDA+CHF
+  SCFcode       nwchem
+  task          isa-pol-from-isa-A+DF
+  ! Options  Tests
+  Orient        file
+  Process       file
+  Sites         file
+End
+
+Finish
