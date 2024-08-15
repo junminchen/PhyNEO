@@ -3,6 +3,7 @@
 [![DOI: 10.1021/acs.jctc.3c01045](https://img.shields.io/badge/DOI-10.1021%2Facs.jctc.3c01045-blue)](https://pubs.acs.org/doi/10.1021/acs.jctc.3c01045)
  
 ## About PhyNEO
+**PS: The workflow is now work on DMFF-devel**
 
 **PhyNEO** (**Phy**sics-driven and **N**eural-Network **E**nhanced **O**rganic and polymer Force Field) is a force field development workflow, based on [DMFF](https://github.com/deepmodeling/DMFF). PhyNEO features a hybrid approach that combines both the physics-driven and the data-driven methods and is able to generate a bulk potential with chemical accuracy using only quantum chemistry data of very small
 clusters. Careful separations of long-/short-range interactions and nonbonding/bonding interactions are the key to the success of PhyNEO. By such a strategy, PhyNEO mitigate the limitations of pure data-driven methods in long-range interactions, thus largely increasing the data efficiency and the scalability of machine learning models.
