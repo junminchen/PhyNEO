@@ -26,6 +26,7 @@ Firstly, we need to use CAMCASP to do TD-DFT and ISA-pol calculation. See it in 
 Then, we can use our scripts to generate XML force field file with the help of Tinker tool.
 + `worflow/lr_param/poledit`: Tinker files for constructing local frame definition to 'localframe'. 
 ```bash
+./pdbxyz DMC.pdb DMC.xyz
 ./poledit DMC.xyz
 ```
 Notes: JUST PRESS 'ENTER' TO LAST QUESTIONS!!! All we need is coping the local frame definition to 'localframe' file.
