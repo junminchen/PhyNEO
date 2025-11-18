@@ -144,7 +144,7 @@ def calculate_diffusion_coefficient(u, selection, start_frame=500,
     if plot_msd:
         try:
             import scienceplots
-            plt.style.use(['science', 'no-latex'])
+            plt.style.use(['science', 'no-latex', 'nature'])
         except:
             pass
         
