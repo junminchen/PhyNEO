@@ -222,6 +222,41 @@ Dependency:
 + `worflow/md_pe/bulk.inp`: we use **packmol** to generate the initial box before run simulation
 + `worflow/md_pe/client_dmff.py`: the client calculator with PhyNEO and DMFF to produce energy, force and virial. PS: Please note that your DMFF version.
 
+### Post-processing: MSD-based Conductivity and Diffusion Coefficient Analysis
+
+Dependency:
+`MDAnalysis`: https://www.mdanalysis.org/
+`NumPy`, `SciPy`, `Matplotlib`
+
+Calculate ionic conductivity and diffusion coefficients from MD trajectories using the Mean Square Displacement (MSD) method.
+
++ `workflow/postprocess/calculate_msd_conductivity.py`: Main script to calculate:
+  - Cation diffusion coefficient (D+)
+  - Anion diffusion coefficient (D-)
+  - Ionic conductivity (σ) using Nernst-Einstein equation
+
+#### Quick Start
+
+Basic usage:
+```bash
+cd workflow/postprocess
+python calculate_msd_conductivity.py \
+    --pdb nvt_init.pdb \
+    --traj nvt_ti.pos_0.1.xyz \
+    --cation "name Li01" \
+    --anion "name P02" \
+    --conc 1.0 \
+    --plot
+```
+
+For detailed documentation, see [workflow/postprocess/README_MSD_Conductivity.md](workflow/postprocess/README_MSD_Conductivity.md)
+
+The tool uses:
+- **Einstein relation**: MSD = 6Dt to calculate diffusion coefficients
+- **Nernst-Einstein equation**: σ = (c × NA × e² / (kB × T)) × (D+ + D-) for conductivity
+
+Supports flexible atom/residue selections and generates publication-quality MSD plots.
+
 ## Support and Contribution
 
 Please visit our repository on [GitHub](https://github.com/Jeremydream/PhyNEO) for the library source code. Any issues or bugs may be reported at our issue tracker. All contributions to PhyNEO are welcomed via pull requests!
