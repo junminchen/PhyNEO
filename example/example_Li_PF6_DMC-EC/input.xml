@@ -1,0 +1,44 @@
+<simulation verbosity="low">
+   <output prefix="ti">
+	   <properties stride="100" filename="out"> [ step, time{picosecond}, temperature{kelvin}, conserved{electronvolt}, potential{electronvolt}, volume{angstrom3}, density{g/cm3}] </properties>
+           <trajectory stride='100' filename='pos' cell_units='angstrom'> positions{angstrom}</trajectory>
+   </output>
+   <total_steps> 50000 </total_steps>
+   <prng><seed> 314155 </seed></prng>
+   <ffsocket name="dmff" mode="unix">
+      <address> unix_dmff </address>
+   </ffsocket>
+   <system>
+      <initialize nbeads="1">
+	      <file mode="pdb"> init_init.pdb </file>
+         <velocities mode="thermal" units="kelvin"> 298.15 </velocities>
+      </initialize>
+      <forces>
+          <force forcefield="dmff" weight="1.0" > </force>
+      </forces>
+      <ensemble>
+         <temperature units="kelvin"> 298.15 </temperature>
+         <pressure units="bar"> 1 </pressure>
+      </ensemble>
+      <motion mode="dynamics">
+         <dynamics mode="npt">
+            <timestep units="femtosecond"> 1.0 </timestep>
+             <barostat mode="isotropic">
+                 <tau units="femtosecond"> 200 </tau>
+                 <thermostat mode="langevin">
+                      <tau units="femtosecond"> 100</tau>
+                 </thermostat>
+              </barostat>
+             <thermostat mode='multi'>
+             <thermostat mode='svr'>
+                 <tau units="femtosecond"> 50 </tau>
+               </thermostat>
+      <thermostat mode="langevin">
+        <tau units="femtosecond">500</tau>
+      </thermostat>
+     </thermostat>
+   </dynamics>
+      </motion>
+   </system>
+</simulation>
+

@@ -1,0 +1,11 @@
+/var/spool/slurmd/job4444147/slurm_script: line 7: module: command not found
+/var/spool/slurmd/job4444147/slurm_script: line 8: activate: No such file or directory
+rm: cannot remove ‘/tmp/ipi_unix_dmff_*’: No such file or directory
+Traceback (most recent call last):
+  File "/data/run01/scw6851/junmin/md/pairwiseml/ipi_md/Test_density/P4_Li_PF6_1.0_DMC-EC_70-30/./client_dmff.py", line 189, in <module>
+    driver_dmff.parse()
+  File "/data/run01/scw6851/junmin/md/pairwiseml/ipi_md/Test_density/P4_Li_PF6_1.0_DMC-EC_70-30/driver.py", line 199, in parse
+    self.exit()
+  File "/data/run01/scw6851/junmin/md/pairwiseml/ipi_md/Test_density/P4_Li_PF6_1.0_DMC-EC_70-30/driver.py", line 176, in exit
+    raise ExitSignal()
+driver.ExitSignal

@@ -1,0 +1,244 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     Packmol generated pdb file
+REMARK     Home-Page: http://m3g.iqm.unicamp.br/packmol
+CRYST1   34.430   34.510   34.440  90.00  90.00  90.00 P 1           1
+ATOM      1  F01 PF6 D   1      12.520  16.172  10.764  1.00  0.00      SYST F  
+ATOM      2  P02 PF6 D   1      13.185  15.274   9.536  1.00  0.00      SYST P  
+ATOM      3  F03 PF6 D   1      12.584  16.352   8.426  1.00  0.00      SYST F  
+ATOM      4  F04 PF6 D   1      14.583  16.162   9.644  1.00  0.00      SYST F  
+ATOM      5  F05 PF6 D   1      11.789  14.384   9.427  1.00  0.00      SYST F  
+ATOM      6  F06 PF6 D   1      13.852  14.380   8.307  1.00  0.00      SYST F  
+ATOM      7  F07 PF6 D   1      13.782  14.196  10.647  1.00  0.00      SYST F  
+ATOM      8  F01 PF6 D   2      20.126   1.874   5.984  1.00  0.00      SYST F  
+ATOM      9  P02 PF6 D   2      18.759   1.010   6.357  1.00  0.00      SYST P  
+ATOM     10  F03 PF6 D   2      18.475   2.020   7.643  1.00  0.00      SYST F  
+ATOM     11  F04 PF6 D   2      17.862   2.005   5.376  1.00  0.00      SYST F  
+ATOM     12  F05 PF6 D   2      19.652   0.014   7.338  1.00  0.00      SYST F  
+ATOM     13  F06 PF6 D   2      17.389   0.150   6.730  1.00  0.00      SYST F  
+ATOM     14  F07 PF6 D   2      19.046  -0.001   5.073  1.00  0.00      SYST F  
+ATOM     15  F01 PF6 D   3      20.273   3.930  20.786  1.00  0.00      SYST F  
+ATOM     16  P02 PF6 D   3      20.231   2.280  20.964  1.00  0.00      SYST P  
+ATOM     17  F03 PF6 D   3      20.006   2.466  22.598  1.00  0.00      SYST F  
+ATOM     18  F04 PF6 D   3      18.587   2.297  20.734  1.00  0.00      SYST F  
+ATOM     19  F05 PF6 D   3      21.874   2.261  21.194  1.00  0.00      SYST F  
+ATOM     20  F06 PF6 D   3      20.185   0.631  21.145  1.00  0.00      SYST F  
+ATOM     21  F07 PF6 D   3      20.460   2.097  19.331  1.00  0.00      SYST F  
+ATOM     22  F01 PF6 D   4      24.092  27.627  23.320  1.00  0.00      SYST F  
+ATOM     23  P02 PF6 D   4      22.843  27.403  24.390  1.00  0.00      SYST P  
+ATOM     24  F03 PF6 D   4      23.937  27.093  25.598  1.00  0.00      SYST F  
+ATOM     25  F04 PF6 D   4      22.879  29.019  24.770  1.00  0.00      SYST F  
+ATOM     26  F05 PF6 D   4      22.804  25.788  24.011  1.00  0.00      SYST F  
+ATOM     27  F06 PF6 D   4      21.596  27.182  25.463  1.00  0.00      SYST F  
+ATOM     28  F07 PF6 D   4      21.750  27.711  23.180  1.00  0.00      SYST F  
+ATOM     29  F01 PF6 D   5      28.251   0.777  22.054  1.00  0.00      SYST F  
+ATOM     30  P02 PF6 D   5      27.119   1.624  22.922  1.00  0.00      SYST P  
+ATOM     31  F03 PF6 D   5      26.393   2.099  21.507  1.00  0.00      SYST F  
+ATOM     32  F04 PF6 D   5      26.148   0.279  22.969  1.00  0.00      SYST F  
+ATOM     33  F05 PF6 D   5      28.088   2.970  22.877  1.00  0.00      SYST F  
+ATOM     34  F06 PF6 D   5      25.983   2.469  23.788  1.00  0.00      SYST F  
+ATOM     35  F07 PF6 D   5      27.847   1.150  24.336  1.00  0.00      SYST F  
+ATOM     36  F01 PF6 D   6      12.447  20.566  21.749  1.00  0.00      SYST F  
+ATOM     37  P02 PF6 D   6      11.551  21.715  22.543  1.00  0.00      SYST P  
+ATOM     38  F03 PF6 D   6      12.474  21.489  23.905  1.00  0.00      SYST F  
+ATOM     39  F04 PF6 D   6      12.602  22.891  22.026  1.00  0.00      SYST F  
+ATOM     40  F05 PF6 D   6      10.499  20.542  23.062  1.00  0.00      SYST F  
+ATOM     41  F06 PF6 D   6      10.660  22.868  23.339  1.00  0.00      SYST F  
+ATOM     42  F07 PF6 D   6      10.628  21.938  21.183  1.00  0.00      SYST F  
+ATOM     43  F01 PF6 D   7       8.547  28.102  12.480  1.00  0.00      SYST F  
+ATOM     44  P02 PF6 D   7       7.681  26.838  13.117  1.00  0.00      SYST P  
+ATOM     45  F03 PF6 D   7       7.069  27.849  14.283  1.00  0.00      SYST F  
+ATOM     46  F04 PF6 D   7       6.405  27.210  12.123  1.00  0.00      SYST F  
+ATOM     47  F05 PF6 D   7       8.955  26.464  14.112  1.00  0.00      SYST F  
+ATOM     48  F06 PF6 D   7       6.811  25.577  13.755  1.00  0.00      SYST F  
+ATOM     49  F07 PF6 D   7       8.296  25.828  11.954  1.00  0.00      SYST F  
+ATOM     50  F01 PF6 D   8      11.555  10.983  22.217  1.00  0.00      SYST F  
+ATOM     51  P02 PF6 D   8      10.849   9.670  21.488  1.00  0.00      SYST P  
+ATOM     52  F03 PF6 D   8       9.472   9.919  22.382  1.00  0.00      SYST F  
+ATOM     53  F04 PF6 D   8      10.252  10.654  20.293  1.00  0.00      SYST F  
+ATOM     54  F05 PF6 D   8      11.445   8.684  22.682  1.00  0.00      SYST F  
+ATOM     55  F06 PF6 D   8      10.138   8.359  20.759  1.00  0.00      SYST F  
+ATOM     56  F07 PF6 D   8      12.227   9.421  20.598  1.00  0.00      SYST F  
+ATOM     57  F01 PF6 D   9      17.616   2.368  14.828  1.00  0.00      SYST F  
+ATOM     58  P02 PF6 D   9      17.342   1.172  13.710  1.00  0.00      SYST P  
+ATOM     59  F03 PF6 D   9      18.576   1.768  12.774  1.00  0.00      SYST F  
+ATOM     60  F04 PF6 D   9      18.417   0.186  14.502  1.00  0.00      SYST F  
+ATOM     61  F05 PF6 D   9      16.266   2.156  12.918  1.00  0.00      SYST F  
+ATOM     62  F06 PF6 D   9      17.072  -0.025  12.593  1.00  0.00      SYST F  
+ATOM     63  F07 PF6 D   9      16.106   0.580  14.646  1.00  0.00      SYST F  
+ATOM     64  F01 PF6 D  10      22.151  22.326  30.001  1.00  0.00      SYST F  
+ATOM     65  P02 PF6 D  10      21.544  23.323  28.822  1.00  0.00      SYST P  
+ATOM     66  F03 PF6 D  10      21.166  24.454  29.977  1.00  0.00      SYST F  
+ATOM     67  F04 PF6 D  10      23.042  24.013  28.634  1.00  0.00      SYST F  
+ATOM     68  F05 PF6 D  10      20.045  22.635  29.007  1.00  0.00      SYST F  
+ATOM     69  F06 PF6 D  10      20.939  24.324  27.644  1.00  0.00      SYST F  
+ATOM     70  F07 PF6 D  10      21.919  22.190  27.669  1.00  0.00      SYST F  
+ATOM     71  F01 PF6 D  11      14.472   1.058  27.639  1.00  0.00      SYST F  
+ATOM     72  P02 PF6 D  11      12.844   1.162  27.943  1.00  0.00      SYST P  
+ATOM     73  F03 PF6 D  11      12.558  -0.002  26.795  1.00  0.00      SYST F  
+ATOM     74  F04 PF6 D  11      12.986  -0.017  29.103  1.00  0.00      SYST F  
+ATOM     75  F05 PF6 D  11      12.699   2.341  26.785  1.00  0.00      SYST F  
+ATOM     76  F06 PF6 D  11      11.215   1.261  28.249  1.00  0.00      SYST F  
+ATOM     77  F07 PF6 D  11      13.131   2.327  29.089  1.00  0.00      SYST F  
+ATOM     78  F01 PF6 D  12      20.530   6.098  27.869  1.00  0.00      SYST F  
+ATOM     79  P02 PF6 D  12      19.419   6.714  28.937  1.00  0.00      SYST P  
+ATOM     80  F03 PF6 D  12      18.191   6.057  28.034  1.00  0.00      SYST F  
+ATOM     81  F04 PF6 D  12      19.507   5.320  29.834  1.00  0.00      SYST F  
+ATOM     82  F05 PF6 D  12      19.329   8.109  28.044  1.00  0.00      SYST F  
+ATOM     83  F06 PF6 D  12      18.305   7.326  30.006  1.00  0.00      SYST F  
+ATOM     84  F07 PF6 D  12      20.647   7.373  29.838  1.00  0.00      SYST F  
+ATOM     85  F01 PF6 D  13      16.733   8.745   0.820  1.00  0.00      SYST F  
+ATOM     86  P02 PF6 D  13      17.972   9.654   1.447  1.00  0.00      SYST P  
+ATOM     87  F03 PF6 D  13      18.724   8.267   1.963  1.00  0.00      SYST F  
+ATOM     88  F04 PF6 D  13      18.778   9.554  -0.000  1.00  0.00      SYST F  
+ATOM     89  F05 PF6 D  13      17.168   9.756   2.895  1.00  0.00      SYST F  
+ATOM     90  F06 PF6 D  13      19.214  10.560   2.072  1.00  0.00      SYST F  
+ATOM     91  F07 PF6 D  13      17.218  11.040   0.934  1.00  0.00      SYST F  
+ATOM     92  F01 PF6 D  14      19.909  18.194  21.432  1.00  0.00      SYST F  
+ATOM     93  P02 PF6 D  14      18.395  18.836  21.652  1.00  0.00      SYST P  
+ATOM     94  F03 PF6 D  14      18.885  19.490  23.097  1.00  0.00      SYST F  
+ATOM     95  F04 PF6 D  14      18.866  20.219  20.865  1.00  0.00      SYST F  
+ATOM     96  F05 PF6 D  14      17.921  17.454  22.439  1.00  0.00      SYST F  
+ATOM     97  F06 PF6 D  14      16.882  19.482  21.874  1.00  0.00      SYST F  
+ATOM     98  F07 PF6 D  14      17.905  18.180  20.209  1.00  0.00      SYST F  
+ATOM     99  F01 PF6 D  15      12.411   3.770  25.139  1.00  0.00      SYST F  
+ATOM    100  P02 PF6 D  15      11.884   5.342  25.204  1.00  0.00      SYST P  
+ATOM    101  F03 PF6 D  15      11.319   5.213  23.648  1.00  0.00      SYST F  
+ATOM    102  F04 PF6 D  15      10.415   4.825  25.781  1.00  0.00      SYST F  
+ATOM    103  F05 PF6 D  15      13.350   5.861  24.628  1.00  0.00      SYST F  
+ATOM    104  F06 PF6 D  15      11.351   6.913  25.267  1.00  0.00      SYST F  
+ATOM    105  F07 PF6 D  15      12.451   5.470  26.758  1.00  0.00      SYST F  
+ATOM    106  F01 PF6 D  16       9.025  23.340  21.735  1.00  0.00      SYST F  
+ATOM    107  P02 PF6 D  16       7.696  23.591  22.697  1.00  0.00      SYST P  
+ATOM    108  F03 PF6 D  16       6.754  23.772  21.343  1.00  0.00      SYST F  
+ATOM    109  F04 PF6 D  16       7.387  21.960  22.695  1.00  0.00      SYST F  
+ATOM    110  F05 PF6 D  16       8.004  25.221  22.701  1.00  0.00      SYST F  
+ATOM    111  F06 PF6 D  16       6.365  23.838  23.657  1.00  0.00      SYST F  
+ATOM    112  F07 PF6 D  16       8.640  23.412  24.050  1.00  0.00      SYST F  
+ATOM    113  F01 PF6 D  17       9.650  24.496  16.948  1.00  0.00      SYST F  
+ATOM    114  P02 PF6 D  17      10.307  22.972  16.915  1.00  0.00      SYST P  
+ATOM    115  F03 PF6 D  17       9.743  22.700  18.453  1.00  0.00      SYST F  
+ATOM    116  F04 PF6 D  17       8.891  22.375  16.289  1.00  0.00      SYST F  
+ATOM    117  F05 PF6 D  17      11.724  23.567  17.541  1.00  0.00      SYST F  
+ATOM    118  F06 PF6 D  17      10.960  21.447  16.885  1.00  0.00      SYST F  
+ATOM    119  F07 PF6 D  17      10.873  23.247  15.380  1.00  0.00      SYST F  
+CONECT    1    2
+CONECT    2    1    3    4    5    6    7
+CONECT    3    2
+CONECT    4    2
+CONECT    5    2
+CONECT    6    2
+CONECT    7    2
+CONECT    8    9
+CONECT    9    8   10   11   12   13   14
+CONECT   10    9
+CONECT   11    9
+CONECT   12    9
+CONECT   13    9
+CONECT   14    9
+CONECT   15   16
+CONECT   16   15   17   18   19   20   21
+CONECT   17   16
+CONECT   18   16
+CONECT   19   16
+CONECT   20   16
+CONECT   21   16
+CONECT   22   23
+CONECT   23   22   24   25   26   27   28
+CONECT   24   23
+CONECT   25   23
+CONECT   26   23
+CONECT   27   23
+CONECT   28   23
+CONECT   29   30
+CONECT   30   29   31   32   33   34   35
+CONECT   31   30
+CONECT   32   30
+CONECT   33   30
+CONECT   34   30
+CONECT   35   30
+CONECT   36   37
+CONECT   37   36   38   39   40   41   42
+CONECT   38   37
+CONECT   39   37
+CONECT   40   37
+CONECT   41   37
+CONECT   42   37
+CONECT   43   44
+CONECT   44   43   45   46   47   48   49
+CONECT   45   44
+CONECT   46   44
+CONECT   47   44
+CONECT   48   44
+CONECT   49   44
+CONECT   50   51
+CONECT   51   50   52   53   54   55   56
+CONECT   52   51
+CONECT   53   51
+CONECT   54   51
+CONECT   55   51
+CONECT   56   51
+CONECT   57   58
+CONECT   58   57   59   60   61   62   63
+CONECT   59   58
+CONECT   60   58
+CONECT   61   58
+CONECT   62   58
+CONECT   63   58
+CONECT   64   65
+CONECT   65   64   66   67   68   69   70
+CONECT   66   65
+CONECT   67   65
+CONECT   68   65
+CONECT   69   65
+CONECT   70   65
+CONECT   71   72
+CONECT   72   71   73   74   75   76   77
+CONECT   73   72
+CONECT   74   72
+CONECT   75   72
+CONECT   76   72
+CONECT   77   72
+CONECT   78   79
+CONECT   79   78   80   81   82   83   84
+CONECT   80   79
+CONECT   81   79
+CONECT   82   79
+CONECT   83   79
+CONECT   84   79
+CONECT   85   86
+CONECT   86   85   87   88   89   90   91
+CONECT   87   86
+CONECT   88   86
+CONECT   89   86
+CONECT   90   86
+CONECT   91   86
+CONECT   92   93
+CONECT   93   92   94   95   96   97   98
+CONECT   94   93
+CONECT   95   93
+CONECT   96   93
+CONECT   97   93
+CONECT   98   93
+CONECT   99  100
+CONECT  100   99  101  102  103  104  105
+CONECT  101  100
+CONECT  102  100
+CONECT  103  100
+CONECT  104  100
+CONECT  105  100
+CONECT  106  107
+CONECT  107  106  108  109  110  111  112
+CONECT  108  107
+CONECT  109  107
+CONECT  110  107
+CONECT  111  107
+CONECT  112  107
+CONECT  113  114
+CONECT  114  113  115  116  117  118  119
+CONECT  115  114
+CONECT  116  114
+CONECT  117  114
+CONECT  118  114
+CONECT  119  114
+END
