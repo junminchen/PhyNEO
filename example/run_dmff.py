@@ -86,7 +86,8 @@ if __name__ == '__main__':
 
     # 实例化并计算
     # calc = DMFFEnergyCalculator('peo.xml', 'peo3.pdb')
-    calc = DMFFEnergyCalculator('EC.xml', 'EC.pdb')
+    # calc = DMFFEnergyCalculator('EC.xml', 'EC.pdb')
+    calc = DMFFEnergyCalculator('../EC_extracted.xml', 'EC.pdb')
 
     # calc = DMFFEnergyCalculator('peo.xml', 'init.pdb')
 

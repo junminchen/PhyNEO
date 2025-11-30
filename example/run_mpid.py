@@ -3,7 +3,7 @@ import sys
 from openmm import *
 from openmm.app import *
 from openmm.unit import *
-import mpidplugin
+# import mpidplugin
 
 
 def forcegroupify(system):
@@ -27,7 +27,9 @@ if __name__ == '__main__':
     # ff_file = sys.argv[2]
 
     print("MM Reference Energy:")
-    ff = ForceField('caff_5_mpid_slater_bond.xml')
+    # ff = ForceField('caff_5_mpid_slater_bond.xml')
+    # ff = ForceField('../EC_Li_mpid.xml')
+    ff = ForceField('modify_xml/mpid_EC_DMC_extracted.xml')
 
     # ff = ForceField('opls_solvent.xml','opls_salt.xml')
     # MM Reference Energy:
