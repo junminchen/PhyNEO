@@ -1,68 +1,38 @@
 #!/usr/bin/env python
 
 import os
-import numpy as np
-import pandas as pd
-import time
-import scipy
+import glob
+import json
+from functools import partial
+from typing import Tuple, Dict, List, Any
 
-import sys
-import time
 import numpy as np
 np.seterr(divide='ignore', invalid='ignore')
-import pandas as pd
-# from scipy.spatial import distance_matrix
 
-from jax import jit
 import jax
 import jax.numpy as jnp
+from jax import jit, value_and_grad, vmap
+import jax.nn.initializers
+from jax import config
+
 from flax import linen as nn
 from flax.training import train_state
 import optax
-# sys.path.append('/personal/workflow/qst_sr_fitting_wt_ml/0_train_hcp/DMFFsrdmp_trainable')
-# sys.path.append('./DMFFsrdmp')
-# sys.path.append('./DMFFsrdmp')
+
 from dmff.api import Hamiltonian
+from dmff.common import nblist
 from dmff.utils import jit_condition, regularize_pairs, pair_buffer_scales
-from dmff.admp.pairwise import distribute_scalar, distribute_v3
+from dmff.admp.pairwise import distribute_scalar
 from dmff.admp.spatial import pbc_shift
-from openmm.app import PDBFile
-import pickle 
 
 import openmm
 from openmm import *
 from openmm.app import *
 from openmm.unit import *
+
 import pickle
-
-from dmff.api import Hamiltonian
-from dmff.common import nblist
-import jax
-from jax import jit, value_and_grad, vmap
-import jax.numpy as jnp
-# import jax_dataloader as jdl
-
-from jax import config
-# config.update("jax_enable_x64", True)
-# config.update("jax_debug_nans", False)  # Enable NaN checking
-
-from functools import partial
-import jax.nn.initializers
-import pickle
-from flax import linen as nn
-
 import MDAnalysis as mda
-
-import jax
-import jax.numpy as jnp
-from ase.io import read
-
 from ase.io import read, write
-
-from typing import Tuple, Dict, List, Any
-import json
-import glob
-import mdtraj as md 
 
 
 # Return data needed for fitting
@@ -151,118 +121,6 @@ def get_environment_atoms(pairs, topo_nblist, topo_mask):
 
     return j_neighbors, k_neighbors, valid_mask_j, valid_mask_k
 
-# class MoleculeDataset(jdl.Dataset):
-#     def __init__(self, ase_structures):
-#         self.max_atoms = max(len(structure) for structure in ase_structures)
-#         # self.max_atoms = 50
-#         z_index = [1, 3, 5, 6, 7, 8, 9, 11, 15, 16]
-
-#         self.positions = []
-#         self.cells = []
-#         self.atomic_numbers = []
-#         self.energies = []
-#         self.sr_energies = []
-#         # self.lr_energies = []
-#         self.masks = []
-#         self.pairs = []
-#         self.molID = []
-#         self.elem_indices = []
-#         self.atype_indices = []
-#         self.topo_mask = []
-#         self.topo_nblist = []
-#         self.distances = []
-#         self.features = []
-#         self.dr_norm = []
-#         self.buffer_scales = []
-#         for structure in ase_structures:
-#             n_atoms = len(structure)
-            
-#             pos = jnp.pad(structure.get_positions(), 
-#                           ((0, self.max_atoms - n_atoms), (0, 0)), 
-#                           mode='constant', constant_values=0)
-#             self.positions.append(pos)
-            
-#             self.cells.append(jnp.array(structure.get_cell()))
-            
-#             atomic_nums = jnp.pad(structure.get_atomic_numbers(), 
-#                                   (0, self.max_atoms - n_atoms), 
-#                                   mode='constant', constant_values=0)
-#             self.atomic_numbers.append(atomic_nums)
-            
-#             self.energies.append(jnp.array(structure.get_potential_energy()))
-#             self.sr_energies.append(jnp.array(structure.info['sr_energy']))
-#             # self.lr_energies.append(jnp.array(structure.info['lr_energy']))
-#             self.distances.append(jnp.array(structure.info['distance']))
-            
-#             mask = jnp.pad(jnp.ones(n_atoms), 
-#                            (0, self.max_atoms - n_atoms), 
-#                            mode='constant', constant_values=0)
-#             self.masks.append(mask)
-
-#             mol_ID = jnp.pad(structure.get_array('molID'), 
-#                                   (0, self.max_atoms - n_atoms), 
-#                                   mode='constant', constant_values=10000)   
-                     
-#             self.molID.append(mol_ID)
-#             self.pairs.append(structure.info['pairs'])
-#             self.topo_mask.append(structure.info['topo_mask'])
-#             self.topo_nblist.append(structure.info['topo_nblist'])
-            
-#             elems = jnp.pad(structure.get_atomic_numbers(), 
-#                           (0, self.max_atoms - n_atoms), 
-#                           mode='constant', constant_values=0)
-
-#             self.elem_indices.append(elems)
-
-#             atypes = jnp.pad(jnp.array([z_index.index(i) for i in structure.get_atomic_numbers()]), 
-#                           (0, self.max_atoms - n_atoms), 
-#                           mode='constant', constant_values=10000)            
-#             self.atype_indices.append(atypes)
-#             # self.features.append(structure.info['features'])
-#             # self.dr_norm.append(structure.info['dr_norm'])
-#             # self.buffer_scales.append(structure.info['buffer_scales'])
-
-#         self.positions = jnp.array(self.positions)
-#         self.cells = jnp.array(self.cells)
-#         self.atomic_numbers = jnp.array(self.atomic_numbers)
-#         self.energies = jnp.array(self.energies)
-#         self.sr_energies = jnp.array(self.sr_energies)
-#         # self.lr_energies = jnp.array(self.lr_energies)
-#         self.masks = jnp.array(self.masks)
-#         self.molID = jnp.array(self.molID)
-#         self.pairs = jnp.array(self.pairs)
-#         self.elem_indices = jnp.array(self.elem_indices)
-#         self.atype_indices = jnp.array(self.atype_indices)
-#         self.topo_mask = jnp.array(self.topo_mask)
-#         self.topo_nblist = jnp.array(self.topo_nblist)
-#         self.distances = jnp.array(self.distances)
-#         self.features = jnp.array(self.features)
-#         self.dr_norm = jnp.array(self.dr_norm)
-#         self.buffer_scales = jnp.array(self.buffer_scales)
-
-#     def __len__(self):
-#         return len(self.energies)
-    
-#     def __getitem__(self, idx):
-#         return {
-#             'pos': self.positions[idx],
-#             'box': self.cells[idx],
-#             'atomic_numbers': self.atomic_numbers[idx],
-#             'energy': self.energies[idx],
-#             'sr_energy': self.sr_energies[idx],
-#             # 'lr_energy': self.lr_energies[idx],
-#             'mask': self.masks[idx],
-#             'molID': self.molID[idx],
-#             'pairs': self.pairs[idx], 
-#             'elems': self.elem_indices[idx], 
-#             'atypes': self.atype_indices[idx],
-#             'distance': self.distances[idx], 
-#             'topo_mask': self.topo_mask[idx],
-#             'topo_nblist': self.topo_nblist[idx],
-#             # 'features': self.features[idx],
-#             # 'dr_norm': self.dr_norm[idx],
-#             # 'buffer_scales': self.buffer_scales[idx]
-#         }
 
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -410,15 +268,19 @@ class EAPNNForce(nn.Module):
 
     def __call__(self, pos, box, pairs, topo_nblist, topo_mask, mol_ID, atype_indices):
         features, dr_norm, buffer_scales = self.feature_extractor(pos, box, pairs, topo_nblist, topo_mask, mol_ID, atype_indices)
-        atomic_energies = self.neural_network(features, dr_norm, buffer_scales)
-        return jnp.sum(atomic_energies)
+        pair_energies = self.neural_network(features, dr_norm, buffer_scales)
+        # Apply mask to ensure padded "ghost" pairs contribute exactly 0.0 to the total energy
+        masked_energies = pair_energies * buffer_scales
+        return jnp.sum(masked_energies)
 
     def get_features(self, pos, box, pairs, topo_nblist, topo_mask, mol_ID, atype_indices):
         return self.feature_extractor(pos, box, pairs, topo_nblist, topo_mask, mol_ID, atype_indices)
 
     def get_energy(self, features, dr_norm, buffer_scales):
-        atomic_energies = self.neural_network(features, dr_norm, buffer_scales)
-        return jnp.sum(atomic_energies)
+        pair_energies = self.neural_network(features, dr_norm, buffer_scales)
+        # Apply mask to ensure padded "ghost" pairs contribute exactly 0.0 to the total energy
+        masked_energies = pair_energies * buffer_scales
+        return jnp.sum(masked_energies)
 
 class FeatureExtractor(nn.Module):
     n_atoms: int
@@ -526,7 +388,8 @@ class FeatureExtractor(nn.Module):
         if self.use_pbc:  # 仅在启用PBC时进行周期性校正
             box_inv = jnp.linalg.inv(box)
             dr = pbc_shift(dr, box, box_inv)
-        dr_norm = jnp.linalg.norm(dr + 1e-10, axis=2)  # [n_atoms, max_neighbors]，加小量避免除零
+        # Safe distance calculation: add epsilon inside sqrt for gradient stability
+        dr_norm = jnp.sqrt(jnp.sum(dr ** 2, axis=2) + 1e-10)  # [n_atoms, max_neighbors]
         
         # 计算截断函数（结合拓扑掩码过滤无效邻居）
         f_cut = cutoff_cosine(dr_norm, self.rc) * topo_mask  # [n_atoms, max_neighbors]
@@ -649,9 +512,10 @@ class FeatureExtractor(nn.Module):
         rj_X = rj_env - pos[pairs[:, 0]][:, None, :]  # 环境原子相对i的位置
         if self.use_pbc:
             rj_X = pbc_shift(rj_X, box, box_inv)  # 应用PBC校正
-        norm_rj_X = jnp.linalg.norm(rj_X, axis=2, keepdims=True) + 1e-10  # 避免除零
+        # Safe norm: add epsilon inside sqrt for gradient stability
+        norm_rj_X = jnp.sqrt(jnp.sum(rj_X ** 2, axis=2, keepdims=True) + 1e-10)
         rj_X_norm = rj_X / norm_rj_X  # 单位向量
-        rij_unit = rij / (dr_norm[:, None] + 1e-10)  # 原子对单位向量
+        rij_unit = rij / jnp.sqrt(jnp.sum(rij ** 2, axis=1, keepdims=True) + 1e-10)  # 原子对单位向量
         cos_gamma_i = jnp.einsum('aji,ai->aj', rj_X_norm, rij_unit) * j_mask  # 点积计算余弦值
 
         # 计算j原子的环境角度特征（cos(gamma_j)）
@@ -660,7 +524,8 @@ class FeatureExtractor(nn.Module):
         rk_X = rk_env - pos[pairs[:, 1]][:, None, :]  # 环境原子相对j的位置
         if self.use_pbc:
             rk_X = pbc_shift(rk_X, box, box_inv)  # 应用PBC校正
-        norm_rk_X = jnp.linalg.norm(rk_X, axis=2, keepdims=True) + 1e-10
+        # Safe norm: add epsilon inside sqrt for gradient stability
+        norm_rk_X = jnp.sqrt(jnp.sum(rk_X ** 2, axis=2, keepdims=True) + 1e-10)
         rk_X_norm = rk_X / norm_rk_X
         rji_unit = -rij_unit  # 反向单位向量
         cos_gamma_j = jnp.einsum('aji,ai->aj', rk_X_norm, rji_unit) * k_mask
@@ -766,8 +631,8 @@ class NeuralNetwork(nn.Module):
             x = nn.LayerNorm()(x)
             x = nn.relu(x)
         out_AB = nn.Dense(1)(x)
-        
-        return jnp.sum(out_AB * buffer_nblist_inter[:,None]) 
+        # Return per-pair energies without summing; mask is applied in EAPNNForce.__call__
+        return out_AB.squeeze(-1) 
     
 if __name__ == "__main__":
     rc = 6.0
@@ -1019,43 +884,15 @@ if __name__ == "__main__":
                 batch['molID'],
                 batch['atypes'],
             )            
-            true_delta = batch['energy']  # 真实的力场-DFT差值
+            true_delta = batch['energy']
             
-            # Huber损失参数（delta=10，可根据你的差值标准差调整）
-            error = pred_delta - true_delta
-            huber_loss = jnp.where(
-                jnp.abs(error) <= 10,
-                0.5 * jnp.square(error),  # 小误差：MSE
-                10 * (jnp.abs(error) - 0.5 * 10)  # 大误差：MAE
-            )
-            return jnp.mean(huber_loss)
+            # Use optax.huber_loss for better stability (delta=10.0)
+            return jnp.mean(optax.huber_loss(pred_delta, true_delta, delta=10.0))
         
         grad_fn = jax.value_and_grad(loss_fn)
         loss, grads = grad_fn(state.params)
         state = state.apply_gradients(grads=grads)
         return state, loss
-
-    # @jax.jit
-    # def train_step(state, batch):
-    #     def loss_fn(params):
-    #         pred_energy = jax.vmap(state.apply_fn, in_axes=(None, 0, 0, 0, 0, 0, 0, 0))(
-    #             params, 
-    #             batch['pos'], 
-    #             batch['box'], 
-    #             batch['pairs'], 
-    #             batch['topo_nblist'],
-    #             batch['topo_mask'],
-    #             batch['molID'],
-    #             batch['atypes'],
-    #         )
-    #         # loss = jnp.mean(jnp.abs(pred_energy - batch['energy']))
-    #         loss = jnp.mean((pred_energy - batch['energy'])**2)
-    #         return loss
-
-    #     grad_fn = jax.value_and_grad(loss_fn)
-    #     loss, grads = grad_fn(state.params)
-    #     state = state.apply_gradients(grads=grads)
-    #     return state, loss
 
     key = jax.random.PRNGKey(0)
     model = EAPNNForce(
@@ -1070,13 +907,6 @@ if __name__ == "__main__":
     )
 
     learning_rate = 1e-3
-
-    # # 使用学习率衰减策略
-    # learning_rate = optax.exponential_decay(
-    #     init_value=1e-3,  # 初始学习率降至5e-4
-    #     transition_steps=100,  # 每100个epoch衰减一次
-    #     decay_rate=0.9  # 衰减系数
-    # )
 
     state = create_train_state(model, learning_rate, key)
 
