@@ -191,18 +191,10 @@ def add_prefix_to_types_classes_and_names(xml_path, output_path, prefix="Z"):
 
 
 if __name__ == "__main__":
-    # convert_forcefield("peo.xml", "converted_forcefield.xml")
-    # convert_forcefield("EC.xml", "converted_forcefield.xml")
-    # convert_forcefield("EC.xml", "converted_forcefield.xml")
-    # convert_forcefield("output.1.ABC.solvents.pospenalty.25.Aex.salts.xml", "converted_forcefield.xml")
-    convert_forcefield("output.2.ABC.solvents.pospenalty.25.LiNa.AexAes.xml", "converted_forcefield.xml")
+    input_file = "phyneo_ecl.xml" 
+    output_file = "phyneo_ecl_z.xml"  
+    convert_forcefield(input_file, output_file)
 
-    # input_file = "../opls_bond/opls_salt.xml"  # 替换为你的输入文件路径
-    # output_file = "../opls_bond/opls_salt_Z.xml"  # 替换为你的输出文件路径
-    # add_prefix_to_types_classes_and_names(input_file, output_file, prefix="Z")
-    # input_file = "../opls_bond/opls_solvent.xml"  # 替换为你的输入文件路径
-    # output_file = "../opls_bond/opls_solvent_Z.xml"  # 替换为你的输出文件路径
-    # add_prefix_to_types_classes_and_names(input_file, output_file, prefix="Z")
 
 
 

@@ -24,33 +24,18 @@ if __name__ == '__main__':
     pdb_file = 'peo3.pdb'
     pdb_file = 'EC.pdb'
     # pdb_file = sys.argv[1]
-    # ff_file = sys.argv[2]
+    ff_file = sys.argv[1]
 
     print("MM Reference Energy:")
-    # ff = ForceField('caff_5_mpid_slater_bond.xml')
+
+    ff = ForceField(ff_file)
     # ff = ForceField('../EC_Li_mpid.xml')
-    ff = ForceField('modify_xml/mpid_EC_DMC_extracted.xml')
-
-    # ff = ForceField('opls_solvent.xml','opls_salt.xml')
-    # MM Reference Energy:
-    # TotalEnergy 12038.654780969031 kJ/mol
-    # HarmonicBondForce 6805.629965834548 kJ/mol
-    # PeriodicTorsionForce 10426.308753081981 kJ/mol
-    # NonbondedForce -26223.99837035884 kJ/mol
-    # CustomBondForce 1716.0950505012083 kJ/mol
-    # CustomAngleForce 0.0 kJ/mol
-    # CustomTorsionForce 0.0 kJ/mol
-    # CustomTorsionForce 0.0 kJ/mol
-    # CustomTorsionForce 0.0 kJ/mol
-    # CMMotionRemover 0.0 kJ/mol
-    # HarmonicAngleForce 19314.619381910135 kJ/mol
-
-    # ff = ForceField('merged_forcefield.xml')
+    # ff = ForceField('phyneo_ecl_z_b.xml')
 
     pdb = PDBFile(pdb_file)
     rc = 8
     # system = ff.createSystem(pdb.topology, nonbondedCutoff=rc*angstrom, nonbondedMethod=PME, defaultTholeWidth=8)
-    system = ff.createSystem(pdb.topology, nonbondedCutoff=rc*angstrom, nonbondedMethod=PME)
+    system = ff.createSystem(pdb.topology, nonbondedCutoff=rc*angstrom, nonbondedMethod=NoCutoff)
 
     # system = ff.createSystem(pdb.topology, nonbondedCutoff=rc*angstrom, nonbondedMethod=PME, constraints=HBonds)
     # system = ff.createSystem(pdb.topology, nonbondedCutoff=rc*unit.angstrom, nonbondedMethod=app.CutoffPeriodic)
