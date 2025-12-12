@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <Residues>
+    <Residue name="LiA">
+      <Atom name="Li01" type="99001" class="99001"/>
+    </Residue>
+    <Residue name="ECA">
+      <Atom name="O00" type="19"/>
+      <Atom name="C01" type="21"/>
+      <Atom name="O02" type="20"/>
+      <Atom name="C03" type="22"/>
+      <Atom name="C04" type="22"/>
+      <Atom name="O05" type="20"/>
+      <Atom name="H06" type="18"/>
+      <Atom name="H07" type="18"/>
+      <Atom name="H08" type="18"/>
+      <Atom name="H09" type="18"/>
+      <Bond from="0" to="1"/>
+      <Bond from="1" to="2"/>
+      <Bond from="2" to="3"/>
+      <Bond from="3" to="4"/>
+      <Bond from="1" to="5"/>
+      <Bond from="3" to="6"/>
+      <Bond from="3" to="7"/>
+      <Bond from="4" to="8"/>
+      <Bond from="4" to="9"/>
+      <Bond from="4" to="5"/>
+    </Residue>
+  </Residues>
+  <AtomTypes>
+    <Type name="99001" class="99001" element="Li" mass="6.941000"/>
+    <Type name="21" class="21" element="C" mass="12.011000"/>
+    <Type name="20" class="20" element="O" mass="15.999000"/>
+    <Type name="18" class="18" element="H" mass="1.008000"/>
+    <Type name="22" class="22" element="C" mass="12.011000"/>
+    <Type name="19" class="19" element="O" mass="15.999000"/>
+  </AtomTypes>
+  <CustomBondForce energy="kb*(r-b0)^2">
+    <PerBondParameter name="b0"/>
+    <PerBondParameter name="kb"/>
+  </CustomBondForce>
+  <HarmonicAngleForce>
+    <Angle class1="19" class2="21" class3="20" angle="2.153736" k="694.544000"/>
+    <Angle class1="21" class2="20" class3="22" angle="2.040290" k="694.544000"/>
+    <Angle class1="20" class2="22" class3="22" angle="1.911136" k="418.400000"/>
+    <Angle class1="20" class2="22" class3="18" angle="1.911136" k="292.880000"/>
+    <Angle class1="22" class2="22" class3="18" angle="1.932079" k="313.800000"/>
+    <Angle class1="18" class2="22" class3="18" angle="1.881465" k="276.144000"/>
+    <Angle class1="20" class2="21" class3="20" angle="2.062630" k="584.923200"/>
+  </HarmonicAngleForce>
+  <CustomAngleForce energy="k0*(theta-theta_0)^2">
+    <PerAngleParameter name="theta_0"/>
+    <PerAngleParameter name="k0"/>
+  </CustomAngleForce>
+  <CustomTorsionForce energy="kphi*(1+cos(n*theta-phi0))">
+    <PerTorsionParameter name="phi0"/>
+    <PerTorsionParameter name="kphi"/>
+    <PerTorsionParameter name="n"/>
+  </CustomTorsionForce>
+  <CustomTorsionForce energy="C0-C1*cos(theta)+C2*(cos(theta))^2-C3*(cos(theta))^3+C4*(cos(theta))^4-C5*(cos(theta))^5">
+    <PerTorsionParameter name="C0"/>
+    <PerTorsionParameter name="C1"/>
+    <PerTorsionParameter name="C2"/>
+    <PerTorsionParameter name="C3"/>
+    <PerTorsionParameter name="C4"/>
+    <PerTorsionParameter name="C5"/>
+  </CustomTorsionForce>
+  <CustomTorsionForce energy="0.5*(C1*(1+cos(theta))+C2*(1-cos(2*theta))+C3*(1+cos(3*theta))+C4*(1-cos(4*theta)))">
+    <PerTorsionParameter name="C1"/>
+    <PerTorsionParameter name="C2"/>
+    <PerTorsionParameter name="C3"/>
+    <PerTorsionParameter name="C4"/>
+  </CustomTorsionForce>
+  <HarmonicBondForce>
+    <Bond class1="21" class2="19" length="0.122900" k="476976.000000"/>
+    <Bond class1="20" class2="21" length="0.132700" k="179075.200000"/>
+    <Bond class1="22" class2="20" length="0.141000" k="267776.000000"/>
+    <Bond class1="22" class2="22" length="0.152900" k="224262.400000"/>
+    <Bond class1="18" class2="22" length="0.109000" k="284512.000000"/>
+  </HarmonicBondForce>
+  <PeriodicTorsionForce>
+    <Proper class1="22" class2="22" class3="20" class4="21" k1="-2.552240" k2="-0.263592" k3="0.882824" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="22" class2="20" class3="21" class4="19" k1="0.000000" k2="10.719408" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="22" class2="20" class3="21" class4="20" k1="9.767548" k2="10.719408" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="18" class2="22" class3="22" class4="20" k1="0.000000" k2="0.000000" k3="0.979056" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="18" class2="22" class3="20" class4="21" k1="0.000000" k2="0.000000" k3="0.414216" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="18" class2="22" class3="22" class4="18" k1="0.000000" k2="0.000000" k3="0.627600" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Proper class1="20" class2="22" class3="22" class4="20" k1="-1.150600" k2="0.000000" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Improper class1="22" class2="20" class3="22" class4="18" k1="0.000000" k2="0.000000" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Improper class1="22" class2="18" class3="22" class4="20" k1="0.000000" k2="0.000000" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+    <Improper class1="21" class2="19" class3="20" class4="20" k1="0.000000" k2="43.932000" k3="0.000000" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
+  </PeriodicTorsionForce>
+  <MPIDForce coulomb14scale="0">
+    <Multipole type="99001" kz="" kx="" c0="1.00000000" dX="0.00000000" dY="0.00000000" dZ="0.00000000" qXX="0.00000000" qXY="0.00000000" qYY="0.00000000" qXZ="0.00000000" qYZ="0.00000000" qZZ="0.00000000"/>
+    <Multipole type="19" kz="21" kx="" c0="-0.61622200" dX="0.00053395" dY="-0.00015248" dZ="-0.00517205" qXX="-0.00006718" qXY="0.00004688" qYY="-0.00009788" qXZ="-0.00000193" qYZ="0.00000070" qZZ="0.00016506"/>
+    <Multipole type="21" kz="-20" kx="20" c0="0.92986133" dX="-0.00000679" dY="-0.00000679" dZ="0.00165723" qXX="0.00002872" qXY="0.00000352" qYY="-0.00002162" qXZ="-0.00000021" qYZ="-0.00000067" qZZ="-0.00000710"/>
+    <Multipole type="20" kz="21" kx="22" c0="-0.37627583" dX="0.00668092" dY="0.00013284" dZ="-0.00100937" qXX="0.00005585" qXY="-0.00000313" qYY="-0.00015588" qXZ="-0.00017070" qYZ="0.00000058" qZZ="0.00010003"/>
+    <Multipole type="22" kz="22" kx="20" c0="0.10045483" dX="0.00736515" dY="0.00026369" dZ="-0.00085754" qXX="0.00010965" qXY="0.00000224" qYY="-0.00009560" qXZ="-0.00006872" qYZ="-0.00000318" qZZ="-0.00001405"/>
+    <Multipole type="18" kz="22" kx="22" c0="0.05954488" dX="-0.00007492" dY="0.00027536" dZ="-0.00252113" qXX="-0.00001852" qXY="0.00000111" qYY="-0.00000556" qXZ="-0.00000260" qYZ="-0.00000244" qZZ="0.00002408"/>
+    <Polarize type="99001" polarizabilityXX="1.8030e-05" polarizabilityYY="1.8030e-05" polarizabilityZZ="1.8030e-05" thole="0.33"/>
+    <Polarize type="19" polarizabilityXX="9.121067e-04" polarizabilityYY="9.121067e-04" polarizabilityZZ="9.121067e-04" thole="0.33"/>
+    <Polarize type="21" polarizabilityXX="8.694350e-04" polarizabilityYY="8.694350e-04" polarizabilityZZ="8.694350e-04" thole="0.33"/>
+    <Polarize type="20" polarizabilityXX="7.392317e-04" polarizabilityYY="7.392317e-04" polarizabilityZZ="7.392317e-04" thole="0.33"/>
+    <Polarize type="22" polarizabilityXX="9.357183e-04" polarizabilityYY="9.357183e-04" polarizabilityZZ="9.357183e-04" thole="0.33"/>
+    <Polarize type="18" polarizabilityXX="3.142883e-04" polarizabilityYY="3.142883e-04" polarizabilityZZ="3.142883e-04" thole="0.33"/>
+  </MPIDForce>
+  <CustomNonbondedForce bondCutoff="3" energy="A*K2*exp(-B*r)     +(-138.93542)*exp(-B*r)*(1+B*r)*Q/r      - (1-exp(-x)*(1+x+0.5*x^2+x^3/6+x^4/24+x^5/120+x^6/720)) * C6/(r^6)      - (1-exp(-x)*(1+x+0.5*x^2+x^3/6+x^4/24+x^5/120+x^6/720+x^7/5040+x^8/40320)) * C8/(r^8)      - (1-exp(-x)*(1+x+0.5*x^2+x^3/6+x^4/24+x^5/120+x^6/720+x^7/5040+x^8/40320+x^9/362880+x^10/3628800)) * C10/(r^10);     x=B*r - (2*B^2*r+3*B)/(B^2*r^2+3*B*r+3)*r;     K2=(Br^2)/3 + Br + 1;     Br = B*r;     B=sqrt(Bexp1*Bexp2);     Q=Q1*Q2;C6=sqrt(C61*C62);     C8=sqrt(C81*C82);C10=sqrt(C101*C102);     A=Aex-Ael-Ain-Adh-Adi;     Aex=(Aexch1*Aexch2);     Ael=(Aelec1*Aelec2);     Ain=(Aind1*Aind2);     Adh=(Adhf1*Adhf2);     Adi=(Adisp1*Adisp2)">
+    <PerParticleParameter name="Aexch"/>
+    <PerParticleParameter name="Aelec"/>
+    <PerParticleParameter name="Aind"/>
+    <PerParticleParameter name="Adhf"/>
+    <PerParticleParameter name="Adisp"/>
+    <PerParticleParameter name="Bexp"/>
+    <PerParticleParameter name="Q"/>
+    <PerParticleParameter name="C6"/>
+    <PerParticleParameter name="C8"/>
+    <PerParticleParameter name="C10"/>
+    <PerParticleParameter name="C12"/>
+    <Atom type="99001" Aexch="128.5118979941596" Aelec="1e-32" Aind="107.57326238429009" Adhf="0.7671619736599902" Adisp="57.51481184824164" Bexp="61.50817782056888" Q="1.00000000" C6="1.527087e-06" C8="1.136166e-08" C10="3.971362e-11" C12="0.0"/>
+    <Atom type="19" Aexch="181.28295798134917" Aelec="131.93479605355122" Aind="3.669648140052791" Adhf="48.54712881726222" Adisp="41.01089473027269" Bexp="43.019521555498784" Q="-6.162220e-01" C6="1.158425e-03" C8="7.175195e-05" C10="2.082804e-06" C12="0.0"/>
+    <Atom type="21" Aexch="14.549032913659392" Aelec="1.0190057972090558" Aind="14.657453164006167" Adhf="3.482789243467867" Adisp="1.2805520117701874" Bexp="30.687401287813316" Q="9.298613e-01" C6="8.422619e-04" C8="4.418617e-05" C10="1.240508e-06" C12="0.0"/>
+    <Atom type="20" Aexch="159.27974030821633" Aelec="89.37452192952989" Aind="13.299537811375577" Adhf="44.468761290218254" Adisp="27.911914459960656" Bexp="44.25492519526442" Q="-3.762758e-01" C6="8.381411e-04" C8="4.308587e-05" C10="1.073917e-06" C12="0.0"/>
+    <Atom type="22" Aexch="80.0414899492616" Aelec="44.92970770977045" Aind="0.5902134678722728" Adhf="1.134848089798824" Adisp="9.275786440572803" Bexp="35.462103554445285" Q="1.004548e-01" C6="1.263260e-03" C8="8.710687e-05" C10="2.910050e-06" C12="0.0"/>
+    <Atom type="18" Aexch="32.83191055213767" Aelec="10.104702006767287" Aind="0.5485185757595699" Adhf="16.79436459054248" Adisp="7.5822956624878834" Bexp="46.40023113131021" Q="5.954488e-02" C6="9.962492e-05" C8="3.288732e-06" C10="5.645362e-08" C12="0.0"/>
+  </CustomNonbondedForce>
+</ForceField>
