@@ -10,10 +10,10 @@ It will:
   4) Zero charges in NonbondedForce (optional).
 
 Usage:
-  python 2_map_opls_atype_to_mpid.auto.py \
+  python 2_map_opls_atype_to_mpid.py \
     --a merged_opls.xml \
-    --b converted_forcefield.xml \
-    --out caff_5_mpid_LJ_bond_all.xml \
+    --b phyneo_ecl_z.xml \
+    --out phyneo_ecl_z_b.xml \
     --zero-nonbonded-charges
 
 Notes:
@@ -41,15 +41,12 @@ class TypeMaps:
     b_to_a_unique: Dict[str, str]
     b_to_a_candidates: Dict[str, List[str]]
 
-
 def parse_xml(path: str) -> etree._ElementTree:
     parser = etree.XMLParser(remove_blank_text=False, recover=True, huge_tree=True)
     return etree.parse(path, parser)
 
-
 def write_xml(tree: etree._ElementTree, path: str) -> None:
     tree.write(path, pretty_print=True, xml_declaration=True, encoding="UTF-8")
-
 
 def build_atom_map(xml_root: etree._Element) -> Dict[TResidueAtom, str]:
     """Build (ResidueName, AtomName) -> type mapping from Residue/Atom definitions."""
@@ -66,13 +63,11 @@ def build_atom_map(xml_root: etree._Element) -> Dict[TResidueAtom, str]:
             atom_map[(res_name, atom_name)] = atom_type
     return atom_map
 
-
 def ensure_section(root: etree._Element, section_name: str) -> etree._Element:
     sec = root.find(section_name)
     if sec is None:
         sec = etree.SubElement(root, section_name)
     return sec
-
 
 def remove_child_tags(section: etree._Element, tags_to_remove: Iterable[str]) -> int:
     removed = 0
@@ -82,7 +77,6 @@ def remove_child_tags(section: etree._Element, tags_to_remove: Iterable[str]) ->
             section.remove(elem)
             removed += 1
     return removed
-
 
 def copy_cleaned_section(
     root_src: etree._Element,
@@ -102,7 +96,6 @@ def copy_cleaned_section(
     new_section = copy.deepcopy(src)
     remove_child_tags(new_section, tags_to_remove)
     root_dst.append(new_section)
-
 
 def build_type_maps(
     map_a: Dict[TResidueAtom, str],
@@ -144,7 +137,6 @@ def build_type_maps(
         b_to_a_candidates={k: sorted(set(v)) for k, v in b_to_a_candidates.items()},
     )
 
-
 def index_parameters_by_type(section: Optional[etree._Element], tag: str) -> Dict[str, etree._Element]:
     if section is None:
         return {}
@@ -155,7 +147,6 @@ def index_parameters_by_type(section: Optional[etree._Element], tag: str) -> Dic
             continue
         d[t] = elem
     return d
-
 
 def safe_remap_type_ref(
     ref: str,
@@ -178,16 +169,19 @@ def safe_remap_type_ref(
         token = token[1:]
 
     if token in b_to_a_unique:
-        return f"{sign}{b_to_a_unique[token]}"
+        mapped_type = f"{sign}{b_to_a_unique[token]}"
+        print(f"Mapping successful: {context} - {ref} -> {mapped_type}")
+        return mapped_type
 
     if token in b_to_a_candidates and b_to_a_candidates[token]:
         msg = f"Ambiguous remap for {context}: B ref '{ref}' candidates -> {b_to_a_candidates[token]}"
         if strict:
             raise ValueError(msg)
+        print(f"Ambiguous mapping (non-strict): {context} - {ref} -> {b_to_a_candidates[token][0]}")
         return f"{sign}{b_to_a_candidates[token][0]}"
 
+    print(f"Mapping failed: {context} - {ref} remains unchanged")
     return ref
-
 
 def append_custom_nonbonded_atoms(
     root_a: etree._Element,
@@ -213,7 +207,6 @@ def append_custom_nonbonded_atoms(
         sec_a.append(new_atom)
         inserted += 1
     return inserted
-
 
 def append_mpid_terms(
     root_a: etree._Element,
@@ -243,6 +236,7 @@ def append_mpid_terms(
                 atom = copy.deepcopy(src_m)
                 atom.set("type", a_type)
 
+                # Update kz and kx values explicitly
                 kz = atom.get("kz")
                 kx = atom.get("kx")
                 if kz is not None:
@@ -280,89 +274,6 @@ def append_mpid_terms(
                 inserted_p += 1
 
     return inserted_m, inserted_p
-def update_customNB_A_with_B_parameters(root_A, root_B, type_map):
-    parameters_B = {}
-    CustomNBref = root_B.find("CustomNonbondedForce")
-    for atom_type in CustomNBref.findall('.//Atom'):
-        type_name = atom_type.get('type')
-        if type_name:
-            parameters_B[type_name] = atom_type
-
-    parameters_A = {}
-    for a_type, b_type in type_map.items():
-        if b_type in parameters_B:
-            parameters_A[a_type] = parameters_B[b_type]
-
-    CustomNB = root_A.find("CustomNonbondedForce")
-
-    # 按照 a_type 的数字部分排序后插入
-    for a_type, atom_element in sorted(parameters_A.items(), key=lambda x: int(''.join(filter(str.isdigit, x[0])))):
-        new_atom = etree.Element("Atom")
-        new_atom.attrib.update(atom_element.attrib)
-        new_atom.set("type", a_type)
-
-        # 设置每个 Atom 元素的 tail 为换行缩进
-        new_atom.tail = "\n    "
-        CustomNB.append(new_atom)
-
-    # 保证 CustomNonbondedForce 的开头和结尾都有适当换行
-    CustomNB.text = "\n    "  # 子元素前的换行与缩进
-    if CustomNB[-1] is not None:  # 检查如果已经有子元素，末尾换行修正
-        CustomNB[-1].tail = "\n"
-
-    return root_A
-    
-def update_mpidforce_A_with_B_parameters(root_A, root_B, type_map, type_reverse_map):
-    mpid_B = root_B.find("MPIDForce")
-
-    # 提取 B 文件中的 Multipole 和 Polarize Atom 参数
-    parameters_B_multipole = {
-        atom.get("type"): atom for atom in mpid_B.findall("Multipole") if atom.get("type")
-    }
-    parameters_B_polarize = {
-        atom.get("type"): atom for atom in mpid_B.findall("Polarize") if atom.get("type")
-    }
-
-    # 根据 type_map 映射，构建 A 文件需要添加的元素
-    parameters_A_multipole = {}
-    parameters_A_polarize = {}
-
-    for a_type, b_type in type_map.items():
-        if b_type in parameters_B_multipole:
-            atom = copy.deepcopy(parameters_B_multipole[b_type])
-            atom.set("type", a_type)
-            parameters_A_multipole[a_type] = atom
-
-        if b_type in parameters_B_polarize:
-            atom = copy.deepcopy(parameters_B_polarize[b_type])
-            atom.set("type", a_type)
-            parameters_A_polarize[a_type] = atom
-
-    mpid_A = root_A.find("MPIDForce")
-
-    # 如果 <MPIDForce> 节点不存在，则创建
-    if mpid_A is None:
-        mpid_A = etree.SubElement(root_A, "MPIDForce")
-
-    # 确保 <MPIDForce> 具有属性 coulomb14scale="0"
-    mpid_A.set("coulomb14scale", "0")
-
-    # 按 type 的数字部分为 Multipole 排序后插入
-    for a_type, atom_element in sorted(parameters_A_multipole.items(), key=lambda x: int(''.join(filter(str.isdigit, x[0])))):
-        atom_element.tail = "\n    "  # 设置换行缩进
-        mpid_A.append(atom_element)
-
-    # 按 type 的数字部分为 Polarize 排序后插入
-    for a_type, atom_element in sorted(parameters_A_polarize.items(), key=lambda x: int(''.join(filter(str.isdigit, x[0])))):
-        atom_element.tail = "\n    "  # 设置换行缩进
-        mpid_A.append(atom_element)
-
-    # 保证 <MPIDForce> 开头和结尾都有换行
-    mpid_A.text = "\n    "  # 子元素前换行缩进
-    if mpid_A[-1] is not None:  # 最后一个子节点对齐
-        mpid_A[-1].tail = "\n"
-
-    return root_A
 
 def zero_charges_in_nonbonded(root: etree._Element) -> int:
     nb = root.find("NonbondedForce")
@@ -414,11 +325,12 @@ def main():
 
     # Step 4: Update CustomNonbondedForce in A with parameters from B
     print("🛠️ Updating CustomNonbondedForce in A...")
-    update_customNB_A_with_B_parameters(root_A, root_B, type_map)
+    append_custom_nonbonded_atoms(root_A, root_B, type_map)
 
     # Step 5: Update MPIDForce in A with parameters from B
     print("🛠️ Updating MPIDForce in A...")
-    update_mpidforce_A_with_B_parameters(root_A, root_B, type_map, type_reverse_map)
+    type_maps = build_type_maps(map_A, map_B, strict=args.strict)
+    append_mpid_terms(root_A, root_B, type_maps, strict=args.strict)
 
     # Step 6: Write output
     print("📁 Writing output to:", args.out)
