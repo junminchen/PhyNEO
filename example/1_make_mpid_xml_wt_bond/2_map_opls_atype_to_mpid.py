@@ -195,7 +195,8 @@ def append_custom_nonbonded_atoms(
     existing_a = {e.get("type") for e in sec_a.findall("Atom") if e.get("type")}
 
     inserted = 0
-    for a_type, b_type in sorted(a_to_b.items()):
+    # 按 a_type 的数字部分排序，确保插入顺序
+    for a_type, b_type in sorted(a_to_b.items(), key=lambda x: int(''.join(filter(str.isdigit, x[0])))):
         if a_type in existing_a:
             continue
         src = params_b.get(b_type)
@@ -204,8 +205,17 @@ def append_custom_nonbonded_atoms(
         new_atom = etree.Element("Atom")
         new_atom.attrib.update(src.attrib)
         new_atom.set("type", a_type)
+
+        # 为每个新插入的 Atom 元素设置换行和缩进
+        new_atom.tail = "\n    "
         sec_a.append(new_atom)
         inserted += 1
+
+    # 确保 CustomNonbondedForce 的头部和尾部都有适当的换行
+    sec_a.text = "\n    "  # 子元素前的换行与缩进
+    if sec_a[-1] is not None:  # 检查是否有子元素，如果有子元素则对最后一个元素进行尾部换行设置
+        sec_a[-1].tail = "\n"
+
     return inserted
 
 def append_mpid_terms(
@@ -217,6 +227,9 @@ def append_mpid_terms(
 ) -> Tuple[int, int]:
     sec_a = ensure_section(root_a, "MPIDForce")
     sec_b = root_b.find("MPIDForce")
+    # 设置 <MPIDForce> 的属性，确保其具有 coulomb14scale="0"
+    if sec_a is not None and "coulomb14scale" not in sec_a.attrib:
+        sec_a.set("coulomb14scale", "0")
     if sec_b is None:
         raise ValueError("Section <MPIDForce> not found in B")
 
