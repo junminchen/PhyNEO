@@ -349,6 +349,7 @@ def main():
     print("📁 Writing output to:", args.out)
     tree_A.write(args.out, pretty_print=True, xml_declaration=True, encoding="UTF-8")
     print("✅ Merge completed!")
+    print("Please manually modify the P local frame of PF6")
 
 
 # Execute script if run directly
