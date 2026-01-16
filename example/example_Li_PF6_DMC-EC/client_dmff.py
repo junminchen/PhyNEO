@@ -133,8 +133,8 @@ class DMFFDriver(driver.BaseDriver):
                                                         G_pf6.positions.shape[1]))
                 E_bond_ = jnp.sum(model_.batch_forward(pos_ABn*10, box*10, params_bond_))
                 E_bond = model.forward(pos_else*10, box*10, params_bond)
-                E_nb_ml = model_nb.apply(params, pos*10, box*10, valid_pairs, valid_mask, topo_nblist, topo_mask, mol_ID, atype_indices)
-                return E_nb+E_bond+E_bond_+E_nb_ml
+                # E_nb_ml = model_nb.apply(params, pos*10, box*10, valid_pairs, valid_mask, topo_nblist, topo_mask, mol_ID, atype_indices)
+                return E_nb+E_bond+E_bond_#+E_nb_ml
 
         else:
             print(f"Topology does not contain ABn residue.")
@@ -147,8 +147,8 @@ class DMFFDriver(driver.BaseDriver):
                 box = jnp.array([[L,0,0],[0,L,0],[0,0,L]])          
                 E_nb = efunc_nb(pos, box, pairs, params_nb)
                 E_bond = model.forward(pos*10, box*10, params_bond)
-                E_nb_ml = model_nb.apply(params, pos*10, box*10, valid_pairs, valid_mask, topo_nblist, topo_mask, mol_ID, atype_indices)
-                return E_nb+E_bond+E_nb_ml
+                #E_nb_ml = model_nb.apply(params, pos*10, box*10, valid_pairs, valid_mask, topo_nblist, topo_mask, mol_ID, atype_indices)
+                return E_nb+E_bond#+E_nb_ml
 
         self.calc_dmff = jit(value_and_grad(dmff_calculator,argnums=(0, 1)))
 
