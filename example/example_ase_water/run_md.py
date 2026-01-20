@@ -232,8 +232,8 @@ def run_npt_simulation(atoms, args):
     timestep = args.timestep * units.fs
     pressure = 1.0 * units.bar  # Target pressure
     dyn = NPTBerendsen(atoms, timestep=timestep, temperature_K=args.temperature,
-                   taut=100 * units.fs, pressure_au=pressure,
-                   taup=2000 * units.fs, compressibility_au=4.57e-5 / units.bar)
+                   taut=50 * units.fs, pressure_au=pressure,
+                   taup=200 * units.fs, compressibility_au=4.57e-5 / units.bar)
     
     # Set up trajectory saving
     def write_frame():
