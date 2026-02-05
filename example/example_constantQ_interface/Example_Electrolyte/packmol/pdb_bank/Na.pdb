@@ -1,0 +1,6 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1 Na01 NaA 1   1       0.992   0.068  -0.073  1.00  0.00      SYSTNa  
+END
+1

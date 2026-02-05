@@ -1,0 +1,33 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  H00 CN1 1   1       1.567  -2.661   1.040  0.00  1.00      SYST H  
+ATOM      2  C01 CN1 1   1       1.881  -1.901   0.307  0.00  1.00      SYST C  
+ATOM      3  C02 CN1 1   1       1.488  -2.322  -1.093  0.00  1.00      SYST C  
+ATOM      4  C03 CN1 1   1       1.264  -0.609   0.664  0.00  1.00      SYST C  
+ATOM      5  H04 CN1 1   1       2.976  -1.791   0.384  0.00  1.00      SYST H  
+ATOM      6  C05 CN1 1   1       0.834  -3.471  -1.358  0.00  1.00      SYST C  
+ATOM      7  H06 CN1 1   1       1.760  -1.642  -1.909  0.00  1.00      SYST H  
+ATOM      8  N07 CN1 1   1       0.761   0.434   0.927  0.00  1.00      SYST N  
+ATOM      9  C08 CN1 1   1       0.441  -3.892  -2.757  0.00  1.00      SYST C  
+ATOM     10  H09 CN1 1   1       0.563  -4.151  -0.542  0.00  1.00      SYST H  
+ATOM     11  C10 CN1 1   1       1.059  -5.184  -3.115  0.00  1.00      SYST C  
+ATOM     12  H11 CN1 1   1       0.755  -3.132  -3.490  0.00  1.00      SYST H  
+ATOM     13  H12 CN1 1   1      -0.654  -4.002  -2.834  0.00  1.00      SYST H  
+ATOM     14  N13 CN1 1   1       1.562  -6.227  -3.378  0.00  1.00      SYST N  
+CONECT    1    2
+CONECT    2    1    3    4    5
+CONECT    3    2    6    7
+CONECT    4    2    8
+CONECT    5    2
+CONECT    6    3    9   10
+CONECT    7    3
+CONECT    8    4
+CONECT    9    6   11   12   13
+CONECT   10    6
+CONECT   11    9   14
+CONECT   12    9
+CONECT   13    9
+CONECT   14   11
+END

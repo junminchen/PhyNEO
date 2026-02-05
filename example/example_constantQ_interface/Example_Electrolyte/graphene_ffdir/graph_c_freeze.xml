@@ -1,0 +1,3610 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="graphitec-C0" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C1" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C2" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C3" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C4" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C5" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C6" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C7" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C8" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C9" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C10" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C11" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C12" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C13" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C14" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C15" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C16" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C17" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C18" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C19" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C20" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C21" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C22" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C23" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C24" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C25" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C26" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C27" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C28" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C29" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C30" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C31" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C32" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C33" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C34" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C35" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C36" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C37" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C38" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C39" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C40" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C41" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C42" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C43" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C44" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C45" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C46" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C47" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C48" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C49" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C50" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C51" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C52" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C53" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C54" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C55" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C56" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C57" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C58" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C59" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C60" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C61" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C62" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C63" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C64" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C65" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C66" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C67" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C68" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C69" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C70" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C71" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C72" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C73" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C74" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C75" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C76" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C77" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C78" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C79" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C80" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C81" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C82" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C83" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C84" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C85" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C86" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C87" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C88" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C89" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C90" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C91" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C92" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C93" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C94" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C95" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C96" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C97" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C98" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C99" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C100" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C101" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C102" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C103" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C104" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C105" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C106" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C107" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C108" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C109" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C110" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C111" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C112" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C113" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C114" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C115" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C116" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C117" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C118" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C119" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C120" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C121" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C122" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C123" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C124" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C125" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C126" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C127" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C128" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C129" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C130" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C131" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C132" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C133" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C134" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C135" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C136" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C137" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C138" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C139" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C140" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C141" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C142" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C143" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C144" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C145" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C146" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C147" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C148" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C149" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C150" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C151" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C152" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C153" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C154" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C155" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C156" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C157" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C158" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C159" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C160" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C161" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C162" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C163" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C164" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C165" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C166" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C167" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C168" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C169" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C170" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C171" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C172" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C173" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C174" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C175" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C176" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C177" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C178" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C179" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C180" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C181" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C182" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C183" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C184" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C185" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C186" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C187" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C188" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C189" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C190" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C191" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C192" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C193" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C194" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C195" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C196" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C197" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C198" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C199" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C200" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C201" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C202" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C203" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C204" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C205" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C206" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C207" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C208" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C209" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C210" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C211" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C212" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C213" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C214" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C215" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C216" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C217" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C218" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C219" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C220" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C221" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C222" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C223" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C224" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C225" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C226" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C227" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C228" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C229" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C230" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C231" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C232" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C233" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C234" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C235" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C236" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C237" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C238" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C239" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C240" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C241" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C242" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C243" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C244" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C245" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C246" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C247" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C248" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C249" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C250" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C251" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C252" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C253" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C254" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C255" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C256" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C257" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C258" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C259" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C260" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C261" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C262" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C263" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C264" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C265" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C266" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C267" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C268" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C269" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C270" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C271" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C272" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C273" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C274" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C275" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C276" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C277" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C278" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C279" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C280" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C281" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C282" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C283" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C284" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C285" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C286" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C287" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C288" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C289" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C290" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C291" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C292" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C293" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C294" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C295" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C296" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C297" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C298" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C299" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C300" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C301" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C302" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C303" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C304" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C305" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C306" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C307" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C308" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C309" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C310" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C311" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C312" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C313" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C314" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C315" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C316" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C317" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C318" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C319" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C320" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C321" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C322" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C323" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C324" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C325" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C326" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C327" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C328" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C329" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C330" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C331" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C332" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C333" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C334" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C335" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C336" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C337" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C338" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C339" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C340" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C341" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C342" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C343" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C344" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C345" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C346" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C347" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C348" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C349" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C350" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C351" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C352" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C353" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C354" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C355" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C356" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C357" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C358" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C359" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C360" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C361" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C362" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C363" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C364" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C365" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C366" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C367" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C368" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C369" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C370" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C371" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C372" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C373" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C374" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C375" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C376" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C377" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C378" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C379" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C380" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C381" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C382" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C383" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C384" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C385" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C386" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C387" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C388" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C389" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C390" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C391" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C392" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C393" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C394" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C395" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C396" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C397" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C398" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C399" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C400" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C401" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C402" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C403" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C404" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C405" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C406" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C407" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C408" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C409" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C410" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C411" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C412" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C413" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C414" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C415" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C416" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C417" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C418" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C419" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C420" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C421" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C422" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C423" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C424" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C425" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C426" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C427" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C428" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C429" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C430" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C431" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C432" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C433" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C434" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C435" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C436" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C437" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C438" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C439" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C440" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C441" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C442" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C443" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C444" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C445" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C446" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C447" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C448" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C449" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C450" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C451" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C452" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C453" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C454" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C455" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C456" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C457" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C458" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C459" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C460" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C461" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C462" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C463" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C464" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C465" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C466" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C467" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C468" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C469" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C470" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C471" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C472" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C473" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C474" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C475" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C476" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C477" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C478" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C479" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C480" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C481" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C482" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C483" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C484" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C485" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C486" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C487" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C488" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C489" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C490" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C491" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C492" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C493" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C494" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C495" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C496" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C497" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C498" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C499" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C500" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C501" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C502" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C503" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C504" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C505" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C506" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C507" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C508" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C509" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C510" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C511" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C512" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C513" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C514" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C515" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C516" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C517" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C518" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C519" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C520" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C521" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C522" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C523" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C524" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C525" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C526" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C527" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C528" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C529" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C530" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C531" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C532" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C533" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C534" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C535" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C536" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C537" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C538" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C539" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C540" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C541" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C542" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C543" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C544" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C545" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C546" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C547" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C548" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C549" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C550" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C551" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C552" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C553" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C554" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C555" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C556" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C557" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C558" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C559" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C560" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C561" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C562" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C563" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C564" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C565" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C566" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C567" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C568" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C569" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C570" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C571" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C572" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C573" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C574" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C575" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C576" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C577" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C578" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C579" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C580" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C581" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C582" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C583" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C584" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C585" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C586" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C587" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C588" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C589" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C590" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C591" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C592" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C593" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C594" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C595" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C596" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C597" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C598" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C599" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C600" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C601" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C602" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C603" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C604" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C605" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C606" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C607" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C608" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C609" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C610" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C611" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C612" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C613" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C614" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C615" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C616" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C617" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C618" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C619" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C620" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C621" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C622" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C623" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C624" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C625" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C626" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C627" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C628" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C629" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C630" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C631" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C632" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C633" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C634" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C635" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C636" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C637" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C638" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C639" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C640" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C641" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C642" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C643" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C644" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C645" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C646" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C647" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C648" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C649" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C650" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C651" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C652" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C653" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C654" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C655" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C656" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C657" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C658" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C659" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C660" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C661" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C662" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C663" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C664" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C665" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C666" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C667" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C668" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C669" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C670" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C671" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C672" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C673" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C674" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C675" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C676" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C677" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C678" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C679" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C680" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C681" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C682" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C683" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C684" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C685" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C686" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C687" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C688" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C689" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C690" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C691" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C692" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C693" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C694" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C695" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C696" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C697" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C698" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C699" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C700" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C701" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C702" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C703" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C704" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C705" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C706" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C707" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C708" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C709" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C710" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C711" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C712" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C713" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C714" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C715" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C716" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C717" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C718" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C719" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C720" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C721" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C722" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C723" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C724" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C725" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C726" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C727" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C728" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C729" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C730" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C731" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C732" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C733" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C734" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C735" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C736" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C737" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C738" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C739" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C740" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C741" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C742" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C743" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C744" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C745" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C746" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C747" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C748" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C749" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C750" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C751" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C752" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C753" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C754" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C755" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C756" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C757" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C758" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C759" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C760" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C761" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C762" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C763" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C764" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C765" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C766" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C767" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C768" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C769" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C770" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C771" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C772" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C773" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C774" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C775" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C776" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C777" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C778" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C779" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C780" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C781" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C782" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C783" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C784" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C785" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C786" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C787" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C788" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C789" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C790" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C791" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C792" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C793" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C794" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C795" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C796" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C797" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C798" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphitec-C799" class="Cgtc" element="C" mass="0.0"/>
+  <Type name="graphited-C0" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C1" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C2" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C3" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C4" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C5" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C6" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C7" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C8" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C9" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C10" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C11" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C12" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C13" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C14" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C15" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C16" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C17" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C18" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C19" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C20" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C21" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C22" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C23" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C24" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C25" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C26" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C27" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C28" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C29" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C30" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C31" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C32" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C33" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C34" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C35" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C36" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C37" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C38" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C39" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C40" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C41" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C42" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C43" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C44" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C45" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C46" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C47" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C48" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C49" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C50" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C51" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C52" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C53" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C54" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C55" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C56" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C57" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C58" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C59" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C60" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C61" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C62" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C63" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C64" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C65" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C66" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C67" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C68" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C69" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C70" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C71" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C72" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C73" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C74" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C75" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C76" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C77" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C78" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C79" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C80" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C81" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C82" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C83" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C84" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C85" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C86" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C87" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C88" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C89" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C90" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C91" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C92" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C93" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C94" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C95" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C96" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C97" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C98" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C99" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C100" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C101" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C102" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C103" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C104" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C105" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C106" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C107" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C108" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C109" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C110" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C111" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C112" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C113" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C114" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C115" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C116" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C117" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C118" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C119" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C120" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C121" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C122" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C123" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C124" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C125" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C126" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C127" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C128" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C129" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C130" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C131" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C132" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C133" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C134" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C135" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C136" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C137" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C138" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C139" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C140" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C141" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C142" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C143" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C144" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C145" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C146" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C147" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C148" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C149" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C150" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C151" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C152" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C153" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C154" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C155" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C156" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C157" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C158" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C159" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C160" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C161" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C162" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C163" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C164" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C165" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C166" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C167" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C168" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C169" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C170" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C171" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C172" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C173" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C174" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C175" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C176" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C177" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C178" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C179" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C180" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C181" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C182" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C183" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C184" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C185" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C186" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C187" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C188" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C189" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C190" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C191" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C192" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C193" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C194" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C195" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C196" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C197" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C198" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C199" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C200" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C201" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C202" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C203" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C204" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C205" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C206" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C207" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C208" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C209" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C210" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C211" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C212" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C213" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C214" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C215" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C216" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C217" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C218" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C219" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C220" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C221" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C222" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C223" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C224" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C225" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C226" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C227" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C228" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C229" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C230" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C231" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C232" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C233" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C234" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C235" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C236" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C237" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C238" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C239" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C240" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C241" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C242" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C243" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C244" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C245" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C246" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C247" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C248" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C249" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C250" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C251" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C252" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C253" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C254" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C255" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C256" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C257" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C258" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C259" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C260" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C261" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C262" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C263" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C264" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C265" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C266" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C267" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C268" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C269" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C270" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C271" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C272" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C273" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C274" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C275" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C276" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C277" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C278" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C279" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C280" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C281" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C282" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C283" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C284" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C285" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C286" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C287" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C288" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C289" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C290" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C291" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C292" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C293" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C294" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C295" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C296" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C297" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C298" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C299" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C300" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C301" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C302" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C303" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C304" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C305" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C306" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C307" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C308" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C309" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C310" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C311" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C312" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C313" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C314" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C315" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C316" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C317" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C318" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C319" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C320" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C321" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C322" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C323" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C324" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C325" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C326" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C327" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C328" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C329" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C330" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C331" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C332" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C333" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C334" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C335" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C336" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C337" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C338" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C339" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C340" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C341" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C342" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C343" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C344" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C345" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C346" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C347" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C348" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C349" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C350" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C351" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C352" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C353" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C354" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C355" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C356" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C357" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C358" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C359" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C360" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C361" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C362" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C363" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C364" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C365" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C366" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C367" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C368" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C369" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C370" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C371" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C372" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C373" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C374" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C375" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C376" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C377" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C378" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C379" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C380" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C381" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C382" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C383" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C384" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C385" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C386" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C387" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C388" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C389" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C390" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C391" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C392" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C393" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C394" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C395" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C396" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C397" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C398" class="Cgtd" element="C" mass="0.0"/>
+  <Type name="graphited-C399" class="Cgtd" element="C" mass="0.0"/>
+ </AtomTypes>
+ <Residues>
+  <Residue name="grpc">
+   <Atom name="C0" type="graphitec-C0"/> 
+   <Atom name="C1" type="graphitec-C1"/> 
+   <Atom name="C2" type="graphitec-C2"/> 
+   <Atom name="C3" type="graphitec-C3"/> 
+   <Atom name="C4" type="graphitec-C4"/> 
+   <Atom name="C5" type="graphitec-C5"/> 
+   <Atom name="C6" type="graphitec-C6"/> 
+   <Atom name="C7" type="graphitec-C7"/> 
+   <Atom name="C8" type="graphitec-C8"/> 
+   <Atom name="C9" type="graphitec-C9"/> 
+   <Atom name="C10" type="graphitec-C10"/> 
+   <Atom name="C11" type="graphitec-C11"/> 
+   <Atom name="C12" type="graphitec-C12"/> 
+   <Atom name="C13" type="graphitec-C13"/> 
+   <Atom name="C14" type="graphitec-C14"/> 
+   <Atom name="C15" type="graphitec-C15"/> 
+   <Atom name="C16" type="graphitec-C16"/> 
+   <Atom name="C17" type="graphitec-C17"/> 
+   <Atom name="C18" type="graphitec-C18"/> 
+   <Atom name="C19" type="graphitec-C19"/> 
+   <Atom name="C20" type="graphitec-C20"/> 
+   <Atom name="C21" type="graphitec-C21"/> 
+   <Atom name="C22" type="graphitec-C22"/> 
+   <Atom name="C23" type="graphitec-C23"/> 
+   <Atom name="C24" type="graphitec-C24"/> 
+   <Atom name="C25" type="graphitec-C25"/> 
+   <Atom name="C26" type="graphitec-C26"/> 
+   <Atom name="C27" type="graphitec-C27"/> 
+   <Atom name="C28" type="graphitec-C28"/> 
+   <Atom name="C29" type="graphitec-C29"/> 
+   <Atom name="C30" type="graphitec-C30"/> 
+   <Atom name="C31" type="graphitec-C31"/> 
+   <Atom name="C32" type="graphitec-C32"/> 
+   <Atom name="C33" type="graphitec-C33"/> 
+   <Atom name="C34" type="graphitec-C34"/> 
+   <Atom name="C35" type="graphitec-C35"/> 
+   <Atom name="C36" type="graphitec-C36"/> 
+   <Atom name="C37" type="graphitec-C37"/> 
+   <Atom name="C38" type="graphitec-C38"/> 
+   <Atom name="C39" type="graphitec-C39"/> 
+   <Atom name="C40" type="graphitec-C40"/> 
+   <Atom name="C41" type="graphitec-C41"/> 
+   <Atom name="C42" type="graphitec-C42"/> 
+   <Atom name="C43" type="graphitec-C43"/> 
+   <Atom name="C44" type="graphitec-C44"/> 
+   <Atom name="C45" type="graphitec-C45"/> 
+   <Atom name="C46" type="graphitec-C46"/> 
+   <Atom name="C47" type="graphitec-C47"/> 
+   <Atom name="C48" type="graphitec-C48"/> 
+   <Atom name="C49" type="graphitec-C49"/> 
+   <Atom name="C50" type="graphitec-C50"/> 
+   <Atom name="C51" type="graphitec-C51"/> 
+   <Atom name="C52" type="graphitec-C52"/> 
+   <Atom name="C53" type="graphitec-C53"/> 
+   <Atom name="C54" type="graphitec-C54"/> 
+   <Atom name="C55" type="graphitec-C55"/> 
+   <Atom name="C56" type="graphitec-C56"/> 
+   <Atom name="C57" type="graphitec-C57"/> 
+   <Atom name="C58" type="graphitec-C58"/> 
+   <Atom name="C59" type="graphitec-C59"/> 
+   <Atom name="C60" type="graphitec-C60"/> 
+   <Atom name="C61" type="graphitec-C61"/> 
+   <Atom name="C62" type="graphitec-C62"/> 
+   <Atom name="C63" type="graphitec-C63"/> 
+   <Atom name="C64" type="graphitec-C64"/> 
+   <Atom name="C65" type="graphitec-C65"/> 
+   <Atom name="C66" type="graphitec-C66"/> 
+   <Atom name="C67" type="graphitec-C67"/> 
+   <Atom name="C68" type="graphitec-C68"/> 
+   <Atom name="C69" type="graphitec-C69"/> 
+   <Atom name="C70" type="graphitec-C70"/> 
+   <Atom name="C71" type="graphitec-C71"/> 
+   <Atom name="C72" type="graphitec-C72"/> 
+   <Atom name="C73" type="graphitec-C73"/> 
+   <Atom name="C74" type="graphitec-C74"/> 
+   <Atom name="C75" type="graphitec-C75"/> 
+   <Atom name="C76" type="graphitec-C76"/> 
+   <Atom name="C77" type="graphitec-C77"/> 
+   <Atom name="C78" type="graphitec-C78"/> 
+   <Atom name="C79" type="graphitec-C79"/> 
+   <Atom name="C80" type="graphitec-C80"/> 
+   <Atom name="C81" type="graphitec-C81"/> 
+   <Atom name="C82" type="graphitec-C82"/> 
+   <Atom name="C83" type="graphitec-C83"/> 
+   <Atom name="C84" type="graphitec-C84"/> 
+   <Atom name="C85" type="graphitec-C85"/> 
+   <Atom name="C86" type="graphitec-C86"/> 
+   <Atom name="C87" type="graphitec-C87"/> 
+   <Atom name="C88" type="graphitec-C88"/> 
+   <Atom name="C89" type="graphitec-C89"/> 
+   <Atom name="C90" type="graphitec-C90"/> 
+   <Atom name="C91" type="graphitec-C91"/> 
+   <Atom name="C92" type="graphitec-C92"/> 
+   <Atom name="C93" type="graphitec-C93"/> 
+   <Atom name="C94" type="graphitec-C94"/> 
+   <Atom name="C95" type="graphitec-C95"/> 
+   <Atom name="C96" type="graphitec-C96"/> 
+   <Atom name="C97" type="graphitec-C97"/> 
+   <Atom name="C98" type="graphitec-C98"/> 
+   <Atom name="C99" type="graphitec-C99"/> 
+   <Atom name="C100" type="graphitec-C100"/> 
+   <Atom name="C101" type="graphitec-C101"/> 
+   <Atom name="C102" type="graphitec-C102"/> 
+   <Atom name="C103" type="graphitec-C103"/> 
+   <Atom name="C104" type="graphitec-C104"/> 
+   <Atom name="C105" type="graphitec-C105"/> 
+   <Atom name="C106" type="graphitec-C106"/> 
+   <Atom name="C107" type="graphitec-C107"/> 
+   <Atom name="C108" type="graphitec-C108"/> 
+   <Atom name="C109" type="graphitec-C109"/> 
+   <Atom name="C110" type="graphitec-C110"/> 
+   <Atom name="C111" type="graphitec-C111"/> 
+   <Atom name="C112" type="graphitec-C112"/> 
+   <Atom name="C113" type="graphitec-C113"/> 
+   <Atom name="C114" type="graphitec-C114"/> 
+   <Atom name="C115" type="graphitec-C115"/> 
+   <Atom name="C116" type="graphitec-C116"/> 
+   <Atom name="C117" type="graphitec-C117"/> 
+   <Atom name="C118" type="graphitec-C118"/> 
+   <Atom name="C119" type="graphitec-C119"/> 
+   <Atom name="C120" type="graphitec-C120"/> 
+   <Atom name="C121" type="graphitec-C121"/> 
+   <Atom name="C122" type="graphitec-C122"/> 
+   <Atom name="C123" type="graphitec-C123"/> 
+   <Atom name="C124" type="graphitec-C124"/> 
+   <Atom name="C125" type="graphitec-C125"/> 
+   <Atom name="C126" type="graphitec-C126"/> 
+   <Atom name="C127" type="graphitec-C127"/> 
+   <Atom name="C128" type="graphitec-C128"/> 
+   <Atom name="C129" type="graphitec-C129"/> 
+   <Atom name="C130" type="graphitec-C130"/> 
+   <Atom name="C131" type="graphitec-C131"/> 
+   <Atom name="C132" type="graphitec-C132"/> 
+   <Atom name="C133" type="graphitec-C133"/> 
+   <Atom name="C134" type="graphitec-C134"/> 
+   <Atom name="C135" type="graphitec-C135"/> 
+   <Atom name="C136" type="graphitec-C136"/> 
+   <Atom name="C137" type="graphitec-C137"/> 
+   <Atom name="C138" type="graphitec-C138"/> 
+   <Atom name="C139" type="graphitec-C139"/> 
+   <Atom name="C140" type="graphitec-C140"/> 
+   <Atom name="C141" type="graphitec-C141"/> 
+   <Atom name="C142" type="graphitec-C142"/> 
+   <Atom name="C143" type="graphitec-C143"/> 
+   <Atom name="C144" type="graphitec-C144"/> 
+   <Atom name="C145" type="graphitec-C145"/> 
+   <Atom name="C146" type="graphitec-C146"/> 
+   <Atom name="C147" type="graphitec-C147"/> 
+   <Atom name="C148" type="graphitec-C148"/> 
+   <Atom name="C149" type="graphitec-C149"/> 
+   <Atom name="C150" type="graphitec-C150"/> 
+   <Atom name="C151" type="graphitec-C151"/> 
+   <Atom name="C152" type="graphitec-C152"/> 
+   <Atom name="C153" type="graphitec-C153"/> 
+   <Atom name="C154" type="graphitec-C154"/> 
+   <Atom name="C155" type="graphitec-C155"/> 
+   <Atom name="C156" type="graphitec-C156"/> 
+   <Atom name="C157" type="graphitec-C157"/> 
+   <Atom name="C158" type="graphitec-C158"/> 
+   <Atom name="C159" type="graphitec-C159"/> 
+   <Atom name="C160" type="graphitec-C160"/> 
+   <Atom name="C161" type="graphitec-C161"/> 
+   <Atom name="C162" type="graphitec-C162"/> 
+   <Atom name="C163" type="graphitec-C163"/> 
+   <Atom name="C164" type="graphitec-C164"/> 
+   <Atom name="C165" type="graphitec-C165"/> 
+   <Atom name="C166" type="graphitec-C166"/> 
+   <Atom name="C167" type="graphitec-C167"/> 
+   <Atom name="C168" type="graphitec-C168"/> 
+   <Atom name="C169" type="graphitec-C169"/> 
+   <Atom name="C170" type="graphitec-C170"/> 
+   <Atom name="C171" type="graphitec-C171"/> 
+   <Atom name="C172" type="graphitec-C172"/> 
+   <Atom name="C173" type="graphitec-C173"/> 
+   <Atom name="C174" type="graphitec-C174"/> 
+   <Atom name="C175" type="graphitec-C175"/> 
+   <Atom name="C176" type="graphitec-C176"/> 
+   <Atom name="C177" type="graphitec-C177"/> 
+   <Atom name="C178" type="graphitec-C178"/> 
+   <Atom name="C179" type="graphitec-C179"/> 
+   <Atom name="C180" type="graphitec-C180"/> 
+   <Atom name="C181" type="graphitec-C181"/> 
+   <Atom name="C182" type="graphitec-C182"/> 
+   <Atom name="C183" type="graphitec-C183"/> 
+   <Atom name="C184" type="graphitec-C184"/> 
+   <Atom name="C185" type="graphitec-C185"/> 
+   <Atom name="C186" type="graphitec-C186"/> 
+   <Atom name="C187" type="graphitec-C187"/> 
+   <Atom name="C188" type="graphitec-C188"/> 
+   <Atom name="C189" type="graphitec-C189"/> 
+   <Atom name="C190" type="graphitec-C190"/> 
+   <Atom name="C191" type="graphitec-C191"/> 
+   <Atom name="C192" type="graphitec-C192"/> 
+   <Atom name="C193" type="graphitec-C193"/> 
+   <Atom name="C194" type="graphitec-C194"/> 
+   <Atom name="C195" type="graphitec-C195"/> 
+   <Atom name="C196" type="graphitec-C196"/> 
+   <Atom name="C197" type="graphitec-C197"/> 
+   <Atom name="C198" type="graphitec-C198"/> 
+   <Atom name="C199" type="graphitec-C199"/> 
+   <Atom name="C200" type="graphitec-C200"/> 
+   <Atom name="C201" type="graphitec-C201"/> 
+   <Atom name="C202" type="graphitec-C202"/> 
+   <Atom name="C203" type="graphitec-C203"/> 
+   <Atom name="C204" type="graphitec-C204"/> 
+   <Atom name="C205" type="graphitec-C205"/> 
+   <Atom name="C206" type="graphitec-C206"/> 
+   <Atom name="C207" type="graphitec-C207"/> 
+   <Atom name="C208" type="graphitec-C208"/> 
+   <Atom name="C209" type="graphitec-C209"/> 
+   <Atom name="C210" type="graphitec-C210"/> 
+   <Atom name="C211" type="graphitec-C211"/> 
+   <Atom name="C212" type="graphitec-C212"/> 
+   <Atom name="C213" type="graphitec-C213"/> 
+   <Atom name="C214" type="graphitec-C214"/> 
+   <Atom name="C215" type="graphitec-C215"/> 
+   <Atom name="C216" type="graphitec-C216"/> 
+   <Atom name="C217" type="graphitec-C217"/> 
+   <Atom name="C218" type="graphitec-C218"/> 
+   <Atom name="C219" type="graphitec-C219"/> 
+   <Atom name="C220" type="graphitec-C220"/> 
+   <Atom name="C221" type="graphitec-C221"/> 
+   <Atom name="C222" type="graphitec-C222"/> 
+   <Atom name="C223" type="graphitec-C223"/> 
+   <Atom name="C224" type="graphitec-C224"/> 
+   <Atom name="C225" type="graphitec-C225"/> 
+   <Atom name="C226" type="graphitec-C226"/> 
+   <Atom name="C227" type="graphitec-C227"/> 
+   <Atom name="C228" type="graphitec-C228"/> 
+   <Atom name="C229" type="graphitec-C229"/> 
+   <Atom name="C230" type="graphitec-C230"/> 
+   <Atom name="C231" type="graphitec-C231"/> 
+   <Atom name="C232" type="graphitec-C232"/> 
+   <Atom name="C233" type="graphitec-C233"/> 
+   <Atom name="C234" type="graphitec-C234"/> 
+   <Atom name="C235" type="graphitec-C235"/> 
+   <Atom name="C236" type="graphitec-C236"/> 
+   <Atom name="C237" type="graphitec-C237"/> 
+   <Atom name="C238" type="graphitec-C238"/> 
+   <Atom name="C239" type="graphitec-C239"/> 
+   <Atom name="C240" type="graphitec-C240"/> 
+   <Atom name="C241" type="graphitec-C241"/> 
+   <Atom name="C242" type="graphitec-C242"/> 
+   <Atom name="C243" type="graphitec-C243"/> 
+   <Atom name="C244" type="graphitec-C244"/> 
+   <Atom name="C245" type="graphitec-C245"/> 
+   <Atom name="C246" type="graphitec-C246"/> 
+   <Atom name="C247" type="graphitec-C247"/> 
+   <Atom name="C248" type="graphitec-C248"/> 
+   <Atom name="C249" type="graphitec-C249"/> 
+   <Atom name="C250" type="graphitec-C250"/> 
+   <Atom name="C251" type="graphitec-C251"/> 
+   <Atom name="C252" type="graphitec-C252"/> 
+   <Atom name="C253" type="graphitec-C253"/> 
+   <Atom name="C254" type="graphitec-C254"/> 
+   <Atom name="C255" type="graphitec-C255"/> 
+   <Atom name="C256" type="graphitec-C256"/> 
+   <Atom name="C257" type="graphitec-C257"/> 
+   <Atom name="C258" type="graphitec-C258"/> 
+   <Atom name="C259" type="graphitec-C259"/> 
+   <Atom name="C260" type="graphitec-C260"/> 
+   <Atom name="C261" type="graphitec-C261"/> 
+   <Atom name="C262" type="graphitec-C262"/> 
+   <Atom name="C263" type="graphitec-C263"/> 
+   <Atom name="C264" type="graphitec-C264"/> 
+   <Atom name="C265" type="graphitec-C265"/> 
+   <Atom name="C266" type="graphitec-C266"/> 
+   <Atom name="C267" type="graphitec-C267"/> 
+   <Atom name="C268" type="graphitec-C268"/> 
+   <Atom name="C269" type="graphitec-C269"/> 
+   <Atom name="C270" type="graphitec-C270"/> 
+   <Atom name="C271" type="graphitec-C271"/> 
+   <Atom name="C272" type="graphitec-C272"/> 
+   <Atom name="C273" type="graphitec-C273"/> 
+   <Atom name="C274" type="graphitec-C274"/> 
+   <Atom name="C275" type="graphitec-C275"/> 
+   <Atom name="C276" type="graphitec-C276"/> 
+   <Atom name="C277" type="graphitec-C277"/> 
+   <Atom name="C278" type="graphitec-C278"/> 
+   <Atom name="C279" type="graphitec-C279"/> 
+   <Atom name="C280" type="graphitec-C280"/> 
+   <Atom name="C281" type="graphitec-C281"/> 
+   <Atom name="C282" type="graphitec-C282"/> 
+   <Atom name="C283" type="graphitec-C283"/> 
+   <Atom name="C284" type="graphitec-C284"/> 
+   <Atom name="C285" type="graphitec-C285"/> 
+   <Atom name="C286" type="graphitec-C286"/> 
+   <Atom name="C287" type="graphitec-C287"/> 
+   <Atom name="C288" type="graphitec-C288"/> 
+   <Atom name="C289" type="graphitec-C289"/> 
+   <Atom name="C290" type="graphitec-C290"/> 
+   <Atom name="C291" type="graphitec-C291"/> 
+   <Atom name="C292" type="graphitec-C292"/> 
+   <Atom name="C293" type="graphitec-C293"/> 
+   <Atom name="C294" type="graphitec-C294"/> 
+   <Atom name="C295" type="graphitec-C295"/> 
+   <Atom name="C296" type="graphitec-C296"/> 
+   <Atom name="C297" type="graphitec-C297"/> 
+   <Atom name="C298" type="graphitec-C298"/> 
+   <Atom name="C299" type="graphitec-C299"/> 
+   <Atom name="C300" type="graphitec-C300"/> 
+   <Atom name="C301" type="graphitec-C301"/> 
+   <Atom name="C302" type="graphitec-C302"/> 
+   <Atom name="C303" type="graphitec-C303"/> 
+   <Atom name="C304" type="graphitec-C304"/> 
+   <Atom name="C305" type="graphitec-C305"/> 
+   <Atom name="C306" type="graphitec-C306"/> 
+   <Atom name="C307" type="graphitec-C307"/> 
+   <Atom name="C308" type="graphitec-C308"/> 
+   <Atom name="C309" type="graphitec-C309"/> 
+   <Atom name="C310" type="graphitec-C310"/> 
+   <Atom name="C311" type="graphitec-C311"/> 
+   <Atom name="C312" type="graphitec-C312"/> 
+   <Atom name="C313" type="graphitec-C313"/> 
+   <Atom name="C314" type="graphitec-C314"/> 
+   <Atom name="C315" type="graphitec-C315"/> 
+   <Atom name="C316" type="graphitec-C316"/> 
+   <Atom name="C317" type="graphitec-C317"/> 
+   <Atom name="C318" type="graphitec-C318"/> 
+   <Atom name="C319" type="graphitec-C319"/> 
+   <Atom name="C320" type="graphitec-C320"/> 
+   <Atom name="C321" type="graphitec-C321"/> 
+   <Atom name="C322" type="graphitec-C322"/> 
+   <Atom name="C323" type="graphitec-C323"/> 
+   <Atom name="C324" type="graphitec-C324"/> 
+   <Atom name="C325" type="graphitec-C325"/> 
+   <Atom name="C326" type="graphitec-C326"/> 
+   <Atom name="C327" type="graphitec-C327"/> 
+   <Atom name="C328" type="graphitec-C328"/> 
+   <Atom name="C329" type="graphitec-C329"/> 
+   <Atom name="C330" type="graphitec-C330"/> 
+   <Atom name="C331" type="graphitec-C331"/> 
+   <Atom name="C332" type="graphitec-C332"/> 
+   <Atom name="C333" type="graphitec-C333"/> 
+   <Atom name="C334" type="graphitec-C334"/> 
+   <Atom name="C335" type="graphitec-C335"/> 
+   <Atom name="C336" type="graphitec-C336"/> 
+   <Atom name="C337" type="graphitec-C337"/> 
+   <Atom name="C338" type="graphitec-C338"/> 
+   <Atom name="C339" type="graphitec-C339"/> 
+   <Atom name="C340" type="graphitec-C340"/> 
+   <Atom name="C341" type="graphitec-C341"/> 
+   <Atom name="C342" type="graphitec-C342"/> 
+   <Atom name="C343" type="graphitec-C343"/> 
+   <Atom name="C344" type="graphitec-C344"/> 
+   <Atom name="C345" type="graphitec-C345"/> 
+   <Atom name="C346" type="graphitec-C346"/> 
+   <Atom name="C347" type="graphitec-C347"/> 
+   <Atom name="C348" type="graphitec-C348"/> 
+   <Atom name="C349" type="graphitec-C349"/> 
+   <Atom name="C350" type="graphitec-C350"/> 
+   <Atom name="C351" type="graphitec-C351"/> 
+   <Atom name="C352" type="graphitec-C352"/> 
+   <Atom name="C353" type="graphitec-C353"/> 
+   <Atom name="C354" type="graphitec-C354"/> 
+   <Atom name="C355" type="graphitec-C355"/> 
+   <Atom name="C356" type="graphitec-C356"/> 
+   <Atom name="C357" type="graphitec-C357"/> 
+   <Atom name="C358" type="graphitec-C358"/> 
+   <Atom name="C359" type="graphitec-C359"/> 
+   <Atom name="C360" type="graphitec-C360"/> 
+   <Atom name="C361" type="graphitec-C361"/> 
+   <Atom name="C362" type="graphitec-C362"/> 
+   <Atom name="C363" type="graphitec-C363"/> 
+   <Atom name="C364" type="graphitec-C364"/> 
+   <Atom name="C365" type="graphitec-C365"/> 
+   <Atom name="C366" type="graphitec-C366"/> 
+   <Atom name="C367" type="graphitec-C367"/> 
+   <Atom name="C368" type="graphitec-C368"/> 
+   <Atom name="C369" type="graphitec-C369"/> 
+   <Atom name="C370" type="graphitec-C370"/> 
+   <Atom name="C371" type="graphitec-C371"/> 
+   <Atom name="C372" type="graphitec-C372"/> 
+   <Atom name="C373" type="graphitec-C373"/> 
+   <Atom name="C374" type="graphitec-C374"/> 
+   <Atom name="C375" type="graphitec-C375"/> 
+   <Atom name="C376" type="graphitec-C376"/> 
+   <Atom name="C377" type="graphitec-C377"/> 
+   <Atom name="C378" type="graphitec-C378"/> 
+   <Atom name="C379" type="graphitec-C379"/> 
+   <Atom name="C380" type="graphitec-C380"/> 
+   <Atom name="C381" type="graphitec-C381"/> 
+   <Atom name="C382" type="graphitec-C382"/> 
+   <Atom name="C383" type="graphitec-C383"/> 
+   <Atom name="C384" type="graphitec-C384"/> 
+   <Atom name="C385" type="graphitec-C385"/> 
+   <Atom name="C386" type="graphitec-C386"/> 
+   <Atom name="C387" type="graphitec-C387"/> 
+   <Atom name="C388" type="graphitec-C388"/> 
+   <Atom name="C389" type="graphitec-C389"/> 
+   <Atom name="C390" type="graphitec-C390"/> 
+   <Atom name="C391" type="graphitec-C391"/> 
+   <Atom name="C392" type="graphitec-C392"/> 
+   <Atom name="C393" type="graphitec-C393"/> 
+   <Atom name="C394" type="graphitec-C394"/> 
+   <Atom name="C395" type="graphitec-C395"/> 
+   <Atom name="C396" type="graphitec-C396"/> 
+   <Atom name="C397" type="graphitec-C397"/> 
+   <Atom name="C398" type="graphitec-C398"/> 
+   <Atom name="C399" type="graphitec-C399"/> 
+   <Atom name="C400" type="graphitec-C400"/> 
+   <Atom name="C401" type="graphitec-C401"/> 
+   <Atom name="C402" type="graphitec-C402"/> 
+   <Atom name="C403" type="graphitec-C403"/> 
+   <Atom name="C404" type="graphitec-C404"/> 
+   <Atom name="C405" type="graphitec-C405"/> 
+   <Atom name="C406" type="graphitec-C406"/> 
+   <Atom name="C407" type="graphitec-C407"/> 
+   <Atom name="C408" type="graphitec-C408"/> 
+   <Atom name="C409" type="graphitec-C409"/> 
+   <Atom name="C410" type="graphitec-C410"/> 
+   <Atom name="C411" type="graphitec-C411"/> 
+   <Atom name="C412" type="graphitec-C412"/> 
+   <Atom name="C413" type="graphitec-C413"/> 
+   <Atom name="C414" type="graphitec-C414"/> 
+   <Atom name="C415" type="graphitec-C415"/> 
+   <Atom name="C416" type="graphitec-C416"/> 
+   <Atom name="C417" type="graphitec-C417"/> 
+   <Atom name="C418" type="graphitec-C418"/> 
+   <Atom name="C419" type="graphitec-C419"/> 
+   <Atom name="C420" type="graphitec-C420"/> 
+   <Atom name="C421" type="graphitec-C421"/> 
+   <Atom name="C422" type="graphitec-C422"/> 
+   <Atom name="C423" type="graphitec-C423"/> 
+   <Atom name="C424" type="graphitec-C424"/> 
+   <Atom name="C425" type="graphitec-C425"/> 
+   <Atom name="C426" type="graphitec-C426"/> 
+   <Atom name="C427" type="graphitec-C427"/> 
+   <Atom name="C428" type="graphitec-C428"/> 
+   <Atom name="C429" type="graphitec-C429"/> 
+   <Atom name="C430" type="graphitec-C430"/> 
+   <Atom name="C431" type="graphitec-C431"/> 
+   <Atom name="C432" type="graphitec-C432"/> 
+   <Atom name="C433" type="graphitec-C433"/> 
+   <Atom name="C434" type="graphitec-C434"/> 
+   <Atom name="C435" type="graphitec-C435"/> 
+   <Atom name="C436" type="graphitec-C436"/> 
+   <Atom name="C437" type="graphitec-C437"/> 
+   <Atom name="C438" type="graphitec-C438"/> 
+   <Atom name="C439" type="graphitec-C439"/> 
+   <Atom name="C440" type="graphitec-C440"/> 
+   <Atom name="C441" type="graphitec-C441"/> 
+   <Atom name="C442" type="graphitec-C442"/> 
+   <Atom name="C443" type="graphitec-C443"/> 
+   <Atom name="C444" type="graphitec-C444"/> 
+   <Atom name="C445" type="graphitec-C445"/> 
+   <Atom name="C446" type="graphitec-C446"/> 
+   <Atom name="C447" type="graphitec-C447"/> 
+   <Atom name="C448" type="graphitec-C448"/> 
+   <Atom name="C449" type="graphitec-C449"/> 
+   <Atom name="C450" type="graphitec-C450"/> 
+   <Atom name="C451" type="graphitec-C451"/> 
+   <Atom name="C452" type="graphitec-C452"/> 
+   <Atom name="C453" type="graphitec-C453"/> 
+   <Atom name="C454" type="graphitec-C454"/> 
+   <Atom name="C455" type="graphitec-C455"/> 
+   <Atom name="C456" type="graphitec-C456"/> 
+   <Atom name="C457" type="graphitec-C457"/> 
+   <Atom name="C458" type="graphitec-C458"/> 
+   <Atom name="C459" type="graphitec-C459"/> 
+   <Atom name="C460" type="graphitec-C460"/> 
+   <Atom name="C461" type="graphitec-C461"/> 
+   <Atom name="C462" type="graphitec-C462"/> 
+   <Atom name="C463" type="graphitec-C463"/> 
+   <Atom name="C464" type="graphitec-C464"/> 
+   <Atom name="C465" type="graphitec-C465"/> 
+   <Atom name="C466" type="graphitec-C466"/> 
+   <Atom name="C467" type="graphitec-C467"/> 
+   <Atom name="C468" type="graphitec-C468"/> 
+   <Atom name="C469" type="graphitec-C469"/> 
+   <Atom name="C470" type="graphitec-C470"/> 
+   <Atom name="C471" type="graphitec-C471"/> 
+   <Atom name="C472" type="graphitec-C472"/> 
+   <Atom name="C473" type="graphitec-C473"/> 
+   <Atom name="C474" type="graphitec-C474"/> 
+   <Atom name="C475" type="graphitec-C475"/> 
+   <Atom name="C476" type="graphitec-C476"/> 
+   <Atom name="C477" type="graphitec-C477"/> 
+   <Atom name="C478" type="graphitec-C478"/> 
+   <Atom name="C479" type="graphitec-C479"/> 
+   <Atom name="C480" type="graphitec-C480"/> 
+   <Atom name="C481" type="graphitec-C481"/> 
+   <Atom name="C482" type="graphitec-C482"/> 
+   <Atom name="C483" type="graphitec-C483"/> 
+   <Atom name="C484" type="graphitec-C484"/> 
+   <Atom name="C485" type="graphitec-C485"/> 
+   <Atom name="C486" type="graphitec-C486"/> 
+   <Atom name="C487" type="graphitec-C487"/> 
+   <Atom name="C488" type="graphitec-C488"/> 
+   <Atom name="C489" type="graphitec-C489"/> 
+   <Atom name="C490" type="graphitec-C490"/> 
+   <Atom name="C491" type="graphitec-C491"/> 
+   <Atom name="C492" type="graphitec-C492"/> 
+   <Atom name="C493" type="graphitec-C493"/> 
+   <Atom name="C494" type="graphitec-C494"/> 
+   <Atom name="C495" type="graphitec-C495"/> 
+   <Atom name="C496" type="graphitec-C496"/> 
+   <Atom name="C497" type="graphitec-C497"/> 
+   <Atom name="C498" type="graphitec-C498"/> 
+   <Atom name="C499" type="graphitec-C499"/> 
+   <Atom name="C500" type="graphitec-C500"/> 
+   <Atom name="C501" type="graphitec-C501"/> 
+   <Atom name="C502" type="graphitec-C502"/> 
+   <Atom name="C503" type="graphitec-C503"/> 
+   <Atom name="C504" type="graphitec-C504"/> 
+   <Atom name="C505" type="graphitec-C505"/> 
+   <Atom name="C506" type="graphitec-C506"/> 
+   <Atom name="C507" type="graphitec-C507"/> 
+   <Atom name="C508" type="graphitec-C508"/> 
+   <Atom name="C509" type="graphitec-C509"/> 
+   <Atom name="C510" type="graphitec-C510"/> 
+   <Atom name="C511" type="graphitec-C511"/> 
+   <Atom name="C512" type="graphitec-C512"/> 
+   <Atom name="C513" type="graphitec-C513"/> 
+   <Atom name="C514" type="graphitec-C514"/> 
+   <Atom name="C515" type="graphitec-C515"/> 
+   <Atom name="C516" type="graphitec-C516"/> 
+   <Atom name="C517" type="graphitec-C517"/> 
+   <Atom name="C518" type="graphitec-C518"/> 
+   <Atom name="C519" type="graphitec-C519"/> 
+   <Atom name="C520" type="graphitec-C520"/> 
+   <Atom name="C521" type="graphitec-C521"/> 
+   <Atom name="C522" type="graphitec-C522"/> 
+   <Atom name="C523" type="graphitec-C523"/> 
+   <Atom name="C524" type="graphitec-C524"/> 
+   <Atom name="C525" type="graphitec-C525"/> 
+   <Atom name="C526" type="graphitec-C526"/> 
+   <Atom name="C527" type="graphitec-C527"/> 
+   <Atom name="C528" type="graphitec-C528"/> 
+   <Atom name="C529" type="graphitec-C529"/> 
+   <Atom name="C530" type="graphitec-C530"/> 
+   <Atom name="C531" type="graphitec-C531"/> 
+   <Atom name="C532" type="graphitec-C532"/> 
+   <Atom name="C533" type="graphitec-C533"/> 
+   <Atom name="C534" type="graphitec-C534"/> 
+   <Atom name="C535" type="graphitec-C535"/> 
+   <Atom name="C536" type="graphitec-C536"/> 
+   <Atom name="C537" type="graphitec-C537"/> 
+   <Atom name="C538" type="graphitec-C538"/> 
+   <Atom name="C539" type="graphitec-C539"/> 
+   <Atom name="C540" type="graphitec-C540"/> 
+   <Atom name="C541" type="graphitec-C541"/> 
+   <Atom name="C542" type="graphitec-C542"/> 
+   <Atom name="C543" type="graphitec-C543"/> 
+   <Atom name="C544" type="graphitec-C544"/> 
+   <Atom name="C545" type="graphitec-C545"/> 
+   <Atom name="C546" type="graphitec-C546"/> 
+   <Atom name="C547" type="graphitec-C547"/> 
+   <Atom name="C548" type="graphitec-C548"/> 
+   <Atom name="C549" type="graphitec-C549"/> 
+   <Atom name="C550" type="graphitec-C550"/> 
+   <Atom name="C551" type="graphitec-C551"/> 
+   <Atom name="C552" type="graphitec-C552"/> 
+   <Atom name="C553" type="graphitec-C553"/> 
+   <Atom name="C554" type="graphitec-C554"/> 
+   <Atom name="C555" type="graphitec-C555"/> 
+   <Atom name="C556" type="graphitec-C556"/> 
+   <Atom name="C557" type="graphitec-C557"/> 
+   <Atom name="C558" type="graphitec-C558"/> 
+   <Atom name="C559" type="graphitec-C559"/> 
+   <Atom name="C560" type="graphitec-C560"/> 
+   <Atom name="C561" type="graphitec-C561"/> 
+   <Atom name="C562" type="graphitec-C562"/> 
+   <Atom name="C563" type="graphitec-C563"/> 
+   <Atom name="C564" type="graphitec-C564"/> 
+   <Atom name="C565" type="graphitec-C565"/> 
+   <Atom name="C566" type="graphitec-C566"/> 
+   <Atom name="C567" type="graphitec-C567"/> 
+   <Atom name="C568" type="graphitec-C568"/> 
+   <Atom name="C569" type="graphitec-C569"/> 
+   <Atom name="C570" type="graphitec-C570"/> 
+   <Atom name="C571" type="graphitec-C571"/> 
+   <Atom name="C572" type="graphitec-C572"/> 
+   <Atom name="C573" type="graphitec-C573"/> 
+   <Atom name="C574" type="graphitec-C574"/> 
+   <Atom name="C575" type="graphitec-C575"/> 
+   <Atom name="C576" type="graphitec-C576"/> 
+   <Atom name="C577" type="graphitec-C577"/> 
+   <Atom name="C578" type="graphitec-C578"/> 
+   <Atom name="C579" type="graphitec-C579"/> 
+   <Atom name="C580" type="graphitec-C580"/> 
+   <Atom name="C581" type="graphitec-C581"/> 
+   <Atom name="C582" type="graphitec-C582"/> 
+   <Atom name="C583" type="graphitec-C583"/> 
+   <Atom name="C584" type="graphitec-C584"/> 
+   <Atom name="C585" type="graphitec-C585"/> 
+   <Atom name="C586" type="graphitec-C586"/> 
+   <Atom name="C587" type="graphitec-C587"/> 
+   <Atom name="C588" type="graphitec-C588"/> 
+   <Atom name="C589" type="graphitec-C589"/> 
+   <Atom name="C590" type="graphitec-C590"/> 
+   <Atom name="C591" type="graphitec-C591"/> 
+   <Atom name="C592" type="graphitec-C592"/> 
+   <Atom name="C593" type="graphitec-C593"/> 
+   <Atom name="C594" type="graphitec-C594"/> 
+   <Atom name="C595" type="graphitec-C595"/> 
+   <Atom name="C596" type="graphitec-C596"/> 
+   <Atom name="C597" type="graphitec-C597"/> 
+   <Atom name="C598" type="graphitec-C598"/> 
+   <Atom name="C599" type="graphitec-C599"/> 
+   <Atom name="C600" type="graphitec-C600"/> 
+   <Atom name="C601" type="graphitec-C601"/> 
+   <Atom name="C602" type="graphitec-C602"/> 
+   <Atom name="C603" type="graphitec-C603"/> 
+   <Atom name="C604" type="graphitec-C604"/> 
+   <Atom name="C605" type="graphitec-C605"/> 
+   <Atom name="C606" type="graphitec-C606"/> 
+   <Atom name="C607" type="graphitec-C607"/> 
+   <Atom name="C608" type="graphitec-C608"/> 
+   <Atom name="C609" type="graphitec-C609"/> 
+   <Atom name="C610" type="graphitec-C610"/> 
+   <Atom name="C611" type="graphitec-C611"/> 
+   <Atom name="C612" type="graphitec-C612"/> 
+   <Atom name="C613" type="graphitec-C613"/> 
+   <Atom name="C614" type="graphitec-C614"/> 
+   <Atom name="C615" type="graphitec-C615"/> 
+   <Atom name="C616" type="graphitec-C616"/> 
+   <Atom name="C617" type="graphitec-C617"/> 
+   <Atom name="C618" type="graphitec-C618"/> 
+   <Atom name="C619" type="graphitec-C619"/> 
+   <Atom name="C620" type="graphitec-C620"/> 
+   <Atom name="C621" type="graphitec-C621"/> 
+   <Atom name="C622" type="graphitec-C622"/> 
+   <Atom name="C623" type="graphitec-C623"/> 
+   <Atom name="C624" type="graphitec-C624"/> 
+   <Atom name="C625" type="graphitec-C625"/> 
+   <Atom name="C626" type="graphitec-C626"/> 
+   <Atom name="C627" type="graphitec-C627"/> 
+   <Atom name="C628" type="graphitec-C628"/> 
+   <Atom name="C629" type="graphitec-C629"/> 
+   <Atom name="C630" type="graphitec-C630"/> 
+   <Atom name="C631" type="graphitec-C631"/> 
+   <Atom name="C632" type="graphitec-C632"/> 
+   <Atom name="C633" type="graphitec-C633"/> 
+   <Atom name="C634" type="graphitec-C634"/> 
+   <Atom name="C635" type="graphitec-C635"/> 
+   <Atom name="C636" type="graphitec-C636"/> 
+   <Atom name="C637" type="graphitec-C637"/> 
+   <Atom name="C638" type="graphitec-C638"/> 
+   <Atom name="C639" type="graphitec-C639"/> 
+   <Atom name="C640" type="graphitec-C640"/> 
+   <Atom name="C641" type="graphitec-C641"/> 
+   <Atom name="C642" type="graphitec-C642"/> 
+   <Atom name="C643" type="graphitec-C643"/> 
+   <Atom name="C644" type="graphitec-C644"/> 
+   <Atom name="C645" type="graphitec-C645"/> 
+   <Atom name="C646" type="graphitec-C646"/> 
+   <Atom name="C647" type="graphitec-C647"/> 
+   <Atom name="C648" type="graphitec-C648"/> 
+   <Atom name="C649" type="graphitec-C649"/> 
+   <Atom name="C650" type="graphitec-C650"/> 
+   <Atom name="C651" type="graphitec-C651"/> 
+   <Atom name="C652" type="graphitec-C652"/> 
+   <Atom name="C653" type="graphitec-C653"/> 
+   <Atom name="C654" type="graphitec-C654"/> 
+   <Atom name="C655" type="graphitec-C655"/> 
+   <Atom name="C656" type="graphitec-C656"/> 
+   <Atom name="C657" type="graphitec-C657"/> 
+   <Atom name="C658" type="graphitec-C658"/> 
+   <Atom name="C659" type="graphitec-C659"/> 
+   <Atom name="C660" type="graphitec-C660"/> 
+   <Atom name="C661" type="graphitec-C661"/> 
+   <Atom name="C662" type="graphitec-C662"/> 
+   <Atom name="C663" type="graphitec-C663"/> 
+   <Atom name="C664" type="graphitec-C664"/> 
+   <Atom name="C665" type="graphitec-C665"/> 
+   <Atom name="C666" type="graphitec-C666"/> 
+   <Atom name="C667" type="graphitec-C667"/> 
+   <Atom name="C668" type="graphitec-C668"/> 
+   <Atom name="C669" type="graphitec-C669"/> 
+   <Atom name="C670" type="graphitec-C670"/> 
+   <Atom name="C671" type="graphitec-C671"/> 
+   <Atom name="C672" type="graphitec-C672"/> 
+   <Atom name="C673" type="graphitec-C673"/> 
+   <Atom name="C674" type="graphitec-C674"/> 
+   <Atom name="C675" type="graphitec-C675"/> 
+   <Atom name="C676" type="graphitec-C676"/> 
+   <Atom name="C677" type="graphitec-C677"/> 
+   <Atom name="C678" type="graphitec-C678"/> 
+   <Atom name="C679" type="graphitec-C679"/> 
+   <Atom name="C680" type="graphitec-C680"/> 
+   <Atom name="C681" type="graphitec-C681"/> 
+   <Atom name="C682" type="graphitec-C682"/> 
+   <Atom name="C683" type="graphitec-C683"/> 
+   <Atom name="C684" type="graphitec-C684"/> 
+   <Atom name="C685" type="graphitec-C685"/> 
+   <Atom name="C686" type="graphitec-C686"/> 
+   <Atom name="C687" type="graphitec-C687"/> 
+   <Atom name="C688" type="graphitec-C688"/> 
+   <Atom name="C689" type="graphitec-C689"/> 
+   <Atom name="C690" type="graphitec-C690"/> 
+   <Atom name="C691" type="graphitec-C691"/> 
+   <Atom name="C692" type="graphitec-C692"/> 
+   <Atom name="C693" type="graphitec-C693"/> 
+   <Atom name="C694" type="graphitec-C694"/> 
+   <Atom name="C695" type="graphitec-C695"/> 
+   <Atom name="C696" type="graphitec-C696"/> 
+   <Atom name="C697" type="graphitec-C697"/> 
+   <Atom name="C698" type="graphitec-C698"/> 
+   <Atom name="C699" type="graphitec-C699"/> 
+   <Atom name="C700" type="graphitec-C700"/> 
+   <Atom name="C701" type="graphitec-C701"/> 
+   <Atom name="C702" type="graphitec-C702"/> 
+   <Atom name="C703" type="graphitec-C703"/> 
+   <Atom name="C704" type="graphitec-C704"/> 
+   <Atom name="C705" type="graphitec-C705"/> 
+   <Atom name="C706" type="graphitec-C706"/> 
+   <Atom name="C707" type="graphitec-C707"/> 
+   <Atom name="C708" type="graphitec-C708"/> 
+   <Atom name="C709" type="graphitec-C709"/> 
+   <Atom name="C710" type="graphitec-C710"/> 
+   <Atom name="C711" type="graphitec-C711"/> 
+   <Atom name="C712" type="graphitec-C712"/> 
+   <Atom name="C713" type="graphitec-C713"/> 
+   <Atom name="C714" type="graphitec-C714"/> 
+   <Atom name="C715" type="graphitec-C715"/> 
+   <Atom name="C716" type="graphitec-C716"/> 
+   <Atom name="C717" type="graphitec-C717"/> 
+   <Atom name="C718" type="graphitec-C718"/> 
+   <Atom name="C719" type="graphitec-C719"/> 
+   <Atom name="C720" type="graphitec-C720"/> 
+   <Atom name="C721" type="graphitec-C721"/> 
+   <Atom name="C722" type="graphitec-C722"/> 
+   <Atom name="C723" type="graphitec-C723"/> 
+   <Atom name="C724" type="graphitec-C724"/> 
+   <Atom name="C725" type="graphitec-C725"/> 
+   <Atom name="C726" type="graphitec-C726"/> 
+   <Atom name="C727" type="graphitec-C727"/> 
+   <Atom name="C728" type="graphitec-C728"/> 
+   <Atom name="C729" type="graphitec-C729"/> 
+   <Atom name="C730" type="graphitec-C730"/> 
+   <Atom name="C731" type="graphitec-C731"/> 
+   <Atom name="C732" type="graphitec-C732"/> 
+   <Atom name="C733" type="graphitec-C733"/> 
+   <Atom name="C734" type="graphitec-C734"/> 
+   <Atom name="C735" type="graphitec-C735"/> 
+   <Atom name="C736" type="graphitec-C736"/> 
+   <Atom name="C737" type="graphitec-C737"/> 
+   <Atom name="C738" type="graphitec-C738"/> 
+   <Atom name="C739" type="graphitec-C739"/> 
+   <Atom name="C740" type="graphitec-C740"/> 
+   <Atom name="C741" type="graphitec-C741"/> 
+   <Atom name="C742" type="graphitec-C742"/> 
+   <Atom name="C743" type="graphitec-C743"/> 
+   <Atom name="C744" type="graphitec-C744"/> 
+   <Atom name="C745" type="graphitec-C745"/> 
+   <Atom name="C746" type="graphitec-C746"/> 
+   <Atom name="C747" type="graphitec-C747"/> 
+   <Atom name="C748" type="graphitec-C748"/> 
+   <Atom name="C749" type="graphitec-C749"/> 
+   <Atom name="C750" type="graphitec-C750"/> 
+   <Atom name="C751" type="graphitec-C751"/> 
+   <Atom name="C752" type="graphitec-C752"/> 
+   <Atom name="C753" type="graphitec-C753"/> 
+   <Atom name="C754" type="graphitec-C754"/> 
+   <Atom name="C755" type="graphitec-C755"/> 
+   <Atom name="C756" type="graphitec-C756"/> 
+   <Atom name="C757" type="graphitec-C757"/> 
+   <Atom name="C758" type="graphitec-C758"/> 
+   <Atom name="C759" type="graphitec-C759"/> 
+   <Atom name="C760" type="graphitec-C760"/> 
+   <Atom name="C761" type="graphitec-C761"/> 
+   <Atom name="C762" type="graphitec-C762"/> 
+   <Atom name="C763" type="graphitec-C763"/> 
+   <Atom name="C764" type="graphitec-C764"/> 
+   <Atom name="C765" type="graphitec-C765"/> 
+   <Atom name="C766" type="graphitec-C766"/> 
+   <Atom name="C767" type="graphitec-C767"/> 
+   <Atom name="C768" type="graphitec-C768"/> 
+   <Atom name="C769" type="graphitec-C769"/> 
+   <Atom name="C770" type="graphitec-C770"/> 
+   <Atom name="C771" type="graphitec-C771"/> 
+   <Atom name="C772" type="graphitec-C772"/> 
+   <Atom name="C773" type="graphitec-C773"/> 
+   <Atom name="C774" type="graphitec-C774"/> 
+   <Atom name="C775" type="graphitec-C775"/> 
+   <Atom name="C776" type="graphitec-C776"/> 
+   <Atom name="C777" type="graphitec-C777"/> 
+   <Atom name="C778" type="graphitec-C778"/> 
+   <Atom name="C779" type="graphitec-C779"/> 
+   <Atom name="C780" type="graphitec-C780"/> 
+   <Atom name="C781" type="graphitec-C781"/> 
+   <Atom name="C782" type="graphitec-C782"/> 
+   <Atom name="C783" type="graphitec-C783"/> 
+   <Atom name="C784" type="graphitec-C784"/> 
+   <Atom name="C785" type="graphitec-C785"/> 
+   <Atom name="C786" type="graphitec-C786"/> 
+   <Atom name="C787" type="graphitec-C787"/> 
+   <Atom name="C788" type="graphitec-C788"/> 
+   <Atom name="C789" type="graphitec-C789"/> 
+   <Atom name="C790" type="graphitec-C790"/> 
+   <Atom name="C791" type="graphitec-C791"/> 
+   <Atom name="C792" type="graphitec-C792"/> 
+   <Atom name="C793" type="graphitec-C793"/> 
+   <Atom name="C794" type="graphitec-C794"/> 
+   <Atom name="C795" type="graphitec-C795"/> 
+   <Atom name="C796" type="graphitec-C796"/> 
+   <Atom name="C797" type="graphitec-C797"/> 
+   <Atom name="C798" type="graphitec-C798"/> 
+   <Atom name="C799" type="graphitec-C799"/> 
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="39"/>
+   <Bond from="0" to="799"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="42"/>
+   <Bond from="2" to="3"/>
+   <Bond from="2" to="761"/>
+   <Bond from="3" to="4"/>
+   <Bond from="3" to="44"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="763"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="46"/>
+   <Bond from="6" to="7"/>
+   <Bond from="6" to="765"/>
+   <Bond from="7" to="8"/>
+   <Bond from="7" to="48"/>
+   <Bond from="8" to="9"/>
+   <Bond from="8" to="767"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="50"/>
+   <Bond from="10" to="11"/>
+   <Bond from="10" to="769"/>
+   <Bond from="11" to="12"/>
+   <Bond from="11" to="52"/>
+   <Bond from="12" to="13"/>
+   <Bond from="12" to="771"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="54"/>
+   <Bond from="14" to="15"/>
+   <Bond from="14" to="773"/>
+   <Bond from="15" to="16"/>
+   <Bond from="15" to="56"/>
+   <Bond from="16" to="17"/>
+   <Bond from="16" to="775"/>
+   <Bond from="17" to="18"/>
+   <Bond from="17" to="58"/>
+   <Bond from="18" to="19"/>
+   <Bond from="18" to="777"/>
+   <Bond from="19" to="20"/>
+   <Bond from="19" to="60"/>
+   <Bond from="20" to="21"/>
+   <Bond from="20" to="779"/>
+   <Bond from="21" to="22"/>
+   <Bond from="21" to="62"/>
+   <Bond from="22" to="23"/>
+   <Bond from="22" to="781"/>
+   <Bond from="23" to="24"/>
+   <Bond from="23" to="64"/>
+   <Bond from="24" to="25"/>
+   <Bond from="24" to="783"/>
+   <Bond from="25" to="26"/>
+   <Bond from="25" to="66"/>
+   <Bond from="26" to="27"/>
+   <Bond from="26" to="785"/>
+   <Bond from="27" to="28"/>
+   <Bond from="27" to="68"/>
+   <Bond from="28" to="29"/>
+   <Bond from="28" to="787"/>
+   <Bond from="29" to="30"/>
+   <Bond from="29" to="70"/>
+   <Bond from="30" to="31"/>
+   <Bond from="30" to="789"/>
+   <Bond from="31" to="32"/>
+   <Bond from="31" to="72"/>
+   <Bond from="32" to="33"/>
+   <Bond from="32" to="791"/>
+   <Bond from="33" to="34"/>
+   <Bond from="33" to="74"/>
+   <Bond from="34" to="35"/>
+   <Bond from="34" to="793"/>
+   <Bond from="35" to="36"/>
+   <Bond from="35" to="76"/>
+   <Bond from="36" to="37"/>
+   <Bond from="36" to="795"/>
+   <Bond from="37" to="38"/>
+   <Bond from="37" to="78"/>
+   <Bond from="38" to="39"/>
+   <Bond from="38" to="797"/>
+   <Bond from="39" to="40"/>
+   <Bond from="40" to="41"/>
+   <Bond from="40" to="79"/>
+   <Bond from="41" to="42"/>
+   <Bond from="41" to="82"/>
+   <Bond from="42" to="43"/>
+   <Bond from="43" to="44"/>
+   <Bond from="43" to="84"/>
+   <Bond from="44" to="45"/>
+   <Bond from="45" to="46"/>
+   <Bond from="45" to="86"/>
+   <Bond from="46" to="47"/>
+   <Bond from="47" to="48"/>
+   <Bond from="47" to="88"/>
+   <Bond from="48" to="49"/>
+   <Bond from="49" to="50"/>
+   <Bond from="49" to="90"/>
+   <Bond from="50" to="51"/>
+   <Bond from="51" to="52"/>
+   <Bond from="51" to="92"/>
+   <Bond from="52" to="53"/>
+   <Bond from="53" to="54"/>
+   <Bond from="53" to="94"/>
+   <Bond from="54" to="55"/>
+   <Bond from="55" to="56"/>
+   <Bond from="55" to="96"/>
+   <Bond from="56" to="57"/>
+   <Bond from="57" to="58"/>
+   <Bond from="57" to="98"/>
+   <Bond from="58" to="59"/>
+   <Bond from="59" to="60"/>
+   <Bond from="59" to="100"/>
+   <Bond from="60" to="61"/>
+   <Bond from="61" to="62"/>
+   <Bond from="61" to="102"/>
+   <Bond from="62" to="63"/>
+   <Bond from="63" to="64"/>
+   <Bond from="63" to="104"/>
+   <Bond from="64" to="65"/>
+   <Bond from="65" to="66"/>
+   <Bond from="65" to="106"/>
+   <Bond from="66" to="67"/>
+   <Bond from="67" to="68"/>
+   <Bond from="67" to="108"/>
+   <Bond from="68" to="69"/>
+   <Bond from="69" to="70"/>
+   <Bond from="69" to="110"/>
+   <Bond from="70" to="71"/>
+   <Bond from="71" to="72"/>
+   <Bond from="71" to="112"/>
+   <Bond from="72" to="73"/>
+   <Bond from="73" to="74"/>
+   <Bond from="73" to="114"/>
+   <Bond from="74" to="75"/>
+   <Bond from="75" to="76"/>
+   <Bond from="75" to="116"/>
+   <Bond from="76" to="77"/>
+   <Bond from="77" to="78"/>
+   <Bond from="77" to="118"/>
+   <Bond from="78" to="79"/>
+   <Bond from="79" to="80"/>
+   <Bond from="80" to="81"/>
+   <Bond from="80" to="119"/>
+   <Bond from="81" to="82"/>
+   <Bond from="81" to="122"/>
+   <Bond from="82" to="83"/>
+   <Bond from="83" to="84"/>
+   <Bond from="83" to="124"/>
+   <Bond from="84" to="85"/>
+   <Bond from="85" to="86"/>
+   <Bond from="85" to="126"/>
+   <Bond from="86" to="87"/>
+   <Bond from="87" to="88"/>
+   <Bond from="87" to="128"/>
+   <Bond from="88" to="89"/>
+   <Bond from="89" to="90"/>
+   <Bond from="89" to="130"/>
+   <Bond from="90" to="91"/>
+   <Bond from="91" to="92"/>
+   <Bond from="91" to="132"/>
+   <Bond from="92" to="93"/>
+   <Bond from="93" to="94"/>
+   <Bond from="93" to="134"/>
+   <Bond from="94" to="95"/>
+   <Bond from="95" to="96"/>
+   <Bond from="95" to="136"/>
+   <Bond from="96" to="97"/>
+   <Bond from="97" to="98"/>
+   <Bond from="97" to="138"/>
+   <Bond from="98" to="99"/>
+   <Bond from="99" to="100"/>
+   <Bond from="99" to="140"/>
+   <Bond from="100" to="101"/>
+   <Bond from="101" to="102"/>
+   <Bond from="101" to="142"/>
+   <Bond from="102" to="103"/>
+   <Bond from="103" to="104"/>
+   <Bond from="103" to="144"/>
+   <Bond from="104" to="105"/>
+   <Bond from="105" to="106"/>
+   <Bond from="105" to="146"/>
+   <Bond from="106" to="107"/>
+   <Bond from="107" to="108"/>
+   <Bond from="107" to="148"/>
+   <Bond from="108" to="109"/>
+   <Bond from="109" to="110"/>
+   <Bond from="109" to="150"/>
+   <Bond from="110" to="111"/>
+   <Bond from="111" to="112"/>
+   <Bond from="111" to="152"/>
+   <Bond from="112" to="113"/>
+   <Bond from="113" to="114"/>
+   <Bond from="113" to="154"/>
+   <Bond from="114" to="115"/>
+   <Bond from="115" to="116"/>
+   <Bond from="115" to="156"/>
+   <Bond from="116" to="117"/>
+   <Bond from="117" to="118"/>
+   <Bond from="117" to="158"/>
+   <Bond from="118" to="119"/>
+   <Bond from="119" to="120"/>
+   <Bond from="120" to="121"/>
+   <Bond from="120" to="159"/>
+   <Bond from="121" to="122"/>
+   <Bond from="121" to="162"/>
+   <Bond from="122" to="123"/>
+   <Bond from="123" to="124"/>
+   <Bond from="123" to="164"/>
+   <Bond from="124" to="125"/>
+   <Bond from="125" to="126"/>
+   <Bond from="125" to="166"/>
+   <Bond from="126" to="127"/>
+   <Bond from="127" to="128"/>
+   <Bond from="127" to="168"/>
+   <Bond from="128" to="129"/>
+   <Bond from="129" to="130"/>
+   <Bond from="129" to="170"/>
+   <Bond from="130" to="131"/>
+   <Bond from="131" to="132"/>
+   <Bond from="131" to="172"/>
+   <Bond from="132" to="133"/>
+   <Bond from="133" to="134"/>
+   <Bond from="133" to="174"/>
+   <Bond from="134" to="135"/>
+   <Bond from="135" to="136"/>
+   <Bond from="135" to="176"/>
+   <Bond from="136" to="137"/>
+   <Bond from="137" to="138"/>
+   <Bond from="137" to="178"/>
+   <Bond from="138" to="139"/>
+   <Bond from="139" to="140"/>
+   <Bond from="139" to="180"/>
+   <Bond from="140" to="141"/>
+   <Bond from="141" to="142"/>
+   <Bond from="141" to="182"/>
+   <Bond from="142" to="143"/>
+   <Bond from="143" to="144"/>
+   <Bond from="143" to="184"/>
+   <Bond from="144" to="145"/>
+   <Bond from="145" to="146"/>
+   <Bond from="145" to="186"/>
+   <Bond from="146" to="147"/>
+   <Bond from="147" to="148"/>
+   <Bond from="147" to="188"/>
+   <Bond from="148" to="149"/>
+   <Bond from="149" to="150"/>
+   <Bond from="149" to="190"/>
+   <Bond from="150" to="151"/>
+   <Bond from="151" to="152"/>
+   <Bond from="151" to="192"/>
+   <Bond from="152" to="153"/>
+   <Bond from="153" to="154"/>
+   <Bond from="153" to="194"/>
+   <Bond from="154" to="155"/>
+   <Bond from="155" to="156"/>
+   <Bond from="155" to="196"/>
+   <Bond from="156" to="157"/>
+   <Bond from="157" to="158"/>
+   <Bond from="157" to="198"/>
+   <Bond from="158" to="159"/>
+   <Bond from="159" to="160"/>
+   <Bond from="160" to="161"/>
+   <Bond from="160" to="199"/>
+   <Bond from="161" to="162"/>
+   <Bond from="161" to="202"/>
+   <Bond from="162" to="163"/>
+   <Bond from="163" to="164"/>
+   <Bond from="163" to="204"/>
+   <Bond from="164" to="165"/>
+   <Bond from="165" to="166"/>
+   <Bond from="165" to="206"/>
+   <Bond from="166" to="167"/>
+   <Bond from="167" to="168"/>
+   <Bond from="167" to="208"/>
+   <Bond from="168" to="169"/>
+   <Bond from="169" to="170"/>
+   <Bond from="169" to="210"/>
+   <Bond from="170" to="171"/>
+   <Bond from="171" to="172"/>
+   <Bond from="171" to="212"/>
+   <Bond from="172" to="173"/>
+   <Bond from="173" to="174"/>
+   <Bond from="173" to="214"/>
+   <Bond from="174" to="175"/>
+   <Bond from="175" to="176"/>
+   <Bond from="175" to="216"/>
+   <Bond from="176" to="177"/>
+   <Bond from="177" to="178"/>
+   <Bond from="177" to="218"/>
+   <Bond from="178" to="179"/>
+   <Bond from="179" to="180"/>
+   <Bond from="179" to="220"/>
+   <Bond from="180" to="181"/>
+   <Bond from="181" to="182"/>
+   <Bond from="181" to="222"/>
+   <Bond from="182" to="183"/>
+   <Bond from="183" to="184"/>
+   <Bond from="183" to="224"/>
+   <Bond from="184" to="185"/>
+   <Bond from="185" to="186"/>
+   <Bond from="185" to="226"/>
+   <Bond from="186" to="187"/>
+   <Bond from="187" to="188"/>
+   <Bond from="187" to="228"/>
+   <Bond from="188" to="189"/>
+   <Bond from="189" to="190"/>
+   <Bond from="189" to="230"/>
+   <Bond from="190" to="191"/>
+   <Bond from="191" to="192"/>
+   <Bond from="191" to="232"/>
+   <Bond from="192" to="193"/>
+   <Bond from="193" to="194"/>
+   <Bond from="193" to="234"/>
+   <Bond from="194" to="195"/>
+   <Bond from="195" to="196"/>
+   <Bond from="195" to="236"/>
+   <Bond from="196" to="197"/>
+   <Bond from="197" to="198"/>
+   <Bond from="197" to="238"/>
+   <Bond from="198" to="199"/>
+   <Bond from="199" to="200"/>
+   <Bond from="200" to="201"/>
+   <Bond from="200" to="239"/>
+   <Bond from="201" to="202"/>
+   <Bond from="201" to="242"/>
+   <Bond from="202" to="203"/>
+   <Bond from="203" to="204"/>
+   <Bond from="203" to="244"/>
+   <Bond from="204" to="205"/>
+   <Bond from="205" to="206"/>
+   <Bond from="205" to="246"/>
+   <Bond from="206" to="207"/>
+   <Bond from="207" to="208"/>
+   <Bond from="207" to="248"/>
+   <Bond from="208" to="209"/>
+   <Bond from="209" to="210"/>
+   <Bond from="209" to="250"/>
+   <Bond from="210" to="211"/>
+   <Bond from="211" to="212"/>
+   <Bond from="211" to="252"/>
+   <Bond from="212" to="213"/>
+   <Bond from="213" to="214"/>
+   <Bond from="213" to="254"/>
+   <Bond from="214" to="215"/>
+   <Bond from="215" to="216"/>
+   <Bond from="215" to="256"/>
+   <Bond from="216" to="217"/>
+   <Bond from="217" to="218"/>
+   <Bond from="217" to="258"/>
+   <Bond from="218" to="219"/>
+   <Bond from="219" to="220"/>
+   <Bond from="219" to="260"/>
+   <Bond from="220" to="221"/>
+   <Bond from="221" to="222"/>
+   <Bond from="221" to="262"/>
+   <Bond from="222" to="223"/>
+   <Bond from="223" to="224"/>
+   <Bond from="223" to="264"/>
+   <Bond from="224" to="225"/>
+   <Bond from="225" to="226"/>
+   <Bond from="225" to="266"/>
+   <Bond from="226" to="227"/>
+   <Bond from="227" to="228"/>
+   <Bond from="227" to="268"/>
+   <Bond from="228" to="229"/>
+   <Bond from="229" to="230"/>
+   <Bond from="229" to="270"/>
+   <Bond from="230" to="231"/>
+   <Bond from="231" to="232"/>
+   <Bond from="231" to="272"/>
+   <Bond from="232" to="233"/>
+   <Bond from="233" to="234"/>
+   <Bond from="233" to="274"/>
+   <Bond from="234" to="235"/>
+   <Bond from="235" to="236"/>
+   <Bond from="235" to="276"/>
+   <Bond from="236" to="237"/>
+   <Bond from="237" to="238"/>
+   <Bond from="237" to="278"/>
+   <Bond from="238" to="239"/>
+   <Bond from="239" to="240"/>
+   <Bond from="240" to="241"/>
+   <Bond from="240" to="279"/>
+   <Bond from="241" to="242"/>
+   <Bond from="241" to="282"/>
+   <Bond from="242" to="243"/>
+   <Bond from="243" to="244"/>
+   <Bond from="243" to="284"/>
+   <Bond from="244" to="245"/>
+   <Bond from="245" to="246"/>
+   <Bond from="245" to="286"/>
+   <Bond from="246" to="247"/>
+   <Bond from="247" to="248"/>
+   <Bond from="247" to="288"/>
+   <Bond from="248" to="249"/>
+   <Bond from="249" to="250"/>
+   <Bond from="249" to="290"/>
+   <Bond from="250" to="251"/>
+   <Bond from="251" to="252"/>
+   <Bond from="251" to="292"/>
+   <Bond from="252" to="253"/>
+   <Bond from="253" to="254"/>
+   <Bond from="253" to="294"/>
+   <Bond from="254" to="255"/>
+   <Bond from="255" to="256"/>
+   <Bond from="255" to="296"/>
+   <Bond from="256" to="257"/>
+   <Bond from="257" to="258"/>
+   <Bond from="257" to="298"/>
+   <Bond from="258" to="259"/>
+   <Bond from="259" to="260"/>
+   <Bond from="259" to="300"/>
+   <Bond from="260" to="261"/>
+   <Bond from="261" to="262"/>
+   <Bond from="261" to="302"/>
+   <Bond from="262" to="263"/>
+   <Bond from="263" to="264"/>
+   <Bond from="263" to="304"/>
+   <Bond from="264" to="265"/>
+   <Bond from="265" to="266"/>
+   <Bond from="265" to="306"/>
+   <Bond from="266" to="267"/>
+   <Bond from="267" to="268"/>
+   <Bond from="267" to="308"/>
+   <Bond from="268" to="269"/>
+   <Bond from="269" to="270"/>
+   <Bond from="269" to="310"/>
+   <Bond from="270" to="271"/>
+   <Bond from="271" to="272"/>
+   <Bond from="271" to="312"/>
+   <Bond from="272" to="273"/>
+   <Bond from="273" to="274"/>
+   <Bond from="273" to="314"/>
+   <Bond from="274" to="275"/>
+   <Bond from="275" to="276"/>
+   <Bond from="275" to="316"/>
+   <Bond from="276" to="277"/>
+   <Bond from="277" to="278"/>
+   <Bond from="277" to="318"/>
+   <Bond from="278" to="279"/>
+   <Bond from="279" to="280"/>
+   <Bond from="280" to="281"/>
+   <Bond from="280" to="319"/>
+   <Bond from="281" to="282"/>
+   <Bond from="281" to="322"/>
+   <Bond from="282" to="283"/>
+   <Bond from="283" to="284"/>
+   <Bond from="283" to="324"/>
+   <Bond from="284" to="285"/>
+   <Bond from="285" to="286"/>
+   <Bond from="285" to="326"/>
+   <Bond from="286" to="287"/>
+   <Bond from="287" to="288"/>
+   <Bond from="287" to="328"/>
+   <Bond from="288" to="289"/>
+   <Bond from="289" to="290"/>
+   <Bond from="289" to="330"/>
+   <Bond from="290" to="291"/>
+   <Bond from="291" to="292"/>
+   <Bond from="291" to="332"/>
+   <Bond from="292" to="293"/>
+   <Bond from="293" to="294"/>
+   <Bond from="293" to="334"/>
+   <Bond from="294" to="295"/>
+   <Bond from="295" to="296"/>
+   <Bond from="295" to="336"/>
+   <Bond from="296" to="297"/>
+   <Bond from="297" to="298"/>
+   <Bond from="297" to="338"/>
+   <Bond from="298" to="299"/>
+   <Bond from="299" to="300"/>
+   <Bond from="299" to="340"/>
+   <Bond from="300" to="301"/>
+   <Bond from="301" to="302"/>
+   <Bond from="301" to="342"/>
+   <Bond from="302" to="303"/>
+   <Bond from="303" to="304"/>
+   <Bond from="303" to="344"/>
+   <Bond from="304" to="305"/>
+   <Bond from="305" to="306"/>
+   <Bond from="305" to="346"/>
+   <Bond from="306" to="307"/>
+   <Bond from="307" to="308"/>
+   <Bond from="307" to="348"/>
+   <Bond from="308" to="309"/>
+   <Bond from="309" to="310"/>
+   <Bond from="309" to="350"/>
+   <Bond from="310" to="311"/>
+   <Bond from="311" to="312"/>
+   <Bond from="311" to="352"/>
+   <Bond from="312" to="313"/>
+   <Bond from="313" to="314"/>
+   <Bond from="313" to="354"/>
+   <Bond from="314" to="315"/>
+   <Bond from="315" to="316"/>
+   <Bond from="315" to="356"/>
+   <Bond from="316" to="317"/>
+   <Bond from="317" to="318"/>
+   <Bond from="317" to="358"/>
+   <Bond from="318" to="319"/>
+   <Bond from="319" to="320"/>
+   <Bond from="320" to="321"/>
+   <Bond from="320" to="359"/>
+   <Bond from="321" to="322"/>
+   <Bond from="321" to="362"/>
+   <Bond from="322" to="323"/>
+   <Bond from="323" to="324"/>
+   <Bond from="323" to="364"/>
+   <Bond from="324" to="325"/>
+   <Bond from="325" to="326"/>
+   <Bond from="325" to="366"/>
+   <Bond from="326" to="327"/>
+   <Bond from="327" to="328"/>
+   <Bond from="327" to="368"/>
+   <Bond from="328" to="329"/>
+   <Bond from="329" to="330"/>
+   <Bond from="329" to="370"/>
+   <Bond from="330" to="331"/>
+   <Bond from="331" to="332"/>
+   <Bond from="331" to="372"/>
+   <Bond from="332" to="333"/>
+   <Bond from="333" to="334"/>
+   <Bond from="333" to="374"/>
+   <Bond from="334" to="335"/>
+   <Bond from="335" to="336"/>
+   <Bond from="335" to="376"/>
+   <Bond from="336" to="337"/>
+   <Bond from="337" to="338"/>
+   <Bond from="337" to="378"/>
+   <Bond from="338" to="339"/>
+   <Bond from="339" to="340"/>
+   <Bond from="339" to="380"/>
+   <Bond from="340" to="341"/>
+   <Bond from="341" to="342"/>
+   <Bond from="341" to="382"/>
+   <Bond from="342" to="343"/>
+   <Bond from="343" to="344"/>
+   <Bond from="343" to="384"/>
+   <Bond from="344" to="345"/>
+   <Bond from="345" to="346"/>
+   <Bond from="345" to="386"/>
+   <Bond from="346" to="347"/>
+   <Bond from="347" to="348"/>
+   <Bond from="347" to="388"/>
+   <Bond from="348" to="349"/>
+   <Bond from="349" to="350"/>
+   <Bond from="349" to="390"/>
+   <Bond from="350" to="351"/>
+   <Bond from="351" to="352"/>
+   <Bond from="351" to="392"/>
+   <Bond from="352" to="353"/>
+   <Bond from="353" to="354"/>
+   <Bond from="353" to="394"/>
+   <Bond from="354" to="355"/>
+   <Bond from="355" to="356"/>
+   <Bond from="355" to="396"/>
+   <Bond from="356" to="357"/>
+   <Bond from="357" to="358"/>
+   <Bond from="357" to="398"/>
+   <Bond from="358" to="359"/>
+   <Bond from="359" to="360"/>
+   <Bond from="360" to="361"/>
+   <Bond from="360" to="399"/>
+   <Bond from="361" to="362"/>
+   <Bond from="361" to="402"/>
+   <Bond from="362" to="363"/>
+   <Bond from="363" to="364"/>
+   <Bond from="363" to="404"/>
+   <Bond from="364" to="365"/>
+   <Bond from="365" to="366"/>
+   <Bond from="365" to="406"/>
+   <Bond from="366" to="367"/>
+   <Bond from="367" to="368"/>
+   <Bond from="367" to="408"/>
+   <Bond from="368" to="369"/>
+   <Bond from="369" to="370"/>
+   <Bond from="369" to="410"/>
+   <Bond from="370" to="371"/>
+   <Bond from="371" to="372"/>
+   <Bond from="371" to="412"/>
+   <Bond from="372" to="373"/>
+   <Bond from="373" to="374"/>
+   <Bond from="373" to="414"/>
+   <Bond from="374" to="375"/>
+   <Bond from="375" to="376"/>
+   <Bond from="375" to="416"/>
+   <Bond from="376" to="377"/>
+   <Bond from="377" to="378"/>
+   <Bond from="377" to="418"/>
+   <Bond from="378" to="379"/>
+   <Bond from="379" to="380"/>
+   <Bond from="379" to="420"/>
+   <Bond from="380" to="381"/>
+   <Bond from="381" to="382"/>
+   <Bond from="381" to="422"/>
+   <Bond from="382" to="383"/>
+   <Bond from="383" to="384"/>
+   <Bond from="383" to="424"/>
+   <Bond from="384" to="385"/>
+   <Bond from="385" to="386"/>
+   <Bond from="385" to="426"/>
+   <Bond from="386" to="387"/>
+   <Bond from="387" to="388"/>
+   <Bond from="387" to="428"/>
+   <Bond from="388" to="389"/>
+   <Bond from="389" to="390"/>
+   <Bond from="389" to="430"/>
+   <Bond from="390" to="391"/>
+   <Bond from="391" to="392"/>
+   <Bond from="391" to="432"/>
+   <Bond from="392" to="393"/>
+   <Bond from="393" to="394"/>
+   <Bond from="393" to="434"/>
+   <Bond from="394" to="395"/>
+   <Bond from="395" to="396"/>
+   <Bond from="395" to="436"/>
+   <Bond from="396" to="397"/>
+   <Bond from="397" to="398"/>
+   <Bond from="397" to="438"/>
+   <Bond from="398" to="399"/>
+   <Bond from="399" to="400"/>
+   <Bond from="400" to="401"/>
+   <Bond from="400" to="439"/>
+   <Bond from="401" to="402"/>
+   <Bond from="401" to="442"/>
+   <Bond from="402" to="403"/>
+   <Bond from="403" to="404"/>
+   <Bond from="403" to="444"/>
+   <Bond from="404" to="405"/>
+   <Bond from="405" to="406"/>
+   <Bond from="405" to="446"/>
+   <Bond from="406" to="407"/>
+   <Bond from="407" to="408"/>
+   <Bond from="407" to="448"/>
+   <Bond from="408" to="409"/>
+   <Bond from="409" to="410"/>
+   <Bond from="409" to="450"/>
+   <Bond from="410" to="411"/>
+   <Bond from="411" to="412"/>
+   <Bond from="411" to="452"/>
+   <Bond from="412" to="413"/>
+   <Bond from="413" to="414"/>
+   <Bond from="413" to="454"/>
+   <Bond from="414" to="415"/>
+   <Bond from="415" to="416"/>
+   <Bond from="415" to="456"/>
+   <Bond from="416" to="417"/>
+   <Bond from="417" to="418"/>
+   <Bond from="417" to="458"/>
+   <Bond from="418" to="419"/>
+   <Bond from="419" to="420"/>
+   <Bond from="419" to="460"/>
+   <Bond from="420" to="421"/>
+   <Bond from="421" to="422"/>
+   <Bond from="421" to="462"/>
+   <Bond from="422" to="423"/>
+   <Bond from="423" to="424"/>
+   <Bond from="423" to="464"/>
+   <Bond from="424" to="425"/>
+   <Bond from="425" to="426"/>
+   <Bond from="425" to="466"/>
+   <Bond from="426" to="427"/>
+   <Bond from="427" to="428"/>
+   <Bond from="427" to="468"/>
+   <Bond from="428" to="429"/>
+   <Bond from="429" to="430"/>
+   <Bond from="429" to="470"/>
+   <Bond from="430" to="431"/>
+   <Bond from="431" to="432"/>
+   <Bond from="431" to="472"/>
+   <Bond from="432" to="433"/>
+   <Bond from="433" to="434"/>
+   <Bond from="433" to="474"/>
+   <Bond from="434" to="435"/>
+   <Bond from="435" to="436"/>
+   <Bond from="435" to="476"/>
+   <Bond from="436" to="437"/>
+   <Bond from="437" to="438"/>
+   <Bond from="437" to="478"/>
+   <Bond from="438" to="439"/>
+   <Bond from="439" to="440"/>
+   <Bond from="440" to="441"/>
+   <Bond from="440" to="479"/>
+   <Bond from="441" to="442"/>
+   <Bond from="441" to="482"/>
+   <Bond from="442" to="443"/>
+   <Bond from="443" to="444"/>
+   <Bond from="443" to="484"/>
+   <Bond from="444" to="445"/>
+   <Bond from="445" to="446"/>
+   <Bond from="445" to="486"/>
+   <Bond from="446" to="447"/>
+   <Bond from="447" to="448"/>
+   <Bond from="447" to="488"/>
+   <Bond from="448" to="449"/>
+   <Bond from="449" to="450"/>
+   <Bond from="449" to="490"/>
+   <Bond from="450" to="451"/>
+   <Bond from="451" to="452"/>
+   <Bond from="451" to="492"/>
+   <Bond from="452" to="453"/>
+   <Bond from="453" to="454"/>
+   <Bond from="453" to="494"/>
+   <Bond from="454" to="455"/>
+   <Bond from="455" to="456"/>
+   <Bond from="455" to="496"/>
+   <Bond from="456" to="457"/>
+   <Bond from="457" to="458"/>
+   <Bond from="457" to="498"/>
+   <Bond from="458" to="459"/>
+   <Bond from="459" to="460"/>
+   <Bond from="459" to="500"/>
+   <Bond from="460" to="461"/>
+   <Bond from="461" to="462"/>
+   <Bond from="461" to="502"/>
+   <Bond from="462" to="463"/>
+   <Bond from="463" to="464"/>
+   <Bond from="463" to="504"/>
+   <Bond from="464" to="465"/>
+   <Bond from="465" to="466"/>
+   <Bond from="465" to="506"/>
+   <Bond from="466" to="467"/>
+   <Bond from="467" to="468"/>
+   <Bond from="467" to="508"/>
+   <Bond from="468" to="469"/>
+   <Bond from="469" to="470"/>
+   <Bond from="469" to="510"/>
+   <Bond from="470" to="471"/>
+   <Bond from="471" to="472"/>
+   <Bond from="471" to="512"/>
+   <Bond from="472" to="473"/>
+   <Bond from="473" to="474"/>
+   <Bond from="473" to="514"/>
+   <Bond from="474" to="475"/>
+   <Bond from="475" to="476"/>
+   <Bond from="475" to="516"/>
+   <Bond from="476" to="477"/>
+   <Bond from="477" to="478"/>
+   <Bond from="477" to="518"/>
+   <Bond from="478" to="479"/>
+   <Bond from="479" to="480"/>
+   <Bond from="480" to="481"/>
+   <Bond from="480" to="519"/>
+   <Bond from="481" to="482"/>
+   <Bond from="481" to="522"/>
+   <Bond from="482" to="483"/>
+   <Bond from="483" to="484"/>
+   <Bond from="483" to="524"/>
+   <Bond from="484" to="485"/>
+   <Bond from="485" to="486"/>
+   <Bond from="485" to="526"/>
+   <Bond from="486" to="487"/>
+   <Bond from="487" to="488"/>
+   <Bond from="487" to="528"/>
+   <Bond from="488" to="489"/>
+   <Bond from="489" to="490"/>
+   <Bond from="489" to="530"/>
+   <Bond from="490" to="491"/>
+   <Bond from="491" to="492"/>
+   <Bond from="491" to="532"/>
+   <Bond from="492" to="493"/>
+   <Bond from="493" to="494"/>
+   <Bond from="493" to="534"/>
+   <Bond from="494" to="495"/>
+   <Bond from="495" to="496"/>
+   <Bond from="495" to="536"/>
+   <Bond from="496" to="497"/>
+   <Bond from="497" to="498"/>
+   <Bond from="497" to="538"/>
+   <Bond from="498" to="499"/>
+   <Bond from="499" to="500"/>
+   <Bond from="499" to="540"/>
+   <Bond from="500" to="501"/>
+   <Bond from="501" to="502"/>
+   <Bond from="501" to="542"/>
+   <Bond from="502" to="503"/>
+   <Bond from="503" to="504"/>
+   <Bond from="503" to="544"/>
+   <Bond from="504" to="505"/>
+   <Bond from="505" to="506"/>
+   <Bond from="505" to="546"/>
+   <Bond from="506" to="507"/>
+   <Bond from="507" to="508"/>
+   <Bond from="507" to="548"/>
+   <Bond from="508" to="509"/>
+   <Bond from="509" to="510"/>
+   <Bond from="509" to="550"/>
+   <Bond from="510" to="511"/>
+   <Bond from="511" to="512"/>
+   <Bond from="511" to="552"/>
+   <Bond from="512" to="513"/>
+   <Bond from="513" to="514"/>
+   <Bond from="513" to="554"/>
+   <Bond from="514" to="515"/>
+   <Bond from="515" to="516"/>
+   <Bond from="515" to="556"/>
+   <Bond from="516" to="517"/>
+   <Bond from="517" to="518"/>
+   <Bond from="517" to="558"/>
+   <Bond from="518" to="519"/>
+   <Bond from="519" to="520"/>
+   <Bond from="520" to="521"/>
+   <Bond from="520" to="559"/>
+   <Bond from="521" to="522"/>
+   <Bond from="521" to="562"/>
+   <Bond from="522" to="523"/>
+   <Bond from="523" to="524"/>
+   <Bond from="523" to="564"/>
+   <Bond from="524" to="525"/>
+   <Bond from="525" to="526"/>
+   <Bond from="525" to="566"/>
+   <Bond from="526" to="527"/>
+   <Bond from="527" to="528"/>
+   <Bond from="527" to="568"/>
+   <Bond from="528" to="529"/>
+   <Bond from="529" to="530"/>
+   <Bond from="529" to="570"/>
+   <Bond from="530" to="531"/>
+   <Bond from="531" to="532"/>
+   <Bond from="531" to="572"/>
+   <Bond from="532" to="533"/>
+   <Bond from="533" to="534"/>
+   <Bond from="533" to="574"/>
+   <Bond from="534" to="535"/>
+   <Bond from="535" to="536"/>
+   <Bond from="535" to="576"/>
+   <Bond from="536" to="537"/>
+   <Bond from="537" to="538"/>
+   <Bond from="537" to="578"/>
+   <Bond from="538" to="539"/>
+   <Bond from="539" to="540"/>
+   <Bond from="539" to="580"/>
+   <Bond from="540" to="541"/>
+   <Bond from="541" to="542"/>
+   <Bond from="541" to="582"/>
+   <Bond from="542" to="543"/>
+   <Bond from="543" to="544"/>
+   <Bond from="543" to="584"/>
+   <Bond from="544" to="545"/>
+   <Bond from="545" to="546"/>
+   <Bond from="545" to="586"/>
+   <Bond from="546" to="547"/>
+   <Bond from="547" to="548"/>
+   <Bond from="547" to="588"/>
+   <Bond from="548" to="549"/>
+   <Bond from="549" to="550"/>
+   <Bond from="549" to="590"/>
+   <Bond from="550" to="551"/>
+   <Bond from="551" to="552"/>
+   <Bond from="551" to="592"/>
+   <Bond from="552" to="553"/>
+   <Bond from="553" to="554"/>
+   <Bond from="553" to="594"/>
+   <Bond from="554" to="555"/>
+   <Bond from="555" to="556"/>
+   <Bond from="555" to="596"/>
+   <Bond from="556" to="557"/>
+   <Bond from="557" to="558"/>
+   <Bond from="557" to="598"/>
+   <Bond from="558" to="559"/>
+   <Bond from="559" to="560"/>
+   <Bond from="560" to="561"/>
+   <Bond from="560" to="599"/>
+   <Bond from="561" to="562"/>
+   <Bond from="561" to="602"/>
+   <Bond from="562" to="563"/>
+   <Bond from="563" to="564"/>
+   <Bond from="563" to="604"/>
+   <Bond from="564" to="565"/>
+   <Bond from="565" to="566"/>
+   <Bond from="565" to="606"/>
+   <Bond from="566" to="567"/>
+   <Bond from="567" to="568"/>
+   <Bond from="567" to="608"/>
+   <Bond from="568" to="569"/>
+   <Bond from="569" to="570"/>
+   <Bond from="569" to="610"/>
+   <Bond from="570" to="571"/>
+   <Bond from="571" to="572"/>
+   <Bond from="571" to="612"/>
+   <Bond from="572" to="573"/>
+   <Bond from="573" to="574"/>
+   <Bond from="573" to="614"/>
+   <Bond from="574" to="575"/>
+   <Bond from="575" to="576"/>
+   <Bond from="575" to="616"/>
+   <Bond from="576" to="577"/>
+   <Bond from="577" to="578"/>
+   <Bond from="577" to="618"/>
+   <Bond from="578" to="579"/>
+   <Bond from="579" to="580"/>
+   <Bond from="579" to="620"/>
+   <Bond from="580" to="581"/>
+   <Bond from="581" to="582"/>
+   <Bond from="581" to="622"/>
+   <Bond from="582" to="583"/>
+   <Bond from="583" to="584"/>
+   <Bond from="583" to="624"/>
+   <Bond from="584" to="585"/>
+   <Bond from="585" to="586"/>
+   <Bond from="585" to="626"/>
+   <Bond from="586" to="587"/>
+   <Bond from="587" to="588"/>
+   <Bond from="587" to="628"/>
+   <Bond from="588" to="589"/>
+   <Bond from="589" to="590"/>
+   <Bond from="589" to="630"/>
+   <Bond from="590" to="591"/>
+   <Bond from="591" to="592"/>
+   <Bond from="591" to="632"/>
+   <Bond from="592" to="593"/>
+   <Bond from="593" to="594"/>
+   <Bond from="593" to="634"/>
+   <Bond from="594" to="595"/>
+   <Bond from="595" to="596"/>
+   <Bond from="595" to="636"/>
+   <Bond from="596" to="597"/>
+   <Bond from="597" to="598"/>
+   <Bond from="597" to="638"/>
+   <Bond from="598" to="599"/>
+   <Bond from="599" to="600"/>
+   <Bond from="600" to="601"/>
+   <Bond from="600" to="639"/>
+   <Bond from="601" to="602"/>
+   <Bond from="601" to="642"/>
+   <Bond from="602" to="603"/>
+   <Bond from="603" to="604"/>
+   <Bond from="603" to="644"/>
+   <Bond from="604" to="605"/>
+   <Bond from="605" to="606"/>
+   <Bond from="605" to="646"/>
+   <Bond from="606" to="607"/>
+   <Bond from="607" to="608"/>
+   <Bond from="607" to="648"/>
+   <Bond from="608" to="609"/>
+   <Bond from="609" to="610"/>
+   <Bond from="609" to="650"/>
+   <Bond from="610" to="611"/>
+   <Bond from="611" to="612"/>
+   <Bond from="611" to="652"/>
+   <Bond from="612" to="613"/>
+   <Bond from="613" to="614"/>
+   <Bond from="613" to="654"/>
+   <Bond from="614" to="615"/>
+   <Bond from="615" to="616"/>
+   <Bond from="615" to="656"/>
+   <Bond from="616" to="617"/>
+   <Bond from="617" to="618"/>
+   <Bond from="617" to="658"/>
+   <Bond from="618" to="619"/>
+   <Bond from="619" to="620"/>
+   <Bond from="619" to="660"/>
+   <Bond from="620" to="621"/>
+   <Bond from="621" to="622"/>
+   <Bond from="621" to="662"/>
+   <Bond from="622" to="623"/>
+   <Bond from="623" to="624"/>
+   <Bond from="623" to="664"/>
+   <Bond from="624" to="625"/>
+   <Bond from="625" to="626"/>
+   <Bond from="625" to="666"/>
+   <Bond from="626" to="627"/>
+   <Bond from="627" to="628"/>
+   <Bond from="627" to="668"/>
+   <Bond from="628" to="629"/>
+   <Bond from="629" to="630"/>
+   <Bond from="629" to="670"/>
+   <Bond from="630" to="631"/>
+   <Bond from="631" to="632"/>
+   <Bond from="631" to="672"/>
+   <Bond from="632" to="633"/>
+   <Bond from="633" to="634"/>
+   <Bond from="633" to="674"/>
+   <Bond from="634" to="635"/>
+   <Bond from="635" to="636"/>
+   <Bond from="635" to="676"/>
+   <Bond from="636" to="637"/>
+   <Bond from="637" to="638"/>
+   <Bond from="637" to="678"/>
+   <Bond from="638" to="639"/>
+   <Bond from="639" to="640"/>
+   <Bond from="640" to="641"/>
+   <Bond from="640" to="679"/>
+   <Bond from="641" to="642"/>
+   <Bond from="641" to="682"/>
+   <Bond from="642" to="643"/>
+   <Bond from="643" to="644"/>
+   <Bond from="643" to="684"/>
+   <Bond from="644" to="645"/>
+   <Bond from="645" to="646"/>
+   <Bond from="645" to="686"/>
+   <Bond from="646" to="647"/>
+   <Bond from="647" to="648"/>
+   <Bond from="647" to="688"/>
+   <Bond from="648" to="649"/>
+   <Bond from="649" to="650"/>
+   <Bond from="649" to="690"/>
+   <Bond from="650" to="651"/>
+   <Bond from="651" to="652"/>
+   <Bond from="651" to="692"/>
+   <Bond from="652" to="653"/>
+   <Bond from="653" to="654"/>
+   <Bond from="653" to="694"/>
+   <Bond from="654" to="655"/>
+   <Bond from="655" to="656"/>
+   <Bond from="655" to="696"/>
+   <Bond from="656" to="657"/>
+   <Bond from="657" to="658"/>
+   <Bond from="657" to="698"/>
+   <Bond from="658" to="659"/>
+   <Bond from="659" to="660"/>
+   <Bond from="659" to="700"/>
+   <Bond from="660" to="661"/>
+   <Bond from="661" to="662"/>
+   <Bond from="661" to="702"/>
+   <Bond from="662" to="663"/>
+   <Bond from="663" to="664"/>
+   <Bond from="663" to="704"/>
+   <Bond from="664" to="665"/>
+   <Bond from="665" to="666"/>
+   <Bond from="665" to="706"/>
+   <Bond from="666" to="667"/>
+   <Bond from="667" to="668"/>
+   <Bond from="667" to="708"/>
+   <Bond from="668" to="669"/>
+   <Bond from="669" to="670"/>
+   <Bond from="669" to="710"/>
+   <Bond from="670" to="671"/>
+   <Bond from="671" to="672"/>
+   <Bond from="671" to="712"/>
+   <Bond from="672" to="673"/>
+   <Bond from="673" to="674"/>
+   <Bond from="673" to="714"/>
+   <Bond from="674" to="675"/>
+   <Bond from="675" to="676"/>
+   <Bond from="675" to="716"/>
+   <Bond from="676" to="677"/>
+   <Bond from="677" to="678"/>
+   <Bond from="677" to="718"/>
+   <Bond from="678" to="679"/>
+   <Bond from="679" to="680"/>
+   <Bond from="680" to="681"/>
+   <Bond from="680" to="719"/>
+   <Bond from="681" to="682"/>
+   <Bond from="681" to="722"/>
+   <Bond from="682" to="683"/>
+   <Bond from="683" to="684"/>
+   <Bond from="683" to="724"/>
+   <Bond from="684" to="685"/>
+   <Bond from="685" to="686"/>
+   <Bond from="685" to="726"/>
+   <Bond from="686" to="687"/>
+   <Bond from="687" to="688"/>
+   <Bond from="687" to="728"/>
+   <Bond from="688" to="689"/>
+   <Bond from="689" to="690"/>
+   <Bond from="689" to="730"/>
+   <Bond from="690" to="691"/>
+   <Bond from="691" to="692"/>
+   <Bond from="691" to="732"/>
+   <Bond from="692" to="693"/>
+   <Bond from="693" to="694"/>
+   <Bond from="693" to="734"/>
+   <Bond from="694" to="695"/>
+   <Bond from="695" to="696"/>
+   <Bond from="695" to="736"/>
+   <Bond from="696" to="697"/>
+   <Bond from="697" to="698"/>
+   <Bond from="697" to="738"/>
+   <Bond from="698" to="699"/>
+   <Bond from="699" to="700"/>
+   <Bond from="699" to="740"/>
+   <Bond from="700" to="701"/>
+   <Bond from="701" to="702"/>
+   <Bond from="701" to="742"/>
+   <Bond from="702" to="703"/>
+   <Bond from="703" to="704"/>
+   <Bond from="703" to="744"/>
+   <Bond from="704" to="705"/>
+   <Bond from="705" to="706"/>
+   <Bond from="705" to="746"/>
+   <Bond from="706" to="707"/>
+   <Bond from="707" to="708"/>
+   <Bond from="707" to="748"/>
+   <Bond from="708" to="709"/>
+   <Bond from="709" to="710"/>
+   <Bond from="709" to="750"/>
+   <Bond from="710" to="711"/>
+   <Bond from="711" to="712"/>
+   <Bond from="711" to="752"/>
+   <Bond from="712" to="713"/>
+   <Bond from="713" to="714"/>
+   <Bond from="713" to="754"/>
+   <Bond from="714" to="715"/>
+   <Bond from="715" to="716"/>
+   <Bond from="715" to="756"/>
+   <Bond from="716" to="717"/>
+   <Bond from="717" to="718"/>
+   <Bond from="717" to="758"/>
+   <Bond from="718" to="719"/>
+   <Bond from="719" to="720"/>
+   <Bond from="720" to="721"/>
+   <Bond from="720" to="759"/>
+   <Bond from="721" to="722"/>
+   <Bond from="721" to="762"/>
+   <Bond from="722" to="723"/>
+   <Bond from="723" to="724"/>
+   <Bond from="723" to="764"/>
+   <Bond from="724" to="725"/>
+   <Bond from="725" to="726"/>
+   <Bond from="725" to="766"/>
+   <Bond from="726" to="727"/>
+   <Bond from="727" to="728"/>
+   <Bond from="727" to="768"/>
+   <Bond from="728" to="729"/>
+   <Bond from="729" to="730"/>
+   <Bond from="729" to="770"/>
+   <Bond from="730" to="731"/>
+   <Bond from="731" to="732"/>
+   <Bond from="731" to="772"/>
+   <Bond from="732" to="733"/>
+   <Bond from="733" to="734"/>
+   <Bond from="733" to="774"/>
+   <Bond from="734" to="735"/>
+   <Bond from="735" to="736"/>
+   <Bond from="735" to="776"/>
+   <Bond from="736" to="737"/>
+   <Bond from="737" to="738"/>
+   <Bond from="737" to="778"/>
+   <Bond from="738" to="739"/>
+   <Bond from="739" to="740"/>
+   <Bond from="739" to="780"/>
+   <Bond from="740" to="741"/>
+   <Bond from="741" to="742"/>
+   <Bond from="741" to="782"/>
+   <Bond from="742" to="743"/>
+   <Bond from="743" to="744"/>
+   <Bond from="743" to="784"/>
+   <Bond from="744" to="745"/>
+   <Bond from="745" to="746"/>
+   <Bond from="745" to="786"/>
+   <Bond from="746" to="747"/>
+   <Bond from="747" to="748"/>
+   <Bond from="747" to="788"/>
+   <Bond from="748" to="749"/>
+   <Bond from="749" to="750"/>
+   <Bond from="749" to="790"/>
+   <Bond from="750" to="751"/>
+   <Bond from="751" to="752"/>
+   <Bond from="751" to="792"/>
+   <Bond from="752" to="753"/>
+   <Bond from="753" to="754"/>
+   <Bond from="753" to="794"/>
+   <Bond from="754" to="755"/>
+   <Bond from="755" to="756"/>
+   <Bond from="755" to="796"/>
+   <Bond from="756" to="757"/>
+   <Bond from="757" to="758"/>
+   <Bond from="757" to="798"/>
+   <Bond from="758" to="759"/>
+   <Bond from="759" to="760"/>
+   <Bond from="760" to="761"/>
+   <Bond from="760" to="799"/>
+   <Bond from="761" to="762"/>
+   <Bond from="762" to="763"/>
+   <Bond from="763" to="764"/>
+   <Bond from="764" to="765"/>
+   <Bond from="765" to="766"/>
+   <Bond from="766" to="767"/>
+   <Bond from="767" to="768"/>
+   <Bond from="768" to="769"/>
+   <Bond from="769" to="770"/>
+   <Bond from="770" to="771"/>
+   <Bond from="771" to="772"/>
+   <Bond from="772" to="773"/>
+   <Bond from="773" to="774"/>
+   <Bond from="774" to="775"/>
+   <Bond from="775" to="776"/>
+   <Bond from="776" to="777"/>
+   <Bond from="777" to="778"/>
+   <Bond from="778" to="779"/>
+   <Bond from="779" to="780"/>
+   <Bond from="780" to="781"/>
+   <Bond from="781" to="782"/>
+   <Bond from="782" to="783"/>
+   <Bond from="783" to="784"/>
+   <Bond from="784" to="785"/>
+   <Bond from="785" to="786"/>
+   <Bond from="786" to="787"/>
+   <Bond from="787" to="788"/>
+   <Bond from="788" to="789"/>
+   <Bond from="789" to="790"/>
+   <Bond from="790" to="791"/>
+   <Bond from="791" to="792"/>
+   <Bond from="792" to="793"/>
+   <Bond from="793" to="794"/>
+   <Bond from="794" to="795"/>
+   <Bond from="795" to="796"/>
+   <Bond from="796" to="797"/>
+   <Bond from="797" to="798"/>
+   <Bond from="798" to="799"/>
+  </Residue>
+  <Residue name="grpd">
+   <Atom name="C0" type="graphited-C0"/> 
+   <Atom name="C1" type="graphited-C1"/> 
+   <Atom name="C2" type="graphited-C2"/> 
+   <Atom name="C3" type="graphited-C3"/> 
+   <Atom name="C4" type="graphited-C4"/> 
+   <Atom name="C5" type="graphited-C5"/> 
+   <Atom name="C6" type="graphited-C6"/> 
+   <Atom name="C7" type="graphited-C7"/> 
+   <Atom name="C8" type="graphited-C8"/> 
+   <Atom name="C9" type="graphited-C9"/> 
+   <Atom name="C10" type="graphited-C10"/> 
+   <Atom name="C11" type="graphited-C11"/> 
+   <Atom name="C12" type="graphited-C12"/> 
+   <Atom name="C13" type="graphited-C13"/> 
+   <Atom name="C14" type="graphited-C14"/> 
+   <Atom name="C15" type="graphited-C15"/> 
+   <Atom name="C16" type="graphited-C16"/> 
+   <Atom name="C17" type="graphited-C17"/> 
+   <Atom name="C18" type="graphited-C18"/> 
+   <Atom name="C19" type="graphited-C19"/> 
+   <Atom name="C20" type="graphited-C20"/> 
+   <Atom name="C21" type="graphited-C21"/> 
+   <Atom name="C22" type="graphited-C22"/> 
+   <Atom name="C23" type="graphited-C23"/> 
+   <Atom name="C24" type="graphited-C24"/> 
+   <Atom name="C25" type="graphited-C25"/> 
+   <Atom name="C26" type="graphited-C26"/> 
+   <Atom name="C27" type="graphited-C27"/> 
+   <Atom name="C28" type="graphited-C28"/> 
+   <Atom name="C29" type="graphited-C29"/> 
+   <Atom name="C30" type="graphited-C30"/> 
+   <Atom name="C31" type="graphited-C31"/> 
+   <Atom name="C32" type="graphited-C32"/> 
+   <Atom name="C33" type="graphited-C33"/> 
+   <Atom name="C34" type="graphited-C34"/> 
+   <Atom name="C35" type="graphited-C35"/> 
+   <Atom name="C36" type="graphited-C36"/> 
+   <Atom name="C37" type="graphited-C37"/> 
+   <Atom name="C38" type="graphited-C38"/> 
+   <Atom name="C39" type="graphited-C39"/> 
+   <Atom name="C40" type="graphited-C40"/> 
+   <Atom name="C41" type="graphited-C41"/> 
+   <Atom name="C42" type="graphited-C42"/> 
+   <Atom name="C43" type="graphited-C43"/> 
+   <Atom name="C44" type="graphited-C44"/> 
+   <Atom name="C45" type="graphited-C45"/> 
+   <Atom name="C46" type="graphited-C46"/> 
+   <Atom name="C47" type="graphited-C47"/> 
+   <Atom name="C48" type="graphited-C48"/> 
+   <Atom name="C49" type="graphited-C49"/> 
+   <Atom name="C50" type="graphited-C50"/> 
+   <Atom name="C51" type="graphited-C51"/> 
+   <Atom name="C52" type="graphited-C52"/> 
+   <Atom name="C53" type="graphited-C53"/> 
+   <Atom name="C54" type="graphited-C54"/> 
+   <Atom name="C55" type="graphited-C55"/> 
+   <Atom name="C56" type="graphited-C56"/> 
+   <Atom name="C57" type="graphited-C57"/> 
+   <Atom name="C58" type="graphited-C58"/> 
+   <Atom name="C59" type="graphited-C59"/> 
+   <Atom name="C60" type="graphited-C60"/> 
+   <Atom name="C61" type="graphited-C61"/> 
+   <Atom name="C62" type="graphited-C62"/> 
+   <Atom name="C63" type="graphited-C63"/> 
+   <Atom name="C64" type="graphited-C64"/> 
+   <Atom name="C65" type="graphited-C65"/> 
+   <Atom name="C66" type="graphited-C66"/> 
+   <Atom name="C67" type="graphited-C67"/> 
+   <Atom name="C68" type="graphited-C68"/> 
+   <Atom name="C69" type="graphited-C69"/> 
+   <Atom name="C70" type="graphited-C70"/> 
+   <Atom name="C71" type="graphited-C71"/> 
+   <Atom name="C72" type="graphited-C72"/> 
+   <Atom name="C73" type="graphited-C73"/> 
+   <Atom name="C74" type="graphited-C74"/> 
+   <Atom name="C75" type="graphited-C75"/> 
+   <Atom name="C76" type="graphited-C76"/> 
+   <Atom name="C77" type="graphited-C77"/> 
+   <Atom name="C78" type="graphited-C78"/> 
+   <Atom name="C79" type="graphited-C79"/> 
+   <Atom name="C80" type="graphited-C80"/> 
+   <Atom name="C81" type="graphited-C81"/> 
+   <Atom name="C82" type="graphited-C82"/> 
+   <Atom name="C83" type="graphited-C83"/> 
+   <Atom name="C84" type="graphited-C84"/> 
+   <Atom name="C85" type="graphited-C85"/> 
+   <Atom name="C86" type="graphited-C86"/> 
+   <Atom name="C87" type="graphited-C87"/> 
+   <Atom name="C88" type="graphited-C88"/> 
+   <Atom name="C89" type="graphited-C89"/> 
+   <Atom name="C90" type="graphited-C90"/> 
+   <Atom name="C91" type="graphited-C91"/> 
+   <Atom name="C92" type="graphited-C92"/> 
+   <Atom name="C93" type="graphited-C93"/> 
+   <Atom name="C94" type="graphited-C94"/> 
+   <Atom name="C95" type="graphited-C95"/> 
+   <Atom name="C96" type="graphited-C96"/> 
+   <Atom name="C97" type="graphited-C97"/> 
+   <Atom name="C98" type="graphited-C98"/> 
+   <Atom name="C99" type="graphited-C99"/> 
+   <Atom name="C100" type="graphited-C100"/> 
+   <Atom name="C101" type="graphited-C101"/> 
+   <Atom name="C102" type="graphited-C102"/> 
+   <Atom name="C103" type="graphited-C103"/> 
+   <Atom name="C104" type="graphited-C104"/> 
+   <Atom name="C105" type="graphited-C105"/> 
+   <Atom name="C106" type="graphited-C106"/> 
+   <Atom name="C107" type="graphited-C107"/> 
+   <Atom name="C108" type="graphited-C108"/> 
+   <Atom name="C109" type="graphited-C109"/> 
+   <Atom name="C110" type="graphited-C110"/> 
+   <Atom name="C111" type="graphited-C111"/> 
+   <Atom name="C112" type="graphited-C112"/> 
+   <Atom name="C113" type="graphited-C113"/> 
+   <Atom name="C114" type="graphited-C114"/> 
+   <Atom name="C115" type="graphited-C115"/> 
+   <Atom name="C116" type="graphited-C116"/> 
+   <Atom name="C117" type="graphited-C117"/> 
+   <Atom name="C118" type="graphited-C118"/> 
+   <Atom name="C119" type="graphited-C119"/> 
+   <Atom name="C120" type="graphited-C120"/> 
+   <Atom name="C121" type="graphited-C121"/> 
+   <Atom name="C122" type="graphited-C122"/> 
+   <Atom name="C123" type="graphited-C123"/> 
+   <Atom name="C124" type="graphited-C124"/> 
+   <Atom name="C125" type="graphited-C125"/> 
+   <Atom name="C126" type="graphited-C126"/> 
+   <Atom name="C127" type="graphited-C127"/> 
+   <Atom name="C128" type="graphited-C128"/> 
+   <Atom name="C129" type="graphited-C129"/> 
+   <Atom name="C130" type="graphited-C130"/> 
+   <Atom name="C131" type="graphited-C131"/> 
+   <Atom name="C132" type="graphited-C132"/> 
+   <Atom name="C133" type="graphited-C133"/> 
+   <Atom name="C134" type="graphited-C134"/> 
+   <Atom name="C135" type="graphited-C135"/> 
+   <Atom name="C136" type="graphited-C136"/> 
+   <Atom name="C137" type="graphited-C137"/> 
+   <Atom name="C138" type="graphited-C138"/> 
+   <Atom name="C139" type="graphited-C139"/> 
+   <Atom name="C140" type="graphited-C140"/> 
+   <Atom name="C141" type="graphited-C141"/> 
+   <Atom name="C142" type="graphited-C142"/> 
+   <Atom name="C143" type="graphited-C143"/> 
+   <Atom name="C144" type="graphited-C144"/> 
+   <Atom name="C145" type="graphited-C145"/> 
+   <Atom name="C146" type="graphited-C146"/> 
+   <Atom name="C147" type="graphited-C147"/> 
+   <Atom name="C148" type="graphited-C148"/> 
+   <Atom name="C149" type="graphited-C149"/> 
+   <Atom name="C150" type="graphited-C150"/> 
+   <Atom name="C151" type="graphited-C151"/> 
+   <Atom name="C152" type="graphited-C152"/> 
+   <Atom name="C153" type="graphited-C153"/> 
+   <Atom name="C154" type="graphited-C154"/> 
+   <Atom name="C155" type="graphited-C155"/> 
+   <Atom name="C156" type="graphited-C156"/> 
+   <Atom name="C157" type="graphited-C157"/> 
+   <Atom name="C158" type="graphited-C158"/> 
+   <Atom name="C159" type="graphited-C159"/> 
+   <Atom name="C160" type="graphited-C160"/> 
+   <Atom name="C161" type="graphited-C161"/> 
+   <Atom name="C162" type="graphited-C162"/> 
+   <Atom name="C163" type="graphited-C163"/> 
+   <Atom name="C164" type="graphited-C164"/> 
+   <Atom name="C165" type="graphited-C165"/> 
+   <Atom name="C166" type="graphited-C166"/> 
+   <Atom name="C167" type="graphited-C167"/> 
+   <Atom name="C168" type="graphited-C168"/> 
+   <Atom name="C169" type="graphited-C169"/> 
+   <Atom name="C170" type="graphited-C170"/> 
+   <Atom name="C171" type="graphited-C171"/> 
+   <Atom name="C172" type="graphited-C172"/> 
+   <Atom name="C173" type="graphited-C173"/> 
+   <Atom name="C174" type="graphited-C174"/> 
+   <Atom name="C175" type="graphited-C175"/> 
+   <Atom name="C176" type="graphited-C176"/> 
+   <Atom name="C177" type="graphited-C177"/> 
+   <Atom name="C178" type="graphited-C178"/> 
+   <Atom name="C179" type="graphited-C179"/> 
+   <Atom name="C180" type="graphited-C180"/> 
+   <Atom name="C181" type="graphited-C181"/> 
+   <Atom name="C182" type="graphited-C182"/> 
+   <Atom name="C183" type="graphited-C183"/> 
+   <Atom name="C184" type="graphited-C184"/> 
+   <Atom name="C185" type="graphited-C185"/> 
+   <Atom name="C186" type="graphited-C186"/> 
+   <Atom name="C187" type="graphited-C187"/> 
+   <Atom name="C188" type="graphited-C188"/> 
+   <Atom name="C189" type="graphited-C189"/> 
+   <Atom name="C190" type="graphited-C190"/> 
+   <Atom name="C191" type="graphited-C191"/> 
+   <Atom name="C192" type="graphited-C192"/> 
+   <Atom name="C193" type="graphited-C193"/> 
+   <Atom name="C194" type="graphited-C194"/> 
+   <Atom name="C195" type="graphited-C195"/> 
+   <Atom name="C196" type="graphited-C196"/> 
+   <Atom name="C197" type="graphited-C197"/> 
+   <Atom name="C198" type="graphited-C198"/> 
+   <Atom name="C199" type="graphited-C199"/> 
+   <Atom name="C200" type="graphited-C200"/> 
+   <Atom name="C201" type="graphited-C201"/> 
+   <Atom name="C202" type="graphited-C202"/> 
+   <Atom name="C203" type="graphited-C203"/> 
+   <Atom name="C204" type="graphited-C204"/> 
+   <Atom name="C205" type="graphited-C205"/> 
+   <Atom name="C206" type="graphited-C206"/> 
+   <Atom name="C207" type="graphited-C207"/> 
+   <Atom name="C208" type="graphited-C208"/> 
+   <Atom name="C209" type="graphited-C209"/> 
+   <Atom name="C210" type="graphited-C210"/> 
+   <Atom name="C211" type="graphited-C211"/> 
+   <Atom name="C212" type="graphited-C212"/> 
+   <Atom name="C213" type="graphited-C213"/> 
+   <Atom name="C214" type="graphited-C214"/> 
+   <Atom name="C215" type="graphited-C215"/> 
+   <Atom name="C216" type="graphited-C216"/> 
+   <Atom name="C217" type="graphited-C217"/> 
+   <Atom name="C218" type="graphited-C218"/> 
+   <Atom name="C219" type="graphited-C219"/> 
+   <Atom name="C220" type="graphited-C220"/> 
+   <Atom name="C221" type="graphited-C221"/> 
+   <Atom name="C222" type="graphited-C222"/> 
+   <Atom name="C223" type="graphited-C223"/> 
+   <Atom name="C224" type="graphited-C224"/> 
+   <Atom name="C225" type="graphited-C225"/> 
+   <Atom name="C226" type="graphited-C226"/> 
+   <Atom name="C227" type="graphited-C227"/> 
+   <Atom name="C228" type="graphited-C228"/> 
+   <Atom name="C229" type="graphited-C229"/> 
+   <Atom name="C230" type="graphited-C230"/> 
+   <Atom name="C231" type="graphited-C231"/> 
+   <Atom name="C232" type="graphited-C232"/> 
+   <Atom name="C233" type="graphited-C233"/> 
+   <Atom name="C234" type="graphited-C234"/> 
+   <Atom name="C235" type="graphited-C235"/> 
+   <Atom name="C236" type="graphited-C236"/> 
+   <Atom name="C237" type="graphited-C237"/> 
+   <Atom name="C238" type="graphited-C238"/> 
+   <Atom name="C239" type="graphited-C239"/> 
+   <Atom name="C240" type="graphited-C240"/> 
+   <Atom name="C241" type="graphited-C241"/> 
+   <Atom name="C242" type="graphited-C242"/> 
+   <Atom name="C243" type="graphited-C243"/> 
+   <Atom name="C244" type="graphited-C244"/> 
+   <Atom name="C245" type="graphited-C245"/> 
+   <Atom name="C246" type="graphited-C246"/> 
+   <Atom name="C247" type="graphited-C247"/> 
+   <Atom name="C248" type="graphited-C248"/> 
+   <Atom name="C249" type="graphited-C249"/> 
+   <Atom name="C250" type="graphited-C250"/> 
+   <Atom name="C251" type="graphited-C251"/> 
+   <Atom name="C252" type="graphited-C252"/> 
+   <Atom name="C253" type="graphited-C253"/> 
+   <Atom name="C254" type="graphited-C254"/> 
+   <Atom name="C255" type="graphited-C255"/> 
+   <Atom name="C256" type="graphited-C256"/> 
+   <Atom name="C257" type="graphited-C257"/> 
+   <Atom name="C258" type="graphited-C258"/> 
+   <Atom name="C259" type="graphited-C259"/> 
+   <Atom name="C260" type="graphited-C260"/> 
+   <Atom name="C261" type="graphited-C261"/> 
+   <Atom name="C262" type="graphited-C262"/> 
+   <Atom name="C263" type="graphited-C263"/> 
+   <Atom name="C264" type="graphited-C264"/> 
+   <Atom name="C265" type="graphited-C265"/> 
+   <Atom name="C266" type="graphited-C266"/> 
+   <Atom name="C267" type="graphited-C267"/> 
+   <Atom name="C268" type="graphited-C268"/> 
+   <Atom name="C269" type="graphited-C269"/> 
+   <Atom name="C270" type="graphited-C270"/> 
+   <Atom name="C271" type="graphited-C271"/> 
+   <Atom name="C272" type="graphited-C272"/> 
+   <Atom name="C273" type="graphited-C273"/> 
+   <Atom name="C274" type="graphited-C274"/> 
+   <Atom name="C275" type="graphited-C275"/> 
+   <Atom name="C276" type="graphited-C276"/> 
+   <Atom name="C277" type="graphited-C277"/> 
+   <Atom name="C278" type="graphited-C278"/> 
+   <Atom name="C279" type="graphited-C279"/> 
+   <Atom name="C280" type="graphited-C280"/> 
+   <Atom name="C281" type="graphited-C281"/> 
+   <Atom name="C282" type="graphited-C282"/> 
+   <Atom name="C283" type="graphited-C283"/> 
+   <Atom name="C284" type="graphited-C284"/> 
+   <Atom name="C285" type="graphited-C285"/> 
+   <Atom name="C286" type="graphited-C286"/> 
+   <Atom name="C287" type="graphited-C287"/> 
+   <Atom name="C288" type="graphited-C288"/> 
+   <Atom name="C289" type="graphited-C289"/> 
+   <Atom name="C290" type="graphited-C290"/> 
+   <Atom name="C291" type="graphited-C291"/> 
+   <Atom name="C292" type="graphited-C292"/> 
+   <Atom name="C293" type="graphited-C293"/> 
+   <Atom name="C294" type="graphited-C294"/> 
+   <Atom name="C295" type="graphited-C295"/> 
+   <Atom name="C296" type="graphited-C296"/> 
+   <Atom name="C297" type="graphited-C297"/> 
+   <Atom name="C298" type="graphited-C298"/> 
+   <Atom name="C299" type="graphited-C299"/> 
+   <Atom name="C300" type="graphited-C300"/> 
+   <Atom name="C301" type="graphited-C301"/> 
+   <Atom name="C302" type="graphited-C302"/> 
+   <Atom name="C303" type="graphited-C303"/> 
+   <Atom name="C304" type="graphited-C304"/> 
+   <Atom name="C305" type="graphited-C305"/> 
+   <Atom name="C306" type="graphited-C306"/> 
+   <Atom name="C307" type="graphited-C307"/> 
+   <Atom name="C308" type="graphited-C308"/> 
+   <Atom name="C309" type="graphited-C309"/> 
+   <Atom name="C310" type="graphited-C310"/> 
+   <Atom name="C311" type="graphited-C311"/> 
+   <Atom name="C312" type="graphited-C312"/> 
+   <Atom name="C313" type="graphited-C313"/> 
+   <Atom name="C314" type="graphited-C314"/> 
+   <Atom name="C315" type="graphited-C315"/> 
+   <Atom name="C316" type="graphited-C316"/> 
+   <Atom name="C317" type="graphited-C317"/> 
+   <Atom name="C318" type="graphited-C318"/> 
+   <Atom name="C319" type="graphited-C319"/> 
+   <Atom name="C320" type="graphited-C320"/> 
+   <Atom name="C321" type="graphited-C321"/> 
+   <Atom name="C322" type="graphited-C322"/> 
+   <Atom name="C323" type="graphited-C323"/> 
+   <Atom name="C324" type="graphited-C324"/> 
+   <Atom name="C325" type="graphited-C325"/> 
+   <Atom name="C326" type="graphited-C326"/> 
+   <Atom name="C327" type="graphited-C327"/> 
+   <Atom name="C328" type="graphited-C328"/> 
+   <Atom name="C329" type="graphited-C329"/> 
+   <Atom name="C330" type="graphited-C330"/> 
+   <Atom name="C331" type="graphited-C331"/> 
+   <Atom name="C332" type="graphited-C332"/> 
+   <Atom name="C333" type="graphited-C333"/> 
+   <Atom name="C334" type="graphited-C334"/> 
+   <Atom name="C335" type="graphited-C335"/> 
+   <Atom name="C336" type="graphited-C336"/> 
+   <Atom name="C337" type="graphited-C337"/> 
+   <Atom name="C338" type="graphited-C338"/> 
+   <Atom name="C339" type="graphited-C339"/> 
+   <Atom name="C340" type="graphited-C340"/> 
+   <Atom name="C341" type="graphited-C341"/> 
+   <Atom name="C342" type="graphited-C342"/> 
+   <Atom name="C343" type="graphited-C343"/> 
+   <Atom name="C344" type="graphited-C344"/> 
+   <Atom name="C345" type="graphited-C345"/> 
+   <Atom name="C346" type="graphited-C346"/> 
+   <Atom name="C347" type="graphited-C347"/> 
+   <Atom name="C348" type="graphited-C348"/> 
+   <Atom name="C349" type="graphited-C349"/> 
+   <Atom name="C350" type="graphited-C350"/> 
+   <Atom name="C351" type="graphited-C351"/> 
+   <Atom name="C352" type="graphited-C352"/> 
+   <Atom name="C353" type="graphited-C353"/> 
+   <Atom name="C354" type="graphited-C354"/> 
+   <Atom name="C355" type="graphited-C355"/> 
+   <Atom name="C356" type="graphited-C356"/> 
+   <Atom name="C357" type="graphited-C357"/> 
+   <Atom name="C358" type="graphited-C358"/> 
+   <Atom name="C359" type="graphited-C359"/> 
+   <Atom name="C360" type="graphited-C360"/> 
+   <Atom name="C361" type="graphited-C361"/> 
+   <Atom name="C362" type="graphited-C362"/> 
+   <Atom name="C363" type="graphited-C363"/> 
+   <Atom name="C364" type="graphited-C364"/> 
+   <Atom name="C365" type="graphited-C365"/> 
+   <Atom name="C366" type="graphited-C366"/> 
+   <Atom name="C367" type="graphited-C367"/> 
+   <Atom name="C368" type="graphited-C368"/> 
+   <Atom name="C369" type="graphited-C369"/> 
+   <Atom name="C370" type="graphited-C370"/> 
+   <Atom name="C371" type="graphited-C371"/> 
+   <Atom name="C372" type="graphited-C372"/> 
+   <Atom name="C373" type="graphited-C373"/> 
+   <Atom name="C374" type="graphited-C374"/> 
+   <Atom name="C375" type="graphited-C375"/> 
+   <Atom name="C376" type="graphited-C376"/> 
+   <Atom name="C377" type="graphited-C377"/> 
+   <Atom name="C378" type="graphited-C378"/> 
+   <Atom name="C379" type="graphited-C379"/> 
+   <Atom name="C380" type="graphited-C380"/> 
+   <Atom name="C381" type="graphited-C381"/> 
+   <Atom name="C382" type="graphited-C382"/> 
+   <Atom name="C383" type="graphited-C383"/> 
+   <Atom name="C384" type="graphited-C384"/> 
+   <Atom name="C385" type="graphited-C385"/> 
+   <Atom name="C386" type="graphited-C386"/> 
+   <Atom name="C387" type="graphited-C387"/> 
+   <Atom name="C388" type="graphited-C388"/> 
+   <Atom name="C389" type="graphited-C389"/> 
+   <Atom name="C390" type="graphited-C390"/> 
+   <Atom name="C391" type="graphited-C391"/> 
+   <Atom name="C392" type="graphited-C392"/> 
+   <Atom name="C393" type="graphited-C393"/> 
+   <Atom name="C394" type="graphited-C394"/> 
+   <Atom name="C395" type="graphited-C395"/> 
+   <Atom name="C396" type="graphited-C396"/> 
+   <Atom name="C397" type="graphited-C397"/> 
+   <Atom name="C398" type="graphited-C398"/> 
+   <Atom name="C399" type="graphited-C399"/> 
+  </Residue>
+ </Residues>
+</ForceField>

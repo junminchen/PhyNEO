@@ -1,0 +1,21 @@
+#PBS -N graphene_MC
+#PBS -q inferno
+#PBS -A GT-jmcdaniel43-chemx
+#PBS -o energies.$PBS_JOBID
+#PBS -e error.$PBS_JOBID
+#PBS -l nodes=1:ppn=1:gpus=1:chemx
+#PBS -l walltime=24:00:00
+
+cd $PBS_O_WORKDIR
+
+hostname
+
+module load cuda/10.0
+module load anaconda3
+
+# fill this in with your OpenMM conda environment
+source activate OpenMM_cuda10
+
+#export OPENMM_CUDA_COMPILER=$(which nvcc)
+
+python run_openMM.py  &> energy_traj

@@ -1,0 +1,21 @@
+<ForceField>
+<HarmonicBondForce>
+  <Bond class1="Cgt" class2="Cgt" length="0.142" k="459403.2"/>
+  <Bond class1="Cgt" class2="Hgt" length="0.1087" k="284512.0"/>
+  <Bond class1="Cgtc" class2="Cgtc" length="0.142" k="459403.2"/>
+</HarmonicBondForce>
+<HarmonicAngleForce>
+  <Angle class1="Cgt" class2="Cgt" class3="Cgt" angle="2.0943951023932" k="527.184"/>
+  <Angle class1="Cgt" class2="Cgt" class3="Hgt" angle="1.570796" k="313.800"/>
+  <Angle class1="Cgtc" class2="Cgtc" class3="Cgtc" angle="2.0943951023932" k="527.184"/>
+ </HarmonicAngleForce>
+ <PeriodicTorsionForce>
+  <Improper class1="Cgtc" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.1840"/>
+  <Improper class1="Cgt" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.1840"/>
+ </PeriodicTorsionForce>
+ <NonbondedForce coulomb14scale="0" lj14scale="0">
+  <Atom class="Cgtc" charge="0.0" sigma="1.00000" epsilon="0.00000"/>
+  <Atom class="Cgt" charge="0.0" sigma="1.00000" epsilon="0.00000"/>
+  <Atom class="Hgt" charge="0.0" sigma="1.00000" epsilon="0.00000"/>
+ </NonbondedForce>
+</ForceField>

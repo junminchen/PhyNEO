@@ -1,0 +1,33 @@
+# Template Packmol input for a lithium electrolyte between graphene electrodes. 
+# Graphene electrodes at z=55 (bottom) and z=126 (top)
+
+tolerance 2.0
+filetype pdb
+output li_electrolyte_box.pdb
+
+# Shared box limits for reference only (Packmol ignores comment lines).
+# BOX_MIN =  0.0   0.0  58.0   (slightly above bottom electrode at z=55)
+# BOX_MAX =  50.0  50.0 123.0   (slightly below top electrode at z=126)
+
+# Upper and lower electrodes (kept fixed)
+structure ../graphene_ffdir/graphene.pdb
+  fixed 0.0 0.0 0.0 0.0 0.0 0.0   # z = 126
+end structure
+
+# Lithium salt ion pair (or separated ions)
+structure pdb_bank/Li.pdb
+  number 100
+  inside box 0.0 0.0 58.0 50.0 50.0 123.0  # 在两电极之间
+end structure
+
+# Primary solvent
+structure pdb_bank/PF6.pdb
+  number 100
+  inside box 0.0 0.0 58.0 50.0 50.0 123.0  # 在两电极之间
+end structure
+
+# Optional co-solvent/additive
+structure pdb_bank/DMC.pdb
+  number 400
+  inside box 0.0 0.0 58.0 50.0 50.0 123.0  # 在两电极之间
+end structure

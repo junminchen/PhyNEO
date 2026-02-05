@@ -1,0 +1,2811 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="graphite-C0" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C1" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C2" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C3" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C4" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C5" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C6" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C7" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C8" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C9" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C10" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C11" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C12" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C13" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C14" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C15" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C16" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C17" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C18" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C19" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C20" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C21" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C22" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C23" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C24" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C25" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C26" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C27" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C28" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C29" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C30" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C31" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C32" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C33" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C34" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C35" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C36" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C37" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C38" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C39" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C40" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C41" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C42" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C43" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C44" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C45" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C46" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C47" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C48" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C49" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C50" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C51" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C52" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C53" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C54" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C55" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C56" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C57" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C58" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C59" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C60" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C61" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C62" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C63" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C64" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C65" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C66" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C67" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C68" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C69" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C70" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C71" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C72" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C73" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C74" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C75" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C76" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C77" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C78" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C79" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C80" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C81" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C82" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C83" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C84" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C85" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C86" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C87" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C88" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C89" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C90" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C91" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C92" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C93" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C94" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C95" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C96" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C97" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C98" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C99" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C100" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C101" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C102" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C103" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C104" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C105" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C106" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C107" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C108" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C109" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C110" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C111" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C112" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C113" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C114" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C115" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C116" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C117" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C118" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C119" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C120" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C121" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C122" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C123" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C124" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C125" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C126" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C127" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C128" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C129" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C130" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C131" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C132" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C133" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C134" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C135" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C136" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C137" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C138" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C139" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C140" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C141" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C142" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C143" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C144" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C145" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C146" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C147" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C148" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C149" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C150" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C151" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C152" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C153" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C154" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C155" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C156" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C157" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C158" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C159" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C160" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C161" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C162" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C163" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C164" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C165" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C166" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C167" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C168" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C169" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C170" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C171" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C172" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C173" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C174" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C175" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C176" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C177" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C178" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C179" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C180" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C181" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C182" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C183" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C184" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C185" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C186" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C187" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C188" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C189" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C190" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C191" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C192" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C193" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C194" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C195" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C196" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C197" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C198" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C199" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C200" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C201" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C202" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C203" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C204" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C205" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C206" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C207" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C208" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C209" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C210" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C211" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C212" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C213" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C214" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C215" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C216" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C217" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C218" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C219" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C220" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C221" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C222" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C223" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C224" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C225" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C226" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C227" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C228" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C229" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C230" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C231" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C232" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C233" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C234" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C235" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C236" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C237" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C238" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C239" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C240" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C241" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C242" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C243" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C244" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C245" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C246" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C247" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C248" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C249" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C250" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C251" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C252" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C253" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C254" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C255" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C256" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C257" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C258" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C259" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C260" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C261" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C262" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C263" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C264" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C265" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C266" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C267" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C268" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C269" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C270" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C271" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C272" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C273" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C274" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C275" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C276" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C277" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C278" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C279" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C280" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C281" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C282" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C283" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C284" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C285" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C286" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C287" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C288" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C289" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C290" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C291" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C292" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C293" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C294" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C295" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C296" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C297" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C298" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C299" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C300" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C301" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C302" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C303" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C304" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C305" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C306" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C307" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C308" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C309" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C310" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C311" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C312" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C313" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C314" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C315" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C316" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C317" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C318" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C319" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C320" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C321" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C322" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C323" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C324" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C325" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C326" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C327" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C328" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C329" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C330" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C331" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C332" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C333" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C334" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C335" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C336" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C337" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C338" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C339" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C340" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C341" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C342" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C343" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C344" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C345" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C346" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C347" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C348" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C349" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C350" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C351" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C352" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C353" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C354" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C355" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C356" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C357" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C358" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C359" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C360" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C361" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C362" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C363" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C364" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C365" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C366" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C367" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C368" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C369" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C370" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C371" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C372" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C373" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C374" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C375" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C376" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C377" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C378" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C379" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C380" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C381" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C382" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C383" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C384" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C385" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C386" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C387" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C388" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C389" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C390" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C391" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C392" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C393" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C394" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C395" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C396" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C397" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C398" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C399" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C400" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C401" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C402" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C403" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C404" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C405" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C406" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C407" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C408" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C409" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C410" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C411" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C412" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C413" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C414" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C415" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C416" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C417" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C418" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C419" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C420" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C421" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C422" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C423" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C424" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C425" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C426" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C427" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C428" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C429" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C430" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C431" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C432" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C433" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C434" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C435" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C436" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C437" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C438" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C439" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C440" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C441" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C442" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C443" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C444" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C445" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C446" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C447" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C448" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C449" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C450" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C451" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C452" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C453" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C454" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C455" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C456" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C457" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C458" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C459" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C460" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C461" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C462" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C463" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C464" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C465" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C466" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C467" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C468" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C469" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C470" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C471" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C472" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C473" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C474" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C475" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C476" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C477" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C478" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C479" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C480" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C481" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C482" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C483" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C484" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C485" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C486" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C487" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C488" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C489" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C490" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C491" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C492" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C493" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C494" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C495" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C496" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C497" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C498" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C499" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C500" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C501" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C502" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C503" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C504" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C505" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C506" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C507" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C508" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C509" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C510" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C511" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C512" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C513" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C514" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C515" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C516" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C517" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C518" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C519" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C520" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C521" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C522" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C523" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C524" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C525" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C526" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C527" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C528" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C529" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C530" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C531" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C532" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C533" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C534" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C535" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C536" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C537" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C538" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C539" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C540" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C541" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C542" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C543" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C544" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C545" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C546" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C547" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C548" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C549" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C550" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C551" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C552" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C553" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C554" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C555" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C556" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C557" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C558" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C559" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C560" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C561" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C562" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C563" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C564" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C565" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C566" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C567" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C568" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C569" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C570" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C571" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C572" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C573" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C574" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C575" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C576" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C577" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C578" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C579" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C580" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C581" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C582" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C583" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C584" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C585" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C586" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C587" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C588" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C589" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C590" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C591" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C592" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C593" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C594" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C595" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C596" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C597" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C598" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C599" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C600" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C601" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C602" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C603" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C604" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C605" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C606" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C607" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C608" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C609" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C610" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C611" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C612" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C613" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C614" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C615" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C616" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C617" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C618" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C619" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C620" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C621" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C622" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C623" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C624" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C625" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C626" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C627" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C628" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C629" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C630" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C631" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C632" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C633" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C634" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C635" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C636" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C637" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C638" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C639" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C640" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C641" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C642" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C643" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C644" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C645" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C646" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C647" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C648" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C649" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C650" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C651" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C652" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C653" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C654" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C655" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C656" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C657" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C658" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C659" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C660" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C661" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C662" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C663" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C664" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C665" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C666" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C667" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C668" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C669" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C670" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C671" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C672" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C673" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C674" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C675" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C676" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C677" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C678" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C679" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C680" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C681" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C682" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C683" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C684" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C685" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C686" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C687" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C688" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C689" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C690" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C691" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C692" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C693" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C694" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C695" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C696" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C697" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C698" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C699" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C700" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C701" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C702" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C703" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C704" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C705" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C706" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C707" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C708" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C709" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C710" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C711" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C712" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C713" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C714" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C715" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C716" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C717" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C718" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C719" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C720" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C721" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C722" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C723" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C724" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C725" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C726" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C727" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C728" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C729" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C730" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C731" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C732" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C733" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C734" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C735" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C736" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C737" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C738" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C739" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C740" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C741" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C742" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C743" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C744" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C745" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C746" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C747" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C748" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C749" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C750" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C751" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C752" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C753" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C754" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C755" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C756" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C757" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C758" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C759" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C760" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C761" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C762" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C763" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C764" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C765" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C766" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C767" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C768" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C769" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C770" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C771" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C772" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C773" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C774" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C775" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C776" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C777" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C778" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C779" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C780" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C781" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C782" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C783" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C784" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C785" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C786" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C787" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C788" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C789" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C790" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C791" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C792" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C793" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C794" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C795" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C796" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C797" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C798" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-C799" class="Cgt" element="C" mass="0.0"/>
+  <Type name="graphite-H800" class="Hgt" element="H" mass="0.0"/>
+ </AtomTypes>
+ <Residues>
+  <Residue name="grph">
+   <Atom name="C0" type="graphite-C0"/> 
+   <Atom name="C1" type="graphite-C1"/> 
+   <Atom name="C2" type="graphite-C2"/> 
+   <Atom name="C3" type="graphite-C3"/> 
+   <Atom name="C4" type="graphite-C4"/> 
+   <Atom name="C5" type="graphite-C5"/> 
+   <Atom name="C6" type="graphite-C6"/> 
+   <Atom name="C7" type="graphite-C7"/> 
+   <Atom name="C8" type="graphite-C8"/> 
+   <Atom name="C9" type="graphite-C9"/> 
+   <Atom name="C10" type="graphite-C10"/> 
+   <Atom name="C11" type="graphite-C11"/> 
+   <Atom name="C12" type="graphite-C12"/> 
+   <Atom name="C13" type="graphite-C13"/> 
+   <Atom name="C14" type="graphite-C14"/> 
+   <Atom name="C15" type="graphite-C15"/> 
+   <Atom name="C16" type="graphite-C16"/> 
+   <Atom name="C17" type="graphite-C17"/> 
+   <Atom name="C18" type="graphite-C18"/> 
+   <Atom name="C19" type="graphite-C19"/> 
+   <Atom name="C20" type="graphite-C20"/> 
+   <Atom name="C21" type="graphite-C21"/> 
+   <Atom name="C22" type="graphite-C22"/> 
+   <Atom name="C23" type="graphite-C23"/> 
+   <Atom name="C24" type="graphite-C24"/> 
+   <Atom name="C25" type="graphite-C25"/> 
+   <Atom name="C26" type="graphite-C26"/> 
+   <Atom name="C27" type="graphite-C27"/> 
+   <Atom name="C28" type="graphite-C28"/> 
+   <Atom name="C29" type="graphite-C29"/> 
+   <Atom name="C30" type="graphite-C30"/> 
+   <Atom name="C31" type="graphite-C31"/> 
+   <Atom name="C32" type="graphite-C32"/> 
+   <Atom name="C33" type="graphite-C33"/> 
+   <Atom name="C34" type="graphite-C34"/> 
+   <Atom name="C35" type="graphite-C35"/> 
+   <Atom name="C36" type="graphite-C36"/> 
+   <Atom name="C37" type="graphite-C37"/> 
+   <Atom name="C38" type="graphite-C38"/> 
+   <Atom name="C39" type="graphite-C39"/> 
+   <Atom name="C40" type="graphite-C40"/> 
+   <Atom name="C41" type="graphite-C41"/> 
+   <Atom name="C42" type="graphite-C42"/> 
+   <Atom name="C43" type="graphite-C43"/> 
+   <Atom name="C44" type="graphite-C44"/> 
+   <Atom name="C45" type="graphite-C45"/> 
+   <Atom name="C46" type="graphite-C46"/> 
+   <Atom name="C47" type="graphite-C47"/> 
+   <Atom name="C48" type="graphite-C48"/> 
+   <Atom name="C49" type="graphite-C49"/> 
+   <Atom name="C50" type="graphite-C50"/> 
+   <Atom name="C51" type="graphite-C51"/> 
+   <Atom name="C52" type="graphite-C52"/> 
+   <Atom name="C53" type="graphite-C53"/> 
+   <Atom name="C54" type="graphite-C54"/> 
+   <Atom name="C55" type="graphite-C55"/> 
+   <Atom name="C56" type="graphite-C56"/> 
+   <Atom name="C57" type="graphite-C57"/> 
+   <Atom name="C58" type="graphite-C58"/> 
+   <Atom name="C59" type="graphite-C59"/> 
+   <Atom name="C60" type="graphite-C60"/> 
+   <Atom name="C61" type="graphite-C61"/> 
+   <Atom name="C62" type="graphite-C62"/> 
+   <Atom name="C63" type="graphite-C63"/> 
+   <Atom name="C64" type="graphite-C64"/> 
+   <Atom name="C65" type="graphite-C65"/> 
+   <Atom name="C66" type="graphite-C66"/> 
+   <Atom name="C67" type="graphite-C67"/> 
+   <Atom name="C68" type="graphite-C68"/> 
+   <Atom name="C69" type="graphite-C69"/> 
+   <Atom name="C70" type="graphite-C70"/> 
+   <Atom name="C71" type="graphite-C71"/> 
+   <Atom name="C72" type="graphite-C72"/> 
+   <Atom name="C73" type="graphite-C73"/> 
+   <Atom name="C74" type="graphite-C74"/> 
+   <Atom name="C75" type="graphite-C75"/> 
+   <Atom name="C76" type="graphite-C76"/> 
+   <Atom name="C77" type="graphite-C77"/> 
+   <Atom name="C78" type="graphite-C78"/> 
+   <Atom name="C79" type="graphite-C79"/> 
+   <Atom name="C80" type="graphite-C80"/> 
+   <Atom name="C81" type="graphite-C81"/> 
+   <Atom name="C82" type="graphite-C82"/> 
+   <Atom name="C83" type="graphite-C83"/> 
+   <Atom name="C84" type="graphite-C84"/> 
+   <Atom name="C85" type="graphite-C85"/> 
+   <Atom name="C86" type="graphite-C86"/> 
+   <Atom name="C87" type="graphite-C87"/> 
+   <Atom name="C88" type="graphite-C88"/> 
+   <Atom name="C89" type="graphite-C89"/> 
+   <Atom name="C90" type="graphite-C90"/> 
+   <Atom name="C91" type="graphite-C91"/> 
+   <Atom name="C92" type="graphite-C92"/> 
+   <Atom name="C93" type="graphite-C93"/> 
+   <Atom name="C94" type="graphite-C94"/> 
+   <Atom name="C95" type="graphite-C95"/> 
+   <Atom name="C96" type="graphite-C96"/> 
+   <Atom name="C97" type="graphite-C97"/> 
+   <Atom name="C98" type="graphite-C98"/> 
+   <Atom name="C99" type="graphite-C99"/> 
+   <Atom name="C100" type="graphite-C100"/> 
+   <Atom name="C101" type="graphite-C101"/> 
+   <Atom name="C102" type="graphite-C102"/> 
+   <Atom name="C103" type="graphite-C103"/> 
+   <Atom name="C104" type="graphite-C104"/> 
+   <Atom name="C105" type="graphite-C105"/> 
+   <Atom name="C106" type="graphite-C106"/> 
+   <Atom name="C107" type="graphite-C107"/> 
+   <Atom name="C108" type="graphite-C108"/> 
+   <Atom name="C109" type="graphite-C109"/> 
+   <Atom name="C110" type="graphite-C110"/> 
+   <Atom name="C111" type="graphite-C111"/> 
+   <Atom name="C112" type="graphite-C112"/> 
+   <Atom name="C113" type="graphite-C113"/> 
+   <Atom name="C114" type="graphite-C114"/> 
+   <Atom name="C115" type="graphite-C115"/> 
+   <Atom name="C116" type="graphite-C116"/> 
+   <Atom name="C117" type="graphite-C117"/> 
+   <Atom name="C118" type="graphite-C118"/> 
+   <Atom name="C119" type="graphite-C119"/> 
+   <Atom name="C120" type="graphite-C120"/> 
+   <Atom name="C121" type="graphite-C121"/> 
+   <Atom name="C122" type="graphite-C122"/> 
+   <Atom name="C123" type="graphite-C123"/> 
+   <Atom name="C124" type="graphite-C124"/> 
+   <Atom name="C125" type="graphite-C125"/> 
+   <Atom name="C126" type="graphite-C126"/> 
+   <Atom name="C127" type="graphite-C127"/> 
+   <Atom name="C128" type="graphite-C128"/> 
+   <Atom name="C129" type="graphite-C129"/> 
+   <Atom name="C130" type="graphite-C130"/> 
+   <Atom name="C131" type="graphite-C131"/> 
+   <Atom name="C132" type="graphite-C132"/> 
+   <Atom name="C133" type="graphite-C133"/> 
+   <Atom name="C134" type="graphite-C134"/> 
+   <Atom name="C135" type="graphite-C135"/> 
+   <Atom name="C136" type="graphite-C136"/> 
+   <Atom name="C137" type="graphite-C137"/> 
+   <Atom name="C138" type="graphite-C138"/> 
+   <Atom name="C139" type="graphite-C139"/> 
+   <Atom name="C140" type="graphite-C140"/> 
+   <Atom name="C141" type="graphite-C141"/> 
+   <Atom name="C142" type="graphite-C142"/> 
+   <Atom name="C143" type="graphite-C143"/> 
+   <Atom name="C144" type="graphite-C144"/> 
+   <Atom name="C145" type="graphite-C145"/> 
+   <Atom name="C146" type="graphite-C146"/> 
+   <Atom name="C147" type="graphite-C147"/> 
+   <Atom name="C148" type="graphite-C148"/> 
+   <Atom name="C149" type="graphite-C149"/> 
+   <Atom name="C150" type="graphite-C150"/> 
+   <Atom name="C151" type="graphite-C151"/> 
+   <Atom name="C152" type="graphite-C152"/> 
+   <Atom name="C153" type="graphite-C153"/> 
+   <Atom name="C154" type="graphite-C154"/> 
+   <Atom name="C155" type="graphite-C155"/> 
+   <Atom name="C156" type="graphite-C156"/> 
+   <Atom name="C157" type="graphite-C157"/> 
+   <Atom name="C158" type="graphite-C158"/> 
+   <Atom name="C159" type="graphite-C159"/> 
+   <Atom name="C160" type="graphite-C160"/> 
+   <Atom name="C161" type="graphite-C161"/> 
+   <Atom name="C162" type="graphite-C162"/> 
+   <Atom name="C163" type="graphite-C163"/> 
+   <Atom name="C164" type="graphite-C164"/> 
+   <Atom name="C165" type="graphite-C165"/> 
+   <Atom name="C166" type="graphite-C166"/> 
+   <Atom name="C167" type="graphite-C167"/> 
+   <Atom name="C168" type="graphite-C168"/> 
+   <Atom name="C169" type="graphite-C169"/> 
+   <Atom name="C170" type="graphite-C170"/> 
+   <Atom name="C171" type="graphite-C171"/> 
+   <Atom name="C172" type="graphite-C172"/> 
+   <Atom name="C173" type="graphite-C173"/> 
+   <Atom name="C174" type="graphite-C174"/> 
+   <Atom name="C175" type="graphite-C175"/> 
+   <Atom name="C176" type="graphite-C176"/> 
+   <Atom name="C177" type="graphite-C177"/> 
+   <Atom name="C178" type="graphite-C178"/> 
+   <Atom name="C179" type="graphite-C179"/> 
+   <Atom name="C180" type="graphite-C180"/> 
+   <Atom name="C181" type="graphite-C181"/> 
+   <Atom name="C182" type="graphite-C182"/> 
+   <Atom name="C183" type="graphite-C183"/> 
+   <Atom name="C184" type="graphite-C184"/> 
+   <Atom name="C185" type="graphite-C185"/> 
+   <Atom name="C186" type="graphite-C186"/> 
+   <Atom name="C187" type="graphite-C187"/> 
+   <Atom name="C188" type="graphite-C188"/> 
+   <Atom name="C189" type="graphite-C189"/> 
+   <Atom name="C190" type="graphite-C190"/> 
+   <Atom name="C191" type="graphite-C191"/> 
+   <Atom name="C192" type="graphite-C192"/> 
+   <Atom name="C193" type="graphite-C193"/> 
+   <Atom name="C194" type="graphite-C194"/> 
+   <Atom name="C195" type="graphite-C195"/> 
+   <Atom name="C196" type="graphite-C196"/> 
+   <Atom name="C197" type="graphite-C197"/> 
+   <Atom name="C198" type="graphite-C198"/> 
+   <Atom name="C199" type="graphite-C199"/> 
+   <Atom name="C200" type="graphite-C200"/> 
+   <Atom name="C201" type="graphite-C201"/> 
+   <Atom name="C202" type="graphite-C202"/> 
+   <Atom name="C203" type="graphite-C203"/> 
+   <Atom name="C204" type="graphite-C204"/> 
+   <Atom name="C205" type="graphite-C205"/> 
+   <Atom name="C206" type="graphite-C206"/> 
+   <Atom name="C207" type="graphite-C207"/> 
+   <Atom name="C208" type="graphite-C208"/> 
+   <Atom name="C209" type="graphite-C209"/> 
+   <Atom name="C210" type="graphite-C210"/> 
+   <Atom name="C211" type="graphite-C211"/> 
+   <Atom name="C212" type="graphite-C212"/> 
+   <Atom name="C213" type="graphite-C213"/> 
+   <Atom name="C214" type="graphite-C214"/> 
+   <Atom name="C215" type="graphite-C215"/> 
+   <Atom name="C216" type="graphite-C216"/> 
+   <Atom name="C217" type="graphite-C217"/> 
+   <Atom name="C218" type="graphite-C218"/> 
+   <Atom name="C219" type="graphite-C219"/> 
+   <Atom name="C220" type="graphite-C220"/> 
+   <Atom name="C221" type="graphite-C221"/> 
+   <Atom name="C222" type="graphite-C222"/> 
+   <Atom name="C223" type="graphite-C223"/> 
+   <Atom name="C224" type="graphite-C224"/> 
+   <Atom name="C225" type="graphite-C225"/> 
+   <Atom name="C226" type="graphite-C226"/> 
+   <Atom name="C227" type="graphite-C227"/> 
+   <Atom name="C228" type="graphite-C228"/> 
+   <Atom name="C229" type="graphite-C229"/> 
+   <Atom name="C230" type="graphite-C230"/> 
+   <Atom name="C231" type="graphite-C231"/> 
+   <Atom name="C232" type="graphite-C232"/> 
+   <Atom name="C233" type="graphite-C233"/> 
+   <Atom name="C234" type="graphite-C234"/> 
+   <Atom name="C235" type="graphite-C235"/> 
+   <Atom name="C236" type="graphite-C236"/> 
+   <Atom name="C237" type="graphite-C237"/> 
+   <Atom name="C238" type="graphite-C238"/> 
+   <Atom name="C239" type="graphite-C239"/> 
+   <Atom name="C240" type="graphite-C240"/> 
+   <Atom name="C241" type="graphite-C241"/> 
+   <Atom name="C242" type="graphite-C242"/> 
+   <Atom name="C243" type="graphite-C243"/> 
+   <Atom name="C244" type="graphite-C244"/> 
+   <Atom name="C245" type="graphite-C245"/> 
+   <Atom name="C246" type="graphite-C246"/> 
+   <Atom name="C247" type="graphite-C247"/> 
+   <Atom name="C248" type="graphite-C248"/> 
+   <Atom name="C249" type="graphite-C249"/> 
+   <Atom name="C250" type="graphite-C250"/> 
+   <Atom name="C251" type="graphite-C251"/> 
+   <Atom name="C252" type="graphite-C252"/> 
+   <Atom name="C253" type="graphite-C253"/> 
+   <Atom name="C254" type="graphite-C254"/> 
+   <Atom name="C255" type="graphite-C255"/> 
+   <Atom name="C256" type="graphite-C256"/> 
+   <Atom name="C257" type="graphite-C257"/> 
+   <Atom name="C258" type="graphite-C258"/> 
+   <Atom name="C259" type="graphite-C259"/> 
+   <Atom name="C260" type="graphite-C260"/> 
+   <Atom name="C261" type="graphite-C261"/> 
+   <Atom name="C262" type="graphite-C262"/> 
+   <Atom name="C263" type="graphite-C263"/> 
+   <Atom name="C264" type="graphite-C264"/> 
+   <Atom name="C265" type="graphite-C265"/> 
+   <Atom name="C266" type="graphite-C266"/> 
+   <Atom name="C267" type="graphite-C267"/> 
+   <Atom name="C268" type="graphite-C268"/> 
+   <Atom name="C269" type="graphite-C269"/> 
+   <Atom name="C270" type="graphite-C270"/> 
+   <Atom name="C271" type="graphite-C271"/> 
+   <Atom name="C272" type="graphite-C272"/> 
+   <Atom name="C273" type="graphite-C273"/> 
+   <Atom name="C274" type="graphite-C274"/> 
+   <Atom name="C275" type="graphite-C275"/> 
+   <Atom name="C276" type="graphite-C276"/> 
+   <Atom name="C277" type="graphite-C277"/> 
+   <Atom name="C278" type="graphite-C278"/> 
+   <Atom name="C279" type="graphite-C279"/> 
+   <Atom name="C280" type="graphite-C280"/> 
+   <Atom name="C281" type="graphite-C281"/> 
+   <Atom name="C282" type="graphite-C282"/> 
+   <Atom name="C283" type="graphite-C283"/> 
+   <Atom name="C284" type="graphite-C284"/> 
+   <Atom name="C285" type="graphite-C285"/> 
+   <Atom name="C286" type="graphite-C286"/> 
+   <Atom name="C287" type="graphite-C287"/> 
+   <Atom name="C288" type="graphite-C288"/> 
+   <Atom name="C289" type="graphite-C289"/> 
+   <Atom name="C290" type="graphite-C290"/> 
+   <Atom name="C291" type="graphite-C291"/> 
+   <Atom name="C292" type="graphite-C292"/> 
+   <Atom name="C293" type="graphite-C293"/> 
+   <Atom name="C294" type="graphite-C294"/> 
+   <Atom name="C295" type="graphite-C295"/> 
+   <Atom name="C296" type="graphite-C296"/> 
+   <Atom name="C297" type="graphite-C297"/> 
+   <Atom name="C298" type="graphite-C298"/> 
+   <Atom name="C299" type="graphite-C299"/> 
+   <Atom name="C300" type="graphite-C300"/> 
+   <Atom name="C301" type="graphite-C301"/> 
+   <Atom name="C302" type="graphite-C302"/> 
+   <Atom name="C303" type="graphite-C303"/> 
+   <Atom name="C304" type="graphite-C304"/> 
+   <Atom name="C305" type="graphite-C305"/> 
+   <Atom name="C306" type="graphite-C306"/> 
+   <Atom name="C307" type="graphite-C307"/> 
+   <Atom name="C308" type="graphite-C308"/> 
+   <Atom name="C309" type="graphite-C309"/> 
+   <Atom name="C310" type="graphite-C310"/> 
+   <Atom name="C311" type="graphite-C311"/> 
+   <Atom name="C312" type="graphite-C312"/> 
+   <Atom name="C313" type="graphite-C313"/> 
+   <Atom name="C314" type="graphite-C314"/> 
+   <Atom name="C315" type="graphite-C315"/> 
+   <Atom name="C316" type="graphite-C316"/> 
+   <Atom name="C317" type="graphite-C317"/> 
+   <Atom name="C318" type="graphite-C318"/> 
+   <Atom name="C319" type="graphite-C319"/> 
+   <Atom name="C320" type="graphite-C320"/> 
+   <Atom name="C321" type="graphite-C321"/> 
+   <Atom name="C322" type="graphite-C322"/> 
+   <Atom name="C323" type="graphite-C323"/> 
+   <Atom name="C324" type="graphite-C324"/> 
+   <Atom name="C325" type="graphite-C325"/> 
+   <Atom name="C326" type="graphite-C326"/> 
+   <Atom name="C327" type="graphite-C327"/> 
+   <Atom name="C328" type="graphite-C328"/> 
+   <Atom name="C329" type="graphite-C329"/> 
+   <Atom name="C330" type="graphite-C330"/> 
+   <Atom name="C331" type="graphite-C331"/> 
+   <Atom name="C332" type="graphite-C332"/> 
+   <Atom name="C333" type="graphite-C333"/> 
+   <Atom name="C334" type="graphite-C334"/> 
+   <Atom name="C335" type="graphite-C335"/> 
+   <Atom name="C336" type="graphite-C336"/> 
+   <Atom name="C337" type="graphite-C337"/> 
+   <Atom name="C338" type="graphite-C338"/> 
+   <Atom name="C339" type="graphite-C339"/> 
+   <Atom name="C340" type="graphite-C340"/> 
+   <Atom name="C341" type="graphite-C341"/> 
+   <Atom name="C342" type="graphite-C342"/> 
+   <Atom name="C343" type="graphite-C343"/> 
+   <Atom name="C344" type="graphite-C344"/> 
+   <Atom name="C345" type="graphite-C345"/> 
+   <Atom name="C346" type="graphite-C346"/> 
+   <Atom name="C347" type="graphite-C347"/> 
+   <Atom name="C348" type="graphite-C348"/> 
+   <Atom name="C349" type="graphite-C349"/> 
+   <Atom name="C350" type="graphite-C350"/> 
+   <Atom name="C351" type="graphite-C351"/> 
+   <Atom name="C352" type="graphite-C352"/> 
+   <Atom name="C353" type="graphite-C353"/> 
+   <Atom name="C354" type="graphite-C354"/> 
+   <Atom name="C355" type="graphite-C355"/> 
+   <Atom name="C356" type="graphite-C356"/> 
+   <Atom name="C357" type="graphite-C357"/> 
+   <Atom name="C358" type="graphite-C358"/> 
+   <Atom name="C359" type="graphite-C359"/> 
+   <Atom name="C360" type="graphite-C360"/> 
+   <Atom name="C361" type="graphite-C361"/> 
+   <Atom name="C362" type="graphite-C362"/> 
+   <Atom name="C363" type="graphite-C363"/> 
+   <Atom name="C364" type="graphite-C364"/> 
+   <Atom name="C365" type="graphite-C365"/> 
+   <Atom name="C366" type="graphite-C366"/> 
+   <Atom name="C367" type="graphite-C367"/> 
+   <Atom name="C368" type="graphite-C368"/> 
+   <Atom name="C369" type="graphite-C369"/> 
+   <Atom name="C370" type="graphite-C370"/> 
+   <Atom name="C371" type="graphite-C371"/> 
+   <Atom name="C372" type="graphite-C372"/> 
+   <Atom name="C373" type="graphite-C373"/> 
+   <Atom name="C374" type="graphite-C374"/> 
+   <Atom name="C375" type="graphite-C375"/> 
+   <Atom name="C376" type="graphite-C376"/> 
+   <Atom name="C377" type="graphite-C377"/> 
+   <Atom name="C378" type="graphite-C378"/> 
+   <Atom name="C379" type="graphite-C379"/> 
+   <Atom name="C380" type="graphite-C380"/> 
+   <Atom name="C381" type="graphite-C381"/> 
+   <Atom name="C382" type="graphite-C382"/> 
+   <Atom name="C383" type="graphite-C383"/> 
+   <Atom name="C384" type="graphite-C384"/> 
+   <Atom name="C385" type="graphite-C385"/> 
+   <Atom name="C386" type="graphite-C386"/> 
+   <Atom name="C387" type="graphite-C387"/> 
+   <Atom name="C388" type="graphite-C388"/> 
+   <Atom name="C389" type="graphite-C389"/> 
+   <Atom name="C390" type="graphite-C390"/> 
+   <Atom name="C391" type="graphite-C391"/> 
+   <Atom name="C392" type="graphite-C392"/> 
+   <Atom name="C393" type="graphite-C393"/> 
+   <Atom name="C394" type="graphite-C394"/> 
+   <Atom name="C395" type="graphite-C395"/> 
+   <Atom name="C396" type="graphite-C396"/> 
+   <Atom name="C397" type="graphite-C397"/> 
+   <Atom name="C398" type="graphite-C398"/> 
+   <Atom name="C399" type="graphite-C399"/> 
+   <Atom name="C400" type="graphite-C400"/> 
+   <Atom name="C401" type="graphite-C401"/> 
+   <Atom name="C402" type="graphite-C402"/> 
+   <Atom name="C403" type="graphite-C403"/> 
+   <Atom name="C404" type="graphite-C404"/> 
+   <Atom name="C405" type="graphite-C405"/> 
+   <Atom name="C406" type="graphite-C406"/> 
+   <Atom name="C407" type="graphite-C407"/> 
+   <Atom name="C408" type="graphite-C408"/> 
+   <Atom name="C409" type="graphite-C409"/> 
+   <Atom name="C410" type="graphite-C410"/> 
+   <Atom name="C411" type="graphite-C411"/> 
+   <Atom name="C412" type="graphite-C412"/> 
+   <Atom name="C413" type="graphite-C413"/> 
+   <Atom name="C414" type="graphite-C414"/> 
+   <Atom name="C415" type="graphite-C415"/> 
+   <Atom name="C416" type="graphite-C416"/> 
+   <Atom name="C417" type="graphite-C417"/> 
+   <Atom name="C418" type="graphite-C418"/> 
+   <Atom name="C419" type="graphite-C419"/> 
+   <Atom name="C420" type="graphite-C420"/> 
+   <Atom name="C421" type="graphite-C421"/> 
+   <Atom name="C422" type="graphite-C422"/> 
+   <Atom name="C423" type="graphite-C423"/> 
+   <Atom name="C424" type="graphite-C424"/> 
+   <Atom name="C425" type="graphite-C425"/> 
+   <Atom name="C426" type="graphite-C426"/> 
+   <Atom name="C427" type="graphite-C427"/> 
+   <Atom name="C428" type="graphite-C428"/> 
+   <Atom name="C429" type="graphite-C429"/> 
+   <Atom name="C430" type="graphite-C430"/> 
+   <Atom name="C431" type="graphite-C431"/> 
+   <Atom name="C432" type="graphite-C432"/> 
+   <Atom name="C433" type="graphite-C433"/> 
+   <Atom name="C434" type="graphite-C434"/> 
+   <Atom name="C435" type="graphite-C435"/> 
+   <Atom name="C436" type="graphite-C436"/> 
+   <Atom name="C437" type="graphite-C437"/> 
+   <Atom name="C438" type="graphite-C438"/> 
+   <Atom name="C439" type="graphite-C439"/> 
+   <Atom name="C440" type="graphite-C440"/> 
+   <Atom name="C441" type="graphite-C441"/> 
+   <Atom name="C442" type="graphite-C442"/> 
+   <Atom name="C443" type="graphite-C443"/> 
+   <Atom name="C444" type="graphite-C444"/> 
+   <Atom name="C445" type="graphite-C445"/> 
+   <Atom name="C446" type="graphite-C446"/> 
+   <Atom name="C447" type="graphite-C447"/> 
+   <Atom name="C448" type="graphite-C448"/> 
+   <Atom name="C449" type="graphite-C449"/> 
+   <Atom name="C450" type="graphite-C450"/> 
+   <Atom name="C451" type="graphite-C451"/> 
+   <Atom name="C452" type="graphite-C452"/> 
+   <Atom name="C453" type="graphite-C453"/> 
+   <Atom name="C454" type="graphite-C454"/> 
+   <Atom name="C455" type="graphite-C455"/> 
+   <Atom name="C456" type="graphite-C456"/> 
+   <Atom name="C457" type="graphite-C457"/> 
+   <Atom name="C458" type="graphite-C458"/> 
+   <Atom name="C459" type="graphite-C459"/> 
+   <Atom name="C460" type="graphite-C460"/> 
+   <Atom name="C461" type="graphite-C461"/> 
+   <Atom name="C462" type="graphite-C462"/> 
+   <Atom name="C463" type="graphite-C463"/> 
+   <Atom name="C464" type="graphite-C464"/> 
+   <Atom name="C465" type="graphite-C465"/> 
+   <Atom name="C466" type="graphite-C466"/> 
+   <Atom name="C467" type="graphite-C467"/> 
+   <Atom name="C468" type="graphite-C468"/> 
+   <Atom name="C469" type="graphite-C469"/> 
+   <Atom name="C470" type="graphite-C470"/> 
+   <Atom name="C471" type="graphite-C471"/> 
+   <Atom name="C472" type="graphite-C472"/> 
+   <Atom name="C473" type="graphite-C473"/> 
+   <Atom name="C474" type="graphite-C474"/> 
+   <Atom name="C475" type="graphite-C475"/> 
+   <Atom name="C476" type="graphite-C476"/> 
+   <Atom name="C477" type="graphite-C477"/> 
+   <Atom name="C478" type="graphite-C478"/> 
+   <Atom name="C479" type="graphite-C479"/> 
+   <Atom name="C480" type="graphite-C480"/> 
+   <Atom name="C481" type="graphite-C481"/> 
+   <Atom name="C482" type="graphite-C482"/> 
+   <Atom name="C483" type="graphite-C483"/> 
+   <Atom name="C484" type="graphite-C484"/> 
+   <Atom name="C485" type="graphite-C485"/> 
+   <Atom name="C486" type="graphite-C486"/> 
+   <Atom name="C487" type="graphite-C487"/> 
+   <Atom name="C488" type="graphite-C488"/> 
+   <Atom name="C489" type="graphite-C489"/> 
+   <Atom name="C490" type="graphite-C490"/> 
+   <Atom name="C491" type="graphite-C491"/> 
+   <Atom name="C492" type="graphite-C492"/> 
+   <Atom name="C493" type="graphite-C493"/> 
+   <Atom name="C494" type="graphite-C494"/> 
+   <Atom name="C495" type="graphite-C495"/> 
+   <Atom name="C496" type="graphite-C496"/> 
+   <Atom name="C497" type="graphite-C497"/> 
+   <Atom name="C498" type="graphite-C498"/> 
+   <Atom name="C499" type="graphite-C499"/> 
+   <Atom name="C500" type="graphite-C500"/> 
+   <Atom name="C501" type="graphite-C501"/> 
+   <Atom name="C502" type="graphite-C502"/> 
+   <Atom name="C503" type="graphite-C503"/> 
+   <Atom name="C504" type="graphite-C504"/> 
+   <Atom name="C505" type="graphite-C505"/> 
+   <Atom name="C506" type="graphite-C506"/> 
+   <Atom name="C507" type="graphite-C507"/> 
+   <Atom name="C508" type="graphite-C508"/> 
+   <Atom name="C509" type="graphite-C509"/> 
+   <Atom name="C510" type="graphite-C510"/> 
+   <Atom name="C511" type="graphite-C511"/> 
+   <Atom name="C512" type="graphite-C512"/> 
+   <Atom name="C513" type="graphite-C513"/> 
+   <Atom name="C514" type="graphite-C514"/> 
+   <Atom name="C515" type="graphite-C515"/> 
+   <Atom name="C516" type="graphite-C516"/> 
+   <Atom name="C517" type="graphite-C517"/> 
+   <Atom name="C518" type="graphite-C518"/> 
+   <Atom name="C519" type="graphite-C519"/> 
+   <Atom name="C520" type="graphite-C520"/> 
+   <Atom name="C521" type="graphite-C521"/> 
+   <Atom name="C522" type="graphite-C522"/> 
+   <Atom name="C523" type="graphite-C523"/> 
+   <Atom name="C524" type="graphite-C524"/> 
+   <Atom name="C525" type="graphite-C525"/> 
+   <Atom name="C526" type="graphite-C526"/> 
+   <Atom name="C527" type="graphite-C527"/> 
+   <Atom name="C528" type="graphite-C528"/> 
+   <Atom name="C529" type="graphite-C529"/> 
+   <Atom name="C530" type="graphite-C530"/> 
+   <Atom name="C531" type="graphite-C531"/> 
+   <Atom name="C532" type="graphite-C532"/> 
+   <Atom name="C533" type="graphite-C533"/> 
+   <Atom name="C534" type="graphite-C534"/> 
+   <Atom name="C535" type="graphite-C535"/> 
+   <Atom name="C536" type="graphite-C536"/> 
+   <Atom name="C537" type="graphite-C537"/> 
+   <Atom name="C538" type="graphite-C538"/> 
+   <Atom name="C539" type="graphite-C539"/> 
+   <Atom name="C540" type="graphite-C540"/> 
+   <Atom name="C541" type="graphite-C541"/> 
+   <Atom name="C542" type="graphite-C542"/> 
+   <Atom name="C543" type="graphite-C543"/> 
+   <Atom name="C544" type="graphite-C544"/> 
+   <Atom name="C545" type="graphite-C545"/> 
+   <Atom name="C546" type="graphite-C546"/> 
+   <Atom name="C547" type="graphite-C547"/> 
+   <Atom name="C548" type="graphite-C548"/> 
+   <Atom name="C549" type="graphite-C549"/> 
+   <Atom name="C550" type="graphite-C550"/> 
+   <Atom name="C551" type="graphite-C551"/> 
+   <Atom name="C552" type="graphite-C552"/> 
+   <Atom name="C553" type="graphite-C553"/> 
+   <Atom name="C554" type="graphite-C554"/> 
+   <Atom name="C555" type="graphite-C555"/> 
+   <Atom name="C556" type="graphite-C556"/> 
+   <Atom name="C557" type="graphite-C557"/> 
+   <Atom name="C558" type="graphite-C558"/> 
+   <Atom name="C559" type="graphite-C559"/> 
+   <Atom name="C560" type="graphite-C560"/> 
+   <Atom name="C561" type="graphite-C561"/> 
+   <Atom name="C562" type="graphite-C562"/> 
+   <Atom name="C563" type="graphite-C563"/> 
+   <Atom name="C564" type="graphite-C564"/> 
+   <Atom name="C565" type="graphite-C565"/> 
+   <Atom name="C566" type="graphite-C566"/> 
+   <Atom name="C567" type="graphite-C567"/> 
+   <Atom name="C568" type="graphite-C568"/> 
+   <Atom name="C569" type="graphite-C569"/> 
+   <Atom name="C570" type="graphite-C570"/> 
+   <Atom name="C571" type="graphite-C571"/> 
+   <Atom name="C572" type="graphite-C572"/> 
+   <Atom name="C573" type="graphite-C573"/> 
+   <Atom name="C574" type="graphite-C574"/> 
+   <Atom name="C575" type="graphite-C575"/> 
+   <Atom name="C576" type="graphite-C576"/> 
+   <Atom name="C577" type="graphite-C577"/> 
+   <Atom name="C578" type="graphite-C578"/> 
+   <Atom name="C579" type="graphite-C579"/> 
+   <Atom name="C580" type="graphite-C580"/> 
+   <Atom name="C581" type="graphite-C581"/> 
+   <Atom name="C582" type="graphite-C582"/> 
+   <Atom name="C583" type="graphite-C583"/> 
+   <Atom name="C584" type="graphite-C584"/> 
+   <Atom name="C585" type="graphite-C585"/> 
+   <Atom name="C586" type="graphite-C586"/> 
+   <Atom name="C587" type="graphite-C587"/> 
+   <Atom name="C588" type="graphite-C588"/> 
+   <Atom name="C589" type="graphite-C589"/> 
+   <Atom name="C590" type="graphite-C590"/> 
+   <Atom name="C591" type="graphite-C591"/> 
+   <Atom name="C592" type="graphite-C592"/> 
+   <Atom name="C593" type="graphite-C593"/> 
+   <Atom name="C594" type="graphite-C594"/> 
+   <Atom name="C595" type="graphite-C595"/> 
+   <Atom name="C596" type="graphite-C596"/> 
+   <Atom name="C597" type="graphite-C597"/> 
+   <Atom name="C598" type="graphite-C598"/> 
+   <Atom name="C599" type="graphite-C599"/> 
+   <Atom name="C600" type="graphite-C600"/> 
+   <Atom name="C601" type="graphite-C601"/> 
+   <Atom name="C602" type="graphite-C602"/> 
+   <Atom name="C603" type="graphite-C603"/> 
+   <Atom name="C604" type="graphite-C604"/> 
+   <Atom name="C605" type="graphite-C605"/> 
+   <Atom name="C606" type="graphite-C606"/> 
+   <Atom name="C607" type="graphite-C607"/> 
+   <Atom name="C608" type="graphite-C608"/> 
+   <Atom name="C609" type="graphite-C609"/> 
+   <Atom name="C610" type="graphite-C610"/> 
+   <Atom name="C611" type="graphite-C611"/> 
+   <Atom name="C612" type="graphite-C612"/> 
+   <Atom name="C613" type="graphite-C613"/> 
+   <Atom name="C614" type="graphite-C614"/> 
+   <Atom name="C615" type="graphite-C615"/> 
+   <Atom name="C616" type="graphite-C616"/> 
+   <Atom name="C617" type="graphite-C617"/> 
+   <Atom name="C618" type="graphite-C618"/> 
+   <Atom name="C619" type="graphite-C619"/> 
+   <Atom name="C620" type="graphite-C620"/> 
+   <Atom name="C621" type="graphite-C621"/> 
+   <Atom name="C622" type="graphite-C622"/> 
+   <Atom name="C623" type="graphite-C623"/> 
+   <Atom name="C624" type="graphite-C624"/> 
+   <Atom name="C625" type="graphite-C625"/> 
+   <Atom name="C626" type="graphite-C626"/> 
+   <Atom name="C627" type="graphite-C627"/> 
+   <Atom name="C628" type="graphite-C628"/> 
+   <Atom name="C629" type="graphite-C629"/> 
+   <Atom name="C630" type="graphite-C630"/> 
+   <Atom name="C631" type="graphite-C631"/> 
+   <Atom name="C632" type="graphite-C632"/> 
+   <Atom name="C633" type="graphite-C633"/> 
+   <Atom name="C634" type="graphite-C634"/> 
+   <Atom name="C635" type="graphite-C635"/> 
+   <Atom name="C636" type="graphite-C636"/> 
+   <Atom name="C637" type="graphite-C637"/> 
+   <Atom name="C638" type="graphite-C638"/> 
+   <Atom name="C639" type="graphite-C639"/> 
+   <Atom name="C640" type="graphite-C640"/> 
+   <Atom name="C641" type="graphite-C641"/> 
+   <Atom name="C642" type="graphite-C642"/> 
+   <Atom name="C643" type="graphite-C643"/> 
+   <Atom name="C644" type="graphite-C644"/> 
+   <Atom name="C645" type="graphite-C645"/> 
+   <Atom name="C646" type="graphite-C646"/> 
+   <Atom name="C647" type="graphite-C647"/> 
+   <Atom name="C648" type="graphite-C648"/> 
+   <Atom name="C649" type="graphite-C649"/> 
+   <Atom name="C650" type="graphite-C650"/> 
+   <Atom name="C651" type="graphite-C651"/> 
+   <Atom name="C652" type="graphite-C652"/> 
+   <Atom name="C653" type="graphite-C653"/> 
+   <Atom name="C654" type="graphite-C654"/> 
+   <Atom name="C655" type="graphite-C655"/> 
+   <Atom name="C656" type="graphite-C656"/> 
+   <Atom name="C657" type="graphite-C657"/> 
+   <Atom name="C658" type="graphite-C658"/> 
+   <Atom name="C659" type="graphite-C659"/> 
+   <Atom name="C660" type="graphite-C660"/> 
+   <Atom name="C661" type="graphite-C661"/> 
+   <Atom name="C662" type="graphite-C662"/> 
+   <Atom name="C663" type="graphite-C663"/> 
+   <Atom name="C664" type="graphite-C664"/> 
+   <Atom name="C665" type="graphite-C665"/> 
+   <Atom name="C666" type="graphite-C666"/> 
+   <Atom name="C667" type="graphite-C667"/> 
+   <Atom name="C668" type="graphite-C668"/> 
+   <Atom name="C669" type="graphite-C669"/> 
+   <Atom name="C670" type="graphite-C670"/> 
+   <Atom name="C671" type="graphite-C671"/> 
+   <Atom name="C672" type="graphite-C672"/> 
+   <Atom name="C673" type="graphite-C673"/> 
+   <Atom name="C674" type="graphite-C674"/> 
+   <Atom name="C675" type="graphite-C675"/> 
+   <Atom name="C676" type="graphite-C676"/> 
+   <Atom name="C677" type="graphite-C677"/> 
+   <Atom name="C678" type="graphite-C678"/> 
+   <Atom name="C679" type="graphite-C679"/> 
+   <Atom name="C680" type="graphite-C680"/> 
+   <Atom name="C681" type="graphite-C681"/> 
+   <Atom name="C682" type="graphite-C682"/> 
+   <Atom name="C683" type="graphite-C683"/> 
+   <Atom name="C684" type="graphite-C684"/> 
+   <Atom name="C685" type="graphite-C685"/> 
+   <Atom name="C686" type="graphite-C686"/> 
+   <Atom name="C687" type="graphite-C687"/> 
+   <Atom name="C688" type="graphite-C688"/> 
+   <Atom name="C689" type="graphite-C689"/> 
+   <Atom name="C690" type="graphite-C690"/> 
+   <Atom name="C691" type="graphite-C691"/> 
+   <Atom name="C692" type="graphite-C692"/> 
+   <Atom name="C693" type="graphite-C693"/> 
+   <Atom name="C694" type="graphite-C694"/> 
+   <Atom name="C695" type="graphite-C695"/> 
+   <Atom name="C696" type="graphite-C696"/> 
+   <Atom name="C697" type="graphite-C697"/> 
+   <Atom name="C698" type="graphite-C698"/> 
+   <Atom name="C699" type="graphite-C699"/> 
+   <Atom name="C700" type="graphite-C700"/> 
+   <Atom name="C701" type="graphite-C701"/> 
+   <Atom name="C702" type="graphite-C702"/> 
+   <Atom name="C703" type="graphite-C703"/> 
+   <Atom name="C704" type="graphite-C704"/> 
+   <Atom name="C705" type="graphite-C705"/> 
+   <Atom name="C706" type="graphite-C706"/> 
+   <Atom name="C707" type="graphite-C707"/> 
+   <Atom name="C708" type="graphite-C708"/> 
+   <Atom name="C709" type="graphite-C709"/> 
+   <Atom name="C710" type="graphite-C710"/> 
+   <Atom name="C711" type="graphite-C711"/> 
+   <Atom name="C712" type="graphite-C712"/> 
+   <Atom name="C713" type="graphite-C713"/> 
+   <Atom name="C714" type="graphite-C714"/> 
+   <Atom name="C715" type="graphite-C715"/> 
+   <Atom name="C716" type="graphite-C716"/> 
+   <Atom name="C717" type="graphite-C717"/> 
+   <Atom name="C718" type="graphite-C718"/> 
+   <Atom name="C719" type="graphite-C719"/> 
+   <Atom name="C720" type="graphite-C720"/> 
+   <Atom name="C721" type="graphite-C721"/> 
+   <Atom name="C722" type="graphite-C722"/> 
+   <Atom name="C723" type="graphite-C723"/> 
+   <Atom name="C724" type="graphite-C724"/> 
+   <Atom name="C725" type="graphite-C725"/> 
+   <Atom name="C726" type="graphite-C726"/> 
+   <Atom name="C727" type="graphite-C727"/> 
+   <Atom name="C728" type="graphite-C728"/> 
+   <Atom name="C729" type="graphite-C729"/> 
+   <Atom name="C730" type="graphite-C730"/> 
+   <Atom name="C731" type="graphite-C731"/> 
+   <Atom name="C732" type="graphite-C732"/> 
+   <Atom name="C733" type="graphite-C733"/> 
+   <Atom name="C734" type="graphite-C734"/> 
+   <Atom name="C735" type="graphite-C735"/> 
+   <Atom name="C736" type="graphite-C736"/> 
+   <Atom name="C737" type="graphite-C737"/> 
+   <Atom name="C738" type="graphite-C738"/> 
+   <Atom name="C739" type="graphite-C739"/> 
+   <Atom name="C740" type="graphite-C740"/> 
+   <Atom name="C741" type="graphite-C741"/> 
+   <Atom name="C742" type="graphite-C742"/> 
+   <Atom name="C743" type="graphite-C743"/> 
+   <Atom name="C744" type="graphite-C744"/> 
+   <Atom name="C745" type="graphite-C745"/> 
+   <Atom name="C746" type="graphite-C746"/> 
+   <Atom name="C747" type="graphite-C747"/> 
+   <Atom name="C748" type="graphite-C748"/> 
+   <Atom name="C749" type="graphite-C749"/> 
+   <Atom name="C750" type="graphite-C750"/> 
+   <Atom name="C751" type="graphite-C751"/> 
+   <Atom name="C752" type="graphite-C752"/> 
+   <Atom name="C753" type="graphite-C753"/> 
+   <Atom name="C754" type="graphite-C754"/> 
+   <Atom name="C755" type="graphite-C755"/> 
+   <Atom name="C756" type="graphite-C756"/> 
+   <Atom name="C757" type="graphite-C757"/> 
+   <Atom name="C758" type="graphite-C758"/> 
+   <Atom name="C759" type="graphite-C759"/> 
+   <Atom name="C760" type="graphite-C760"/> 
+   <Atom name="C761" type="graphite-C761"/> 
+   <Atom name="C762" type="graphite-C762"/> 
+   <Atom name="C763" type="graphite-C763"/> 
+   <Atom name="C764" type="graphite-C764"/> 
+   <Atom name="C765" type="graphite-C765"/> 
+   <Atom name="C766" type="graphite-C766"/> 
+   <Atom name="C767" type="graphite-C767"/> 
+   <Atom name="C768" type="graphite-C768"/> 
+   <Atom name="C769" type="graphite-C769"/> 
+   <Atom name="C770" type="graphite-C770"/> 
+   <Atom name="C771" type="graphite-C771"/> 
+   <Atom name="C772" type="graphite-C772"/> 
+   <Atom name="C773" type="graphite-C773"/> 
+   <Atom name="C774" type="graphite-C774"/> 
+   <Atom name="C775" type="graphite-C775"/> 
+   <Atom name="C776" type="graphite-C776"/> 
+   <Atom name="C777" type="graphite-C777"/> 
+   <Atom name="C778" type="graphite-C778"/> 
+   <Atom name="C779" type="graphite-C779"/> 
+   <Atom name="C780" type="graphite-C780"/> 
+   <Atom name="C781" type="graphite-C781"/> 
+   <Atom name="C782" type="graphite-C782"/> 
+   <Atom name="C783" type="graphite-C783"/> 
+   <Atom name="C784" type="graphite-C784"/> 
+   <Atom name="C785" type="graphite-C785"/> 
+   <Atom name="C786" type="graphite-C786"/> 
+   <Atom name="C787" type="graphite-C787"/> 
+   <Atom name="C788" type="graphite-C788"/> 
+   <Atom name="C789" type="graphite-C789"/> 
+   <Atom name="C790" type="graphite-C790"/> 
+   <Atom name="C791" type="graphite-C791"/> 
+   <Atom name="C792" type="graphite-C792"/> 
+   <Atom name="C793" type="graphite-C793"/> 
+   <Atom name="C794" type="graphite-C794"/> 
+   <Atom name="C795" type="graphite-C795"/> 
+   <Atom name="C796" type="graphite-C796"/> 
+   <Atom name="C797" type="graphite-C797"/> 
+   <Atom name="C798" type="graphite-C798"/> 
+   <Atom name="C799" type="graphite-C799"/> 
+   <Atom name="H800" type="graphite-H800"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="39"/>
+   <Bond from="0" to="799"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="42"/>
+   <Bond from="2" to="3"/>
+   <Bond from="2" to="761"/>
+   <Bond from="3" to="4"/>
+   <Bond from="3" to="44"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="763"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="46"/>
+   <Bond from="6" to="7"/>
+   <Bond from="6" to="765"/>
+   <Bond from="7" to="8"/>
+   <Bond from="7" to="48"/>
+   <Bond from="8" to="9"/>
+   <Bond from="8" to="767"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="50"/>
+   <Bond from="10" to="11"/>
+   <Bond from="10" to="769"/>
+   <Bond from="11" to="12"/>
+   <Bond from="11" to="52"/>
+   <Bond from="12" to="13"/>
+   <Bond from="12" to="771"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="54"/>
+   <Bond from="14" to="15"/>
+   <Bond from="14" to="773"/>
+   <Bond from="15" to="16"/>
+   <Bond from="15" to="56"/>
+   <Bond from="16" to="17"/>
+   <Bond from="16" to="775"/>
+   <Bond from="17" to="18"/>
+   <Bond from="17" to="58"/>
+   <Bond from="18" to="19"/>
+   <Bond from="18" to="777"/>
+   <Bond from="19" to="20"/>
+   <Bond from="19" to="60"/>
+   <Bond from="20" to="21"/>
+   <Bond from="20" to="779"/>
+   <Bond from="21" to="22"/>
+   <Bond from="21" to="62"/>
+   <Bond from="22" to="23"/>
+   <Bond from="22" to="781"/>
+   <Bond from="23" to="24"/>
+   <Bond from="23" to="64"/>
+   <Bond from="24" to="25"/>
+   <Bond from="24" to="783"/>
+   <Bond from="25" to="26"/>
+   <Bond from="25" to="66"/>
+   <Bond from="26" to="27"/>
+   <Bond from="26" to="785"/>
+   <Bond from="27" to="28"/>
+   <Bond from="27" to="68"/>
+   <Bond from="28" to="29"/>
+   <Bond from="28" to="787"/>
+   <Bond from="29" to="30"/>
+   <Bond from="29" to="70"/>
+   <Bond from="30" to="31"/>
+   <Bond from="30" to="789"/>
+   <Bond from="31" to="32"/>
+   <Bond from="31" to="72"/>
+   <Bond from="32" to="33"/>
+   <Bond from="32" to="791"/>
+   <Bond from="33" to="34"/>
+   <Bond from="33" to="74"/>
+   <Bond from="34" to="35"/>
+   <Bond from="34" to="793"/>
+   <Bond from="35" to="36"/>
+   <Bond from="35" to="76"/>
+   <Bond from="36" to="37"/>
+   <Bond from="36" to="795"/>
+   <Bond from="37" to="38"/>
+   <Bond from="37" to="78"/>
+   <Bond from="38" to="39"/>
+   <Bond from="38" to="797"/>
+   <Bond from="39" to="40"/>
+   <Bond from="40" to="41"/>
+   <Bond from="40" to="79"/>
+   <Bond from="41" to="42"/>
+   <Bond from="41" to="82"/>
+   <Bond from="42" to="43"/>
+   <Bond from="43" to="44"/>
+   <Bond from="43" to="84"/>
+   <Bond from="44" to="45"/>
+   <Bond from="45" to="46"/>
+   <Bond from="45" to="86"/>
+   <Bond from="46" to="47"/>
+   <Bond from="47" to="48"/>
+   <Bond from="47" to="88"/>
+   <Bond from="48" to="49"/>
+   <Bond from="49" to="50"/>
+   <Bond from="49" to="90"/>
+   <Bond from="50" to="51"/>
+   <Bond from="51" to="52"/>
+   <Bond from="51" to="92"/>
+   <Bond from="52" to="53"/>
+   <Bond from="53" to="54"/>
+   <Bond from="53" to="94"/>
+   <Bond from="54" to="55"/>
+   <Bond from="55" to="56"/>
+   <Bond from="55" to="96"/>
+   <Bond from="56" to="57"/>
+   <Bond from="57" to="58"/>
+   <Bond from="57" to="98"/>
+   <Bond from="58" to="59"/>
+   <Bond from="59" to="60"/>
+   <Bond from="59" to="100"/>
+   <Bond from="60" to="61"/>
+   <Bond from="61" to="62"/>
+   <Bond from="61" to="102"/>
+   <Bond from="62" to="63"/>
+   <Bond from="63" to="64"/>
+   <Bond from="63" to="104"/>
+   <Bond from="64" to="65"/>
+   <Bond from="65" to="66"/>
+   <Bond from="65" to="106"/>
+   <Bond from="66" to="67"/>
+   <Bond from="67" to="68"/>
+   <Bond from="67" to="108"/>
+   <Bond from="68" to="69"/>
+   <Bond from="69" to="70"/>
+   <Bond from="69" to="110"/>
+   <Bond from="70" to="71"/>
+   <Bond from="71" to="72"/>
+   <Bond from="71" to="112"/>
+   <Bond from="72" to="73"/>
+   <Bond from="73" to="74"/>
+   <Bond from="73" to="114"/>
+   <Bond from="74" to="75"/>
+   <Bond from="75" to="76"/>
+   <Bond from="75" to="116"/>
+   <Bond from="76" to="77"/>
+   <Bond from="77" to="78"/>
+   <Bond from="77" to="118"/>
+   <Bond from="78" to="79"/>
+   <Bond from="79" to="80"/>
+   <Bond from="80" to="81"/>
+   <Bond from="80" to="119"/>
+   <Bond from="81" to="82"/>
+   <Bond from="81" to="122"/>
+   <Bond from="82" to="83"/>
+   <Bond from="83" to="84"/>
+   <Bond from="83" to="124"/>
+   <Bond from="84" to="85"/>
+   <Bond from="85" to="86"/>
+   <Bond from="85" to="126"/>
+   <Bond from="86" to="87"/>
+   <Bond from="87" to="88"/>
+   <Bond from="87" to="128"/>
+   <Bond from="88" to="89"/>
+   <Bond from="89" to="90"/>
+   <Bond from="89" to="130"/>
+   <Bond from="90" to="91"/>
+   <Bond from="91" to="92"/>
+   <Bond from="91" to="132"/>
+   <Bond from="92" to="93"/>
+   <Bond from="93" to="94"/>
+   <Bond from="93" to="134"/>
+   <Bond from="94" to="95"/>
+   <Bond from="95" to="96"/>
+   <Bond from="95" to="136"/>
+   <Bond from="96" to="97"/>
+   <Bond from="97" to="98"/>
+   <Bond from="97" to="138"/>
+   <Bond from="98" to="99"/>
+   <Bond from="99" to="100"/>
+   <Bond from="99" to="140"/>
+   <Bond from="100" to="101"/>
+   <Bond from="101" to="102"/>
+   <Bond from="101" to="142"/>
+   <Bond from="102" to="103"/>
+   <Bond from="103" to="104"/>
+   <Bond from="103" to="144"/>
+   <Bond from="104" to="105"/>
+   <Bond from="105" to="106"/>
+   <Bond from="105" to="146"/>
+   <Bond from="106" to="107"/>
+   <Bond from="107" to="108"/>
+   <Bond from="107" to="148"/>
+   <Bond from="108" to="109"/>
+   <Bond from="109" to="110"/>
+   <Bond from="109" to="150"/>
+   <Bond from="110" to="111"/>
+   <Bond from="111" to="112"/>
+   <Bond from="111" to="152"/>
+   <Bond from="112" to="113"/>
+   <Bond from="113" to="114"/>
+   <Bond from="113" to="154"/>
+   <Bond from="114" to="115"/>
+   <Bond from="115" to="116"/>
+   <Bond from="115" to="156"/>
+   <Bond from="116" to="117"/>
+   <Bond from="117" to="118"/>
+   <Bond from="117" to="158"/>
+   <Bond from="118" to="119"/>
+   <Bond from="119" to="120"/>
+   <Bond from="120" to="121"/>
+   <Bond from="120" to="159"/>
+   <Bond from="121" to="122"/>
+   <Bond from="121" to="162"/>
+   <Bond from="122" to="123"/>
+   <Bond from="123" to="124"/>
+   <Bond from="123" to="164"/>
+   <Bond from="124" to="125"/>
+   <Bond from="125" to="126"/>
+   <Bond from="125" to="166"/>
+   <Bond from="126" to="127"/>
+   <Bond from="127" to="128"/>
+   <Bond from="127" to="168"/>
+   <Bond from="128" to="129"/>
+   <Bond from="129" to="130"/>
+   <Bond from="129" to="170"/>
+   <Bond from="130" to="131"/>
+   <Bond from="131" to="132"/>
+   <Bond from="131" to="172"/>
+   <Bond from="132" to="133"/>
+   <Bond from="133" to="134"/>
+   <Bond from="133" to="174"/>
+   <Bond from="134" to="135"/>
+   <Bond from="135" to="136"/>
+   <Bond from="135" to="176"/>
+   <Bond from="136" to="137"/>
+   <Bond from="137" to="138"/>
+   <Bond from="137" to="178"/>
+   <Bond from="138" to="139"/>
+   <Bond from="139" to="140"/>
+   <Bond from="139" to="180"/>
+   <Bond from="140" to="141"/>
+   <Bond from="141" to="142"/>
+   <Bond from="141" to="182"/>
+   <Bond from="142" to="143"/>
+   <Bond from="143" to="144"/>
+   <Bond from="143" to="184"/>
+   <Bond from="144" to="145"/>
+   <Bond from="145" to="146"/>
+   <Bond from="145" to="186"/>
+   <Bond from="146" to="147"/>
+   <Bond from="147" to="148"/>
+   <Bond from="147" to="188"/>
+   <Bond from="148" to="149"/>
+   <Bond from="149" to="150"/>
+   <Bond from="149" to="190"/>
+   <Bond from="150" to="151"/>
+   <Bond from="151" to="152"/>
+   <Bond from="151" to="192"/>
+   <Bond from="152" to="153"/>
+   <Bond from="153" to="154"/>
+   <Bond from="153" to="194"/>
+   <Bond from="154" to="155"/>
+   <Bond from="155" to="156"/>
+   <Bond from="155" to="196"/>
+   <Bond from="156" to="157"/>
+   <Bond from="157" to="158"/>
+   <Bond from="157" to="198"/>
+   <Bond from="158" to="159"/>
+   <Bond from="159" to="160"/>
+   <Bond from="160" to="161"/>
+   <Bond from="160" to="199"/>
+   <Bond from="161" to="162"/>
+   <Bond from="161" to="202"/>
+   <Bond from="162" to="163"/>
+   <Bond from="163" to="164"/>
+   <Bond from="163" to="204"/>
+   <Bond from="164" to="165"/>
+   <Bond from="165" to="166"/>
+   <Bond from="165" to="206"/>
+   <Bond from="166" to="167"/>
+   <Bond from="167" to="168"/>
+   <Bond from="167" to="208"/>
+   <Bond from="168" to="169"/>
+   <Bond from="169" to="170"/>
+   <Bond from="169" to="210"/>
+   <Bond from="170" to="171"/>
+   <Bond from="171" to="172"/>
+   <Bond from="171" to="212"/>
+   <Bond from="172" to="173"/>
+   <Bond from="173" to="174"/>
+   <Bond from="173" to="214"/>
+   <Bond from="174" to="175"/>
+   <Bond from="175" to="176"/>
+   <Bond from="175" to="216"/>
+   <Bond from="176" to="177"/>
+   <Bond from="177" to="178"/>
+   <Bond from="177" to="218"/>
+   <Bond from="178" to="179"/>
+   <Bond from="179" to="180"/>
+   <Bond from="179" to="220"/>
+   <Bond from="180" to="181"/>
+   <Bond from="181" to="182"/>
+   <Bond from="181" to="222"/>
+   <Bond from="182" to="183"/>
+   <Bond from="183" to="184"/>
+   <Bond from="183" to="224"/>
+   <Bond from="184" to="185"/>
+   <Bond from="185" to="186"/>
+   <Bond from="185" to="226"/>
+   <Bond from="186" to="187"/>
+   <Bond from="187" to="188"/>
+   <Bond from="187" to="228"/>
+   <Bond from="188" to="189"/>
+   <Bond from="189" to="190"/>
+   <Bond from="189" to="230"/>
+   <Bond from="190" to="191"/>
+   <Bond from="191" to="192"/>
+   <Bond from="191" to="232"/>
+   <Bond from="192" to="193"/>
+   <Bond from="193" to="194"/>
+   <Bond from="193" to="234"/>
+   <Bond from="194" to="195"/>
+   <Bond from="195" to="196"/>
+   <Bond from="195" to="236"/>
+   <Bond from="196" to="197"/>
+   <Bond from="197" to="198"/>
+   <Bond from="197" to="238"/>
+   <Bond from="198" to="199"/>
+   <Bond from="199" to="200"/>
+   <Bond from="200" to="201"/>
+   <Bond from="200" to="239"/>
+   <Bond from="201" to="202"/>
+   <Bond from="201" to="242"/>
+   <Bond from="202" to="203"/>
+   <Bond from="203" to="204"/>
+   <Bond from="203" to="244"/>
+   <Bond from="204" to="205"/>
+   <Bond from="205" to="206"/>
+   <Bond from="205" to="246"/>
+   <Bond from="206" to="207"/>
+   <Bond from="207" to="208"/>
+   <Bond from="207" to="248"/>
+   <Bond from="208" to="209"/>
+   <Bond from="209" to="210"/>
+   <Bond from="209" to="250"/>
+   <Bond from="210" to="211"/>
+   <Bond from="211" to="212"/>
+   <Bond from="211" to="252"/>
+   <Bond from="212" to="213"/>
+   <Bond from="213" to="214"/>
+   <Bond from="213" to="254"/>
+   <Bond from="214" to="215"/>
+   <Bond from="215" to="216"/>
+   <Bond from="215" to="256"/>
+   <Bond from="216" to="217"/>
+   <Bond from="217" to="218"/>
+   <Bond from="217" to="258"/>
+   <Bond from="218" to="219"/>
+   <Bond from="219" to="220"/>
+   <Bond from="219" to="260"/>
+   <Bond from="220" to="221"/>
+   <Bond from="221" to="222"/>
+   <Bond from="221" to="262"/>
+   <Bond from="222" to="223"/>
+   <Bond from="223" to="224"/>
+   <Bond from="223" to="264"/>
+   <Bond from="224" to="225"/>
+   <Bond from="225" to="226"/>
+   <Bond from="225" to="266"/>
+   <Bond from="226" to="227"/>
+   <Bond from="227" to="228"/>
+   <Bond from="227" to="268"/>
+   <Bond from="228" to="229"/>
+   <Bond from="229" to="230"/>
+   <Bond from="229" to="270"/>
+   <Bond from="230" to="231"/>
+   <Bond from="231" to="232"/>
+   <Bond from="231" to="272"/>
+   <Bond from="232" to="233"/>
+   <Bond from="233" to="234"/>
+   <Bond from="233" to="274"/>
+   <Bond from="234" to="235"/>
+   <Bond from="235" to="236"/>
+   <Bond from="235" to="276"/>
+   <Bond from="236" to="237"/>
+   <Bond from="237" to="238"/>
+   <Bond from="237" to="278"/>
+   <Bond from="238" to="239"/>
+   <Bond from="239" to="240"/>
+   <Bond from="240" to="241"/>
+   <Bond from="240" to="279"/>
+   <Bond from="241" to="242"/>
+   <Bond from="241" to="282"/>
+   <Bond from="242" to="243"/>
+   <Bond from="243" to="244"/>
+   <Bond from="243" to="284"/>
+   <Bond from="244" to="245"/>
+   <Bond from="245" to="246"/>
+   <Bond from="245" to="286"/>
+   <Bond from="246" to="247"/>
+   <Bond from="247" to="248"/>
+   <Bond from="247" to="288"/>
+   <Bond from="248" to="249"/>
+   <Bond from="249" to="250"/>
+   <Bond from="249" to="290"/>
+   <Bond from="250" to="251"/>
+   <Bond from="251" to="252"/>
+   <Bond from="251" to="292"/>
+   <Bond from="252" to="253"/>
+   <Bond from="253" to="254"/>
+   <Bond from="253" to="294"/>
+   <Bond from="254" to="255"/>
+   <Bond from="255" to="256"/>
+   <Bond from="255" to="296"/>
+   <Bond from="256" to="257"/>
+   <Bond from="257" to="258"/>
+   <Bond from="257" to="298"/>
+   <Bond from="258" to="259"/>
+   <Bond from="259" to="260"/>
+   <Bond from="259" to="300"/>
+   <Bond from="260" to="261"/>
+   <Bond from="261" to="262"/>
+   <Bond from="261" to="302"/>
+   <Bond from="262" to="263"/>
+   <Bond from="263" to="264"/>
+   <Bond from="263" to="304"/>
+   <Bond from="264" to="265"/>
+   <Bond from="265" to="266"/>
+   <Bond from="265" to="306"/>
+   <Bond from="266" to="267"/>
+   <Bond from="267" to="268"/>
+   <Bond from="267" to="308"/>
+   <Bond from="268" to="269"/>
+   <Bond from="269" to="270"/>
+   <Bond from="269" to="310"/>
+   <Bond from="270" to="271"/>
+   <Bond from="271" to="272"/>
+   <Bond from="271" to="312"/>
+   <Bond from="272" to="273"/>
+   <Bond from="273" to="274"/>
+   <Bond from="273" to="314"/>
+   <Bond from="274" to="275"/>
+   <Bond from="275" to="276"/>
+   <Bond from="275" to="316"/>
+   <Bond from="276" to="277"/>
+   <Bond from="277" to="278"/>
+   <Bond from="277" to="318"/>
+   <Bond from="278" to="279"/>
+   <Bond from="279" to="280"/>
+   <Bond from="280" to="281"/>
+   <Bond from="280" to="319"/>
+   <Bond from="281" to="282"/>
+   <Bond from="281" to="322"/>
+   <Bond from="282" to="283"/>
+   <Bond from="283" to="284"/>
+   <Bond from="283" to="324"/>
+   <Bond from="284" to="285"/>
+   <Bond from="285" to="286"/>
+   <Bond from="285" to="326"/>
+   <Bond from="286" to="287"/>
+   <Bond from="287" to="288"/>
+   <Bond from="287" to="328"/>
+   <Bond from="288" to="289"/>
+   <Bond from="289" to="290"/>
+   <Bond from="289" to="330"/>
+   <Bond from="290" to="291"/>
+   <Bond from="291" to="292"/>
+   <Bond from="291" to="332"/>
+   <Bond from="292" to="293"/>
+   <Bond from="293" to="294"/>
+   <Bond from="293" to="334"/>
+   <Bond from="294" to="295"/>
+   <Bond from="295" to="296"/>
+   <Bond from="295" to="336"/>
+   <Bond from="296" to="297"/>
+   <Bond from="297" to="298"/>
+   <Bond from="297" to="338"/>
+   <Bond from="298" to="299"/>
+   <Bond from="299" to="300"/>
+   <Bond from="299" to="340"/>
+   <Bond from="300" to="301"/>
+   <Bond from="301" to="302"/>
+   <Bond from="301" to="342"/>
+   <Bond from="302" to="303"/>
+   <Bond from="303" to="304"/>
+   <Bond from="303" to="344"/>
+   <Bond from="304" to="305"/>
+   <Bond from="305" to="306"/>
+   <Bond from="305" to="346"/>
+   <Bond from="306" to="307"/>
+   <Bond from="307" to="308"/>
+   <Bond from="307" to="348"/>
+   <Bond from="308" to="309"/>
+   <Bond from="309" to="310"/>
+   <Bond from="309" to="350"/>
+   <Bond from="310" to="311"/>
+   <Bond from="311" to="312"/>
+   <Bond from="311" to="352"/>
+   <Bond from="312" to="313"/>
+   <Bond from="313" to="314"/>
+   <Bond from="313" to="354"/>
+   <Bond from="314" to="315"/>
+   <Bond from="315" to="316"/>
+   <Bond from="315" to="356"/>
+   <Bond from="316" to="317"/>
+   <Bond from="317" to="318"/>
+   <Bond from="317" to="358"/>
+   <Bond from="318" to="319"/>
+   <Bond from="319" to="320"/>
+   <Bond from="320" to="321"/>
+   <Bond from="320" to="359"/>
+   <Bond from="321" to="322"/>
+   <Bond from="321" to="362"/>
+   <Bond from="322" to="323"/>
+   <Bond from="323" to="324"/>
+   <Bond from="323" to="364"/>
+   <Bond from="324" to="325"/>
+   <Bond from="325" to="326"/>
+   <Bond from="325" to="366"/>
+   <Bond from="326" to="327"/>
+   <Bond from="327" to="328"/>
+   <Bond from="327" to="368"/>
+   <Bond from="328" to="329"/>
+   <Bond from="329" to="330"/>
+   <Bond from="329" to="370"/>
+   <Bond from="330" to="331"/>
+   <Bond from="331" to="332"/>
+   <Bond from="331" to="372"/>
+   <Bond from="332" to="333"/>
+   <Bond from="333" to="334"/>
+   <Bond from="333" to="374"/>
+   <Bond from="334" to="335"/>
+   <Bond from="335" to="336"/>
+   <Bond from="335" to="376"/>
+   <Bond from="336" to="337"/>
+   <Bond from="337" to="338"/>
+   <Bond from="337" to="378"/>
+   <Bond from="338" to="339"/>
+   <Bond from="339" to="340"/>
+   <Bond from="339" to="380"/>
+   <Bond from="340" to="341"/>
+   <Bond from="341" to="342"/>
+   <Bond from="341" to="382"/>
+   <Bond from="342" to="343"/>
+   <Bond from="343" to="344"/>
+   <Bond from="343" to="384"/>
+   <Bond from="344" to="345"/>
+   <Bond from="345" to="346"/>
+   <Bond from="345" to="386"/>
+   <Bond from="346" to="347"/>
+   <Bond from="347" to="348"/>
+   <Bond from="347" to="388"/>
+   <Bond from="348" to="349"/>
+   <Bond from="349" to="350"/>
+   <Bond from="349" to="390"/>
+   <Bond from="350" to="351"/>
+   <Bond from="351" to="352"/>
+   <Bond from="351" to="392"/>
+   <Bond from="352" to="353"/>
+   <Bond from="353" to="354"/>
+   <Bond from="353" to="394"/>
+   <Bond from="354" to="355"/>
+   <Bond from="355" to="356"/>
+   <Bond from="355" to="396"/>
+   <Bond from="356" to="357"/>
+   <Bond from="357" to="358"/>
+   <Bond from="357" to="398"/>
+   <Bond from="358" to="359"/>
+   <Bond from="359" to="360"/>
+   <Bond from="360" to="361"/>
+   <Bond from="360" to="399"/>
+   <Bond from="361" to="362"/>
+   <Bond from="361" to="402"/>
+   <Bond from="362" to="363"/>
+   <Bond from="363" to="364"/>
+   <Bond from="363" to="404"/>
+   <Bond from="364" to="365"/>
+   <Bond from="365" to="366"/>
+   <Bond from="365" to="406"/>
+   <Bond from="366" to="367"/>
+   <Bond from="367" to="368"/>
+   <Bond from="367" to="408"/>
+   <Bond from="368" to="369"/>
+   <Bond from="369" to="370"/>
+   <Bond from="369" to="410"/>
+   <Bond from="370" to="371"/>
+   <Bond from="371" to="372"/>
+   <Bond from="371" to="412"/>
+   <Bond from="372" to="373"/>
+   <Bond from="373" to="374"/>
+   <Bond from="373" to="414"/>
+   <Bond from="374" to="375"/>
+   <Bond from="375" to="376"/>
+   <Bond from="375" to="416"/>
+   <Bond from="376" to="377"/>
+   <Bond from="377" to="378"/>
+   <Bond from="377" to="418"/>
+   <Bond from="378" to="379"/>
+   <Bond from="379" to="380"/>
+   <Bond from="379" to="420"/>
+   <Bond from="380" to="381"/>
+   <Bond from="381" to="382"/>
+   <Bond from="381" to="422"/>
+   <Bond from="382" to="383"/>
+   <Bond from="383" to="384"/>
+   <Bond from="383" to="424"/>
+   <Bond from="384" to="385"/>
+   <Bond from="385" to="386"/>
+   <Bond from="385" to="426"/>
+   <Bond from="386" to="387"/>
+   <Bond from="387" to="388"/>
+   <Bond from="387" to="428"/>
+   <Bond from="388" to="389"/>
+   <Bond from="389" to="390"/>
+   <Bond from="389" to="430"/>
+   <Bond from="390" to="391"/>
+   <Bond from="391" to="392"/>
+   <Bond from="391" to="432"/>
+   <Bond from="392" to="393"/>
+   <Bond from="393" to="394"/>
+   <Bond from="393" to="434"/>
+   <Bond from="394" to="395"/>
+   <Bond from="395" to="396"/>
+   <Bond from="395" to="436"/>
+   <Bond from="396" to="397"/>
+   <Bond from="397" to="398"/>
+   <Bond from="397" to="438"/>
+   <Bond from="398" to="399"/>
+   <Bond from="399" to="400"/>
+   <Bond from="400" to="401"/>
+   <Bond from="400" to="439"/>
+   <Bond from="401" to="402"/>
+   <Bond from="401" to="442"/>
+   <Bond from="402" to="403"/>
+   <Bond from="403" to="404"/>
+   <Bond from="403" to="444"/>
+   <Bond from="404" to="405"/>
+   <Bond from="405" to="406"/>
+   <Bond from="405" to="446"/>
+   <Bond from="406" to="407"/>
+   <Bond from="407" to="408"/>
+   <Bond from="407" to="448"/>
+   <Bond from="408" to="409"/>
+   <Bond from="409" to="410"/>
+   <Bond from="409" to="450"/>
+   <Bond from="410" to="411"/>
+   <Bond from="411" to="412"/>
+   <Bond from="411" to="452"/>
+   <Bond from="412" to="413"/>
+   <Bond from="413" to="414"/>
+   <Bond from="413" to="454"/>
+   <Bond from="414" to="415"/>
+   <Bond from="415" to="416"/>
+   <Bond from="415" to="456"/>
+   <Bond from="416" to="417"/>
+   <Bond from="417" to="418"/>
+   <Bond from="417" to="458"/>
+   <Bond from="418" to="419"/>
+   <Bond from="419" to="420"/>
+   <Bond from="419" to="460"/>
+   <Bond from="420" to="421"/>
+   <Bond from="421" to="422"/>
+   <Bond from="421" to="462"/>
+   <Bond from="422" to="423"/>
+   <Bond from="423" to="424"/>
+   <Bond from="423" to="464"/>
+   <Bond from="424" to="425"/>
+   <Bond from="425" to="426"/>
+   <Bond from="425" to="466"/>
+   <Bond from="426" to="427"/>
+   <Bond from="427" to="428"/>
+   <Bond from="427" to="468"/>
+   <Bond from="428" to="429"/>
+   <Bond from="429" to="430"/>
+   <Bond from="429" to="470"/>
+   <Bond from="430" to="431"/>
+   <Bond from="431" to="432"/>
+   <Bond from="431" to="472"/>
+   <Bond from="432" to="433"/>
+   <Bond from="433" to="434"/>
+   <Bond from="433" to="474"/>
+   <Bond from="434" to="435"/>
+   <Bond from="435" to="436"/>
+   <Bond from="435" to="476"/>
+   <Bond from="436" to="437"/>
+   <Bond from="437" to="438"/>
+   <Bond from="437" to="478"/>
+   <Bond from="438" to="439"/>
+   <Bond from="439" to="440"/>
+   <Bond from="440" to="441"/>
+   <Bond from="440" to="479"/>
+   <Bond from="441" to="442"/>
+   <Bond from="441" to="482"/>
+   <Bond from="442" to="443"/>
+   <Bond from="443" to="444"/>
+   <Bond from="443" to="484"/>
+   <Bond from="444" to="445"/>
+   <Bond from="445" to="446"/>
+   <Bond from="445" to="486"/>
+   <Bond from="446" to="447"/>
+   <Bond from="447" to="448"/>
+   <Bond from="447" to="488"/>
+   <Bond from="448" to="449"/>
+   <Bond from="449" to="450"/>
+   <Bond from="449" to="490"/>
+   <Bond from="450" to="451"/>
+   <Bond from="451" to="452"/>
+   <Bond from="451" to="492"/>
+   <Bond from="452" to="453"/>
+   <Bond from="453" to="454"/>
+   <Bond from="453" to="494"/>
+   <Bond from="454" to="455"/>
+   <Bond from="455" to="456"/>
+   <Bond from="455" to="496"/>
+   <Bond from="456" to="457"/>
+   <Bond from="457" to="458"/>
+   <Bond from="457" to="498"/>
+   <Bond from="458" to="459"/>
+   <Bond from="459" to="460"/>
+   <Bond from="459" to="500"/>
+   <Bond from="460" to="461"/>
+   <Bond from="461" to="462"/>
+   <Bond from="461" to="502"/>
+   <Bond from="462" to="463"/>
+   <Bond from="463" to="464"/>
+   <Bond from="463" to="504"/>
+   <Bond from="464" to="465"/>
+   <Bond from="465" to="466"/>
+   <Bond from="465" to="506"/>
+   <Bond from="466" to="467"/>
+   <Bond from="467" to="468"/>
+   <Bond from="467" to="508"/>
+   <Bond from="468" to="469"/>
+   <Bond from="469" to="470"/>
+   <Bond from="469" to="510"/>
+   <Bond from="470" to="471"/>
+   <Bond from="471" to="472"/>
+   <Bond from="471" to="512"/>
+   <Bond from="472" to="473"/>
+   <Bond from="473" to="474"/>
+   <Bond from="473" to="514"/>
+   <Bond from="474" to="475"/>
+   <Bond from="475" to="476"/>
+   <Bond from="475" to="516"/>
+   <Bond from="476" to="477"/>
+   <Bond from="477" to="478"/>
+   <Bond from="477" to="518"/>
+   <Bond from="478" to="479"/>
+   <Bond from="479" to="480"/>
+   <Bond from="480" to="481"/>
+   <Bond from="480" to="519"/>
+   <Bond from="481" to="482"/>
+   <Bond from="481" to="522"/>
+   <Bond from="482" to="483"/>
+   <Bond from="483" to="484"/>
+   <Bond from="483" to="524"/>
+   <Bond from="484" to="485"/>
+   <Bond from="485" to="486"/>
+   <Bond from="485" to="526"/>
+   <Bond from="486" to="487"/>
+   <Bond from="487" to="488"/>
+   <Bond from="487" to="528"/>
+   <Bond from="488" to="489"/>
+   <Bond from="489" to="490"/>
+   <Bond from="489" to="530"/>
+   <Bond from="490" to="491"/>
+   <Bond from="491" to="492"/>
+   <Bond from="491" to="532"/>
+   <Bond from="492" to="493"/>
+   <Bond from="493" to="494"/>
+   <Bond from="493" to="534"/>
+   <Bond from="494" to="495"/>
+   <Bond from="495" to="496"/>
+   <Bond from="495" to="536"/>
+   <Bond from="496" to="497"/>
+   <Bond from="497" to="498"/>
+   <Bond from="497" to="538"/>
+   <Bond from="498" to="499"/>
+   <Bond from="499" to="500"/>
+   <Bond from="499" to="540"/>
+   <Bond from="500" to="501"/>
+   <Bond from="501" to="502"/>
+   <Bond from="501" to="542"/>
+   <Bond from="502" to="503"/>
+   <Bond from="503" to="504"/>
+   <Bond from="503" to="544"/>
+   <Bond from="504" to="505"/>
+   <Bond from="505" to="506"/>
+   <Bond from="505" to="546"/>
+   <Bond from="506" to="507"/>
+   <Bond from="507" to="508"/>
+   <Bond from="507" to="548"/>
+   <Bond from="508" to="509"/>
+   <Bond from="509" to="510"/>
+   <Bond from="509" to="550"/>
+   <Bond from="510" to="511"/>
+   <Bond from="511" to="512"/>
+   <Bond from="511" to="552"/>
+   <Bond from="512" to="513"/>
+   <Bond from="513" to="514"/>
+   <Bond from="513" to="554"/>
+   <Bond from="514" to="515"/>
+   <Bond from="515" to="516"/>
+   <Bond from="515" to="556"/>
+   <Bond from="516" to="517"/>
+   <Bond from="517" to="518"/>
+   <Bond from="517" to="558"/>
+   <Bond from="518" to="519"/>
+   <Bond from="519" to="520"/>
+   <Bond from="520" to="521"/>
+   <Bond from="520" to="559"/>
+   <Bond from="521" to="522"/>
+   <Bond from="521" to="562"/>
+   <Bond from="522" to="523"/>
+   <Bond from="523" to="524"/>
+   <Bond from="523" to="564"/>
+   <Bond from="524" to="525"/>
+   <Bond from="525" to="526"/>
+   <Bond from="525" to="566"/>
+   <Bond from="526" to="527"/>
+   <Bond from="527" to="528"/>
+   <Bond from="527" to="568"/>
+   <Bond from="528" to="529"/>
+   <Bond from="529" to="530"/>
+   <Bond from="529" to="570"/>
+   <Bond from="530" to="531"/>
+   <Bond from="531" to="532"/>
+   <Bond from="531" to="572"/>
+   <Bond from="532" to="533"/>
+   <Bond from="533" to="534"/>
+   <Bond from="533" to="574"/>
+   <Bond from="534" to="535"/>
+   <Bond from="535" to="536"/>
+   <Bond from="535" to="576"/>
+   <Bond from="536" to="537"/>
+   <Bond from="537" to="538"/>
+   <Bond from="537" to="578"/>
+   <Bond from="538" to="539"/>
+   <Bond from="539" to="540"/>
+   <Bond from="539" to="580"/>
+   <Bond from="540" to="541"/>
+   <Bond from="541" to="542"/>
+   <Bond from="541" to="582"/>
+   <Bond from="542" to="543"/>
+   <Bond from="543" to="544"/>
+   <Bond from="543" to="584"/>
+   <Bond from="544" to="545"/>
+   <Bond from="545" to="546"/>
+   <Bond from="545" to="586"/>
+   <Bond from="546" to="547"/>
+   <Bond from="547" to="548"/>
+   <Bond from="547" to="588"/>
+   <Bond from="548" to="549"/>
+   <Bond from="549" to="550"/>
+   <Bond from="549" to="590"/>
+   <Bond from="550" to="551"/>
+   <Bond from="551" to="552"/>
+   <Bond from="551" to="592"/>
+   <Bond from="552" to="553"/>
+   <Bond from="553" to="554"/>
+   <Bond from="553" to="594"/>
+   <Bond from="554" to="555"/>
+   <Bond from="555" to="556"/>
+   <Bond from="555" to="596"/>
+   <Bond from="556" to="557"/>
+   <Bond from="557" to="558"/>
+   <Bond from="557" to="598"/>
+   <Bond from="558" to="559"/>
+   <Bond from="559" to="560"/>
+   <Bond from="560" to="561"/>
+   <Bond from="560" to="599"/>
+   <Bond from="561" to="562"/>
+   <Bond from="561" to="602"/>
+   <Bond from="562" to="563"/>
+   <Bond from="563" to="564"/>
+   <Bond from="563" to="604"/>
+   <Bond from="564" to="565"/>
+   <Bond from="565" to="566"/>
+   <Bond from="565" to="606"/>
+   <Bond from="566" to="567"/>
+   <Bond from="567" to="568"/>
+   <Bond from="567" to="608"/>
+   <Bond from="568" to="569"/>
+   <Bond from="569" to="570"/>
+   <Bond from="569" to="610"/>
+   <Bond from="570" to="571"/>
+   <Bond from="571" to="572"/>
+   <Bond from="571" to="612"/>
+   <Bond from="572" to="573"/>
+   <Bond from="573" to="574"/>
+   <Bond from="573" to="614"/>
+   <Bond from="574" to="575"/>
+   <Bond from="575" to="576"/>
+   <Bond from="575" to="616"/>
+   <Bond from="576" to="577"/>
+   <Bond from="577" to="578"/>
+   <Bond from="577" to="618"/>
+   <Bond from="578" to="579"/>
+   <Bond from="579" to="580"/>
+   <Bond from="579" to="620"/>
+   <Bond from="580" to="581"/>
+   <Bond from="581" to="582"/>
+   <Bond from="581" to="622"/>
+   <Bond from="582" to="583"/>
+   <Bond from="583" to="584"/>
+   <Bond from="583" to="624"/>
+   <Bond from="584" to="585"/>
+   <Bond from="585" to="586"/>
+   <Bond from="585" to="626"/>
+   <Bond from="586" to="587"/>
+   <Bond from="587" to="588"/>
+   <Bond from="587" to="628"/>
+   <Bond from="588" to="589"/>
+   <Bond from="589" to="590"/>
+   <Bond from="589" to="630"/>
+   <Bond from="590" to="591"/>
+   <Bond from="591" to="592"/>
+   <Bond from="591" to="632"/>
+   <Bond from="592" to="593"/>
+   <Bond from="593" to="594"/>
+   <Bond from="593" to="634"/>
+   <Bond from="594" to="595"/>
+   <Bond from="595" to="596"/>
+   <Bond from="595" to="636"/>
+   <Bond from="596" to="597"/>
+   <Bond from="597" to="598"/>
+   <Bond from="597" to="638"/>
+   <Bond from="598" to="599"/>
+   <Bond from="599" to="600"/>
+   <Bond from="600" to="601"/>
+   <Bond from="600" to="639"/>
+   <Bond from="601" to="602"/>
+   <Bond from="601" to="642"/>
+   <Bond from="602" to="603"/>
+   <Bond from="603" to="604"/>
+   <Bond from="603" to="644"/>
+   <Bond from="604" to="605"/>
+   <Bond from="605" to="606"/>
+   <Bond from="605" to="646"/>
+   <Bond from="606" to="607"/>
+   <Bond from="607" to="608"/>
+   <Bond from="607" to="648"/>
+   <Bond from="608" to="609"/>
+   <Bond from="609" to="610"/>
+   <Bond from="609" to="650"/>
+   <Bond from="610" to="611"/>
+   <Bond from="611" to="612"/>
+   <Bond from="611" to="652"/>
+   <Bond from="612" to="613"/>
+   <Bond from="613" to="614"/>
+   <Bond from="613" to="654"/>
+   <Bond from="614" to="615"/>
+   <Bond from="615" to="616"/>
+   <Bond from="615" to="656"/>
+   <Bond from="616" to="617"/>
+   <Bond from="617" to="618"/>
+   <Bond from="617" to="658"/>
+   <Bond from="618" to="619"/>
+   <Bond from="619" to="620"/>
+   <Bond from="619" to="660"/>
+   <Bond from="620" to="621"/>
+   <Bond from="621" to="622"/>
+   <Bond from="621" to="662"/>
+   <Bond from="622" to="623"/>
+   <Bond from="623" to="624"/>
+   <Bond from="623" to="664"/>
+   <Bond from="624" to="625"/>
+   <Bond from="625" to="626"/>
+   <Bond from="625" to="666"/>
+   <Bond from="626" to="627"/>
+   <Bond from="627" to="628"/>
+   <Bond from="627" to="668"/>
+   <Bond from="628" to="629"/>
+   <Bond from="629" to="630"/>
+   <Bond from="629" to="670"/>
+   <Bond from="630" to="631"/>
+   <Bond from="631" to="632"/>
+   <Bond from="631" to="672"/>
+   <Bond from="632" to="633"/>
+   <Bond from="633" to="634"/>
+   <Bond from="633" to="674"/>
+   <Bond from="634" to="635"/>
+   <Bond from="635" to="636"/>
+   <Bond from="635" to="676"/>
+   <Bond from="636" to="637"/>
+   <Bond from="637" to="638"/>
+   <Bond from="637" to="678"/>
+   <Bond from="638" to="639"/>
+   <Bond from="639" to="640"/>
+   <Bond from="640" to="641"/>
+   <Bond from="640" to="679"/>
+   <Bond from="641" to="642"/>
+   <Bond from="641" to="682"/>
+   <Bond from="642" to="643"/>
+   <Bond from="643" to="644"/>
+   <Bond from="643" to="684"/>
+   <Bond from="644" to="645"/>
+   <Bond from="645" to="646"/>
+   <Bond from="645" to="686"/>
+   <Bond from="646" to="647"/>
+   <Bond from="647" to="648"/>
+   <Bond from="647" to="688"/>
+   <Bond from="648" to="649"/>
+   <Bond from="649" to="650"/>
+   <Bond from="649" to="690"/>
+   <Bond from="650" to="651"/>
+   <Bond from="651" to="652"/>
+   <Bond from="651" to="692"/>
+   <Bond from="652" to="653"/>
+   <Bond from="653" to="654"/>
+   <Bond from="653" to="694"/>
+   <Bond from="654" to="655"/>
+   <Bond from="655" to="656"/>
+   <Bond from="655" to="696"/>
+   <Bond from="656" to="657"/>
+   <Bond from="657" to="658"/>
+   <Bond from="657" to="698"/>
+   <Bond from="658" to="659"/>
+   <Bond from="659" to="660"/>
+   <Bond from="659" to="700"/>
+   <Bond from="660" to="661"/>
+   <Bond from="661" to="662"/>
+   <Bond from="661" to="702"/>
+   <Bond from="662" to="663"/>
+   <Bond from="663" to="664"/>
+   <Bond from="663" to="704"/>
+   <Bond from="664" to="665"/>
+   <Bond from="665" to="666"/>
+   <Bond from="665" to="706"/>
+   <Bond from="666" to="667"/>
+   <Bond from="667" to="668"/>
+   <Bond from="667" to="708"/>
+   <Bond from="668" to="669"/>
+   <Bond from="669" to="670"/>
+   <Bond from="669" to="710"/>
+   <Bond from="670" to="671"/>
+   <Bond from="671" to="672"/>
+   <Bond from="671" to="712"/>
+   <Bond from="672" to="673"/>
+   <Bond from="673" to="674"/>
+   <Bond from="673" to="714"/>
+   <Bond from="674" to="675"/>
+   <Bond from="675" to="676"/>
+   <Bond from="675" to="716"/>
+   <Bond from="676" to="677"/>
+   <Bond from="677" to="678"/>
+   <Bond from="677" to="718"/>
+   <Bond from="678" to="679"/>
+   <Bond from="679" to="680"/>
+   <Bond from="680" to="681"/>
+   <Bond from="680" to="719"/>
+   <Bond from="681" to="682"/>
+   <Bond from="681" to="722"/>
+   <Bond from="682" to="683"/>
+   <Bond from="683" to="684"/>
+   <Bond from="683" to="724"/>
+   <Bond from="684" to="685"/>
+   <Bond from="685" to="686"/>
+   <Bond from="685" to="726"/>
+   <Bond from="686" to="687"/>
+   <Bond from="687" to="688"/>
+   <Bond from="687" to="728"/>
+   <Bond from="688" to="689"/>
+   <Bond from="689" to="690"/>
+   <Bond from="689" to="730"/>
+   <Bond from="690" to="691"/>
+   <Bond from="691" to="692"/>
+   <Bond from="691" to="732"/>
+   <Bond from="692" to="693"/>
+   <Bond from="693" to="694"/>
+   <Bond from="693" to="734"/>
+   <Bond from="694" to="695"/>
+   <Bond from="695" to="696"/>
+   <Bond from="695" to="736"/>
+   <Bond from="696" to="697"/>
+   <Bond from="697" to="698"/>
+   <Bond from="697" to="738"/>
+   <Bond from="698" to="699"/>
+   <Bond from="699" to="700"/>
+   <Bond from="699" to="740"/>
+   <Bond from="700" to="701"/>
+   <Bond from="701" to="702"/>
+   <Bond from="701" to="742"/>
+   <Bond from="702" to="703"/>
+   <Bond from="703" to="704"/>
+   <Bond from="703" to="744"/>
+   <Bond from="704" to="705"/>
+   <Bond from="705" to="706"/>
+   <Bond from="705" to="746"/>
+   <Bond from="706" to="707"/>
+   <Bond from="707" to="708"/>
+   <Bond from="707" to="748"/>
+   <Bond from="708" to="709"/>
+   <Bond from="709" to="710"/>
+   <Bond from="709" to="750"/>
+   <Bond from="710" to="711"/>
+   <Bond from="711" to="712"/>
+   <Bond from="711" to="752"/>
+   <Bond from="712" to="713"/>
+   <Bond from="713" to="714"/>
+   <Bond from="713" to="754"/>
+   <Bond from="714" to="715"/>
+   <Bond from="715" to="716"/>
+   <Bond from="715" to="756"/>
+   <Bond from="716" to="717"/>
+   <Bond from="717" to="718"/>
+   <Bond from="717" to="758"/>
+   <Bond from="718" to="719"/>
+   <Bond from="719" to="720"/>
+   <Bond from="720" to="721"/>
+   <Bond from="720" to="759"/>
+   <Bond from="721" to="722"/>
+   <Bond from="721" to="762"/>
+   <Bond from="722" to="723"/>
+   <Bond from="723" to="724"/>
+   <Bond from="723" to="764"/>
+   <Bond from="724" to="725"/>
+   <Bond from="725" to="726"/>
+   <Bond from="725" to="766"/>
+   <Bond from="726" to="727"/>
+   <Bond from="727" to="728"/>
+   <Bond from="727" to="768"/>
+   <Bond from="728" to="729"/>
+   <Bond from="729" to="730"/>
+   <Bond from="729" to="770"/>
+   <Bond from="730" to="731"/>
+   <Bond from="731" to="732"/>
+   <Bond from="731" to="772"/>
+   <Bond from="732" to="733"/>
+   <Bond from="733" to="734"/>
+   <Bond from="733" to="774"/>
+   <Bond from="734" to="735"/>
+   <Bond from="735" to="736"/>
+   <Bond from="735" to="776"/>
+   <Bond from="736" to="737"/>
+   <Bond from="737" to="738"/>
+   <Bond from="737" to="778"/>
+   <Bond from="738" to="739"/>
+   <Bond from="739" to="740"/>
+   <Bond from="739" to="780"/>
+   <Bond from="740" to="741"/>
+   <Bond from="741" to="742"/>
+   <Bond from="741" to="782"/>
+   <Bond from="742" to="743"/>
+   <Bond from="743" to="744"/>
+   <Bond from="743" to="784"/>
+   <Bond from="744" to="745"/>
+   <Bond from="745" to="746"/>
+   <Bond from="745" to="786"/>
+   <Bond from="746" to="747"/>
+   <Bond from="747" to="748"/>
+   <Bond from="747" to="788"/>
+   <Bond from="748" to="749"/>
+   <Bond from="749" to="750"/>
+   <Bond from="749" to="790"/>
+   <Bond from="750" to="751"/>
+   <Bond from="751" to="752"/>
+   <Bond from="751" to="792"/>
+   <Bond from="752" to="753"/>
+   <Bond from="753" to="754"/>
+   <Bond from="753" to="794"/>
+   <Bond from="754" to="755"/>
+   <Bond from="755" to="756"/>
+   <Bond from="755" to="796"/>
+   <Bond from="756" to="757"/>
+   <Bond from="757" to="758"/>
+   <Bond from="757" to="798"/>
+   <Bond from="758" to="759"/>
+   <Bond from="759" to="760"/>
+   <Bond from="760" to="761"/>
+   <Bond from="760" to="799"/>
+   <Bond from="761" to="762"/>
+   <Bond from="762" to="763"/>
+   <Bond from="763" to="764"/>
+   <Bond from="764" to="765"/>
+   <Bond from="765" to="766"/>
+   <Bond from="766" to="767"/>
+   <Bond from="767" to="768"/>
+   <Bond from="768" to="769"/>
+   <Bond from="769" to="770"/>
+   <Bond from="770" to="771"/>
+   <Bond from="771" to="772"/>
+   <Bond from="772" to="773"/>
+   <Bond from="773" to="774"/>
+   <Bond from="774" to="775"/>
+   <Bond from="775" to="776"/>
+   <Bond from="776" to="777"/>
+   <Bond from="777" to="778"/>
+   <Bond from="778" to="779"/>
+   <Bond from="779" to="780"/>
+   <Bond from="780" to="781"/>
+   <Bond from="781" to="782"/>
+   <Bond from="782" to="783"/>
+   <Bond from="783" to="784"/>
+   <Bond from="784" to="785"/>
+   <Bond from="785" to="786"/>
+   <Bond from="786" to="787"/>
+   <Bond from="787" to="788"/>
+   <Bond from="788" to="789"/>
+   <Bond from="789" to="790"/>
+   <Bond from="790" to="791"/>
+   <Bond from="791" to="792"/>
+   <Bond from="792" to="793"/>
+   <Bond from="793" to="794"/>
+   <Bond from="794" to="795"/>
+   <Bond from="795" to="796"/>
+   <Bond from="796" to="797"/>
+   <Bond from="797" to="798"/>
+   <Bond from="798" to="799"/>
+   <Bond from="799" to="800"/>
+  </Residue>
+ </Residues>
+</ForceField>

@@ -1,0 +1,18 @@
+tolerance 2.0
+filetype pdb
+output li_electrolyte.pdb
+
+structure pdb_bank/Li.pdb
+  number 100
+  inside box 0.0 0.0 0.0 50.0 50.0 50.0
+end structure
+
+structure pdb_bank/PF6.pdb
+  number 100
+  inside box 0.0 0.0 0.0 50.0 50.0 50.0
+end structure
+
+structure pdb_bank/DMC.pdb
+  number 400
+  inside box 0.0 0.0 0.0 50.0 50.0 50.0
+end structure

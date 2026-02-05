@@ -1,0 +1,7 @@
+<ForceField>
+ <CustomNonbondedForce>
+  <Atom class="Cgtc" Aexch="0" Aelec="0" Aind="0" Adhf="0" Bexp="100" C6="0" C8="0" C10="0" C12="0"/>
+  <Atom class="Cgt" Aexch="423935.1" Aelec="204171.8" Aind="18740.5" Adhf="44967.6" Bexp="34.384" C6="0.0016774" C8="6.6332e-05" C10="6.42479e-06" C12="2.679893e-07"/>
+  <Atom class="Hgt" Aexch="0" Aelec="0" Aind="0" Adhf="0" Bexp="100" C6="0" C8="0" C10="0" C12="0"/>
+ </CustomNonbondedForce>
+</ForceField>

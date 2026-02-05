@@ -1,0 +1,1748 @@
+<ForceField>
+  <!--                               README                                                 -->
+  <!--                                                                                      -->
+  <!-- 1) Some of these systems require additional exclusions to be defined. This is        -->
+  <!-- controlled in the accompanying sapt_exclusions.py file which should be called        --> 
+  <!-- by any OpenMM simulation script that uses these force fields                         -->    
+  <!--                                                                                      -->
+  <!-- 2) PC and Choline force fields should be considered "experimental", as we've noticed -->
+  <!-- unphysical intra-molecular distortions.  Before production-ready use, greater care   -->
+  <!-- should be taken to parameterize the intra-molecular flexibility of these molecules   -->
+ <Info>
+  <Source>sapt.itp bmim.itp TF2N.itp</Source>
+  <DateGenerated>Tue Jul 25 11:12:55 2017</DateGenerated>
+  <Reference></Reference>
+ </Info>
+ <AtomTypes>
+  <Type name="swm4ndp-O" class="OW" element="O" mass="15.59943"/>
+  <Type name="swm4ndp-H" class="HW" element="H" mass="1.007947"/>
+  <Type name="swm4ndp-M" class="MW" mass="0"/>
+  <Type name="swm4ndp-OD" class="OWD" mass="0.4"/>
+  <Type name="EMIM-NI1" class="NI1" element="N" mass="13.6067"/>
+  <Type name="EMIM-DN1" class="Sh" mass="0.4"/>
+  <Type name="EMIM-NI" class="NI" element="N" mass="13.6067"/>
+  <Type name="EMIM-DN11" class="Sh" mass="0.4"/>
+  <Type name="EMIM-CI" class="CI" element="C" mass="11.611"/>
+  <Type name="EMIM-DC1" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HI" class="HI" element="H" mass="1.008"/>
+  <Type name="EMIM-CWI" class="CWI" element="C" mass="11.611"/>
+  <Type name="EMIM-DC2" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HWI" class="HWI" element="H" mass="1.008"/>
+  <Type name="EMIM-CWI1" class="CWI1" element="C" mass="11.611"/>
+  <Type name="EMIM-DC21" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HWI1" class="HWI1" element="H" mass="1.008"/>
+  <Type name="EMIM-CMI" class="CMI" element="C" mass="11.611"/>
+  <Type name="EMIM-DC3" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HMI1" class="HMI" element="H" mass="1.008"/>
+  <Type name="EMIM-HMI2" class="HMI" element="H" mass="1.008"/>
+  <Type name="EMIM-HMI3" class="HMI" element="H" mass="1.008"/>
+  <Type name="EMIM-CAI" class="CAI" element="C" mass="11.611"/>
+  <Type name="EMIM-DC4" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HAI1" class="HAI" element="H" mass="1.008"/>
+  <Type name="EMIM-HAI2" class="HAI" element="H" mass="1.008"/>
+  <Type name="EMIM-CTI" class="CTI" element="C" mass="11.611"/>
+  <Type name="EMIM-DC5" class="Sh" mass="0.4"/>
+  <Type name="EMIM-HTI1" class="HTI" element="H" mass="1.008"/>
+  <Type name="EMIM-HTI2" class="HTI" element="H" mass="1.008"/>
+  <Type name="EMIM-HTI3" class="HTI" element="H" mass="1.008"/>
+  <Type name="BMIM-N1" class="NI1" element="N" mass="13.6067"/>
+  <Type name="BMIM-DN1" class="Sh" mass="0.4"/>
+  <Type name="BMIM-N11" class="NI" element="N" mass="13.6067"/>
+  <Type name="BMIM-DN11" class="Sh" mass="0.4"/>
+  <Type name="BMIM-C1" class="CI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC1" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H1" class="HI" element="H" mass="1.008"/>
+  <Type name="BMIM-C2" class="CWI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC2" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H2" class="HWI" element="H" mass="1.008"/>
+  <Type name="BMIM-C21" class="CWI1" element="C" mass="11.611"/>
+  <Type name="BMIM-DC21" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H21" class="HWI1" element="H" mass="1.008"/>
+  <Type name="BMIM-C3" class="CMI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC3" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H3" class="HMI" element="H" mass="1.008"/>
+  <Type name="BMIM-H31" class="HMI" element="H" mass="1.008"/>
+  <Type name="BMIM-H32" class="HMI" element="H" mass="1.008"/>
+  <Type name="BMIM-C4" class="CAI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC4" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H4" class="HAI" element="H" mass="1.008"/>
+  <Type name="BMIM-H41" class="HAI" element="H" mass="1.008"/>
+  <Type name="BMIM-C5" class="CSI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC5" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H5" class="HSI" element="H" mass="1.008"/>
+  <Type name="BMIM-H51" class="HSI" element="H" mass="1.008"/>
+  <Type name="BMIM-C51" class="CSI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC51" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H52" class="HSI" element="H" mass="1.008"/>
+  <Type name="BMIM-H53" class="HSI" element="H" mass="1.008"/>
+  <Type name="BMIM-C6" class="CTI" element="C" mass="11.611"/>
+  <Type name="BMIM-DC6" class="Sh" mass="0.4"/>
+  <Type name="BMIM-H6" class="HTI" element="H" mass="1.008"/>
+  <Type name="BMIM-H61" class="HTI" element="H" mass="1.008"/>
+  <Type name="BMIM-H62" class="HTI" element="H" mass="1.008"/>
+  <Type name="TMEA-N" class="Na" element="N" mass="13.6067"/>
+  <Type name="TMEA-DN" class="Sh" mass="0.4"/>
+  <Type name="TMEA-C" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMEA-DC" class="Sh" mass="0.4"/>
+  <Type name="TMEA-H" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H1" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H2" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-C1" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMEA-DC1" class="Sh" mass="0.4"/>
+  <Type name="TMEA-H3" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H4" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H5" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-C2" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMEA-DC2" class="Sh" mass="0.4"/>
+  <Type name="TMEA-H6" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H7" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H8" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-C3" class="Cae" element="C" mass="11.611"/>
+  <Type name="TMEA-DC3" class="Sh" mass="0.4"/>
+  <Type name="TMEA-H9" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-H10" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMEA-C4" class="Cb" element="C" mass="11.611"/>
+  <Type name="TMEA-DC4" class="Sh" mass="0.4"/>
+  <Type name="TMEA-H11" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMEA-H12" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMEA-H13" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMPA-N" class="Na" element="N" mass="13.6067"/>
+  <Type name="TMPA-DN" class="Sh" mass="0.4"/>
+  <Type name="TMPA-C" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMPA-DC" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H1" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H2" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-C1" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMPA-DC1" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H3" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H4" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H5" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-C2" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMPA-DC2" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H6" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H7" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H8" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-C3" class="Cae" element="C" mass="11.611"/>
+  <Type name="TMPA-DC3" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H9" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-H10" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMPA-C4" class="Cb" element="C" mass="11.611"/>
+  <Type name="TMPA-DC4" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H11" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMPA-H12" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMPA-C5" class="Cb" element="C" mass="11.611"/>
+  <Type name="TMPA-DC5" class="Sh" mass="0.4"/>
+  <Type name="TMPA-H13" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMPA-H14" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMPA-H15" class="Hb" element="H" mass="1.008"/>
+  <Type name="TMA-N" class="Na" element="N" mass="13.6067"/>
+  <Type name="TMA-DN" class="Sh" mass="0.4"/>
+  <Type name="TMA-C" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMA-DC" class="Sh" mass="0.4"/>
+  <Type name="TMA-H" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H1" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H2" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-C1" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMA-DC1" class="Sh" mass="0.4"/>
+  <Type name="TMA-H3" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H4" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H5" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-C2" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMA-DC2" class="Sh" mass="0.4"/>
+  <Type name="TMA-H6" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H7" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H8" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-C3" class="Cam" element="C" mass="11.611"/>
+  <Type name="TMA-DC3" class="Sh" mass="0.4"/>
+  <Type name="TMA-H9" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H10" class="Ha" element="H" mass="1.008"/>
+  <Type name="TMA-H11" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-N" class="Na" element="N" mass="13.6067"/>
+  <Type name="Chol-DN" class="Sh" mass="0.4"/>
+  <Type name="Chol-C" class="Cam" element="C" mass="11.611"/>
+  <Type name="Chol-DC" class="Sh" mass="0.4"/>
+  <Type name="Chol-H" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H1" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H2" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-C1" class="Cam" element="C" mass="11.611"/>
+  <Type name="Chol-DC1" class="Sh" mass="0.4"/>
+  <Type name="Chol-H3" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H4" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H5" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-C2" class="Cam" element="C" mass="11.611"/>
+  <Type name="Chol-DC2" class="Sh" mass="0.4"/>
+  <Type name="Chol-H6" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H7" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H8" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-C3" class="Cae" element="C" mass="11.611"/>
+  <Type name="Chol-DC3" class="Sh" mass="0.4"/>
+  <Type name="Chol-H9" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-H10" class="Ha" element="H" mass="1.008"/>
+  <Type name="Chol-C4" class="Cb" element="C" mass="11.611"/>
+  <Type name="Chol-DC4" class="Sh" mass="0.4"/>
+  <Type name="Chol-H11" class="Hb" element="H" mass="1.008"/>
+  <Type name="Chol-H12" class="Hb" element="H" mass="1.008"/>
+  <Type name="Chol-O" class="Oh" element="O" mass="15.6"/>
+  <Type name="Chol-DO" class="Sh" mass="0.4"/>
+  <Type name="Chol-H13" class="Ho" element="H" mass="1.008"/>
+  <Type name="BF4-B" class="B" element="B" mass="10.411"/>
+  <Type name="BF4-DB" class="Sh" mass="0.4"/>
+  <Type name="BF4-F1" class="FI" element="F" mass="18.5984"/>
+  <Type name="BF4-DF1" class="Sh" mass="0.4"/>
+  <Type name="BF4-F2" class="FI" element="F" mass="18.5984"/>
+  <Type name="BF4-DF2" class="Sh" mass="0.4"/>
+  <Type name="BF4-F3" class="FI" element="F" mass="18.5984"/>
+  <Type name="BF4-DF3" class="Sh" mass="0.4"/>
+  <Type name="BF4-F4" class="FI" element="F" mass="18.5984"/>
+  <Type name="BF4-DF4" class="Sh" mass="0.4"/>
+  <Type name="PF6-P" class="P" element="P" mass="30.574"/>
+  <Type name="PF6-DP" class="Sh" mass="0.4"/>
+  <Type name="PF6-F1" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF1" class="Sh" mass="0.4"/>
+  <Type name="PF6-F2" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF2" class="Sh" mass="0.4"/>
+  <Type name="PF6-F3" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF3" class="Sh" mass="0.4"/>
+  <Type name="PF6-F4" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF4" class="Sh" mass="0.4"/>
+  <Type name="PF6-F5" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF5" class="Sh" mass="0.4"/>
+  <Type name="PF6-F6" class="FI" element="F" mass="18.5984"/>
+  <Type name="PF6-DF6" class="Sh" mass="0.4"/>
+  <!--      virtual site for NO3   -->
+  <Type name="NO3-M1" class="MNO" element="N"  mass="13.6067"/>
+  <Type name="NO3-N1" class="NNO"  mass="0"/>
+  <Type name="NO3-DN" class="Sh" mass="0.4"/>
+  <Type name="NO3-O1" class="ONO" element="O" mass="15.5994"/>
+  <Type name="NO3-DO1" class="Sh" mass="0.4"/>
+  <Type name="NO3-O2" class="ONO" element="O" mass="15.5994"/>
+  <Type name="NO3-DO2" class="Sh" mass="0.4"/>
+  <Type name="NO3-O3" class="ONO" element="O" mass="15.5994"/>
+  <Type name="NO3-DO3" class="Sh" mass="0.4"/>
+  <Type name="trfl-Cf" class="Ctf" element="C" mass="11.61"/>
+  <Type name="trfl-DCf" class="Sh" mass="0.4"/>
+  <Type name="trfl-Fc" class="Ftf" element="F" mass="18.6"/>
+  <Type name="trfl-DFc" class="Sh" mass="0.4"/>
+  <Type name="trfl-Fc1" class="Ftf" element="F" mass="18.6"/>
+  <Type name="trfl-DFc1" class="Sh" mass="0.4"/>
+  <Type name="trfl-Fc2" class="Ftf" element="F" mass="18.6"/>
+  <Type name="trfl-DFc2" class="Sh" mass="0.4"/>
+  <Type name="trfl-S" class="Stf" element="S" mass="31.66"/>
+  <Type name="trfl-DS" class="Sh" mass="0.4"/>
+  <Type name="trfl-Os" class="Otf" element="O" mass="15.6"/>
+  <Type name="trfl-DOs" class="Sh" mass="0.4"/>
+  <Type name="trfl-Os1" class="Otf" element="O" mass="15.6"/>
+  <Type name="trfl-DOs1" class="Sh" mass="0.4"/>
+  <Type name="trfl-Os2" class="Otf" element="O" mass="15.6"/>
+  <Type name="trfl-DOs2" class="Sh" mass="0.4"/>
+  <Type name="FSI-N" class="Nfs" element="N" mass="13.6067"/>
+  <Type name="FSI-DN" class="Sh" mass="0.4"/>
+  <Type name="FSI-S" class="Sfs" element="S" mass="31.66"/>
+  <Type name="FSI-DS" class="Sh" mass="0.4"/>
+  <Type name="FSI-O" class="Ofs" element="O" mass="15.6"/>
+  <Type name="FSI-DO" class="Sh" mass="0.4"/>
+  <Type name="FSI-O1" class="Ofs" element="O" mass="15.6"/>
+  <Type name="FSI-DO1" class="Sh" mass="0.4"/>
+  <Type name="FSI-F" class="Ffs" element="F" mass="18.6"/>
+  <Type name="FSI-DF" class="Sh" mass="0.4"/>
+  <Type name="FSI-S1" class="Sfs" element="S" mass="31.66"/>
+  <Type name="FSI-DS1" class="Sh" mass="0.4"/>
+  <Type name="FSI-O2" class="Ofs" element="O" mass="15.6"/>
+  <Type name="FSI-DO2" class="Sh" mass="0.4"/>
+  <Type name="FSI-O3" class="Ofs" element="O" mass="15.6"/>
+  <Type name="FSI-DO3" class="Sh" mass="0.4"/>
+  <Type name="FSI-F1" class="Ffs" element="F" mass="18.6"/>
+  <Type name="FSI-DF1" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ntf" class="Ntf" element="N" mass="13.6067"/>
+  <Type name="Tf2N-DN" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Stf" class="Stf" element="S" mass="31.66"/>
+  <Type name="Tf2N-DS" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Otf" class="Otf" element="O" mass="15.6"/>
+  <Type name="Tf2N-DO" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Otf1" class="Otf" element="O" mass="15.6"/>
+  <Type name="Tf2N-DO1" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ctf" class="Ctf" element="C" mass="11.611"/>
+  <Type name="Tf2N-DC" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf1" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF1" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf2" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF2" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Stf1" class="Stf" element="S" mass="31.66"/>
+  <Type name="Tf2N-DS1" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Otf2" class="Otf" element="O" mass="15.6"/>
+  <Type name="Tf2N-DO2" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Otf3" class="Otf" element="O" mass="15.6"/>
+  <Type name="Tf2N-DO3" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ctf1" class="Ctf" element="C" mass="11.611"/>
+  <Type name="Tf2N-DC1" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf3" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF3" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf4" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF4" class="Sh" mass="0.4"/>
+  <Type name="Tf2N-Ftf5" class="Ftf" element="F" mass="18.6"/>
+  <Type name="Tf2N-DF5" class="Sh" mass="0.4"/>
+  <Type name="actn-O2a" class="O2a" element="O" mass="15.611"/>
+  <Type name="actn-D" class="Sh" mass="0.4"/>
+  <Type name="actn-C2a" class="C2a" element="C" mass="11.611"/>
+  <Type name="actn-D1" class="Sh" mass="0.4"/>
+  <Type name="actn-C3a" class="C3a" element="C" mass="11.611"/>
+  <Type name="actn-D2" class="Sh" mass="0.4"/>
+  <Type name="actn-C3a1" class="C3a" element="C" mass="11.611"/>
+  <Type name="actn-D3" class="Sh" mass="0.4"/>
+  <Type name="actn-H3a" class="H3a" element="H" mass="1.00800"/>
+  <Type name="actn-H3a1" class="H3a" element="H" mass="1.00800"/>
+  <Type name="actn-H3a2" class="H3a" element="H" mass="1.00800"/>
+  <Type name="actn-H3a3" class="H3a" element="H" mass="1.00800"/>
+  <Type name="actn-H3a4" class="H3a" element="H" mass="1.00800"/>
+  <Type name="actn-H3a5" class="H3a" element="H" mass="1.00800"/>
+  <!-- acetonitrile uses dispersion parameters scaled down to account for 3-body dispersion, hence "s" extension on class type    -->
+  <Type name="acnt-CT" class="CTs" element="C" mass="11.611"/>
+  <Type name="acnt-DCT" class="Sh" mass="0.4"/>
+  <Type name="acnt-CZ" class="CZs" element="C" mass="11.611"/>
+  <Type name="acnt-DCZ" class="Sh" mass="0.4"/>
+  <Type name="acnt-NZ" class="NZs" element="N" mass="13.6067"/>
+  <Type name="acnt-DNZ" class="Sh" mass="0.4"/>
+  <Type name="acnt-HZ" class="HZs" element="H" mass="1.0080"/>
+  <Type name="acnt-HZ1" class="HZs" element="H" mass="1.0080"/>
+  <Type name="acnt-HZ2" class="HZs" element="H" mass="1.0080"/>
+  <!-- end acetonitrile   -->
+  <Type name="dchl-CT" class="CT" element="C" mass="11.611"/>
+  <Type name="dchl-DCT" class="Sh" mass="0.4"/>
+  <Type name="dchl-HC" class="HCc" element="H" mass="1.0080"/>
+  <Type name="dchl-HC1" class="HCc" element="H" mass="1.0080"/>
+  <Type name="dchl-Cl" class="Cl" element="CL" mass="35.053"/>
+  <Type name="dchl-DCl" class="Sh" mass="0.4"/>
+  <Type name="dchl-CT1" class="CT" element="C" mass="11.611"/>
+  <Type name="dchl-DCT1" class="Sh" mass="0.4"/>
+  <Type name="dchl-HC2" class="HCc" element="H" mass="1.0080"/>
+  <Type name="dchl-Cl1" class="Cl" element="CL" mass="35.053"/>
+  <Type name="dchl-DCl1" class="Sh" mass="0.4"/>
+  <Type name="dchl-HC3" class="HCc" element="H" mass="1.0080"/>
+  <Type name="PC-Or" class="Or" element="O" mass="15.611"/>
+  <Type name="PC-DO" class="Sh" mass="0.4"/>
+  <Type name="PC-Or1" class="Or" element="O" mass="15.611"/>
+  <Type name="PC-DO1" class="Sh" mass="0.4"/>
+  <Type name="PC-C2" class="C2" element="C" mass="11.611"/>
+  <Type name="PC-DC" class="Sh" mass="0.4"/>
+  <Type name="PC-O2" class="O2" element="O" mass="15.611"/>
+  <Type name="PC-DO2" class="Sh" mass="0.4"/>
+  <Type name="PC-Crm" class="CT" element="C" mass="11.611"/>
+  <Type name="PC-DC1" class="Sh" mass="0.4"/>
+  <Type name="PC-Cre" class="CT" element="C" mass="11.611"/>
+  <Type name="PC-DC2" class="Sh" mass="0.4"/>
+  <Type name="PC-CT" class="CT" element="C" mass="11.611"/>
+  <Type name="PC-DC3" class="Sh" mass="0.4"/>
+  <Type name="PC-H1" class="HC" element="H" mass="1.00800"/>
+  <Type name="PC-H2" class="HC" element="H" mass="1.00800"/>
+  <Type name="PC-H3" class="HC" element="H" mass="1.00800"/>
+  <Type name="PC-H4" class="HC" element="H" mass="1.00800"/>
+  <Type name="PC-H5" class="HC" element="H" mass="1.00800"/>
+  <Type name="PC-H6" class="HC" element="H" mass="1.00800"/>
+ </AtomTypes>
+ <Residues>
+  <Residue name="BF4">
+   <Atom name="B" type="BF4-B"/>
+   <Atom name="F1" type="BF4-F1"/>
+   <Atom name="F2" type="BF4-F2"/>
+   <Atom name="F3" type="BF4-F3"/>
+   <Atom name="F4" type="BF4-F4"/>
+   <Atom name="DB" type="BF4-DB"/>
+   <Atom name="DF1" type="BF4-DF1"/>
+   <Atom name="DF2" type="BF4-DF2"/>
+   <Atom name="DF3" type="BF4-DF3"/>
+   <Atom name="DF4" type="BF4-DF4"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="3"/>
+   <Bond from="0" to="4"/>
+  </Residue>
+  <Residue name="PF6">
+   <Atom name="P" type="PF6-P"/>
+   <Atom name="F1" type="PF6-F1"/>
+   <Atom name="F2" type="PF6-F2"/>
+   <Atom name="F3" type="PF6-F3"/>
+   <Atom name="F4" type="PF6-F4"/>
+   <Atom name="F5" type="PF6-F5"/>
+   <Atom name="F6" type="PF6-F6"/>
+   <Atom name="DP" type="PF6-DP"/>
+   <Atom name="DF1" type="PF6-DF1"/>
+   <Atom name="DF2" type="PF6-DF2"/>
+   <Atom name="DF3" type="PF6-DF3"/>
+   <Atom name="DF4" type="PF6-DF4"/>
+   <Atom name="DF5" type="PF6-DF5"/>
+   <Atom name="DF6" type="PF6-DF6"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="3"/>
+   <Bond from="0" to="4"/>
+   <Bond from="0" to="5"/>
+   <Bond from="0" to="6"/>
+  </Residue>
+  <Residue name="NO3">
+   <Atom name="M" type="NO3-M1"/>
+   <Atom name="O1" type="NO3-O1"/>
+   <Atom name="O2" type="NO3-O2"/>
+   <Atom name="O3" type="NO3-O3"/>
+   <Atom name="N" type="NO3-N1"/>
+   <Atom name="DN" type="NO3-DN"/>
+   <Atom name="DO1" type="NO3-DO1"/>
+   <Atom name="DO2" type="NO3-DO2"/>
+   <Atom name="DO3" type="NO3-DO3"/>
+   <VirtualSite type="average3" index="4" atom1="1" atom2="2" atom3="3" weight1="0.33333333" weight2="0.33333333" weight3="0.33333333"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="2" to="3"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="3"/>
+  </Residue>
+  <Residue name="trfl">
+   <Atom name="Cf" type="trfl-Cf"/>
+   <Atom name="Fc" type="trfl-Fc"/>
+   <Atom name="Fc1" type="trfl-Fc1"/>
+   <Atom name="Fc2" type="trfl-Fc2"/>
+   <Atom name="S" type="trfl-S"/>
+   <Atom name="Os" type="trfl-Os"/>
+   <Atom name="Os1" type="trfl-Os1"/>
+   <Atom name="Os2" type="trfl-Os2"/>
+   <Atom name="DCf" type="trfl-DCf"/>
+   <Atom name="DFc" type="trfl-DFc"/>
+   <Atom name="DFc1" type="trfl-DFc1"/>
+   <Atom name="DFc2" type="trfl-DFc2"/>
+   <Atom name="DS" type="trfl-DS"/>
+   <Atom name="DOs" type="trfl-DOs"/>
+   <Atom name="DOs1" type="trfl-DOs1"/>
+   <Atom name="DOs2" type="trfl-DOs2"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="3"/>
+   <Bond from="0" to="4"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="6"/>
+   <Bond from="4" to="7"/>
+  </Residue>
+  <Residue name="FSI">
+   <Atom name="N" type="FSI-N"/>
+   <Atom name="S" type="FSI-S"/>
+   <Atom name="O" type="FSI-O"/>
+   <Atom name="O1" type="FSI-O1"/>
+   <Atom name="F" type="FSI-F"/>
+   <Atom name="S1" type="FSI-S1"/>
+   <Atom name="O2" type="FSI-O2"/>
+   <Atom name="O3" type="FSI-O3"/>
+   <Atom name="F1" type="FSI-F1"/>
+   <Atom name="DN" type="FSI-DN"/>
+   <Atom name="DS" type="FSI-DS"/>
+   <Atom name="DO" type="FSI-DO"/>
+   <Atom name="DO1" type="FSI-DO1"/>
+   <Atom name="DF" type="FSI-DF"/>
+   <Atom name="DS1" type="FSI-DS1"/>
+   <Atom name="DO2" type="FSI-DO2"/>
+   <Atom name="DO3" type="FSI-DO3"/>
+   <Atom name="DF1" type="FSI-DF1"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="5"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="5" to="8"/>
+  </Residue>
+  <!-- here we've added bonds between O and F atoms on opposite sides of the molecule so that openMM will create custombond interactions for repulsion    -->
+  <Residue name="Tf2N">
+   <Atom name="Ntf" type="Tf2N-Ntf"/>
+   <Atom name="Stf" type="Tf2N-Stf"/>
+   <Atom name="Otf" type="Tf2N-Otf"/>
+   <Atom name="Otf1" type="Tf2N-Otf1"/>
+   <Atom name="Ctf" type="Tf2N-Ctf"/>
+   <Atom name="Ftf" type="Tf2N-Ftf"/>
+   <Atom name="Ftf1" type="Tf2N-Ftf1"/>
+   <Atom name="Ftf2" type="Tf2N-Ftf2"/>
+   <Atom name="Stf1" type="Tf2N-Stf1"/>
+   <Atom name="Otf2" type="Tf2N-Otf2"/>
+   <Atom name="Otf3" type="Tf2N-Otf3"/>
+   <Atom name="Ctf1" type="Tf2N-Ctf1"/>
+   <Atom name="Ftf3" type="Tf2N-Ftf3"/>
+   <Atom name="Ftf4" type="Tf2N-Ftf4"/>
+   <Atom name="Ftf5" type="Tf2N-Ftf5"/>
+   <Atom name="DN" type="Tf2N-DN"/>
+   <Atom name="DS" type="Tf2N-DS"/>
+   <Atom name="DO" type="Tf2N-DO"/>
+   <Atom name="DO1" type="Tf2N-DO1"/>
+   <Atom name="DC" type="Tf2N-DC"/>
+   <Atom name="DF" type="Tf2N-DF"/>
+   <Atom name="DF1" type="Tf2N-DF1"/>
+   <Atom name="DF2" type="Tf2N-DF2"/>
+   <Atom name="DS1" type="Tf2N-DS1"/>
+   <Atom name="DO2" type="Tf2N-DO2"/>
+   <Atom name="DO3" type="Tf2N-DO3"/>
+   <Atom name="DC1" type="Tf2N-DC1"/>
+   <Atom name="DF3" type="Tf2N-DF3"/>
+   <Atom name="DF4" type="Tf2N-DF4"/>
+   <Atom name="DF5" type="Tf2N-DF5"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="8"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="6"/>
+   <Bond from="4" to="7"/>
+   <!-- these are the F-F, O-F, O-O fake bonds -->
+   <Bond from="2" to="9"/>
+   <Bond from="2" to="10"/>
+   <Bond from="2" to="12"/>
+   <Bond from="2" to="13"/>
+   <Bond from="2" to="14"/>
+   <Bond from="3" to="9"/>
+   <Bond from="3" to="10"/>
+   <Bond from="3" to="12"/>
+   <Bond from="3" to="13"/>
+   <Bond from="3" to="14"/>
+   <Bond from="5" to="9"/>
+   <Bond from="5" to="10"/>
+   <Bond from="5" to="12"/>
+   <Bond from="5" to="13"/>
+   <Bond from="5" to="14"/>
+   <Bond from="6" to="9"/>
+   <Bond from="6" to="10"/>
+   <Bond from="6" to="12"/>
+   <Bond from="6" to="13"/>
+   <Bond from="6" to="14"/>
+   <Bond from="7" to="9"/>
+   <Bond from="7" to="10"/>
+   <Bond from="7" to="12"/>
+   <Bond from="7" to="13"/>
+   <Bond from="7" to="14"/>
+   <!-- now back to real bonds -->
+   <Bond from="8" to="9"/>
+   <Bond from="8" to="10"/>
+   <Bond from="8" to="11"/>
+   <Bond from="11" to="12"/>
+   <Bond from="11" to="13"/>
+   <Bond from="11" to="14"/>
+  </Residue>
+  <Residue name="EMIM">
+   <Atom name="NI1" type="EMIM-NI1"/>
+   <Atom name="NI" type="EMIM-NI"/>
+   <Atom name="CI" type="EMIM-CI"/>
+   <Atom name="HI" type="EMIM-HI"/>
+   <Atom name="CWI" type="EMIM-CWI"/>
+   <Atom name="HWI" type="EMIM-HWI"/>
+   <Atom name="CWI1" type="EMIM-CWI1"/>
+   <Atom name="HWI1" type="EMIM-HWI1"/>
+   <Atom name="CMI" type="EMIM-CMI"/>
+   <Atom name="HMI1" type="EMIM-HMI1"/>
+   <Atom name="HMI2" type="EMIM-HMI2"/>
+   <Atom name="HMI3" type="EMIM-HMI3"/>
+   <Atom name="CAI" type="EMIM-CAI"/>
+   <Atom name="HAI1" type="EMIM-HAI1"/>
+   <Atom name="HAI2" type="EMIM-HAI2"/>
+   <Atom name="CTI" type="EMIM-CTI"/>
+   <Atom name="HTI1" type="EMIM-HTI1"/>
+   <Atom name="HTI2" type="EMIM-HTI2"/>
+   <Atom name="HTI3" type="EMIM-HTI3"/>
+   <Atom name="DN1" type="EMIM-DN1"/>
+   <Atom name="DN11" type="EMIM-DN11"/>
+   <Atom name="DC1" type="EMIM-DC1"/>
+   <Atom name="DC2" type="EMIM-DC2"/>
+   <Atom name="DC21" type="EMIM-DC21"/>
+   <Atom name="DC3" type="EMIM-DC3"/>
+   <Atom name="DC4" type="EMIM-DC4"/>
+   <Atom name="DC5" type="EMIM-DC5"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="4"/>
+   <Bond from="0" to="8"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="6"/>
+   <Bond from="1" to="12"/>
+   <Bond from="2" to="3"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="6"/>
+   <Bond from="6" to="7"/>
+   <Bond from="8" to="9"/>
+   <Bond from="8" to="10"/>
+   <Bond from="8" to="11"/>
+   <Bond from="12" to="13"/>
+   <Bond from="12" to="14"/>
+   <Bond from="12" to="15"/>
+   <Bond from="15" to="16"/>
+   <Bond from="15" to="17"/>
+   <Bond from="15" to="18"/>
+  </Residue>
+  <Residue name="BMIM">
+   <Atom name="N1" type="BMIM-N1"/>
+   <Atom name="N11" type="BMIM-N11"/>
+   <Atom name="C1" type="BMIM-C1"/>
+   <Atom name="H1" type="BMIM-H1"/>
+   <Atom name="C2" type="BMIM-C2"/>
+   <Atom name="H2" type="BMIM-H2"/>
+   <Atom name="C21" type="BMIM-C21"/>
+   <Atom name="H21" type="BMIM-H21"/>
+   <Atom name="C3" type="BMIM-C3"/>
+   <Atom name="H3" type="BMIM-H3"/>
+   <Atom name="H31" type="BMIM-H31"/>
+   <Atom name="H32" type="BMIM-H32"/>
+   <Atom name="C4" type="BMIM-C4"/>
+   <Atom name="H4" type="BMIM-H4"/>
+   <Atom name="H41" type="BMIM-H41"/>
+   <Atom name="C5" type="BMIM-C5"/>
+   <Atom name="H5" type="BMIM-H5"/>
+   <Atom name="H51" type="BMIM-H51"/>
+   <Atom name="C51" type="BMIM-C51"/>
+   <Atom name="H52" type="BMIM-H52"/>
+   <Atom name="H53" type="BMIM-H53"/>
+   <Atom name="C6" type="BMIM-C6"/>
+   <Atom name="H6" type="BMIM-H6"/>
+   <Atom name="H61" type="BMIM-H61"/>
+   <Atom name="H62" type="BMIM-H62"/>
+   <Atom name="DN1" type="BMIM-DN1"/>
+   <Atom name="DN11" type="BMIM-DN11"/>
+   <Atom name="DC1" type="BMIM-DC1"/>
+   <Atom name="DC2" type="BMIM-DC2"/>
+   <Atom name="DC21" type="BMIM-DC21"/>
+   <Atom name="DC3" type="BMIM-DC3"/>
+   <Atom name="DC4" type="BMIM-DC4"/>
+   <Atom name="DC5" type="BMIM-DC5"/>
+   <Atom name="DC51" type="BMIM-DC51"/>
+   <Atom name="DC6" type="BMIM-DC6"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="4"/>
+   <Bond from="0" to="8"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="6"/>
+   <Bond from="1" to="12"/>
+   <Bond from="2" to="3"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="6"/>
+   <Bond from="6" to="7"/>
+   <Bond from="8" to="9"/>
+   <Bond from="8" to="10"/>
+   <Bond from="8" to="11"/>
+   <Bond from="12" to="13"/>
+   <Bond from="12" to="14"/>
+   <Bond from="12" to="15"/>
+   <Bond from="15" to="16"/>
+   <Bond from="15" to="17"/>
+   <Bond from="15" to="18"/>
+   <Bond from="18" to="19"/>
+   <Bond from="18" to="20"/>
+   <Bond from="18" to="21"/>
+   <Bond from="21" to="22"/>
+   <Bond from="21" to="23"/>
+   <Bond from="21" to="24"/>
+  </Residue>
+  <Residue name="TMEA">
+   <Atom name="N" type="TMEA-N"/>
+   <Atom name="C" type="TMEA-C"/>
+   <Atom name="H" type="TMEA-H"/>
+   <Atom name="H1" type="TMEA-H1"/>
+   <Atom name="H2" type="TMEA-H2"/>
+   <Atom name="C1" type="TMEA-C1"/>
+   <Atom name="H3" type="TMEA-H3"/>
+   <Atom name="H4" type="TMEA-H4"/>
+   <Atom name="H5" type="TMEA-H5"/>
+   <Atom name="C2" type="TMEA-C2"/>
+   <Atom name="H6" type="TMEA-H6"/>
+   <Atom name="H7" type="TMEA-H7"/>
+   <Atom name="H8" type="TMEA-H8"/>
+   <Atom name="C3" type="TMEA-C3"/>
+   <Atom name="H9" type="TMEA-H9"/>
+   <Atom name="H10" type="TMEA-H10"/>
+   <Atom name="C4" type="TMEA-C4"/>
+   <Atom name="H11" type="TMEA-H11"/>
+   <Atom name="H12" type="TMEA-H12"/>
+   <Atom name="H13" type="TMEA-H13"/>
+   <Atom name="DN" type="TMEA-DN"/>
+   <Atom name="DC" type="TMEA-DC"/>
+   <Atom name="DC1" type="TMEA-DC1"/>
+   <Atom name="DC2" type="TMEA-DC2"/>
+   <Atom name="DC3" type="TMEA-DC3"/>
+   <Atom name="DC4" type="TMEA-DC4"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="5"/>
+   <Bond from="0" to="9"/>
+   <Bond from="0" to="13"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="5" to="8"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="11"/>
+   <Bond from="9" to="12"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="15"/>
+   <Bond from="13" to="16"/>
+   <Bond from="16" to="17"/>
+   <Bond from="16" to="18"/>
+   <Bond from="16" to="19"/>
+  </Residue>
+  <Residue name="TMPA">
+   <Atom name="N" type="TMPA-N"/>
+   <Atom name="C" type="TMPA-C"/>
+   <Atom name="H" type="TMPA-H"/>
+   <Atom name="H1" type="TMPA-H1"/>
+   <Atom name="H2" type="TMPA-H2"/>
+   <Atom name="C1" type="TMPA-C1"/>
+   <Atom name="H3" type="TMPA-H3"/>
+   <Atom name="H4" type="TMPA-H4"/>
+   <Atom name="H5" type="TMPA-H5"/>
+   <Atom name="C2" type="TMPA-C2"/>
+   <Atom name="H6" type="TMPA-H6"/>
+   <Atom name="H7" type="TMPA-H7"/>
+   <Atom name="H8" type="TMPA-H8"/>
+   <Atom name="C3" type="TMPA-C3"/>
+   <Atom name="H9" type="TMPA-H9"/>
+   <Atom name="H10" type="TMPA-H10"/>
+   <Atom name="C4" type="TMPA-C4"/>
+   <Atom name="H11" type="TMPA-H11"/>
+   <Atom name="H12" type="TMPA-H12"/>
+   <Atom name="C5" type="TMPA-C5"/>
+   <Atom name="H13" type="TMPA-H13"/>
+   <Atom name="H14" type="TMPA-H14"/>
+   <Atom name="H15" type="TMPA-H15"/>
+   <Atom name="DN" type="TMPA-DN"/>
+   <Atom name="DC" type="TMPA-DC"/>
+   <Atom name="DC1" type="TMPA-DC1"/>
+   <Atom name="DC2" type="TMPA-DC2"/>
+   <Atom name="DC3" type="TMPA-DC3"/>
+   <Atom name="DC4" type="TMPA-DC4"/>
+   <Atom name="DC5" type="TMPA-DC5"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="5"/>
+   <Bond from="0" to="9"/>
+   <Bond from="0" to="13"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="5" to="8"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="11"/>
+   <Bond from="9" to="12"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="15"/>
+   <Bond from="13" to="16"/>
+   <Bond from="16" to="17"/>
+   <Bond from="16" to="18"/>
+   <Bond from="16" to="19"/>
+   <Bond from="19" to="20"/>
+   <Bond from="19" to="21"/>
+   <Bond from="19" to="22"/>
+  </Residue>
+  <Residue name="TMA">
+   <Atom name="N" type="TMA-N"/>
+   <Atom name="C" type="TMA-C"/>
+   <Atom name="H" type="TMA-H"/>
+   <Atom name="H1" type="TMA-H1"/>
+   <Atom name="H2" type="TMA-H2"/>
+   <Atom name="C1" type="TMA-C1"/>
+   <Atom name="H3" type="TMA-H3"/>
+   <Atom name="H4" type="TMA-H4"/>
+   <Atom name="H5" type="TMA-H5"/>
+   <Atom name="C2" type="TMA-C2"/>
+   <Atom name="H6" type="TMA-H6"/>
+   <Atom name="H7" type="TMA-H7"/>
+   <Atom name="H8" type="TMA-H8"/>
+   <Atom name="C3" type="TMA-C3"/>
+   <Atom name="H9" type="TMA-H9"/>
+   <Atom name="H10" type="TMA-H10"/>
+   <Atom name="H11" type="TMA-H11"/>
+   <Atom name="DN" type="TMA-DN"/>
+   <Atom name="DC" type="TMA-DC"/>
+   <Atom name="DC1" type="TMA-DC1"/>
+   <Atom name="DC2" type="TMA-DC2"/>
+   <Atom name="DC3" type="TMA-DC3"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="5"/>
+   <Bond from="0" to="9"/>
+   <Bond from="0" to="13"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="5" to="8"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="11"/>
+   <Bond from="9" to="12"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="15"/>
+   <Bond from="13" to="16"/>
+  </Residue>
+  <Residue name="Chol">
+   <Atom name="N" type="Chol-N"/>
+   <Atom name="C" type="Chol-C"/>
+   <Atom name="H" type="Chol-H"/>
+   <Atom name="H1" type="Chol-H1"/>
+   <Atom name="H2" type="Chol-H2"/>
+   <Atom name="C1" type="Chol-C1"/>
+   <Atom name="H3" type="Chol-H3"/>
+   <Atom name="H4" type="Chol-H4"/>
+   <Atom name="H5" type="Chol-H5"/>
+   <Atom name="C2" type="Chol-C2"/>
+   <Atom name="H6" type="Chol-H6"/>
+   <Atom name="H7" type="Chol-H7"/>
+   <Atom name="H8" type="Chol-H8"/>
+   <Atom name="C3" type="Chol-C3"/>
+   <Atom name="H9" type="Chol-H9"/>
+   <Atom name="H10" type="Chol-H10"/>
+   <Atom name="C4" type="Chol-C4"/>
+   <Atom name="H11" type="Chol-H11"/>
+   <Atom name="H12" type="Chol-H12"/>
+   <Atom name="O" type="Chol-O"/>
+   <Atom name="H13" type="Chol-H13"/>
+   <Atom name="DN" type="Chol-DN"/>
+   <Atom name="DC" type="Chol-DC"/>
+   <Atom name="DC1" type="Chol-DC1"/>
+   <Atom name="DC2" type="Chol-DC2"/>
+   <Atom name="DC3" type="Chol-DC3"/>
+   <Atom name="DC4" type="Chol-DC4"/>
+   <Atom name="DO" type="Chol-DO"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="5"/>
+   <Bond from="0" to="9"/>
+   <Bond from="0" to="13"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="1" to="4"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="5" to="8"/>
+   <Bond from="9" to="10"/>
+   <Bond from="9" to="11"/>
+   <Bond from="9" to="12"/>
+   <Bond from="13" to="14"/>
+   <Bond from="13" to="15"/>
+   <Bond from="13" to="16"/>
+   <Bond from="16" to="17"/>
+   <Bond from="16" to="18"/>
+   <Bond from="16" to="19"/>
+   <Bond from="19" to="20"/>
+  </Residue>
+  <Residue name="HOH">
+   <Atom name="O" type="swm4ndp-O"/>
+   <Atom name="H1" type="swm4ndp-H"/>
+   <Atom name="H2" type="swm4ndp-H"/>
+   <Atom name="M" type="swm4ndp-M"/>
+   <Atom name="OD" type="swm4ndp-OD"/>
+   <VirtualSite type="average3" index="3" atom1="0" atom2="1" atom3="2" weight1="0.589781071" weight2="0.2051094645" weight3="0.2051094645"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+  </Residue>
+  <Residue name="actn">
+   <Atom name="O2a" type="actn-O2a"/>
+   <Atom name="C2a" type="actn-C2a"/>
+   <Atom name="C3a" type="actn-C3a"/>
+   <Atom name="C3a1" type="actn-C3a1"/>
+   <Atom name="H3a" type="actn-H3a"/>
+   <Atom name="H3a1" type="actn-H3a1"/>
+   <Atom name="H3a2" type="actn-H3a2"/>
+   <Atom name="H3a3" type="actn-H3a3"/>
+   <Atom name="H3a4" type="actn-H3a4"/>
+   <Atom name="H3a5" type="actn-H3a5"/>
+   <Atom name="D" type="actn-D"/>
+   <Atom name="D1" type="actn-D1"/>
+   <Atom name="D2" type="actn-D2"/>
+   <Atom name="D3" type="actn-D3"/>
+   <Bond from="0" to="1"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="3"/>
+   <Bond from="2" to="4"/>
+   <Bond from="2" to="5"/>
+   <Bond from="2" to="6"/>
+   <Bond from="3" to="7"/>
+   <Bond from="3" to="8"/>
+   <Bond from="3" to="9"/>
+  </Residue>
+  <Residue name="acnt">
+   <Atom name="CT" type="acnt-CT"/>
+   <Atom name="CZ" type="acnt-CZ"/>
+   <Atom name="NZ" type="acnt-NZ"/>
+   <Atom name="HZ" type="acnt-HZ"/>
+   <Atom name="HZ1" type="acnt-HZ1"/>
+   <Atom name="HZ2" type="acnt-HZ2"/>
+   <Atom name="DCT" type="acnt-DCT"/>
+   <Atom name="DCZ" type="acnt-DCZ"/>
+   <Atom name="DNZ" type="acnt-DNZ"/>
+   <Bond from="0" to="1"/>
+   <Bond from="1" to="2"/>
+   <Bond from="0" to="3"/>
+   <Bond from="0" to="4"/>
+   <Bond from="0" to="5"/>
+  </Residue>
+  <Residue name="dchl">
+   <Atom name="CT" type="dchl-CT"/>
+   <Atom name="HC" type="dchl-HC"/>
+   <Atom name="HC1" type="dchl-HC1"/>
+   <Atom name="Cl" type="dchl-Cl"/>
+   <Atom name="CT1" type="dchl-CT1"/>
+   <Atom name="HC2" type="dchl-HC2"/>
+   <Atom name="Cl1" type="dchl-Cl1"/>
+   <Atom name="HC3" type="dchl-HC3"/>
+   <Atom name="DCT" type="dchl-DCT"/>
+   <Atom name="DCl" type="dchl-DCl"/>
+   <Atom name="DCT1" type="dchl-DCT1"/>
+   <Atom name="DCl1" type="dchl-DCl1"/>
+   <Bond from="0" to="1"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="3"/>
+   <Bond from="0" to="4"/>
+   <Bond from="4" to="5"/>
+   <Bond from="4" to="6"/>
+   <Bond from="4" to="7"/>
+  </Residue>
+  <Residue name="PC">
+   <Atom name="Or" type="PC-Or"/>
+   <Atom name="Or1" type="PC-Or1"/>
+   <Atom name="C2" type="PC-C2"/>
+   <Atom name="O2" type="PC-O2"/>
+   <Atom name="Crm" type="PC-Crm"/>
+   <Atom name="Cre" type="PC-Cre"/>
+   <Atom name="CT" type="PC-CT"/>
+   <Atom name="H1" type="PC-H1"/>
+   <Atom name="H2" type="PC-H2"/>
+   <Atom name="H3" type="PC-H3"/>
+   <Atom name="H4" type="PC-H4"/>
+   <Atom name="H5" type="PC-H5"/>
+   <Atom name="H6" type="PC-H6"/>
+   <Atom name="DO" type="PC-DO"/>
+   <Atom name="DO1" type="PC-DO1"/>
+   <Atom name="DC" type="PC-DC"/>
+   <Atom name="DO2" type="PC-DO2"/>
+   <Atom name="DC1" type="PC-DC1"/>
+   <Atom name="DC2" type="PC-DC2"/>
+   <Atom name="DC3" type="PC-DC3"/>
+   <Bond from="0" to="2"/>
+   <Bond from="0" to="5"/>
+   <Bond from="1" to="2"/>
+   <Bond from="1" to="4"/>
+   <Bond from="2" to="3"/>
+   <Bond from="5" to="4"/>
+   <Bond from="4" to="8"/>
+   <Bond from="4" to="9"/>
+   <Bond from="5" to="6"/>
+   <Bond from="5" to="7"/>
+   <Bond from="6" to="10"/>
+   <Bond from="6" to="11"/>
+   <Bond from="6" to="12"/>
+  </Residue>
+ </Residues>
+ <HarmonicBondForce>
+  <Bond class1="CI" class2="NI1" length="0.1315" k="399153.6"/>
+  <Bond class1="CI" class2="NI" length="0.1315" k="399153.6"/>
+  <Bond class1="HMI" class2="CMI" length="0.1080" k="284512.0"/>
+  <Bond class1="CMI" class2="NI1" length="0.1465" k="282001.6"/>
+  <Bond class1="CI" class2="HI" length="0.1069" k="307105.6"/>
+  <Bond class1="CWI" class2="NI1" length="0.1378" k="357313.6"/>
+  <Bond class1="CWI1" class2="NI" length="0.1378" k="357313.6"/>
+  <Bond class1="CWI" class2="CWI1" length="0.1336" k="217568.0"/>
+  <Bond class1="CWI" class2="HWI" length="0.1068" k="307105.6"/>
+  <Bond class1="CWI1" class2="HWI1" length="0.1068" k="307105.6"/>
+  <Bond class1="NI" class2="CAI" length="0.1476" k="282001.6"/>
+  <Bond class1="CAI" class2="HAI" length="0.1080" k="284512.0"/>
+  <Bond class1="CAI" class2="CTI" length="0.1521" k="224262.4"/>
+  <Bond class1="CTI" class2="HTI" length="0.1084" k="284512.0"/>
+  <Bond class1="CAI" class2="CSI" length="0.1526" k="224262.4"/>
+  <Bond class1="CSI" class2="CSI" length="0.1531" k="224262.4"/>
+  <Bond class1="CSI" class2="CTI" length="0.1528" k="224262.4"/>
+  <Bond class1="CSI" class2="HSI" length="0.1087" k="284512.0"/>
+  <Bond class1="C2a" class2="C3a" length="0.1517" k="265265.6"/>
+  <Bond class1="C2a" class2="O2a" length="0.1217" k="476976.0"/>
+  <Bond class1="C3a" class2="H3a" length="0.110" k="284512.0"/>
+  <Bond class1="B" class2="FI" length="0.139" k="121300.0"/>
+  <Bond class1="P" class2="FI" length="0.160" k="79500.0"/>
+  <!--      virtual site for NO3   -->
+  <!-- <Bond class1="NNO" class2="ONO" length="0.12676" k="439320.0"/>  -->
+  <Bond class1="MNO" class2="ONO" length="0.12676" k="439320.0"/>
+  <Bond class1="ONO" class2="ONO" length="0.215" k="439320.0"/>
+  <!--      end virtual site for NO3   -->
+  <Bond class1="Sfs" class2="Ofs" length="0.14400" k="630000.0"/>
+  <Bond class1="Nfs" class2="Sfs" length="0.15800" k="360000.0"/>
+  <Bond class1="Sfs" class2="Ffs" length="0.16100" k="230000.0"/>
+  <Bond class1="Ctf" class2="Ftf" length="0.13100" k="351456.0"/>
+  <Bond class1="Ctf" class2="Stf" length="0.18500" k="284512.0"/>
+  <Bond class1="Stf" class2="Otf" length="0.14300" k="630000.0"/>
+  <Bond class1="Ntf" class2="Stf" length="0.15500" k="360000.0"/>
+  <Bond class1="Osw" class2="Hsw" length="0.09572" k="10000.0"/>
+  <Bond class1="CTs" class2="CZs" length="0.14700" k="326352.0"/>
+  <Bond class1="CZs" class2="NZs" length="0.11570" k="543920.0"/>
+  <Bond class1="CTs" class2="HZs" length="0.1087" k="284512.0"/>
+  <Bond class1="CT" class2="HCc" length="0.10900" k="284512.0"/>
+  <Bond class1="CT" class2="HC" length="0.10900" k="284512.0"/>
+  <Bond class1="CT" class2="CT" length="0.15290" k="224262.4"/>
+  <Bond class1="CT" class2="Cl" length="0.17810" k="205016.0"/>
+  <Bond class1="Na" class2="Cam" length="0.149" k="357313.6"/>
+  <Bond class1="Na" class2="Cae" length="0.154" k="357313.6"/>
+  <Bond class1="Cam" class2="Ha" length="0.109" k="284512.0"/>
+  <Bond class1="Cae" class2="Ha" length="0.109" k="284512.0"/>
+  <Bond class1="Cae" class2="Cb" length="0.151" k="224262.4"/>
+  <Bond class1="Cb" class2="Cb" length="0.151" k="224262.4"/>
+  <Bond class1="Cb" class2="Hb" length="0.109" k="284512.0"/>
+  <Bond class1="Cb" class2="Oh" length="0.142" k="357313.6"/>
+  <Bond class1="Oh" class2="Ho" length="0.097" k="462750.4"/>
+  <Bond class1="Or" class2="C2" length="0.137" k="179075.0"/>
+  <Bond class1="C2" class2="O2" length="0.122" k="476976.0"/>
+  <Bond class1="Or" class2="CT" length="0.142" k="267776.0"/>
+  <Bond type1="PC-Crm" type2="PC-Cre" length="0.150" k="224262.4"/>
+  <Bond type1="PC-Cre" type2="PC-CT" length="0.150" k="224262.4"/>
+  <Bond class1="OW" class2="HW" length="0.09572" k="462750.4"/>
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+  <Angle class1="HMI" class2="CMI" class3="HMI" angle="1.91637151868977" k="276.144"/>
+  <Angle class1="HMI" class2="CMI" class3="NI1" angle="1.90589954317781" k="313.8"/>
+  <Angle class1="CMI" class2="NI1" class3="CI" angle="2.20609617452083" k="585.76"/>
+  <Angle class1="CMI" class2="NI1" class3="CWI" angle="2.19213354050488" k="585.76"/>
+  <Angle class1="NI1" class2="CI" class3="HI" angle="2.18340689424491" k="292.88"/>
+  <Angle class1="NI" class2="CI" class3="HI" angle="2.18340689424491" k="292.88"/>
+  <Angle class1="NI1" class2="CI" class3="NI" angle="1.91637151868977" k="585.76"/>
+  <Angle class1="CI" class2="NI1" class3="CWI" angle="1.88321026290188" k="585.76"/>
+  <Angle class1="CI" class2="NI" class3="CWI1" angle="1.88321026290188" k="585.76"/>
+  <Angle class1="NI1" class2="CWI" class3="CWI1" angle="1.86924762888593" k="585.76"/>
+  <Angle class1="NI" class2="CWI1" class3="CWI" angle="1.86924762888593" k="585.76"/>
+  <Angle class1="NI1" class2="CWI" class3="HWI" angle="2.12930168743308" k="292.88"/>
+  <Angle class1="NI" class2="CWI1" class3="HWI1" angle="2.12930168743308" k="292.88"/>
+  <Angle class1="HWI" class2="CWI" class3="CWI1" angle="2.28463599086058" k="292.88"/>
+  <Angle class1="HWI1" class2="CWI1" class3="CWI" angle="2.28463599086058" k="292.88"/>
+  <Angle class1="CWI1" class2="NI" class3="CAI" angle="2.18689755274889" k="585.76"/>
+  <Angle class1="CI" class2="NI" class3="CAI" angle="2.21307749152881" k="585.76"/>
+  <Angle class1="NI" class2="CAI" class3="HAI" angle="1.8762289458939" k="313.8"/>
+  <Angle class1="HAI" class2="CAI" class3="CTI" angle="1.94080612821769" k="313.8"/>
+  <Angle class1="HAI" class2="CAI" class3="HAI" angle="1.90066355542182" k="276.144"/>
+  <Angle class1="CAI" class2="CTI" class3="HTI" angle="1.93207948195772" k="313.8"/>
+  <Angle class1="HTI" class2="CTI" class3="HTI" angle="1.88321026290188" k="276.144"/>
+  <Angle class1="NI" class2="CAI" class3="CTI" angle="1.96524073774561" k="488.2728"/>
+  <Angle class1="NI" class2="CAI" class3="CSI" angle="1.97222205475359" k="488.2728"/>
+  <Angle class1="CAI" class2="CSI" class3="HSI" angle="1.89542756766584" k="313.8"/>
+  <Angle class1="CAI" class2="CSI" class3="CTI" angle="1.97396738400559" k="488.2728"/>
+  <Angle class1="CAI" class2="CSI" class3="CSI" angle="1.97745804250958" k="488.2728"/>
+  <Angle class1="HAI" class2="CAI" class3="CSI" angle="1.94080612821769" k="313.8"/>
+  <Angle class1="HSI" class2="CSI" class3="CTI" angle="1.91462618943778" k="313.8"/>
+  <Angle class1="HSI" class2="CSI" class3="CSI" angle="1.91462618943778" k="313.8"/>
+  <Angle class1="HSI" class2="CSI" class3="HSI" angle="1.91462618943778" k="276.144"/>
+  <Angle class1="CSI" class2="CSI" class3="CTI" angle="1.96000474998963" k="488.2728"/>
+  <Angle class1="CSI" class2="CSI" class3="CSI" angle="1.96000474998963" k="488.2728"/>
+  <Angle class1="CSI" class2="CTI" class3="HTI" angle="1.9390607989657" k="313.8"/>
+  <Angle class1="C3a" class2="C2a" class3="O2a" angle="2.12197130457471" k="669.440"/>
+  <Angle class1="C3a" class2="C2a" class3="C3a" angle="2.03924269803017" k="585.760"/>
+  <Angle class1="H3a" class2="C3a" class3="H3a" angle="1.91113553093379" k="276.144"/>
+  <Angle class1="H3a" class2="C3a" class3="C2a" angle="1.91113553093379" k="276.144"/>
+  <Angle class1="FI" class2="B" class3="FI" angle="1.91113553093379" k="209.0"/>
+   <!-- PF6, here we have to go by atomtype, since some angles are 90, some are 180 -->
+  <Angle type1="PF6-F1" type2="PF6-P" type3="PF6-F2" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F1" type2="PF6-P" type3="PF6-F3" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F1" type2="PF6-P" type3="PF6-F4" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F1" type2="PF6-P" type3="PF6-F5" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F2" type2="PF6-P" type3="PF6-F3" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F2" type2="PF6-P" type3="PF6-F4" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F2" type2="PF6-P" type3="PF6-F6" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F3" type2="PF6-P" type3="PF6-F5" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F3" type2="PF6-P" type3="PF6-F6" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F4" type2="PF6-P" type3="PF6-F5" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F4" type2="PF6-P" type3="PF6-F6" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F5" type2="PF6-P" type3="PF6-F6" angle="1.5707963267949" k="335.0" />
+  <Angle type1="PF6-F1" type2="PF6-P" type3="PF6-F6" angle="3.141592654" k="335.0" />
+  <Angle type1="PF6-F2" type2="PF6-P" type3="PF6-F5" angle="3.141592654" k="335.0" />
+  <Angle type1="PF6-F3" type2="PF6-P" type3="PF6-F4" angle="3.141592654" k="335.0" />
+   <!-- end PF6 atom type -->
+  <!--      virtual site for NO3   -->
+  <!-- <Angle class1="ONO" class2="NNO" class3="ONO" angle="2.0943951023932" k="878.64"/> -->
+  <Angle class1="ONO" class2="MNO" class3="ONO" angle="2.0943951023932" k="878.64"/>
+  <!--     end virtual site for NO3   -->
+  <Angle class1="Ofs" class2="Sfs" class3="Ofs" angle="2.0943951023932" k="870.272"/>
+  <Angle class1="Ofs" class2="Sfs" class3="Ffs" angle="1.79768912955416" k="870.272"/>
+  <Angle class1="Ofs" class2="Sfs" class3="Nfs" angle="1.97222205475359" k="800.0"/>
+  <Angle class1="Ffs" class2="Sfs" class3="Nfs" angle="1.79768912955416" k="1200.0"/>
+  <Angle class1="Sfs" class2="Nfs" class3="Sfs" angle="2.12930168743308" k="600.0"/>
+  <Angle class1="Ftf" class2="Ctf" class3="Ftf" angle="1.86750229963393" k="669.440"/>
+  <Angle class1="Ftf" class2="Ctf" class3="Stf" angle="1.95476876223365" k="669.440"/>
+  <Angle class1="Ctf" class2="Stf" class3="Otf" angle="1.79768912955416" k="619.232"/>
+  <Angle class1="Ctf" class2="Stf" class3="Ntf" angle="1.79768912955416" k="1000.0"/>
+  <Angle class1="Otf" class2="Stf" class3="Otf" angle="2.04203522483337" k="870.272"/>
+  <Angle class1="Otf" class2="Stf" class3="Ntf" angle="2.04203522483337" k="800.0"/>
+  <Angle class1="Stf" class2="Ntf" class3="Stf" angle="2.18166156499291" k="600.0"/>
+  <Angle class1="Hsw" class2="Osw" class3="Hsw" angle="1.82421813418447" k="10000.0"/>
+  <Angle class1="HZs" class2="CTs" class3="CZs" angle="1.89368223841385" k="292.880"/>
+  <Angle class1="HZs" class2="CTs" class3="HZs" angle="1.91462618943778" k="276.144"/>
+  <Angle class1="CTs" class2="CZs" class3="NZs" angle="3.14159265358979" k="1255.200"/>
+  <Angle class1="HC" class2="CT" class3="HC" angle="1.911" k="276.144"/>
+  <Angle class1="HC" class2="CT" class3="CT" angle="1.911" k="313.8"/>
+  <Angle class1="HCc" class2="CT" class3="Cl" angle="1.8779742751459" k="426.768"/>
+  <Angle class1="HCc" class2="CT" class3="HCc" angle="1.88146493364989" k="276.144"/>
+  <Angle class1="CT" class2="CT" class3="HCc" angle="1.93207948195772" k="313.800"/>
+  <Angle class1="CT" class2="CT" class3="Cl" angle="1.91637151868977" k="577.392"/>
+  <Angle class1="Cam" class2="Na" class3="Cam" angle="1.91113553093379" k="585.76"/>
+  <Angle class1="Cae" class2="Na" class3="Cam" angle="1.91113553093379" k="585.76"/>
+  <Angle class1="Ha" class2="Cam" class3="Ha" angle="1.91113553093379" k="276.144"/>
+  <Angle class1="Ha" class2="Cam" class3="Na" angle="1.91113553093379" k="313.8"/>
+  <Angle class1="Ha" class2="Cae" class3="Ha" angle="1.91113553093379" k="276.144"/>
+  <Angle class1="Ha" class2="Cae" class3="Na" angle="1.91113553093379" k="313.8"/>
+  <Angle class1="Cb" class2="Cae" class3="Na" angle="1.91113553093379" k="585.76"/>
+  <Angle class1="Cb" class2="Cae" class3="Ha" angle="1.91113553093379" k="313.8"/>
+  <Angle class1="Cb" class2="Cb" class3="Cae" angle="1.91113553093379" k="577.4"/>
+  <Angle class1="Hb" class2="Cb" class3="Cae" angle="1.91113553093379" k="313.8"/>
+  <Angle class1="Hb" class2="Cb" class3="Cb" angle="1.91113553093379" k="313.8"/>
+  <Angle class1="Hb" class2="Cb" class3="Hb" angle="1.91113553093379" k="276.144"/>
+  <Angle class1="Or" class2="C2" class3="O2" angle="2.12197" k="694.5"/>
+  <Angle class1="CT" class2="Or" class3="C2" angle="2.040" k="694.5"/>
+  <Angle class1="Or" class2="C2" class3="Or" angle="1.9478" k="774.9"/>
+  <Angle class1="Or" class2="CT" class3="HC" angle="1.9006" k="292.9"/>
+  <Angle class1="Or" class2="CT" class3="CT" angle="1.9006" k="418.4"/>
+   <!--choline: large force constants due to intra-molecular electrostatics -->
+  <Angle class1="Oh" class2="Cb" class3="Cae" angle="1.91113553093379" k="713.8"/>
+  <Angle class1="Oh" class2="Cb" class3="Hb" angle="1.91113553093379" k="676.144"/>
+  <Angle class1="Cb" class2="Oh" class3="Ho" angle="1.93731546971371" k="292.88"/>
+   <!-- end   choline                                                       -->
+  <Angle class1="HW" class2="OW" class3="HW" angle="1.82421813418" k="836.8"/>
+ </HarmonicAngleForce>
+ <PeriodicTorsionForce>
+  <Improper type1="PC-CT" type2="" type3="" type4="" periodicity1="1" phase1="0.6154" k1="5."/>
+  <Improper type1="PC-Crm" type2="" type3="" type4="" periodicity1="1" phase1="0.6154" k1="5."/>
+  <Improper type1="PC-Cre" type2="" type3="" type4="" periodicity1="1" phase1="0.6154" k1="5."/>
+  <Improper class1="C2" class2="" class3="" class4="" periodicity1="2" phase1="3.141592653" k1="10."/>
+  <Proper class1="Or" class2="CT" class3="CT" class4="Or" periodicity1="1" phase1="0.559" k1="10."/>
+  <Improper class1="NI" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.1840"/>
+  <Improper class1="NI1" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.1840"/>
+  <Improper class1="CWI1" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.60240"/>
+  <Improper class1="CWI" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.60240"/>
+  <Improper class1="CI" class2="" class3="" class4="" periodicity1="2" phase1="3.14159265358979" k1="4.60240"/>
+  <Improper class1="O2a" class2="" class3="" class4="" periodicity1="2" phase1="0" k1="1000."/>
+   <!--large impropers to counterbalance intra-molecular electrostatics of choline -->
+  <Improper type1="Chol-N"  type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+  <Improper type1="Chol-C" type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+  <Improper type1="Chol-C1" type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+  <Improper type1="Chol-C2" type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+  <Improper type1="Chol-C3" type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+  <Improper type1="Chol-C4" type2="" type3="" type4="" periodicity1="2" phase1="0.6154" k1="50."/>
+ </PeriodicTorsionForce>
+ <RBTorsionForce>
+  <Proper class1="HMI" class2="CMI" class3="NI1" class4="CI" c0="0." c1="0." c2="0." c3="0." c4="0." c5="0."/>
+  <Proper class1="HMI" class2="CMI" class3="NI1" class4="CWI" c0="0.2594080" c1="0.7782240" c2="0." c3="-1.037632" c4="0." c5="0."/>
+  <Proper class1="CMI" class2="NI1" class3="CI" class4="HI" c0="19.4597841" c1="0." c2="-19.4597841" c3="0." c4="0." c5="0."/>
+  <Proper class1="CMI" class2="NI1" class3="CI" class4="NI" c0="19.4597841" c1="0." c2="-19.4597841" c3="0." c4="0." c5="0."/>
+  <Proper class1="CMI" class2="NI1" class3="CWI" class4="CWI1" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="CMI" class2="NI1" class3="CWI" class4="HWI" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="NI1" class2="CI" class3="NI" class4="CAI" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+  <Proper class1="NI1" class2="CWI" class3="CWI1" class4="HWI1" c0="44.978000" c1="0." c2="-44.978000" c3="0." c4="0." c5="0."/>
+  <Proper class1="NI" class2="CWI1" class3="CWI" class4="HWI" c0="44.978000" c1="0." c2="-44.978000" c3="0." c4="0." c5="0."/>
+  <Proper class1="NI1" class2="CWI" class3="CWI1" class4="NI" c0="44.978000" c1="0." c2="-44.978000" c3="0." c4="0." c5="0."/>
+  <Proper class1="HI" class2="CI" class3="NI" class4="CWI1" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+<Proper class1="HI" class2="CI" class3="NI1" class4="CWI" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI" class3="CWI1" class4="CWI" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI1" class3="CWI" class4="CWI1" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI1" class3="CWI" class4="HWI" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI" class3="CWI1" class4="HWI1" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="HI" class2="CI" class3="NI" class4="CAI" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+  <Proper class1="HWI1" class2="CWI1" class3="NI" class4="CAI" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="CWI" class2="CWI1" class3="NI" class4="CAI" c0="12.552" c1="0." c2="-12.552" c3="0." c4="0." c5="0."/>
+  <Proper class1="HAI" class2="CAI" class3="CTI" class4="HTI" c0="0.66525600" c1="1.9957680" c2="0." c3="-2.6610240" c4="0." c5="0."/>
+  <Proper class1="HWI" class2="CWI" class3="CWI1" class4="HWI1" c0="44.978000" c1="0." c2="-44.978000" c3="0." c4="0." c5="0."/>
+  <Proper class1="CWI" class2="NI1" class3="CI" class4="NI" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+  <Proper class1="CWI1" class2="NI" class3="CI" class4="NI1" c0="19.459784" c1="0." c2="-19.459784" c3="0." c4="0." c5="0."/>
+   <!-- these are smooth methyl dihedrals for EMIM -->
+  <Proper class1="CWI1" class2="NI" class3="CAI" class4="HAI" c0="0." c1="0." c2="0." c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI" class3="CAI" class4="HAI" c0="0." c1="0." c2="0." c3="0." c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI" class3="CAI" class4="CTI" c0="0.0" c1="-0.676" c2="1.937" c3="-1.768" c4="0.501" c5="0.939"/>
+  <Proper class1="CWI1" class2="NI" class3="CAI" class4="CTI" c0="0.0" c1="0.676" c2="1.937" c3="1.768" c4="0.501" c5="-0.939"/>
+  <Proper class1="NI" class2="CAI" class3="CTI" class4="HTI" c0="0.0" c1="0.0" c2="0.0" c3="0.0" c4="0.0" c5="0.0"/>
+   <!-- end EMIM rotation -->
+  <Proper class1="CWI1" class2="NI" class3="CAI" class4="CSI" c0="-9.66504004" c1="5.81576002" c2="6.27600002" c3="-2.42672001" c4="0." c5="0."/>
+  <Proper class1="CI" class2="NI" class3="CAI" class4="CSI" c0="-6.57724802" c1="1.117128" c2="2.32212001" c3="3.13800001" c4="0." c5="0."/>
+  <Proper class1="NI" class2="CAI" class3="CSI" class4="CSI" c0="-1.179888" c1="1.93300801" c2="-3.16310401" c3="2.40998401" c4="0." c5="0."/>
+  <Proper class1="HAI" class2="CAI" class3="CSI" class4="HSI" c0="0.665256002" c1="1.99576801" c2="0." c3="-2.66102401" c4="0." c5="0."/>
+  <Proper class1="CAI" class2="CSI" class3="CSI" class4="HSI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="CAI" class2="CSI" class3="CSI" class4="CTI" c0="2.92880001" c1="-1.46440001" c2="0.209200001" c3="-1.67360001" c4="0." c5="0."/>
+  <Proper class1="HSI" class2="CSI" class3="CSI" class4="HSI" c0="0.665256002" c1="1.99576801" c2="0." c3="-2.66102401" c4="0." c5="0."/>
+  <Proper class1="CAI" class2="CSI" class3="CTI" class4="HTI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="NI" class2="CAI" class3="CSI" class4="CTI" c0="3.16310401" c1="7.08769603" c2="-2.71960001" c3="-7.53120003" c4="0." c5="0."/>
+  <Proper class1="HAI" class2="CAI" class3="CSI" class4="CTI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="HSI" class2="CSI" class3="CTI" class4="HTI" c0="0.665256002" c1="1.99576801" c2="0." c3="-2.66102401" c4="0." c5="0."/>
+  <Proper class1="HSI" class2="CSI" class3="CSI" class4="CTI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="CAI" class2="CSI" class3="CSI" class4="CSI" c0="2.92880001" c1="-1.46440001" c2="0.209200001" c3="-1.67360001" c4="0." c5="0."/>
+  <Proper class1="CSI" class2="CSI" class3="CSI" class4="CSI" c0="2.92880001" c1="-1.46440001" c2="0.209200001" c3="-1.67360001" c4="0." c5="0."/>
+  <Proper class1="CSI" class2="CSI" class3="CSI" class4="CTI" c0="2.92880001" c1="-1.46440001" c2="0.209200001" c3="-1.67360001" c4="0." c5="0."/>
+  <Proper class1="CSI" class2="CSI" class3="CSI" class4="HSI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="CSI" class2="CSI" class3="CTI" class4="HTI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="NI" class2="CAI" class3="CSI" class4="HSI" c0="0." c1="0." c2="0." c3="0." c4="0." c5="0."/>
+  <Proper class1="HAI" class2="CAI" class3="CSI" class4="CSI" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="Ftf" class2="Ctf" class3="Stf" class4="Otf" c0="-0.6" c1="0.0" c2="0.0" c3="-3.0" c4="0.0" c5="0.0"/>
+  <Proper class1="Ftf" class2="Ctf" class3="Stf" class4="Ntf" c0="-0.6" c1="0.0" c2="0.0" c3="-3.0" c4="0.0" c5="0.0"/>
+  <Proper class1="Ctf" class2="Stf" class3="Ntf" class4="Stf" c0="2.4" c1="-56.1" c2="12.8" c3="22.1" c4="-12.7" c5="30.1"/>
+  <Proper class1="Otf" class2="Stf" class3="Ntf" class4="Stf" c0="0.0" c1="-9.6" c2="4.6" c3="-35.1" c4="-7.1" c5="3.2"/>
+  <Proper class1="Ffs" class2="Sfs" class3="Nfs" class4="Sfs" c0="5.4" c1="5.56" c2="-26.8" c3="-23.6" c4="9.18" c5="31.89"/>
+  <Proper class1="Ofs" class2="Sfs" class3="Nfs" class4="Sfs" c0="10.8" c1="32.61" c2="3.25" c3="-27.83" c4="-23.4" c5="9.5"/>
+  <Proper class1="Ha" class2="Cam" class3="Na" class4="Cam" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="Ha" class2="Cam" class3="Na" class4="Cae" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="Hb" class2="Cb" class3="Cae" class4="Ha" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="Hb" class2="Cb" class3="Cae" class4="Na" c0="0.765672003" c1="2.29701601" c2="0." c3="-3.06268801" c4="0." c5="0."/>
+  <Proper class1="Ha" class2="Cae" class3="Na" class4="Cam" c0="0.0" c1="0.0" c2="0.0" c3="0.0" c4="0.0" c5="0.0"/>
+  <Proper class1="Cb" class2="Cae" class3="Na" class4="Cam" c0="10.933" c1="62.237" c2="-31.64" c3="-6.41" c4="19.4" c5="-6.33"/>
+  <Proper class1="Cae" class2="Cb" class3="Oh" class4="Ho" c0="-0.44350" c1="3.83255" c2="0.72801" c3="-4.11705" c4="0.00000" c5="0.00000"/>
+  <Proper class1="Hb" class2="Cb" class3="Oh" class4="Ho" c0="-0.44350" c1="3.83255" c2="0.72801" c3="-4.11705" c4="0.00000" c5="0.00000"/>
+  <Proper class1="Oh" class2="Cb" class3="Cae" class4="Na" c0="-30.5" c1="338.8" c2="-121.7" c3="344.9" c4="240.2" c5="-276.1"/>
+  <Proper class1="Oh" class2="Cb" class3="Cae" class4="Ha" c0="-30.5" c1="338.8" c2="-121.7" c3="344.9" c4="240.2" c5="-276.1"/>
+  <Proper class1="HCc" class2="CT" class3="CT" class4="HCc" c0="0.00000" c1="0.00000" c2="0.00000" c3="0.00000" c4="0.00000" c5="0.00000"/>
+  <Proper class1="Cl" class2="CT" class3="CT" class4="HCc" c0="0.00000" c1="0.00000" c2="0.00000" c3="0.00000" c4="0.00000" c5="0.00000"/>
+  <Proper class1="Cl" class2="CT" class3="CT" class4="Cl" c0="0.00000" c1="16.00000" c2="0.00000" c3="-28.00000" c4="0.00000" c5="0.00000"/>
+  <Proper class1="C2" class2="Or" class3="CT" class4="CT" c0="-2.2" c1="5.2" c2="0.53" c3="-3.53" c4="0.0" c5="0.0"/>
+  <Proper class1="C2" class2="Or" class3="CT" class4="HC" c0="0.41" c1="1.24" c2="0.0" c3="-1.66" c4="0.0" c5="0.0"/>
+  <Proper class1="CT" class2="Or" class3="C2" class4="O2" c0="20.92" c1="0.0" c2="-20.92" c3="0.0" c4="0.0" c5="0.0"/>
+ </RBTorsionForce>
+  <!--      virtual site for NO3   -->
+  <CustomTorsionForce energy="k*(theta^2)">
+  <PerTorsionParameter name="k"/>
+  <!--<Improper type1="NO3-N1" type2="NO3-O1" type3="NO3-O2" type4="NO3-O3" k="2051.04"/> -->
+  <Improper type1="NO3-M1" type2="NO3-O1" type3="NO3-O2" type4="NO3-O3" k="251.04"/>
+ </CustomTorsionForce>
+ <NonbondedForce coulomb14scale="0" lj14scale="0">
+  <Atom type="swm4ndp-O" charge="1.71636" sigma="0.318395" epsilon="0.882573"/>
+  <Atom type="swm4ndp-H" charge="0.55733" sigma="1" epsilon="0"/>
+  <Atom type="swm4ndp-M" charge="-1.11466" sigma="1" epsilon="0"/>
+  <Atom type="swm4ndp-OD" charge="-1.71636" sigma="1" epsilon="0"/>
+  <Atom type="EMIM-NI1" charge="0.6439" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DN1" charge="-0.8404" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-NI" charge="0.6439" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DN11" charge="-0.8404" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CI" charge="1.4674" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC1" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HI" charge="0.0922" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CWI" charge="1.1311" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC2" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HWI" charge="0.1635" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CWI1" charge="1.1311" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC21" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HWI1" charge="0.1635" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CMI" charge="1.3319" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC3" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HMI1" charge="0.0291" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HMI2" charge="0.0291" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HMI3" charge="0.0291" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CAI" charge="1.4027" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC4" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HAI1" charge="0.0096" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HAI2" charge="0.0096" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-CTI" charge="0.7772" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-DC5" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HTI1" charge="0.1069" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HTI2" charge="0.1069" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="EMIM-HTI3" charge="0.1069" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-N1" charge="0.6490" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DN1" charge="-0.8404" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-N11" charge="0.6490" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DN11" charge="-0.8404" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C1" charge="1.4635" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC1" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H1" charge="0.0918" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C2" charge="1.1286" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC2" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H2" charge="0.1644" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C21" charge="1.1286" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC21" charge="-1.1478" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H21" charge="0.1644" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C3" charge="1.3153" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC3" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H3" charge="0.0328" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H31" charge="0.0328" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H32" charge="0.0328" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C4" charge="1.3178" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC4" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H4" charge="0.0157" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H41" charge="0.0157" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C5" charge="1.1454" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC5" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H5" charge="-0.0181" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H51" charge="-0.0181" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C51" charge="1.1454" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC51" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H52" charge="-0.0181" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H53" charge="-0.0181" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-C6" charge="1.0587" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-DC6" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H6" charge="0.0213" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H61" charge="0.0213" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BMIM-H62" charge="0.0213" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-N" charge="0.999" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-DN" charge="-0.959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-C" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-DC" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H1" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H2" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-C1" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-DC1" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H3" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H4" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H5" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-C2" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-DC2" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H6" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H7" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H8" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-C3" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-DC3" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H9" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H10" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMA-H11" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-N" charge="0.999" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DN" charge="-0.959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-C" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DC" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H1" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H2" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-C1" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DC1" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H3" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H4" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H5" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-C2" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DC2" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H6" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H7" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H8" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-C3" charge="1.508" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DC3" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H9" charge="-0.06" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H10" charge="-0.06" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-C4" charge="0.638" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-DC4" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H11" charge="0.17" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H12" charge="0.17" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMEA-H13" charge="0.17" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-N" charge="0.999" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DN" charge="-0.959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H1" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H2" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C1" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC1" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H3" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H4" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H5" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C2" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC2" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H6" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H7" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H8" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C3" charge="1.408" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC3" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H9" charge="-0.01" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H10" charge="-0.01" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C4" charge="1.188" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC4" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H11" charge="-0.02" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H12" charge="-0.02" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-C5" charge="1.058" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-DC5" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H13" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H14" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="TMPA-H15" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-N" charge="0.999" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DN" charge="-0.959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-C" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DC" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H1" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H2" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-C1" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DC1" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H3" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H4" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H5" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-C2" charge="1.238" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DC2" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H6" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H7" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H8" charge="0.05" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-C3" charge="1.048" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DC3" charge="-1.148" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H9" charge="0.1" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H10" charge="0.1" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-C4" charge="1.522" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DC4" charge="-1.252" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H11" charge="0.02" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H12" charge="0.02" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-O" charge="0.247" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-DO" charge="-0.817" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Chol-H13" charge="0.40" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-B" charge="1.3538" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-DB" charge="-0.1530" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-F1" charge="0.2428" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-DF1" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-F2" charge="0.2428" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-DF2" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-F3" charge="0.2428" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-DF3" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-F4" charge="0.2428" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="BF4-DF4" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-P" charge="2.3744" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DP" charge="-0.6120" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F1" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF1" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F2" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF2" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F3" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF3" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F4" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF4" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F5" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF5" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-F6" charge="0.3326" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PF6-DF6" charge="-0.7930" sigma="1.00000" epsilon="0.00000"/>
+  <!--      virtual site for NO3   -->
+  <Atom type="NO3-M1" charge="1.0899" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-N1" charge="1.0532" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-DN" charge="-1.0899" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-O1" charge="0.2504" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-DO1" charge="-0.9348" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-O2" charge="0.2504" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-DO2" charge="-0.9348" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-O3" charge="0.2504" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="NO3-DO3" charge="-0.9348" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Cf" charge="1.2109" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DCf" charge="-1.159" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Fc" charge="0.498" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DFc" charge="-0.567" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Fc1" charge="0.498" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DFc1" charge="-0.567" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Fc2" charge="0.498" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DFc2" charge="-0.567" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-S" charge="1.5723" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DS" charge="-1.192" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Os" charge="0.5106" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DOs" charge="-0.919" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Os1" charge="0.5106" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DOs1" charge="-0.919" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-Os2" charge="0.5106" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="trfl-DOs2" charge="-0.919" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-N" charge="0.34554" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DN" charge="-1.3959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-S" charge="2.91295" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DS" charge="-1.1917" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-O" charge="0.21809" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DO" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-O1" charge="0.21809" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DO1" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-F" charge="0.27195" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DF" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-S1" charge="2.91295" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DS1" charge="-1.1917" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-O2" charge="0.21809" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DO2" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-O3" charge="0.21809" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DO3" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-F1" charge="0.27195" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="FSI-DF1" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ntf" charge="0.84875" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DN" charge="-1.3959" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Stf" charge="1.97127" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DS" charge="-1.1917" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Otf" charge="0.43495" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DO" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Otf1" charge="0.43495" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DO1" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ctf" charge="1.42916" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DC" charge="-1.1594" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf1" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF1" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf2" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF2" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Stf1" charge="1.97127" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DS1" charge="-1.1917" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Otf2" charge="0.43495" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DO2" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Otf3" charge="0.43495" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DO3" charge="-0.9185" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ctf1" charge="1.42916" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DC1" charge="-1.1594" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf3" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF3" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf4" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF4" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-Ftf5" charge="0.46432" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="Tf2N-DF5" charge="-0.5672" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-O2a" charge="0.36719" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-D" charge="-0.8931" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-C2a" charge="1.43859" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-D1" charge="-0.7097" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-C3a" charge="0.84601" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-D2" charge="-1.2523" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-C3a1" charge="0.84601" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-D3" charge="-1.2523" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a1" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a2" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a3" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a4" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="actn-H3a5" charge="0.1016" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-CT" charge="1.263" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-DCT" charge="-1.252" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-CZ" charge="1.004" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-DCZ" charge="-0.716" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-NZ" charge="0.554" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-DNZ" charge="-1.015" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-HZ" charge="0.054" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-HZ1" charge="0.054" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="acnt-HZ2" charge="0.054" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-CT" charge="1.217" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-DCT" charge="-1.252" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-HC" charge="0.10" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-HC1" charge="0.10" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-Cl" charge="1.117" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-DCl" charge="-1.282" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-CT1" charge="1.217" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-DCT1" charge="-1.252" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-HC2" charge="0.10" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-Cl1" charge="1.117" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-DCl1" charge="-1.282" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="dchl-HC3" charge="0.10" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-Or" charge="0.4731" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DO" charge="-0.8931" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-Or1" charge="0.4731" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DO1" charge="-0.8931" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-C2" charge="1.5997" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DC" charge="-0.7097" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-O2" charge="0.3431" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DO2" charge="-0.8931" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-Crm" charge="1.2838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DC1" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-Cre" charge="1.2438" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DC2" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-CT" charge="1.0438" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-DC3" charge="-1.0838" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H1" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H2" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H3" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H4" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H5" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+  <Atom type="PC-H6" charge="0.03" sigma="1.00000" epsilon="0.00000"/>
+ </NonbondedForce>
+ <DrudeForce>
+  <Particle type1="swm4ndp-OD" type2="swm4ndp-O" charge="-1.71636" polarizability="0.000978253" thole="1.3"/>
+  <Particle type1="BF4-DB" type2="BF4-B" charge="-0.1530" polarizability="0.00003469" thole="1"/>
+  <Particle type1="BF4-DF1" type2="BF4-F1" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="BF4-DF2" type2="BF4-F2" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="BF4-DF3" type2="BF4-F3" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="BF4-DF4" type2="BF4-F4" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <!--      virtual site for NO3   -->
+  <Particle type1="NO3-DN" type2="NO3-M1" charge="-1.0899" polarizability="0.00176033" thole="1"/>
+  <Particle type1="NO3-DO1" type2="NO3-O1" charge="-0.9348" polarizability="0.00129497" thole="1"/>
+  <Particle type1="NO3-DO2" type2="NO3-O2" charge="-0.9348" polarizability="0.00129497" thole="1"/>
+  <Particle type1="NO3-DO3" type2="NO3-O3" charge="-0.9348" polarizability="0.00129497" thole="1"/>
+  <Particle type1="PF6-DF1" type2="PF6-F1" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DF2" type2="PF6-F2" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DF3" type2="PF6-F3" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DF4" type2="PF6-F4" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DF5" type2="PF6-F5" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DF6" type2="PF6-F6" charge="-0.7930" polarizability="0.000931897" thole="1"/>
+  <Particle type1="PF6-DP" type2="PF6-P" charge="-0.6120" polarizability="0.000555" thole="1"/>
+  <Particle type1="FSI-DO2" type2="FSI-O2" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="FSI-DO1" type2="FSI-O1" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="FSI-DN" type2="FSI-N" charge="-1.3959" polarizability="0.002887" thole="1"/>
+  <Particle type1="FSI-DF1" type2="FSI-F1" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="FSI-DO3" type2="FSI-O3" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="FSI-DF" type2="FSI-F" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="FSI-DS" type2="FSI-S" charge="-1.1917" polarizability="0.002106" thole="1"/>
+  <Particle type1="FSI-DS1" type2="FSI-S1" charge="-1.1917" polarizability="0.002106" thole="1"/>
+  <Particle type1="FSI-DO" type2="FSI-O" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="trfl-DOs" type2="trfl-Os" charge="-0.919" polarizability="0.001252" thole="1"/>
+  <Particle type1="trfl-DFc2" type2="trfl-Fc2" charge="-0.567" polarizability="0.000476" thole="1"/>
+  <Particle type1="trfl-DOs1" type2="trfl-Os1" charge="-0.919" polarizability="0.001252" thole="1"/>
+  <Particle type1="trfl-DFc1" type2="trfl-Fc1" charge="-0.567" polarizability="0.000476" thole="1"/>
+  <Particle type1="trfl-DOs2" type2="trfl-Os2" charge="-0.919" polarizability="0.001252" thole="1"/>
+  <Particle type1="trfl-DS" type2="trfl-S" charge="-1.192" polarizability="0.002106" thole="1"/>
+  <Particle type1="trfl-DFc" type2="trfl-Fc" charge="-0.567" polarizability="0.000476" thole="1"/>
+  <Particle type1="trfl-DCf" type2="trfl-Cf" charge="-1.159" polarizability="0.001991" thole="1"/>
+  <Particle type1="Tf2N-DO2" type2="Tf2N-Otf2" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="BMIM-DC3" type2="BMIM-C3" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="Tf2N-DO3" type2="Tf2N-Otf3" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="BMIM-DC21" type2="BMIM-C21" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="BMIM-DN1" type2="BMIM-N1" charge="-0.8404" polarizability="0.0010466" thole="1"/>
+  <Particle type1="Tf2N-DS1" type2="Tf2N-Stf1" charge="-1.1917" polarizability="0.002106" thole="1"/>
+  <Particle type1="BMIM-DC5" type2="BMIM-C5" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="BMIM-DC51" type2="BMIM-C51" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="Tf2N-DF5" type2="Tf2N-Ftf5" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="Tf2N-DF2" type2="Tf2N-Ftf2" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="Tf2N-DN" type2="Tf2N-Ntf" charge="-1.3959" polarizability="0.002887" thole="1"/>
+  <Particle type1="BMIM-DC1" type2="BMIM-C1" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="BMIM-DC4" type2="BMIM-C4" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="Tf2N-DC1" type2="Tf2N-Ctf1" charge="-1.1594" polarizability="0.001991" thole="1"/>
+  <Particle type1="Tf2N-DF4" type2="Tf2N-Ftf4" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="BMIM-DC2" type2="BMIM-C2" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="Tf2N-DS" type2="Tf2N-Stf" charge="-1.1917" polarizability="0.002106" thole="1"/>
+  <Particle type1="BMIM-DN11" type2="BMIM-N11" charge="-0.8404" polarizability="0.0010466" thole="1"/>
+  <Particle type1="Tf2N-DF3" type2="Tf2N-Ftf3" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="Tf2N-DO" type2="Tf2N-Otf" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="Tf2N-DC" type2="Tf2N-Ctf" charge="-1.1594" polarizability="0.001991" thole="1"/>
+  <Particle type1="Tf2N-DF1" type2="Tf2N-Ftf1" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="Tf2N-DO1" type2="Tf2N-Otf1" charge="-0.9185" polarizability="0.001252" thole="1"/>
+  <Particle type1="BMIM-DC6" type2="BMIM-C6" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="Tf2N-DF" type2="Tf2N-Ftf" charge="-0.5672" polarizability="0.000476" thole="1"/>
+  <Particle type1="EMIM-DC2" type2="EMIM-CWI" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="EMIM-DC5" type2="EMIM-CTI" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="EMIM-DC1" type2="EMIM-CI" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="EMIM-DC3" type2="EMIM-CMI" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="EMIM-DC4" type2="EMIM-CAI" charge="-1.0838" polarizability="0.00174068" thole="1"/>
+  <Particle type1="EMIM-DC21" type2="EMIM-CWI1" charge="-1.1478" polarizability="0.00195233" thole="1"/>
+  <Particle type1="EMIM-DN1" type2="EMIM-NI1" charge="-0.8404" polarizability="0.0010466" thole="1"/>
+  <Particle type1="EMIM-DN11" type2="EMIM-NI" charge="-0.8404" polarizability="0.0010466" thole="1"/>
+  <Particle type1="actn-D1" type2="actn-C2a" charge="-0.7097" polarizability="0.000746" thole="1"/>
+  <Particle type1="actn-D" type2="actn-O2a" charge="-0.8931" polarizability="0.001182" thole="1"/>
+  <Particle type1="actn-D3" type2="actn-C3a1" charge="-1.2523" polarizability="0.002324" thole="1"/>
+  <Particle type1="actn-D2" type2="actn-C3a" charge="-1.2523" polarizability="0.002324" thole="1"/>
+  <Particle type1="acnt-DCZ" type2="acnt-CZ" charge="-0.716" polarizability="0.000760" thole="1"/>
+  <Particle type1="acnt-DCT" type2="acnt-CT" charge="-1.252" polarizability="0.002324" thole="1"/>
+  <Particle type1="acnt-DNZ" type2="acnt-NZ" charge="-1.015" polarizability="0.001527" thole="1"/>
+  <Particle type1="dchl-DCT" type2="dchl-CT" charge="-1.252" polarizability="0.002324" thole="1"/>
+  <Particle type1="dchl-DCT1" type2="dchl-CT1" charge="-1.252" polarizability="0.002324" thole="1"/>
+  <Particle type1="dchl-DCl" type2="dchl-Cl" charge="-1.282" polarizability="0.002435" thole="1"/>
+  <Particle type1="dchl-DCl1" type2="dchl-Cl1" charge="-1.282" polarizability="0.002435" thole="1"/>
+  <Particle type1="TMA-DC3" type2="TMA-C3" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMA-DN" type2="TMA-N" charge="-0.959" polarizability="0.001363" thole="1"/>
+  <Particle type1="TMA-DC1" type2="TMA-C1" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMA-DC" type2="TMA-C" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMA-DC2" type2="TMA-C2" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMEA-DC4" type2="TMEA-C4" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMEA-DC3" type2="TMEA-C3" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMEA-DN" type2="TMEA-N" charge="-0.959" polarizability="0.001363" thole="1"/>
+  <Particle type1="TMEA-DC1" type2="TMEA-C1" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMEA-DC" type2="TMEA-C" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMEA-DC2" type2="TMEA-C2" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DC2" type2="TMPA-C2" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DC3" type2="TMPA-C3" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DN" type2="TMPA-N" charge="-0.959" polarizability="0.001363" thole="1"/>
+  <Particle type1="TMPA-DC5" type2="TMPA-C5" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DC" type2="TMPA-C" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DC1" type2="TMPA-C1" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="TMPA-DC4" type2="TMPA-C4" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="Chol-DC3" type2="Chol-C3" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="Chol-DC" type2="Chol-C" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="Chol-DN" type2="Chol-N" charge="-0.959" polarizability="0.001363" thole="1"/>
+  <Particle type1="Chol-DO" type2="Chol-O" charge="-0.817" polarizability="0.000989" thole="1"/>
+  <Particle type1="Chol-DC4" type2="Chol-C4" charge="-1.252" polarizability="0.001953" thole="1"/>
+  <Particle type1="Chol-DC2" type2="Chol-C2" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="Chol-DC1" type2="Chol-C1" charge="-1.148" polarizability="0.001953" thole="1"/>
+  <Particle type1="PC-DC" type2="PC-C2" charge="-0.7097" polarizability="0.000746" thole="1"/>
+  <Particle type1="PC-DO2" type2="PC-O2" charge="-0.8931" polarizability="0.001182" thole="1"/>
+  <Particle type1="PC-DO" type2="PC-Or" charge="-0.8931" polarizability="0.001182" thole="1"/>
+  <Particle type1="PC-DO1" type2="PC-Or1" charge="-0.8931" polarizability="0.001182" thole="1"/>
+  <Particle type1="PC-DC1" type2="PC-Crm" charge="-1.0838" polarizability="0.001741" thole="1"/>
+  <Particle type1="PC-DC2" type2="PC-Cre" charge="-1.0838" polarizability="0.001741" thole="1"/>
+  <Particle type1="PC-DC3" type2="PC-CT" charge="-1.0838" polarizability="0.001741" thole="1"/>
+ </DrudeForce>
+ <CustomNonbondedForce energy="A*exBr - f6*C6/(r^6) - f8*C8/(r^8) - f10*C10/(r^10) - f12*C12/(r^12);
+    A=Aex-Ael-Ain-Adh;
+    Aex=sqrt(Aexch1*Aexch2); Ael=sqrt(Aelec1*Aelec2); Ain=sqrt(Aind1*Aind2); Adh=sqrt(Adhf1*Adhf2);
+    f12 = f10 - exBr*( (1/39916800)*(Br^11)*(1 + Br/12) );
+    f10 = f8 - exBr*( (1/362880)*(Br^9)*(1 + Br/10 ) );
+    f8 = f6 - exBr*( (1/5040)*(Br^7)*(1 + Br/8 ) );
+    f6 = 1 - exBr*(1 + Br * (1 + (1/2)*Br*(1 + (1/3)*Br*(1 + (1/4)*Br*(1 + (1/5)*Br*(1 + (1/6)*Br ) ) )  ) ) );
+    exBr = exp(-Br);
+    Br = B*r;
+    B=(Bexp1+Bexp2)*Bexp1*Bexp2/(Bexp1^2 + Bexp2^2);
+    C6=sqrt(C61*C62); C8=sqrt(C81*C82); C10=sqrt(C101*C102); C12=sqrt(C121*C122)"
+    bondCutoff="3">
+  <PerParticleParameter name="Aexch"/>
+  <PerParticleParameter name="Aelec"/>
+  <PerParticleParameter name="Aind"/>
+  <PerParticleParameter name="Adhf"/>
+  <PerParticleParameter name="Bexp"/>
+  <PerParticleParameter name="C6"/>
+  <PerParticleParameter name="C8"/>
+  <PerParticleParameter name="C10"/>
+  <PerParticleParameter name="C12"/>
+  <Atom type="swm4ndp-O" Aexch="154905" Aelec="77452" Aind="21529" Adhf="0.0" Bexp="36.84974" C6="0.000456" C8="3.67376E-05" C10="2.87553E-06" C12="1.81911E-07"/>
+  <Atom type="swm4ndp-H" Aexch="1575" Aelec="0.0" Aind="0.0" Adhf="0.0" Bexp="58.582" C6="2.6E-06" C8="1.3198E-07" C10="1.87942E-08" C12="1.30988E-09"/>
+  <Atom type="swm4ndp-M" Aexch="55923" Aelec="13653" Aind="893" Adhf="788" Bexp="32.12541" C6="0.000841" C8="3.8005E-05" C10="1.76105E-06" C12="6.50111E-08"/>
+  <Atom type="swm4ndp-OD" Aexch="0" Aelec="0" Aind="0" Adhf="0" Bexp="1" C6="0" C8="0" C10="0" C12="0"/>
+  <Atom class="Ofs" Aexch="696545.15" Aelec="225793.0" Aind="0" Adhf="44108.4" Bexp="37.795" C6="0.0012801" C8="7.7656e-05" C10="8.04715e-06" C12="5.28908e-07"/>
+  <Atom class="Ffs" Aexch="123398.5" Aelec="34394.1" Aind="787.65" Adhf="4200.8" Bexp="35.962" C6="0.0005251" C8="4.1469e-05" C10="2.39069e-06" C12="9.54729e-08"/>
+  <Atom class="Nfs" Aexch="2193342.4" Aelec="1144954.3" Aind="0" Adhf="0" Bexp="39.061" C6="0.0035676" C8="0.000425002" C10="2.384919e-05" C12="0"/>
+  <Atom class="Sfs" Aexch="2226948.8" Aelec="44108.4" Aind="2481.1" Adhf="5776.1" Bexp="37.795" C6="0.0049285" C8="0.000480787" C10="3.793327e-05" C12="2.341735e-06"/>
+  <Atom class="Otf" Aexch="696545.2" Aelec="225793.0" Aind="0.0" Adhf="44108.4" Bexp="37.795" C6="0.0012801" C8="7.7656e-05" C10="8.04715e-06" C12="5.28908e-07"/>
+  <Atom class="Stf" Aexch="2226949.0" Aelec="44108.4" Aind="2481.1" Adhf="5776.1" Bexp="37.795" C6="0.0049285" C8="0.000480787" C10="3.793327e-05" C12="2.341736e-06"/>
+  <Atom class="CWI" Aexch="422654.8" Aelec="198880.5" Aind="0.0" Adhf="39863.4" Bexp="34.384" C6="0.0014149" C8="6.1588e-05" C10="9.41083000000001e-06" C12="5.057034e-07"/>
+  <Atom class="NI" Aexch="252624.4" Aelec="102233.5" Aind="0.0" Adhf="17537.3" Bexp="39.061" C6="0.0010187" C8="6.246e-05" C10="9.21975e-06" C12="6.769417e-07"/>
+  <Atom class="HTI" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="Ntf" Aexch="2193342.0" Aelec="1144954.0" Aind="0.0" Adhf="0.0" Bexp="39.061" C6="0.0035676" C8="0.000425002" C10="2.384919e-05" C12="0"/>
+  <Atom class="Ctf" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013545" C8="5.705e-05" C10="1.80898e-06" C12="5.20977e-08"/>
+  <Atom class="HI" Aexch="5241.8" Aelec="305.2" Aind="0.0" Adhf="540.4" Bexp="37.776" C6="4.94e-05" C8="1.251e-06" C10="2.2456e-07" C12="0"/>
+  <Atom class="HSI" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="CSI" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013545" C8="5.705e-05" C10="1.80898e-06" C12="5.20977e-08"/>
+  <Atom class="CAI" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0007166" C8="0" C10="0" C12="0"/>
+  <Atom class="Ftf" Aexch="123398.5" Aelec="34394.1" Aind="787.7" Adhf="4200.8" Bexp="35.962" C6="0.0005251" C8="4.1469e-05" C10="2.39069e-06" C12="9.54729e-08"/>
+  <Atom class="CTI" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013545" C8="5.705e-05" C10="1.80898e-06" C12="5.20977e-08"/>
+  <Atom class="B" Aexch="11862.8" Aelec="0.0" Aind="0.0" Adhf="0.0" Bexp="29.518" C6="0.0009733" C8="5.3191e-05" C10="5.3711e-06" C12="3.301846e-07"/>
+  <Atom class="P" Aexch="0.0" Aelec="0.0" Aind="0.0" Adhf="0.0" Bexp="33.184" C6="0.0035821" C8="0.000300625" C10="1.180089e-05" C12="0"/>
+  <Atom class="FI" Aexch="180128.4" Aelec="80998.3" Aind="0.0" Adhf="13995.8" Bexp="35.961" C6="0.0007953" C8="5.754e-05" C10="2.75526e-06" C12="8.57594e-08"/>
+  <Atom class="MNO" Aexch="0" Aelec="0" Aind="0" Adhf="0" Bexp="100" C6="0" C8="0" C10="0" C12="0"/>
+  <Atom class="NNO" Aexch="29405.6" Aelec="5093.5" Aind="2363.0" Adhf="0.0" Bexp="39.061" C6="0.0013055" C8="0.000100467" C10="8.73950000000001e-06" C12="5.967131e-07"/>
+  <Atom class="ONO" Aexch="129962.3" Aelec="65243.7" Aind="0.0" Adhf="7876.5" Bexp="32.125" C6="0.001467" C8="9.34700000000001e-05" C10="7.41171e-06" C12="4.376966e-07"/>
+  <Atom class="CWI1" Aexch="422654.8" Aelec="198880.5" Aind="0.0" Adhf="39863.4" Bexp="34.384" C6="0.0014149" C8="6.1588e-05" C10="9.41083000000001e-06" C12="5.057034e-07"/>
+  <Atom class="CMI" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0007166" C8="0" C10="0" C12="0"/>
+  <Atom class="CI" Aexch="422654.8" Aelec="198880.5" Aind="0.0" Adhf="39863.4" Bexp="34.384" C6="0.0014149" C8="6.1588e-05" C10="9.41083000000001e-06" C12="5.057034e-07"/>
+  <Atom class="NI1" Aexch="252624.4" Aelec="102233.5" Aind="0.0" Adhf="17537.3" Bexp="39.061" C6="0.0010187" C8="6.246e-05" C10="9.21975e-06" C12="6.769417e-07"/>
+  <Atom class="HWI" Aexch="5241.8" Aelec="305.2" Aind="0.0" Adhf="540.4" Bexp="37.776" C6="4.94e-05" C8="1.251e-06" C10="2.2456e-07" C12="0"/>
+  <Atom class="HWI1" Aexch="5241.8" Aelec="305.2" Aind="0.0" Adhf="540.4" Bexp="37.776" C6="4.94e-05" C8="1.251e-06" C10="2.2456e-07" C12="0"/>
+  <Atom class="HMI" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="Sh" Aexch="0" Aelec="0" Aind="0" Adhf="0" Bexp="100" C6="0" C8="0" C10="0" C12="0"/>
+  <Atom class="HAI" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="HCc" Aexch="10320.8" Aelec="911.3" Aind="966.184" Adhf="1346.8" Bexp="37.794" C6="0.0001294" C8="6.797e-06" C10="4.996e-07" C12="0"/>
+  <Atom class="HC" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="CT" Aexch="304951.8" Aelec="117596.1" Aind="10.502" Adhf="2835.5" Bexp="34.384" C6="0.0013546" C8="5.7056e-05" C10="1.80923e-06" C12="5.210627e-08"/>
+  <Atom class="Cl" Aexch="1039330.4" Aelec="397309.0" Aind="36890.1" Adhf="49537.9" Bexp="33.0698" C6="0.0053993" C8="0.000483006" C10="5.722893e-05" C12="0"/>
+  <!-- the dispersion parameters for acetonitrile are scaled down by ~2.5 % to implicitly account for 3-body dispersion    -->
+  <Atom class="CTs" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013208" C8="5.563e-05" C10="1.764e-06" C12="5.08036e-08"/>
+  <Atom class="CZs" Aexch="159315.3" Aelec="58811.2" Aind="7955.3" Adhf="4305.8" Bexp="34.384" C6="0.0009836" C8="4.5752e-05" C10="3.08927e-06" C12="1.39371e-07"/>
+  <Atom class="NZs" Aexch="491703.6" Aelec="172626.6" Aind="4148.3" Adhf="28670.5" Bexp="35.904" C6="0.0015419" C8="9.589e-05" C10="1.035016e-05" C12="0"/>
+  <Atom class="HZs" Aexch="10685.8" Aelec="1260.2" Aind="1023.9" Adhf="1312.8" Bexp="37.794" C6="0.0001262" C8="6.627e-06" C10="4.8711e-07" C12="0"/>
+  <!-- end acetonitrile    -->
+  <Atom class="C2a" Aexch="263600.2" Aelec="112896.5" Aind="11.7" Adhf="2837.2" Bexp="34.384" C6="0.0007729" C8="2.3492e-05" C10="2.75392e-06" C12="1.023663e-07"/>
+  <Atom class="O2a" Aexch="315060.0" Aelec="139939.1" Aind="29536.9" Adhf="26583.2" Bexp="37.795" C6="0.0013191" C8="5.7131e-05" C10="4.58043e-06" C12="2.208856e-07"/>
+  <Atom class="C3a" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013545" C8="5.705e-05" C10="1.80898e-06" C12="5.20977e-08"/>
+  <Atom class="H3a" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="Na" Aexch="252625.61" Aelec="102236.97" Aind="0.0" Adhf="17538.34" Bexp="39.061" C6="0.0010187" C8="6.24594e-05" C10="9.21956200000001e-06" C12="6.7692452e-07"/>
+  <Atom class="Ha" Aexch="9627.71" Aelec="1310.12" Aind="1071.2" Adhf="1331.13" Bexp="37.794" C6="0.00012945" C8="6.7972e-06" C10="4.996e-07" C12="0"/>
+  <Atom class="Cam" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.00091067" C8="0" C10="0" C12="0"/>
+  <Atom class="Cae" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.00091067" C8="0" C10="0" C12="0"/>
+  <Atom class="Cb" Aexch="304938.7" Aelec="117598.0" Aind="11.7" Adhf="2837.1" Bexp="34.384" C6="0.0013545" C8="5.705e-05" C10="1.80898e-06" C12="5.20977e-08"/>
+  <Atom class="Hb" Aexch="15986.7" Aelec="3623.5" Aind="746.7" Adhf="1467.9" Bexp="37.776" C6="0.0001294" C8="6.796e-06" C10="4.9953e-07" C12="0"/>
+  <Atom class="Oh" Aexch="398289.0" Aelec="140369.0" Aind="14748.0" Adhf="13141.0" Bexp="37.794" C6="0.001462" C8="8.665e-05" C10="5.5467e-06" C12="2.7977e-07"/>
+  <Atom class="Ho" Aexch="1182.0" Aelec="428.0" Aind="92.0" Adhf="223.0" Bexp="31.483" C6="9.379e-05" C8="2.607e-06" C10="4.151e-07" C12="0"/>
+  <Atom class="O2" Aexch="315060.0" Aelec="139939.1" Aind="29536.9" Adhf="26583.2" Bexp="37.795" C6="0.0013191" C8="5.7131e-05" C10="4.58043e-06" C12="2.208856e-07"/>
+  <Atom class="C2" Aexch="263600.2" Aelec="112896.5" Aind="11.7" Adhf="2837.2" Bexp="34.384" C6="0.0007729" C8="2.3492e-05" C10="2.75392e-06" C12="1.023663e-07"/>
+  <Atom class="Or" Aexch="336155.8" Aelec="106585.3" Aind="857.4" Adhf="18802.0" Bexp="37.795" C6="0.000705" C8="4.304e-05" C10="2.9906e-06" C12="1.5909e-07"/>
+ </CustomNonbondedForce>
+ <CustomBondForce energy="A*exBr - f6*C6/(r^6) - f8*C8/(r^8) - f10*C10/(r^10) - f12*C12/(r^12);
+    A=Aex-Ael-Ain-Adh;
+    f12 = f10 - exBr*( (1/39916800)*(Br^11)*(1 + Br/12) );
+    f10 = f8 - exBr*( (1/362880)*(Br^9)*(1 + Br/10 ) );
+    f8 = f6 - exBr*( (1/5040)*(Br^7)*(1 + Br/8 ) );
+    f6 = 1 - exBr*(1 + Br * (1 + (1/2)*Br*(1 + (1/3)*Br*(1 + (1/4)*Br*(1 + (1/5)*Br*(1 + (1/6)*Br ) ) )  ) ) );
+    exBr = exp(-Br);
+    Br = B*r">
+  <PerBondParameter name="Aex"/>
+  <PerBondParameter name="Ael"/>
+  <PerBondParameter name="Ain"/>
+  <PerBondParameter name="Adh"/>
+  <PerBondParameter name="B"/>
+  <PerBondParameter name="C6"/>
+  <PerBondParameter name="C8"/>
+  <PerBondParameter name="C10"/>
+  <PerBondParameter name="C12"/>
+  <Bond class1="Otf" class2="Otf" Aex="696545.2" Ael="225793.0" Ain="0.0" Adh="44108.4" B="37.795"  C6="0.0012801" C8="7.7656e-05" C10="8.04715e-06" C12="5.28908e-07"/>
+  <Bond class1="Ftf" class2="Ftf" Aex="123398.5" Ael= "34394.1" Ain="787.7" Adh="4200.8" B="35.962" C6="0.0005251" C8="4.1469e-05" C10="2.39069e-06" C12="9.54729e-08"/>
+  <Bond class1="Otf" class2="Ftf" Aex="293176.8" Ael= "88124.6" Ain="0.0" Adh="13612.2" B="36.833"  C6="0.000820"  C8="5.6748e-05" C10="4.38614e-06" C12="2.24714e-07"/>
+ </CustomBondForce>
+</ForceField>
