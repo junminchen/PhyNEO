@@ -1,0 +1,12 @@
+REMARK   1 CREATED WITH OPENMM 7.3, 2018-09-26
+CRYST1   20.000   20.000   20.000  90.00  90.00  90.00 P 1           1 
+MODEL        1
+HETATM    1  O   HOH A   1       0.      0.000   0.     1.00  0.00           O  
+HETATM    2  H1  HOH A   1      -0.757   0.000  -0.586  1.00  0.00           H  
+HETATM    3  H2  HOH A   1       0.757   0.000  -0.586  1.00  0.00           H  
+HETATM    4  O   HOH A   2       0.      0.000   0.     1.00  0.00           O  
+HETATM    5  H1  HOH A   2      -0.757   0.000  -0.586  1.00  0.00           H  
+HETATM    6  H2  HOH A   2       0.757   0.000  -0.586  1.00  0.00           H  
+TER       7      HOH A   3
+ENDMDL
+END

@@ -1,0 +1,57 @@
+RESI  SWM4 0.000
+GROUP
+ATOM  OH2 ODW -1.11466
+ATOM  H1 HDW 0.55733
+ATOM  H2 HDW 0.55733
+
+POLARIZE OH2 0.97825258 1.3
+
+BOND  OH2 H1
+BOND  OH2 H2
+BOND  H1 H2
+
+
+OPOLE OH2  BISECT  OH2 H1 H2 -
+0.00000 0.00000 -0.50626 -
+0.11497 0.00000 0.11497 0.00000 0.00000 -0.22994 -
+0.00000 0.00000 0.00000 0.00000 0.05222 0.00000 0.05222 0.00000 0.00000 -0.10443
+
+ACCEPTOR OH2
+ PATCH FIRST NONE LAST NONE
+
+read para card !append
+* Drude polarizable FF parameters
+*
+
+BONDS
+!atom type      Kb       b0
+!============================================
+!
+ODW      LPDW       0.00      0.24034492 ! SWM4, SWM4-NDP water, Guillaume 2005
+X        DRUD     500.00      0.000 ! DO NOT COMMENT. Essential for use of Drudes in c41b1. Bug...
+ODW      HDW      450.00      0.9572 ! SWM4, SWM4-NDP water, Guillaume 2005
+ODW      DOH2     500.00      0.0000 ! SWM4, SWM4-NDP water, Guillaume 2005
+HDW      HDW        0.00      1.5139 ! SWM4 and SWM6 water models
+
+ANGLES
+!atom types     Ktheta  Theta0   Kub     S0
+!==================================================
+HDW      ODW      HDW       55.000   104.52 ! SWM4-NDP water Guillaume 2005
+
+DIHEDRALS
+
+IMPROPER
+
+
+NONBONDED nbxmod  5 atom vatom cdiel vdistance switch vswitch -
+cutnb 16.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5
+
+! SWM4
+HDW      0.0   -0.0000     0.0000 ! SWM4-NDP water, GL, 2005, also for SWM6-NDP
+ODW      0.0   -0.21094325 1.78692899 ! SWM4, SWM4-NDP water, GL, 2005
+DRUD     0.0   -0.0000    0.0000 ! Drudes
+DOH2     0.0   -0.0000    0.0000 ! water Drude
+LPDW     0.0   -0.0000    0.0000 ! Lone pairs on water: Note overlap of SWM4 and SWM6 LPs
+
+END
+RETURN

@@ -1,0 +1,32 @@
+stages:
+  - cudatest
+
+cudatest:
+  stage: cudatest
+  tags:
+  - cuda
+  script:
+  - mkdir -p build_cuda
+  - cd build_cuda
+  - rm -rf *
+  - export PYTHONPATH=`pwd`/src
+  - export PATH=/v/apps/cmake/3.7.1-centos7/bin:$PATH
+  - export INTELDIR=/v/apps/intel/composer_xe_2017/compilers_and_libraries_2017.1.132/linux
+  - export CUDA_HOME=/v/apps/cuda/cuda-7.5.18
+  - export OPENMM_CUDA_COMPILER=${CUDA_HOME}/bin/nvcc
+  - export PATH=${CUDA_HOME}/bin:$PATH
+  - export LM_LICENSE_FILE=/v/apps/intel/licenses/2017_l_PK5BF7J3.lic
+  - export LD_LIBRARY_PATH=${CUDA_HOME}/lib:${CUDA_HOME}/lib64::${LD_LIBRARY_PATH}
+  - export INSTALLDIR=`pwd`/testinstall
+  - export OPENMM_LIB_PATH=${INSTALLDIR}/lib
+  - export OPENMM_PLUGIN_DIR=${OPENMM_LIB_PATH}/plugins
+  - export LD_LIBRARY_PATH=${OPENMM_LIB_PATH}:$LD_LIBRARY_PATH
+  - cp -R /u/andysim/bin/openmm_gitlab_mpid $INSTALLDIR
+  - source ${INTELDIR}/bin/iccvars.sh intel64
+  - which python
+  - which nvcc
+  - CXX=icpc CC=icc CXXFLAGS='-std=c++11' cmake -DPYTHON_EXECUTABLE=`which python` -DCMAKE_PREFIX_PATH=$INSTALLDIR -DOPENMM_DIR=$INSTALLDIR ..
+  - make -j2
+  - ctest -VV
+  - cd ..
+  - rm -rf build_cuda

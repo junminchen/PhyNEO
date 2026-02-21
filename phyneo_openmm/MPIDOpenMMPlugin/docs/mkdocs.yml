@@ -1,0 +1,22 @@
+site_name: MPIDOpenMMPlugin Documentation and Notes
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+    - Home: index.md
+    - Installation: building.md
+    - Running the Code: running.md
+    - Technical Details: technical.md
+    - Contributing: contributing.md
+    - License: license.md
+    - Authors: authors.md
+
+theme: readthedocs
+
+docs_dir: source

@@ -1,0 +1,76 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="OW" class="OW" element="O" mass="15.999"/>
+  <Type name="HW" class="HW" element="H" mass="1.008"/>
+  <Type name="CT3" class="CT3" element="C" mass="12.011"/>
+  <Type name="HA3" class="HA3" element="H" mass="1.008"/>
+ </AtomTypes>
+ <Residues>
+  <Residue name="HOH">
+   <Atom name="H1" type="HW"/>
+   <Atom name="H2" type="HW"/>
+   <Atom name="O" type="OW"/>
+   <Bond atomName1="O" atomName2="H1"/>
+   <Bond atomName1="O" atomName2="H2"/>
+ </Residue>
+ <Residue name="ETHA">
+    <!-- These charges are set to zero to allow the MPIDForce to process the Coulomb terms -->
+   <Atom charge="0.0" name="H13" type="HA3"/>
+   <Atom charge="0.0" name="C1" type="CT3"/>
+   <Atom charge="0.0" name="C2" type="CT3"/>
+   <Atom charge="0.0" name="H21" type="HA3"/>
+   <Atom charge="0.0" name="H22" type="HA3"/>
+   <Atom charge="0.0" name="H23" type="HA3"/>
+   <Atom charge="0.0" name="H11" type="HA3"/>
+   <Atom charge="0.0" name="H12" type="HA3"/>
+   <Bond atomName1="C1" atomName2="H11"/>
+   <Bond atomName1="C1" atomName2="H12"/>
+   <Bond atomName1="C1" atomName2="H13"/>
+   <Bond atomName1="C1" atomName2="C2"/>
+   <Bond atomName1="C2" atomName2="H21"/>
+   <Bond atomName1="C2" atomName2="H22"/>
+   <Bond atomName1="C2" atomName2="H23"/>
+ </Residue>
+ </Residues>
+  <AmoebaUreyBradleyForce>
+    <UreyBradley d="0.21789999999999998" k="9426.552000000001" type1="HA3" type2="CT3" type3="CT3"/>
+  </AmoebaUreyBradleyForce>
+ <HarmonicBondForce>
+  <Bond class1="OW" class2="HW" length="0.09572" k="376560"/>
+    <Bond k="269449.6" length="0.1111" type1="HA3" type2="CT3"/>
+    <Bond k="186187.99999999997" length="0.15300000000000002" type1="CT3" type2="CT3"/>
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+    <Angle class1="HW" class2="OW" class3="HW" angle="1.82421813418" k="460.24"/>
+    <Angle angle="1.8919369091618534" k="297.064" type1="HA3" type2="CT3" type3="HA3"/>
+    <Angle angle="1.9216075064457567" k="313.8" type1="HA3" type2="CT3" type3="CT3"/>
+ </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.63806" periodicity1="3" phase1="0.0" type1="" type2="CT3" type3="CT3" type4=""/>
+  </PeriodicTorsionForce>
+ <NonbondedForce coulomb14scale="0.833333" lj14scale="0.5">
+    <Atom charge="0.0" type="OW"  sigma="0.31983264" epsilon="0.677808"/>
+    <Atom charge="0.0" type="HW"  sigma="1" epsilon="0"/>
+    <Atom charge="0.00" type="HA3" sigma="0.23876085646161097" epsilon="0.100416"/>
+    <Atom charge="0.0" type="CT3" sigma="0.3634866770012585" epsilon="0.32635200000000003"/>
+ </NonbondedForce>
+ <MPIDForce coulomb14scale="1.0" >
+   <Multipole type="OW" c0="-0.834" />
+   <Multipole type="HW" c0="0.417" />
+   <Multipole type="HA3" c0="0.09" />
+   <Multipole type="CT3" c0="-0.27" />
+   <Polarize type="OW" polarizabilityXX="0.00088" polarizabilityYY="0.00088" polarizabilityZZ="0.00088" thole="8.0"/>
+   <Polarize type="CT3" polarizabilityXX="0.00068" polarizabilityYY="0.00068" polarizabilityZZ="0.00068" thole="8.0"/>
+ </MPIDForce>
+</ForceField>
+
+<!--  Dump unwanted parameters here!
+ <MPIDForce coulomb14scale="0.5" >
+   <Multipole type="OW" c0="-0.834" />
+   <Multipole type="HW" c0="0.417" />
+   <Multipole type="HA3" c0="0.09" />
+   <Multipole type="CT3" c0="-0.27" />
+   <Polarize type="OW" polarizabilityXX="0.00088" polarizabilityYY="0.00088" polarizabilityZZ="0.00088" thole="8.0"/>
+   <Polarize type="CT3" polarizabilityXX="0.00068" polarizabilityYY="0.00068" polarizabilityZZ="0.00068" thole="8.0"/>
+ </MPIDForce>
+-->
