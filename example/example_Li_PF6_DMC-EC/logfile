@@ -20,7 +20,7 @@
 # Simulation information:
 #           Machine Name: am3-peichenzhong-group-MS-7E47
 #      Working Directory: /home/am3-peichenzhong-group/Documents/project/PhyNEO/example/example_Li_PF6_DMC-EC
-#          Date and Time: 2026-01-15 14:35:45
+#          Date and Time: 2026-02-13 13:08:22
 
  @system: Initializing system object 
  @simulation: Initializing simulation object 
@@ -32,25 +32,20 @@
  @init_file: Initializing from file init_init.pdb. Dimension: length, units: automatic, cell_units: automatic
  @initializer: Resampling velocities at temperature 298.15 kelvin
  @system.bind: Binding the forces 
-Traceback (most recent call last):
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/lib/python3.11/site-packages/ipi/interfaces/sockets.py", line 659, in open
-    self.server.bind(self.sockets_prefix + self.address)
-OSError: [Errno 98] Address already in use
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/bin/i-pi", line 115, in <module>
-    main(args[0], options)
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/bin/i-pi", line 61, in main
-    simulation = Simulation.load_from_xml(open(fn_input), request_banner=True, custom_verbosity=options.verbosity, sockets_prefix=options.sockets_prefix)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/lib/python3.11/site-packages/ipi/engine/simulation.py", line 117, in load_from_xml
-    simulation.bind(read_only)
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/lib/python3.11/site-packages/ipi/engine/simulation.py", line 221, in bind
-    f.start()
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/lib/python3.11/site-packages/ipi/engine/forcefields.py", line 362, in start
-    self.socket.open()
-  File "/home/am3-peichenzhong-group/miniconda3/envs/phyneo/lib/python3.11/site-packages/ipi/interfaces/sockets.py", line 666, in open
-    raise RuntimeError(
-RuntimeError: Error opening unix socket. Check if a file /tmp/ipi_unix_dmff exists, and remove it if unused.
+ @ForceField (dmff): Starting the polling thread main loop.
+ @interfacesocket.pool_update:   Client asked for connection from . Now hand-shaking.
+ !W!  @SOCKET: Couldn't find readable socket in 60s, will try again
+ !W!  @SOCKET: Couldn't find readable socket in 60s, will try again
+ @interfacesocket.pool_update:   Handshaking was successful. Added to the client list.
+ @simulation.run: Average timings at MD step       0. t/step: 1.48135e-01
+ @simulation.run: Average timings at MD step    1000. t/step: 1.72068e-01
+ @simulation.run: Average timings at MD step    2000. t/step: 2.10680e-01
+ @simulation.run: Average timings at MD step    3000. t/step: 1.50202e-01
+ @simulation.run: Average timings at MD step    4000. t/step: 1.47725e-01
+ @simulation.run: Average timings at MD step    5000. t/step: 1.47510e-01
+ !W!  @SOFTEXIT:   Kill signal. Trying to make a clean exit.
+ @softexit.trigger:  SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 131641060091712)>  @SOFTEXIT: Kill signal received
+ !W! Soft exit has been requested with message: ' @SOFTEXIT: Kill signal received Restartable as is: YES.'. Cleaning up.
+ @softexit.trigger:  SOFTEXIT CALLED FROM THREAD <Thread(ThreadPoolExecutor-1_0, started 131638630389440)>  @ FORCES : cannot return so will die off here
+ @interfacesocket.close: Shutting down the driver interface.
+ !W!  @SOCKET:   Inconsistent client state in dispatch thread! (III)

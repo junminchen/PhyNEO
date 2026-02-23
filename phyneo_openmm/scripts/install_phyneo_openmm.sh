@@ -136,7 +136,7 @@ install_openmm_conda() {
     "numpy"
   )
   if [[ "${MPID_MODE}" == "cuda" ]]; then
-    pkgs+=("cudatoolkit")
+    pkgs+=("cuda-nvcc")
   fi
 
   if env_exists "${ENV_NAME}"; then
@@ -146,7 +146,7 @@ install_openmm_conda() {
     conda create -y -n "${ENV_NAME}" -c conda-forge "${pkgs[@]}"
   fi
 
-  OPENMM_PREFIX="$(conda run -n "${ENV_NAME}" python -c 'import os; print(os.environ["CONDA_PREFIX"])' | tail -n 1)"
+  OPENMM_PREFIX="$(conda env list | grep -w "${ENV_NAME}" | head -n 1 | awk '{print $NF}')"
   if [[ -z "${PYTHON_EXEC}" ]]; then
     PYTHON_EXEC="${OPENMM_PREFIX}/bin/python"
   fi
@@ -206,7 +206,8 @@ build_mpid_plugin() {
     -DOPENMM_DIR="${OPENMM_PREFIX}" \
     -DMPID_BUILD_CUDA_LIB="${cuda_flag}" \
     -DMPID_BUILD_PYTHON_WRAPPERS=ON \
-    -DPYTHON_EXECUTABLE="${PYTHON_EXEC}"
+    -DPYTHON_EXECUTABLE="${PYTHON_EXEC}" \
+    -DSWIG_EXECUTABLE="${OPENMM_PREFIX}/bin/swig"
 
   cmake --build "${build_dir}" -j "$(get_nproc)"
   cmake --install "${build_dir}"
@@ -215,7 +216,7 @@ build_mpid_plugin() {
 
 run_smoke_check() {
   local plugin_dir="${OPENMM_PREFIX}/lib/plugins"
-  local run_prefix=(env "OPENMM_PLUGIN_DIR=${plugin_dir}" "PYTHONPATH=${REPO_ROOT}:${PYTHONPATH:-}" "${PYTHON_EXEC}")
+  local run_prefix=(env "OPENMM_PLUGIN_DIR=${plugin_dir}" "${PYTHON_EXEC}")
 
   echo "[INFO] Smoke check 1/3: import openmm + mpidplugin"
   "${run_prefix[@]}" - <<'PY'
@@ -228,17 +229,21 @@ print('mpidplugin import ok')
 PY
 
   echo "[INFO] Smoke check 2/3: import phyneo_openmm toolkit adapter"
-  "${run_prefix[@]}" - <<'PY'
+  "${run_prefix[@]}" - <<PY
+import sys
+sys.path.append('${REPO_ROOT}')
 from phyneo_openmm.toolkit.protocol import create_protocol_from_config
 print('toolkit import ok:', callable(create_protocol_from_config))
 PY
 
   echo "[INFO] Smoke check 3/3: load_phyneo_system on example PDB/XML"
-  "${run_prefix[@]}" - <<'PY'
+  "${run_prefix[@]}" - <<PY
+import sys
+sys.path.append('${REPO_ROOT}')
 from pathlib import Path
 from phyneo_openmm.phyneo_protocol import load_phyneo_system
 
-root = Path('/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config')
+root = Path('${ROOT_DIR}/example/run_config')
 pdb = root / 'bulk_ec_packmol.pdb'
 xml = root / 'caff_5_mpid_slater_bond_hcp.xml'
 if not xml.exists():

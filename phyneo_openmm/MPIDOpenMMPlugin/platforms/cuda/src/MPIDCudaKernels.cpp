@@ -443,13 +443,13 @@ void CudaCalcMPIDForceKernel::initialize(const System& system, const MPIDForce& 
             nb.setEwaldErrorTolerance(force.getEwaldErrorTolerance());
             nb.setCutoffDistance(force.getCutoffDistance());
             NonbondedForceImpl::calcPMEParameters(system, nb, alpha, gridSizeX, gridSizeY, gridSizeZ, false);
-            gridSizeX = CudaFFT3D::findLegalDimension(gridSizeX);
-            gridSizeY = CudaFFT3D::findLegalDimension(gridSizeY);
-            gridSizeZ = CudaFFT3D::findLegalDimension(gridSizeZ);
+            gridSizeX = cu.findLegalFFTDimension(gridSizeX);
+            gridSizeY = cu.findLegalFFTDimension(gridSizeY);
+            gridSizeZ = cu.findLegalFFTDimension(gridSizeZ);
         } else {
-            gridSizeX = CudaFFT3D::findLegalDimension(nx);
-            gridSizeY = CudaFFT3D::findLegalDimension(ny);
-            gridSizeZ = CudaFFT3D::findLegalDimension(nz);
+            gridSizeX = cu.findLegalFFTDimension(nx);
+            gridSizeY = cu.findLegalFFTDimension(ny);
+            gridSizeZ = cu.findLegalFFTDimension(nz);
         }
         defines["EWALD_ALPHA"] = cu.doubleToString(alpha);
         defines["SQRT_PI"] = cu.doubleToString(sqrt(M_PI));
