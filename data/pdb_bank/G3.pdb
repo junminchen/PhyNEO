@@ -1,0 +1,65 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     1 CREATED WITH OPENMM 7.4.1, 2021-03-03
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+HETATM    1  C00 TER 1   1      -3.658   7.749  -2.797  1.00  0.00      A    C  
+HETATM    2  H01 TER 1   1      -4.693   7.461  -2.556  1.00  0.00      A    H  
+HETATM    3  H02 TER 1   1      -2.999   6.880  -2.618  1.00  0.00      A    H  
+HETATM    4  O03 TER 1   1      -3.342   8.827  -1.908  1.00  0.00      A    O  
+HETATM    5  C04 TER 1   1      -1.940   8.879  -1.635  1.00  0.00      A    C  
+HETATM    6  H05 TER 1   1      -1.343   8.998  -2.557  1.00  0.00      A    H  
+HETATM    7  H06 TER 1   1      -1.775   9.749  -0.987  1.00  0.00      A    H  
+HETATM    8  H07 TER 1   1      -1.613   7.960  -1.115  1.00  0.00      A    H  
+HETATM    9  C00 INT 1   2      -4.443   6.251  -5.277  1.00  0.00      A    C  
+HETATM   10  H01 INT 1   2      -5.211   6.706  -5.934  1.00  0.00      A    H  
+HETATM   11  H02 INT 1   2      -4.910   6.078  -4.292  1.00  0.00      A    H  
+HETATM   12  O03 INT 1   2      -3.307   7.105  -5.160  1.00  0.00      A    O  
+HETATM   13  C04 INT 1   2      -3.521   8.201  -4.262  1.00  0.00      A    C  
+HETATM   14  H05 INT 1   2      -2.630   8.836  -4.362  1.00  0.00      A    H  
+HETATM   15  H06 INT 1   2      -4.402   8.795  -4.571  1.00  0.00      A    H  
+HETATM   16  C00 INT 1   3      -3.334   3.791  -3.887  1.00  0.00      A    C  
+HETATM   17  H01 INT 1   3      -3.856   2.824  -4.039  1.00  0.00      A    H  
+HETATM   18  H02 INT 1   3      -4.019   4.477  -3.359  1.00  0.00      A    H  
+HETATM   19  O03 INT 1   3      -2.919   4.325  -5.146  1.00  0.00      A    O  
+HETATM   20  C04 INT 1   3      -3.974   4.937  -5.890  1.00  0.00      A    C  
+HETATM   21  H05 INT 1   3      -3.552   5.127  -6.888  1.00  0.00      A    H  
+HETATM   22  H06 INT 1   3      -4.840   4.253  -5.992  1.00  0.00      A    H  
+HETATM   23  C00 TER 1   4      -2.102   3.584  -3.019  1.00  0.00      A    C  
+HETATM   24  H01 TER 1   4      -1.332   3.032  -3.592  1.00  0.00      A    H  
+HETATM   25  H02 TER 1   4      -2.389   2.980  -2.142  1.00  0.00      A    H  
+HETATM   26  O03 TER 1   4      -1.564   4.799  -2.497  1.00  0.00      A    O  
+HETATM   27  C04 TER 1   4      -0.714   5.494  -3.426  1.00  0.00      A    C  
+HETATM   28  H05 TER 1   4      -0.227   6.293  -2.849  1.00  0.00      A    H  
+HETATM   29  H06 TER 1   4       0.062   4.812  -3.819  1.00  0.00      A    H  
+HETATM   30  H07 TER 1   4      -1.287   5.918  -4.262  1.00  0.00      A    H  
+CONECT    1    2    3    4   13
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1    5
+CONECT    5    4    6    7    8
+CONECT    6    5
+CONECT    7    5
+CONECT    8    5
+CONECT    9   10   11   12   20
+CONECT   10    9
+CONECT   11    9
+CONECT   12    9   13
+CONECT   13    1   12   14   15
+CONECT   14   13
+CONECT   15   13
+CONECT   16   17   18   19   23
+CONECT   17   16
+CONECT   18   16
+CONECT   19   16   20
+CONECT   20    9   19   21   22
+CONECT   21   20
+CONECT   22   20
+CONECT   23   16   24   25   26
+CONECT   24   23
+CONECT   25   23
+CONECT   26   23   27
+CONECT   27   26   28   29   30
+CONECT   28   27
+CONECT   29   27
+CONECT   30   27
+END

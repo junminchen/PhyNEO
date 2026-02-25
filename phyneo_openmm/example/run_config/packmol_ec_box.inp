@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output ec_box_35A.pdb
+
+structure ec_monomer.pdb
+  number 381
+  inside box 1.0 1.0 1.0 34.0 34.0 34.0
+end structure

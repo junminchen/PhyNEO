@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output output/ps_box_35A.pdb
+
+structure /home/am3-peichenzhong-group/Documents/project/PhyNEO/data/pdb_bank/PS.pdb
+  number 299
+  inside box 1.0 1.0 1.0 34.0 34.0 34.0
+end structure

@@ -1,0 +1,3 @@
+# Step | Time(ps) | Epot(eV) | Ekin(eV) | Temp(K) | Etot(eV) | Density(g/cm³)
+Step:      0 | Time: 0.0000 ps | Epot = -0.1345 eV | Ekin = 0.0386 eV | T = 298 K | Etot = -0.0960 eV | Density = 1.0268 g/cm³
+Step:    100 | Time: 0.1000 ps | Epot = 2.9687 eV | Ekin = 333.9267 eV | T = 2583373 K | Etot = 336.8953 eV | Density = 0.0165 g/cm³

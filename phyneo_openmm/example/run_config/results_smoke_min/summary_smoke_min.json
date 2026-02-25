@@ -1,0 +1,47 @@
+{
+  "validated": {
+    "pdb_path": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/bulk_ec_packmol.pdb",
+    "xml_path": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/caff_5_mpid_slater_bond_hcp.xml",
+    "nonbonded_method": "NoCutoff",
+    "platform": "Reference",
+    "m_scales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "p_scales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "d_scales": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "mpid_scales_applied": true,
+  "outputs": [
+    {
+      "stage": "npt",
+      "final_pdb": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/npt_final.pdb",
+      "traj": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/npt.dcd",
+      "state_csv": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/npt_state.csv",
+      "steps": 100000
+    },
+    {
+      "stage": "nvt",
+      "final_pdb": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/nvt_final.pdb",
+      "traj": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/nvt.dcd",
+      "state_csv": "/Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/phyneo_openmm/example/run_config/results_smoke_min/nvt_state.csv",
+      "steps": 2
+    }
+  ],
+  "post_process": {}
+}

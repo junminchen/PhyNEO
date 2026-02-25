@@ -1,0 +1,7 @@
+MPIDPluginWrapper.cpp
+mpidplugin.py
+setup.py
+mpidplugin.egg-info/PKG-INFO
+mpidplugin.egg-info/SOURCES.txt
+mpidplugin.egg-info/dependency_links.txt
+mpidplugin.egg-info/top_level.txt

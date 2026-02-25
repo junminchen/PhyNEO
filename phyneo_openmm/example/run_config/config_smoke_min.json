@@ -1,0 +1,28 @@
+{
+  "protocol": {"type": "transport"},
+  "input": {
+    "pdb": "./bulk_ec_packmol.pdb",
+    "xml": "./caff_5_mpid_slater_bond_hcp.xml"
+  },
+  "runtime": {
+    "platform": "Reference",
+    "nonbonded_method": "NoCutoff",
+    "constraints": "none",
+    "temperature_k": 300.0,
+    "timestep_fs": 1.0,
+    "friction_ps": 1.0,
+    "mpid_scale_exclusions": true,
+    "m_scales": [0.0, 0.0, 0.0, 0.0, 0.0],
+    "p_scales": [0.0, 0.0, 0.0, 0.0, 0.0],
+    "d_scales": [1.0, 1.0, 1.0, 1.0, 1.0]
+  },
+  "output": {
+    "work_dir": "./results_smoke_min",
+    "summary_json": "summary_smoke_min.json"
+  },
+  "stages": {
+    "npt": {"enabled": true, "steps": 100000, "pressure_atm": 1.0, "minimize": false, "traj_interval": 500, "state_interval": 500},
+    "nvt": {"enabled": true, "steps": 2, "minimize": false, "traj_interval": 1, "state_interval": 1},
+    "noneq": {"enabled": false, "steps": 2, "minimize": false, "traj_interval": 0, "state_interval": 0}
+  }
+}
