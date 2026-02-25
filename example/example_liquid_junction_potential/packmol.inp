@@ -1,0 +1,84 @@
+# 这是一个三明治结构的 Packmol 输入文件
+# 结构: [Ref: 0-80] | [Salt Bridge: 80-160] | [Test: 160-240]
+# 单位: Angstrom (A)
+
+tolerance 2.0
+filetype pdb
+output sandwich_box.pdb
+
+# ==========================================================
+# 区域 1: Reference Electrolyte (1 M LiFSI in DEC)
+# 位置: Z 从 0 到 80
+# ==========================================================
+
+# Li+ 离子
+structure pdb_bank/Li.pdb
+  number 77 
+  inside box 0. 0. 0. 50. 50. 78.
+end structure
+
+# FSI- 阴离子
+structure pdb_bank/FSI.pdb
+  number 77
+  inside box 0. 0. 0. 50. 50. 78.
+end structure
+
+# DEC 溶剂
+structure pdb_bank/DEC.pdb
+  number 630
+  inside box 0. 0. 2. 50. 50. 78.
+end structure
+
+
+# ==========================================================
+# 区域 2: Salt Bridge (3 M LiTFSI in DOL-DME 1:1 vol)
+# 位置: Z 从 80 到 160
+# ==========================================================
+
+# Li+ 离子
+structure pdb_bank/Li.pdb
+  number 230
+  inside box 0. 0. 82. 50. 50. 158.
+end structure
+
+# TFSI- 阴离子
+structure pdb_bank/TFSI.pdb
+  number 230
+  inside box 0. 0. 82. 50. 50. 158.
+end structure
+
+# DOL 溶剂
+structure pdb_bank/DOL.pdb
+  number 550
+  inside box 0. 0. 82. 50. 50. 158.
+end structure
+
+# DME 溶剂
+structure pdb_bank/DME.pdb
+  number 450
+  inside box 0. 0. 82. 50. 50. 158.
+end structure
+
+
+# ==========================================================
+# 区域 3: Test Electrolyte (1 M LiFSI in DME)
+# 位置: Z 从 160 到 240
+# ==========================================================
+
+# Li+ 离子
+structure pdb_bank/Li.pdb
+  number 77
+  inside box 0. 0. 162. 50. 50. 238.
+end structure
+
+# FSI- 阴离子
+structure pdb_bank/FSI.pdb
+  number 77
+  inside box 0. 0. 162. 50. 50. 238.
+end structure
+
+# DME 溶剂
+structure pdb_bank/DME.pdb
+  number 750
+  inside box 0. 0. 162. 50. 50. 238.
+end structure

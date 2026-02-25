@@ -30,7 +30,9 @@
             <Bond from="4" to="9"/>      
         </Residue>    
     </Residues>  
-    <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">    
+    <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" 
+                            pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" 
+                            dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">    
         <Atom type="1" kz="2" kx="" c0="-0.61622200" dX="0.00053395" dY="-0.00015248" dZ="-0.00517205" qXX="-0.00006718" qXY="0.00004688" qYY="-0.00009788" qXZ="-0.00000193" qYZ="0.00000070" qZZ="0.00016506"/>    
         <Atom type="2" kz="-3" kx="3" c0="0.92986133" dX="-0.00000679" dY="-0.00000679" dZ="0.00165723" qXX="0.00002872" qXY="0.00000352" qYY="-0.00002162" qXZ="-0.00000021" qYZ="-0.00000067" qZZ="-0.00000710"/>    
         <Atom type="3" kz="2" kx="4" c0="-0.37627583" dX="0.00668092" dY="0.00013284" dZ="-0.00100937" qXX="0.00005585" qXY="-0.00000313" qYY="-0.00015588" qXZ="-0.00017070" qYZ="0.00000058" qZZ="0.00010003"/>    
