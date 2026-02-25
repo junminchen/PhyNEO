@@ -1,0 +1,10 @@
+<ForceField>
+ <Residues>
+  <Residue name="SOD">
+   <Atom name="NA" type="SOD-Na"/>
+  </Residue>
+  <Residue name="CLA">
+   <Atom name="CL" type="CLA-Cl"/>
+  </Residue>
+ </Residues>
+</ForceField>

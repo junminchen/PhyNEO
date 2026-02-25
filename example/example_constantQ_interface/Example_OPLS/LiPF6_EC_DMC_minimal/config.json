@@ -1,0 +1,30 @@
+{
+  "composition": {
+    "Li": 64,
+    "PF6": 64,
+    "EC": 256,
+    "DMC": 512
+  },
+  "box_angstrom": [55.0, 55.0, 55.0],
+  "packmol_tolerance_angstrom": 2.0,
+  "forcefield_xml": [
+    "../opls_salt.xml",
+    "../opls_solvent.xml"
+  ],
+  "openmm": {
+    "nonbonded_method": "PME",
+    "nonbonded_cutoff_nm": 1.0,
+    "constraints": "HBonds",
+    "rigid_water": false,
+    "ewald_error_tolerance": 0.0005
+  },
+  "md": {
+    "temperature_k": 298.15,
+    "pressure_bar": 1.0,
+    "timestep_fs": 2.0,
+    "friction_ps": 1.0,
+    "equil_steps": 50000,
+    "prod_steps": 200000,
+    "report_interval": 1000
+  }
+}

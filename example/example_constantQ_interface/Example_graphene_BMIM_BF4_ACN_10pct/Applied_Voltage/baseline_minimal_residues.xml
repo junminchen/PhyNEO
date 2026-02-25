@@ -1,0 +1,8 @@
+<ForceField>
+ <Residues>
+  <Residue name="CAT"><Atom name="CA" type="E-CAT"/></Residue>
+  <Residue name="ANO"><Atom name="AN" type="E-ANO"/></Residue>
+  <Residue name="SOD"><Atom name="NA" type="I-NA"/></Residue>
+  <Residue name="CLA"><Atom name="CL" type="I-CL"/></Residue>
+ </Residues>
+</ForceField>

@@ -1,0 +1,10 @@
+<ForceField>
+  <AtomTypes>
+    <Type name="E-CAT" class="E-CAT" element="C" mass="0.0"/>
+    <Type name="E-ANO" class="E-ANO" element="N" mass="0.0"/>
+  </AtomTypes>
+  <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+    <Atom class="E-CAT" charge="0.0" sigma="0.34" epsilon="0.10"/>
+    <Atom class="E-ANO" charge="0.0" sigma="0.34" epsilon="0.10"/>
+  </NonbondedForce>
+</ForceField>

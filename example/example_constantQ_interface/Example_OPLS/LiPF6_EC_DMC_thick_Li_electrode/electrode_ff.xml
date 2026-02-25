@@ -1,0 +1,10 @@
+<ForceField>
+  <AtomTypes>
+    <Type name="E-LI-CAT" class="E-LI-CAT" element="Li" mass="6.94"/>
+    <Type name="E-LI-ANO" class="E-LI-ANO" element="Li" mass="6.94"/>
+  </AtomTypes>
+  <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+    <Atom class="E-LI-CAT" charge="0.0" sigma="0.250" epsilon="0.40"/>
+    <Atom class="E-LI-ANO" charge="0.0" sigma="0.250" epsilon="0.40"/>
+  </NonbondedForce>
+</ForceField>

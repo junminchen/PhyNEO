@@ -1,0 +1,24 @@
+# Electrolyte-only packing in liquid slab
+tolerance 2.0
+filetype pdb
+output electrolyte_start.pdb
+
+structure ../pdb_bank/Li.pdb
+  number 64
+  inside box 0.000 0.000 18.000 55.000 55.000 72.000
+end structure
+
+structure ../pdb_bank/PF6.pdb
+  number 64
+  inside box 0.000 0.000 18.000 55.000 55.000 72.000
+end structure
+
+structure ../pdb_bank/EC.pdb
+  number 256
+  inside box 0.000 0.000 18.000 55.000 55.000 72.000
+end structure
+
+structure ../pdb_bank/DMC.pdb
+  number 512
+  inside box 0.000 0.000 18.000 55.000 55.000 72.000
+end structure

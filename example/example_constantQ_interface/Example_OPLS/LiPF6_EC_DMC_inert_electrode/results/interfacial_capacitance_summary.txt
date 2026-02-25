@@ -1,0 +1,19 @@
+Interfacial capacitance summary
+definition: C_int = |Q_electrode|/(A*DeltaV)
+samples_used: 29
+step_min: 1000
+step_max: 15000
+area_A2: 3025.000000
+voltage_V: 2.000000
+Q_cath_mean_e: 2.5126477930
+Q_anode_mean_e: -2.5638477805
+Q_total_mean_e: -0.0511999875
+C_cathode_F_per_m2: 0.0066381072
+C_anode_F_per_m2: 0.0067736964
+C_interfacial_avg_F_per_m2: 0.0067059018
+C_cathode_uF_per_cm2: 0.663811
+C_anode_uF_per_cm2: 0.677370
+C_interfacial_avg_uF_per_cm2: 0.670590
+C_interfacial_avg_block_std_uF_per_cm2: 0.013886
+blocks_used: 5
+note: Differential capacitance requires a voltage sweep (multiple DeltaV points).

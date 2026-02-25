@@ -1,0 +1,20 @@
+Interfacial distribution summary
+frames_used: 30
+blocks_used: 5
+z_cathode_A: 14.878113
+z_anode_A: 84.299385
+analysis_zmin_A: 15.878113
+analysis_zmax_A: 83.299385
+interface_width_A: 5.000000
+cathode_window_A: [15.878113, 20.878113)
+anode_window_A: [78.299385, 83.299385)
+adsorption_Li_cathode_1_per_nm2: 0.06721763
+adsorption_Li_anode_1_per_nm2: 0.00000000
+adsorption_PF6_cathode_1_per_nm2: 0.12341598
+adsorption_PF6_anode_1_per_nm2: 0.00000000
+adsorption_EC_cathode_1_per_nm2: 0.43636364
+adsorption_EC_anode_1_per_nm2: 0.00000000
+adsorption_DMC_cathode_1_per_nm2: 0.73608815
+adsorption_DMC_anode_1_per_nm2: 0.00110193
+charge_adsorption_cathode_e_per_nm2: -0.05619835
+charge_adsorption_anode_e_per_nm2: 0.00000000

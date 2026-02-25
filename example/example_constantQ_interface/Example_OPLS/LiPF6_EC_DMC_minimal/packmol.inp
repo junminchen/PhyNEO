@@ -1,0 +1,24 @@
+# Auto-generated from config.json
+tolerance 2.0
+filetype pdb
+output start.pdb
+
+structure ../pdb_bank/Li.pdb
+  number 64
+  inside box 0.0 0.0 0.0 55.0 55.0 55.0
+end structure
+
+structure ../pdb_bank/PF6.pdb
+  number 64
+  inside box 0.0 0.0 0.0 55.0 55.0 55.0
+end structure
+
+structure ../pdb_bank/EC.pdb
+  number 256
+  inside box 0.0 0.0 0.0 55.0 55.0 55.0
+end structure
+
+structure ../pdb_bank/DMC.pdb
+  number 512
+  inside box 0.0 0.0 0.0 55.0 55.0 55.0
+end structure

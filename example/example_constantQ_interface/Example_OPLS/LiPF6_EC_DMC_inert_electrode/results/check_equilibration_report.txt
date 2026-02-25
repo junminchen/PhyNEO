@@ -1,0 +1,23 @@
+Equilibration Check Report
+==========================
+bulk_log: /Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/example/example_constantQ_interface/Example_OPLS/LiPF6_EC_DMC_minimal/npt.log
+interface_log: /Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/example/example_constantQ_interface/Example_OPLS/LiPF6_EC_DMC_inert_electrode/npt_inert.log
+charge_log: /Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/example/example_constantQ_interface/Example_OPLS/LiPF6_EC_DMC_inert_electrode/electrode_charges.log
+distribution_csv: /Users/jeremychen/Desktop/Project/project_electrolyte/OpenMM_PhyNEO/PhyNEO/example/example_constantQ_interface/Example_OPLS/LiPF6_EC_DMC_inert_electrode/results/interface_distribution.csv
+
+[PASS] Bulk density plateau
+  value: mean=1.2035 g/mL, cv=0.92%, drift=2.56%
+  criterion: cv<=3% and |drift|<=3%
+
+[WARN] Interface slab density vs bulk
+  value: interface=0.7837 g/mL, bulk=1.2035 g/mL, diff=34.88%
+  criterion: interface cv<=5%, |drift|<=5%, bulk diff<=5%
+
+[WARN] Mid-slab profile quality
+  value: mid total-density cv=6.37%, mean|rho_q|=0.1567 e/nm^3
+  criterion: mid cv<=10% and mean|rho_q|<=0.10 e/nm^3
+
+[PASS] CPM charge convergence
+  value: mean|Q_total|=0.0512 e, dQ_c=0.0187 e, dQ_a=0.0187 e
+  criterion: mean|Q_total|<=0.10 e and half-tail drift <=0.10 e
+

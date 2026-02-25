@@ -1,0 +1,141 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  N00 CN6 1   1       1.000   1.000   0.000  0.00  1.00      SYST N  
+ATOM      2  C01 CN6 1   1      -0.261   1.000   0.000  0.00  1.00      SYST C  
+ATOM      3  C02 CN6 1   1      -1.781   1.000   0.002  0.00  1.00      SYST C  
+ATOM      4  C03 CN6 1   1      -2.215   1.546  -1.333  0.00  1.00      SYST C  
+ATOM      5  O04 CN6 1   1      -3.623   1.761  -1.300  0.00  1.00      SYST O  
+ATOM      6  C05 CN6 1   1      -4.064   2.137  -2.608  0.00  1.00      SYST C  
+ATOM      7  C06 CN6 1   1      -5.587   2.076  -2.638  0.00  1.00      SYST C  
+ATOM      8  C07 CN6 1   1      -6.213   3.108  -1.622  0.00  1.00      SYST C  
+ATOM      9  O08 CN6 1   1      -5.851   4.502  -1.905  0.00  1.00      SYST O  
+ATOM     10  C09 CN6 1   1      -6.223   5.438  -0.841  0.00  1.00      SYST C  
+ATOM     11  C10 CN6 1   1      -5.590   6.908  -0.941  0.00  1.00      SYST C  
+ATOM     12  C11 CN6 1   1      -4.088   6.680  -0.921  0.00  1.00      SYST C  
+ATOM     13  N12 CN6 1   1      -2.841   6.492  -0.903  0.00  1.00      SYST N  
+ATOM     14  O13 CN6 1   1      -7.640   2.961  -1.546  0.00  1.00      SYST O  
+ATOM     15  C14 CN6 1   1      -8.166   1.635  -1.348  0.00  1.00      SYST C  
+ATOM     16  C15 CN6 1   1      -7.802   0.974  -0.020  0.00  1.00      SYST C  
+ATOM     17  C16 CN6 1   1      -8.465  -0.389   0.096  0.00  1.00      SYST C  
+ATOM     18  N17 CN6 1   1      -9.017  -1.519   0.191  0.00  1.00      SYST N  
+ATOM     19  C18 CN6 1   1      -6.202   2.038  -4.094  0.00  1.00      SYST C  
+ATOM     20  C19 CN6 1   1      -5.924   3.328  -4.867  0.00  1.00      SYST C  
+ATOM     21  O20 CN6 1   1      -6.670   3.285  -6.085  0.00  1.00      SYST O  
+ATOM     22  C21 CN6 1   1      -6.362   4.396  -6.928  0.00  1.00      SYST C  
+ATOM     23  C22 CN6 1   1      -7.115   4.246  -8.242  0.00  1.00      SYST C  
+ATOM     24  C23 CN6 1   1      -6.729   3.014  -8.942  0.00  1.00      SYST C  
+ATOM     25  N24 CN6 1   1      -6.471   2.016  -9.483  0.00  1.00      SYST N  
+ATOM     26  C25 CN6 1   1      -5.741   0.762  -4.920  0.00  1.00      SYST C  
+ATOM     27  O26 CN6 1   1      -4.362   0.987  -5.165  0.00  1.00      SYST O  
+ATOM     28  C27 CN6 1   1      -3.546   0.148  -5.953  0.00  1.00      SYST C  
+ATOM     29  C28 CN6 1   1      -3.694   0.336  -7.456  0.00  1.00      SYST C  
+ATOM     30  C29 CN6 1   1      -3.466   1.734  -7.846  0.00  1.00      SYST C  
+ATOM     31  N30 CN6 1   1      -3.283   2.840  -8.154  0.00  1.00      SYST N  
+ATOM     32  O31 CN6 1   1      -6.034  -0.353  -4.060  0.00  1.00      SYST O  
+ATOM     33  C32 CN6 1   1      -6.167  -1.641  -4.656  0.00  1.00      SYST C  
+ATOM     34  C33 CN6 1   1      -6.961  -2.544  -3.702  0.00  1.00      SYST C  
+ATOM     35  C34 CN6 1   1      -6.715  -3.964  -3.987  0.00  1.00      SYST C  
+ATOM     36  N35 CN6 1   1      -6.519  -5.090  -4.211  0.00  1.00      SYST N  
+ATOM     37  H36 CN6 1   1      -2.147   1.635   0.817  0.00  1.00      SYST H  
+ATOM     38  H37 CN6 1   1      -2.169  -0.010   0.170  0.00  1.00      SYST H  
+ATOM     39  H38 CN6 1   1      -1.948   0.824  -2.118  0.00  1.00      SYST H  
+ATOM     40  H39 CN6 1   1      -1.718   2.498  -1.556  0.00  1.00      SYST H  
+ATOM     41  H40 CN6 1   1      -3.629   1.394  -3.269  0.00  1.00      SYST H  
+ATOM     42  H41 CN6 1   1      -3.675   3.122  -2.874  0.00  1.00      SYST H  
+ATOM     43  H42 CN6 1   1      -5.818   1.095  -2.201  0.00  1.00      SYST H  
+ATOM     44  H43 CN6 1   1      -5.803   2.880  -0.630  0.00  1.00      SYST H  
+ATOM     45  H44 CN6 1   1      -5.918   5.000   0.118  0.00  1.00      SYST H  
+ATOM     46  H45 CN6 1   1      -7.313   5.529  -0.855  0.00  1.00      SYST H  
+ATOM     47  H46 CN6 1   1      -5.915   7.518  -0.095  0.00  1.00      SYST H  
+ATOM     48  H47 CN6 1   1      -5.879   7.369  -1.890  0.00  1.00      SYST H  
+ATOM     49  H48 CN6 1   1      -7.904   0.977  -2.183  0.00  1.00      SYST H  
+ATOM     50  H49 CN6 1   1      -9.255   1.738  -1.410  0.00  1.00      SYST H  
+ATOM     51  H50 CN6 1   1      -8.137   1.612   0.805  0.00  1.00      SYST H  
+ATOM     52  H51 CN6 1   1      -6.719   0.858   0.087  0.00  1.00      SYST H  
+ATOM     53  H52 CN6 1   1      -7.290   1.941  -3.997  0.00  1.00      SYST H  
+ATOM     54  H53 CN6 1   1      -4.857   3.439  -5.085  0.00  1.00      SYST H  
+ATOM     55  H54 CN6 1   1      -6.259   4.200  -4.300  0.00  1.00      SYST H  
+ATOM     56  H55 CN6 1   1      -5.282   4.450  -7.100  0.00  1.00      SYST H  
+ATOM     57  H56 CN6 1   1      -6.683   5.319  -6.428  0.00  1.00      SYST H  
+ATOM     58  H57 CN6 1   1      -6.916   5.116  -8.879  0.00  1.00      SYST H  
+ATOM     59  H58 CN6 1   1      -8.192   4.215  -8.046  0.00  1.00      SYST H  
+ATOM     60  H59 CN6 1   1      -6.303   0.691  -5.861  0.00  1.00      SYST H  
+ATOM     61  H60 CN6 1   1      -3.652  -0.897  -5.662  0.00  1.00      SYST H  
+ATOM     62  H61 CN6 1   1      -2.519   0.429  -5.683  0.00  1.00      SYST H  
+ATOM     63  H62 CN6 1   1      -4.682   0.006  -7.787  0.00  1.00      SYST H  
+ATOM     64  H63 CN6 1   1      -2.947  -0.296  -7.953  0.00  1.00      SYST H  
+ATOM     65  H64 CN6 1   1      -5.168  -2.059  -4.804  0.00  1.00      SYST H  
+ATOM     66  H65 CN6 1   1      -6.678  -1.586  -5.624  0.00  1.00      SYST H  
+ATOM     67  H66 CN6 1   1      -8.033  -2.329  -3.797  0.00  1.00      SYST H  
+ATOM     68  H67 CN6 1   1      -6.702  -2.324  -2.659  0.00  1.00      SYST H  
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2    4   37   38
+CONECT    4    3    5   39   40
+CONECT    5    4    6
+CONECT    6    5    7   41   42
+CONECT    7    6    8   19   43
+CONECT    8    7    9   14   44
+CONECT    9    8   10
+CONECT   10    9   11   45   46
+CONECT   11   10   12   47   48
+CONECT   12   11   13
+CONECT   13   12
+CONECT   14    8   15
+CONECT   15   14   16   49   50
+CONECT   16   15   17   51   52
+CONECT   17   16   18
+CONECT   18   17
+CONECT   19    7   20   26   53
+CONECT   20   19   21   54   55
+CONECT   21   20   22
+CONECT   22   21   23   56   57
+CONECT   23   22   24   58   59
+CONECT   24   23   25
+CONECT   25   24
+CONECT   26   19   27   32   60
+CONECT   27   26   28
+CONECT   28   27   29   61   62
+CONECT   29   28   30   63   64
+CONECT   30   29   31
+CONECT   31   30
+CONECT   32   26   33
+CONECT   33   32   34   65   66
+CONECT   34   33   35   67   68
+CONECT   35   34   36
+CONECT   36   35
+CONECT   37    3
+CONECT   38    3
+CONECT   39    4
+CONECT   40    4
+CONECT   41    6
+CONECT   42    6
+CONECT   43    7
+CONECT   44    8
+CONECT   45   10
+CONECT   46   10
+CONECT   47   11
+CONECT   48   11
+CONECT   49   15
+CONECT   50   15
+CONECT   51   16
+CONECT   52   16
+CONECT   53   19
+CONECT   54   20
+CONECT   55   20
+CONECT   56   22
+CONECT   57   22
+CONECT   58   23
+CONECT   59   23
+CONECT   60   26
+CONECT   61   28
+CONECT   62   28
+CONECT   63   29
+CONECT   64   29
+CONECT   65   33
+CONECT   66   33
+CONECT   67   34
+CONECT   68   34
+END

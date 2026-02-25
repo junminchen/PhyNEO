@@ -1,0 +1,10 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="SOD-Na" class="SOD-Na" element="Na" mass="22.98976928"/>
+  <Type name="CLA-Cl" class="CLA-Cl" element="Cl" mass="35.45"/>
+ </AtomTypes>
+ <NonbondedForce coulomb14scale="0.0" lj14scale="0.0">
+  <Atom class="SOD-Na" charge="1.0" sigma="0.2584" epsilon="0.4184"/>
+  <Atom class="CLA-Cl" charge="-1.0" sigma="0.4401" epsilon="0.4184"/>
+ </NonbondedForce>
+</ForceField>

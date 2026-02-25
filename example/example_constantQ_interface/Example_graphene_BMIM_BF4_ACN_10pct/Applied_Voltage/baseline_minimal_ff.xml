@@ -1,0 +1,14 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="E-CAT" class="E-CAT" element="C" mass="0.0"/>
+  <Type name="E-ANO" class="E-ANO" element="N" mass="0.0"/>
+  <Type name="I-NA" class="I-NA" element="Na" mass="22.98976928"/>
+  <Type name="I-CL" class="I-CL" element="Cl" mass="35.45"/>
+ </AtomTypes>
+ <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
+  <Atom class="E-CAT" charge="0.0" sigma="0.34" epsilon="0.10"/>
+  <Atom class="E-ANO" charge="0.0" sigma="0.34" epsilon="0.10"/>
+  <Atom class="I-NA" charge="1.0" sigma="0.2584" epsilon="0.4184"/>
+  <Atom class="I-CL" charge="-1.0" sigma="0.4401" epsilon="0.4184"/>
+ </NonbondedForce>
+</ForceField>

@@ -1,0 +1,309 @@
+<?xml version="1.0" ?>
+<ForceField>
+    <AtomTypes>
+        <Type name="Li+" class="Li+" element="Li" mass="6.941000"/>
+        <Type name="Na+" class="Na+" element="Na" mass="22.990000"/>
+        <Type name="B" class="B" element="B" mass="10.811000"/>
+        <Type name="FB" class="FB" element="F" mass="18.998000"/>
+        <Type name="2009il_B" class="2009il_B" element="B" mass="10.811000"/>
+        <Type name="opls_180" class="opls_180" element="O" mass="15.999400"/>
+        <Type name="opls_141" class="opls_141" element="C" mass="12.011000"/>
+        <Type name="opls_272" class="opls_272" element="O" mass="15.999400"/>
+        <Type name="2009il_FB" class="2009il_FB" element="F" mass="18.998000"/>
+        <Type name="NBT" class="NBT" element="N" mass="14.000000"/>
+        <Type name="SBT" class="SBT" element="S" mass="32.066000"/>
+        <Type name="OBT" class="OBT" element="O" mass="15.999000"/>
+        <Type name="FSI" class="FSI" element="F" mass="18.998000"/>
+        <Type name="FP1" class="FP1" element="F" mass="18.998000"/>
+        <Type name="FP3" class="FP3" element="F" mass="18.998000"/>
+        <Type name="FP4" class="FP4" element="F" mass="18.998000"/>
+        <Type name="FP5" class="FP5" element="F" mass="18.998000"/>
+        <Type name="FP6" class="FP6" element="F" mass="18.998000"/>
+        <Type name="FP7" class="FP7" element="F" mass="18.998000"/>
+        <Type name="FP" class="FP" element="F" mass="18.998000"/>
+        <Type name="P" class="P" element="P" mass="30.974000"/>
+        <Type name="CBT" class="CBT" element="C" mass="12.011000"/>
+        <Type name="F1" class="F1" element="F" mass="18.998000"/>
+    </AtomTypes>
+    <Residues>
+        <Residue name="LiA">
+            <Atom name="Li01" type="Li+" charge="1.000000"/>
+        </Residue>
+        <Residue name="NaA">
+            <Atom name="Na01" type="Na+" charge="1.000000"/>
+        </Residue>
+        <Residue name="BF4">
+            <Atom name="B01" type="B" charge="0.285700"/>
+            <Atom name="F02" type="FB" charge="-0.371700"/>
+            <Atom name="F03" type="FB" charge="-0.371800"/>
+            <Atom name="F04" type="FB" charge="-0.371500"/>
+            <Atom name="F05" type="FB" charge="-0.170700"/>
+            <Bond atomName1="B01" atomName2="F02"/>
+            <Bond atomName1="B01" atomName2="F03"/>
+            <Bond atomName1="B01" atomName2="F04"/>
+            <Bond atomName1="B01" atomName2="F05"/>
+        </Residue>
+        <Residue name="BOB">
+            <Atom name="B01" type="2009il_B" charge="0.266900"/>
+            <Atom name="O02" type="opls_180" charge="-0.279400"/>
+            <Atom name="C03" type="opls_141" charge="0.339600"/>
+            <Atom name="O04" type="opls_272" charge="-0.427000"/>
+            <Atom name="C05" type="opls_141" charge="0.339300"/>
+            <Atom name="O06" type="opls_272" charge="-0.426900"/>
+            <Atom name="O07" type="opls_180" charge="-0.279700"/>
+            <Atom name="O08" type="opls_180" charge="-0.278900"/>
+            <Atom name="C09" type="opls_141" charge="0.339500"/>
+            <Atom name="O0A" type="opls_272" charge="-0.427100"/>
+            <Atom name="C0B" type="opls_141" charge="0.339400"/>
+            <Atom name="O0C" type="opls_272" charge="-0.426800"/>
+            <Atom name="O0D" type="opls_180" charge="-0.078900"/>
+            <Bond atomName1="B01" atomName2="O02"/>
+            <Bond atomName1="B01" atomName2="O07"/>
+            <Bond atomName1="B01" atomName2="O08"/>
+            <Bond atomName1="B01" atomName2="O0D"/>
+            <Bond atomName1="C03" atomName2="O04"/>
+            <Bond atomName1="C05" atomName2="O06"/>
+            <Bond atomName1="C09" atomName2="O0A"/>
+            <Bond atomName1="C0B" atomName2="O0C"/>
+            <Bond atomName1="O02" atomName2="C03"/>
+            <Bond atomName1="C03" atomName2="C05"/>
+            <Bond atomName1="C05" atomName2="O07"/>
+            <Bond atomName1="O08" atomName2="C09"/>
+            <Bond atomName1="C09" atomName2="C0B"/>
+            <Bond atomName1="C0B" atomName2="O0D"/>
+        </Residue>
+        <Residue name="DFO">
+            <Atom name="F01" type="2009il_FB" charge="-0.342900"/>
+            <Atom name="B02" type="2009il_B" charge="0.276400"/>
+            <Atom name="O03" type="opls_180" charge="-0.284500"/>
+            <Atom name="C04" type="opls_141" charge="0.338400"/>
+            <Atom name="C05" type="opls_141" charge="0.338200"/>
+            <Atom name="O06" type="opls_180" charge="-0.284300"/>
+            <Atom name="O07" type="opls_272" charge="-0.449600"/>
+            <Atom name="O08" type="opls_272" charge="-0.449800"/>
+            <Atom name="F09" type="2009il_FB" charge="-0.141900"/>
+            <Bond atomName1="F01" atomName2="B02"/>
+            <Bond atomName1="B02" atomName2="F09"/>
+            <Bond atomName1="O03" atomName2="C04"/>
+            <Bond atomName1="C04" atomName2="C05"/>
+            <Bond atomName1="C05" atomName2="O06"/>
+            <Bond atomName1="B02" atomName2="O03"/>
+            <Bond atomName1="B02" atomName2="O06"/>
+            <Bond atomName1="C04" atomName2="O08"/>
+            <Bond atomName1="C05" atomName2="O07"/>
+        </Residue>
+        <Residue name="FSI">
+            <Atom name="N01" type="NBT" charge="-0.948700"/>
+            <Atom name="S02" type="SBT" charge="1.759500"/>
+            <Atom name="O03" type="OBT" charge="-0.767500"/>
+            <Atom name="O04" type="OBT" charge="-0.767900"/>
+            <Atom name="F05" type="FSI" charge="-0.345600"/>
+            <Atom name="S06" type="SBT" charge="1.737500"/>
+            <Atom name="O07" type="OBT" charge="-0.762400"/>
+            <Atom name="O08" type="OBT" charge="-0.769400"/>
+            <Atom name="F09" type="FSI" charge="-0.135500"/>
+            <Bond atomName1="N01" atomName2="S02"/>
+            <Bond atomName1="N01" atomName2="S06"/>
+            <Bond atomName1="S02" atomName2="O03"/>
+            <Bond atomName1="S02" atomName2="O04"/>
+            <Bond atomName1="S02" atomName2="F05"/>
+            <Bond atomName1="S06" atomName2="O07"/>
+            <Bond atomName1="S06" atomName2="O08"/>
+            <Bond atomName1="S06" atomName2="F09"/>
+        </Residue>
+        <Residue name="PF6">
+            <Atom name="F01" type="FP1" charge="-0.390000"/>
+            <Atom name="P02" type="P" charge="1.340000"/>
+            <Atom name="F03" type="FP3" charge="-0.390000"/>
+            <Atom name="F04" type="FP4" charge="-0.390000"/>
+            <Atom name="F05" type="FP5" charge="-0.390000"/>
+            <Atom name="F06" type="FP6" charge="-0.390000"/>
+            <Atom name="F07" type="FP7" charge="-0.390000"/>
+            <Bond atomName1="F01" atomName2="P02"/>
+            <Bond atomName1="P02" atomName2="F03"/>
+            <Bond atomName1="P02" atomName2="F04"/>
+            <Bond atomName1="P02" atomName2="F05"/>
+            <Bond atomName1="P02" atomName2="F06"/>
+            <Bond atomName1="P02" atomName2="F07"/>
+        </Residue>
+        <Residue name="TFS">
+            <Atom name="C01" type="CBT" charge="0.243600"/>
+            <Atom name="F02" type="F1" charge="-0.148600"/>
+            <Atom name="F03" type="F1" charge="-0.150900"/>
+            <Atom name="F04" type="F1" charge="-0.152100"/>
+            <Atom name="S05" type="SBT" charge="1.492100"/>
+            <Atom name="O06" type="OBT" charge="-0.707500"/>
+            <Atom name="O07" type="OBT" charge="-0.712000"/>
+            <Atom name="N08" type="NBT" charge="-0.929200"/>
+            <Atom name="S09" type="SBT" charge="1.492600"/>
+            <Atom name="O0A" type="OBT" charge="-0.707800"/>
+            <Atom name="O0B" type="OBT" charge="-0.710600"/>
+            <Atom name="C0C" type="CBT" charge="0.242700"/>
+            <Atom name="F0D" type="F1" charge="-0.149000"/>
+            <Atom name="F0E" type="F1" charge="-0.150900"/>
+            <Atom name="F0F" type="F1" charge="0.047600"/>
+            <Bond atomName1="C01" atomName2="F02"/>
+            <Bond atomName1="C01" atomName2="F03"/>
+            <Bond atomName1="C01" atomName2="F04"/>
+            <Bond atomName1="C01" atomName2="S05"/>
+            <Bond atomName1="S05" atomName2="O06"/>
+            <Bond atomName1="S05" atomName2="O07"/>
+            <Bond atomName1="S05" atomName2="N08"/>
+            <Bond atomName1="N08" atomName2="S09"/>
+            <Bond atomName1="S09" atomName2="O0A"/>
+            <Bond atomName1="S09" atomName2="O0B"/>
+            <Bond atomName1="S09" atomName2="C0C"/>
+            <Bond atomName1="C0C" atomName2="F0D"/>
+            <Bond atomName1="C0C" atomName2="F0E"/>
+            <Bond atomName1="C0C" atomName2="F0F"/>
+        </Residue>
+        <Residue name="DFP">
+            <Atom name="O01" type="opls_272" charge="-0.731900"/>
+            <Atom name="P02" type="P" charge="0.687100"/>
+            <Atom name="O03" type="opls_272" charge="-0.732000"/>
+            <Atom name="F04" type="FP" charge="-0.211700"/>
+            <Atom name="F05" type="FP" charge="-0.011500"/>
+            <Bond atomName1="O01" atomName2="P02"/>
+            <Bond atomName1="P02" atomName2="O03"/>
+            <Bond atomName1="P02" atomName2="F04"/>
+            <Bond atomName1="P02" atomName2="F05"/>
+        </Residue>
+    </Residues>
+    <CustomBondForce energy="kb*(r-b0)^2">
+        <PerBondParameter name="b0"/>
+        <PerBondParameter name="kb"/>
+        <Bond class1="FP1" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="FP3" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="FP4" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="FP5" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="FP6" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="FP7" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="B" class2="FB" b0="0.139000" kb="161750.000000"/>
+        <Bond class1="2009il_B" class2="opls_180" b0="0.146639" kb="1000000.000000"/>
+        <Bond class1="opls_141" class2="opls_272" b0="0.122002" kb="1000000.000000"/>
+        <Bond class1="opls_180" class2="opls_141" b0="0.137000" kb="188280.000000"/>
+        <Bond class1="opls_141" class2="opls_141" b0="0.134000" kb="229701.600000"/>
+        <Bond class1="2009il_FB" class2="2009il_B" b0="0.139000" kb="161750.000000"/>
+        <Bond class1="2009il_B" class2="opls_180" b0="0.146774" kb="1000000.000000"/>
+        <Bond class1="opls_141" class2="opls_272" b0="0.121991" kb="1000000.000000"/>
+        <Bond class1="NBT" class2="SBT" b0="0.157000" kb="156850.000000"/>
+        <Bond class1="SBT" class2="OBT" b0="0.144000" kb="266550.000000"/>
+        <Bond class1="SBT" class2="FSI" b0="0.158000" kb="93950.000000"/>
+        <Bond class1="CBT" class2="F1" b0="0.133000" kb="153552.800000"/>
+        <Bond class1="CBT" class2="SBT" b0="0.177000" kb="142256.000000"/>
+        <Bond class1="SBT" class2="NBT" b0="0.157000" kb="156850.000000"/>
+        <Bond class1="FP" class2="P" b0="0.161000" kb="155000.000000"/>
+        <Bond class1="opls_272" class2="P" b0="0.149000" kb="200622.800000"/>
+    </CustomBondForce>
+    <HarmonicAngleForce>
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP1" type2="P" type3="FP3" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP1" type2="P" type3="FP4" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP1" type2="P" type3="FP5" />
+        <Angle angle="3.1415926535897932" k="291.00" type1="FP1" type2="P" type3="FP6" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP1" type2="P" type3="FP7" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP3" type2="P" type3="FP4" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP3" type2="P" type3="FP5" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP3" type2="P" type3="FP6" />
+        <Angle angle="3.1415926535897932" k="291.00" type1="FP3" type2="P" type3="FP7" />
+        <Angle angle="3.1415926535897932" k="291.00" type1="FP4" type2="P" type3="FP5" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP4" type2="P" type3="FP6" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP4" type2="P" type3="FP7" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP5" type2="P" type3="FP6" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP5" type2="P" type3="FP7" />
+        <Angle angle="1.5707963267948966" k="1165.00" type1="FP6" type2="P" type3="FP7" />
+    </HarmonicAngleForce>
+    <CustomAngleForce energy="k0*(theta-theta_0)^2">
+        <PerAngleParameter name="theta_0"/>
+        <PerAngleParameter name="k0"/>
+        <Angle class1="FB" class2="B" class3="FB" theta_0="1.910612" k0="334.750000"/>
+        <Angle class1="opls_180" class2="2009il_B" class3="opls_180" theta_0="1.859095" k0="1000.000000"/>
+        <Angle class1="2009il_B" class2="opls_180" class3="opls_141" theta_0="1.865609" k0="1000.000000"/>
+        <Angle class1="opls_180" class2="opls_141" class3="opls_272" theta_0="2.166266" k0="1000.000000"/>
+        <Angle class1="opls_272" class2="opls_141" class3="opls_141" theta_0="2.199464" k0="1000.000000"/>
+        <Angle class1="opls_180" class2="opls_141" class3="opls_141" theta_0="2.146755" k0="292.880000"/>
+        <Angle class1="2009il_FB" class2="2009il_B" class3="opls_180" theta_0="1.921379" k0="1000.000000"/>
+        <Angle class1="opls_180" class2="2009il_B" class3="opls_180" theta_0="1.851669" k0="1000.000000"/>
+        <Angle class1="2009il_B" class2="opls_180" class3="opls_141" theta_0="1.870564" k0="1000.000000"/>
+        <Angle class1="opls_180" class2="opls_141" class3="opls_272" theta_0="2.166649" k0="1000.000000"/>
+        <Angle class1="opls_141" class2="opls_141" class3="opls_272" theta_0="2.200669" k0="1000.000000"/>
+        <Angle class1="2009il_FB" class2="2009il_B" class3="2009il_FB" theta_0="1.910612" k0="334.750000"/>
+        <Angle class1="SBT" class2="NBT" class3="SBT" theta_0="2.192134" k0="335.500000"/>
+        <Angle class1="NBT" class2="SBT" class3="OBT" theta_0="1.982694" k0="394.500000"/>
+        <Angle class1="NBT" class2="SBT" class3="FSI" theta_0="1.806416" k0="451.000000"/>
+        <Angle class1="OBT" class2="SBT" class3="OBT" theta_0="2.068215" k0="484.500000"/>
+        <Angle class1="OBT" class2="SBT" class3="FSI" theta_0="1.816888" k0="538.500000"/>
+        <Angle class1="F1" class2="CBT" class3="F1" theta_0="1.869248" k0="390.500000"/>
+        <Angle class1="F1" class2="CBT" class3="SBT" theta_0="1.949533" k0="347.000000"/>
+        <Angle class1="CBT" class2="SBT" class3="OBT" theta_0="1.790708" k0="435.000000"/>
+        <Angle class1="CBT" class2="SBT" class3="NBT" theta_0="1.806416" k0="382.000000"/>
+        <Angle class1="OBT" class2="SBT" class3="NBT" theta_0="1.982694" k0="394.500000"/>
+        <Angle class1="opls_272" class2="P" class3="opls_272" theta_0="2.021091" k0="191.627000"/>
+        <Angle class1="opls_272" class2="P" class3="FP" theta_0="1.955990" k0="179.912000"/>
+        <Angle class1="FP" class2="P" class3="FP" theta_0="1.570796" k0="582.500000"/>
+    </CustomAngleForce>
+    <CustomTorsionForce energy="kphi*(1+cos(n*theta-phi0))">
+        <PerTorsionParameter name="phi0"/>
+        <PerTorsionParameter name="kphi"/>
+        <PerTorsionParameter name="n"/>
+        <Proper class1="opls_180" class2="2009il_B" class3="opls_180" class4="opls_141" phi0="-0.000832" kphi="10.000000" n="1.000000"/>
+        <Proper class1="opls_272" class2="opls_141" class3="opls_180" class4="2009il_B" phi0="-3.140868" kphi="10.000000" n="1.000000"/>
+        <Proper class1="opls_141" class2="opls_141" class3="opls_180" class4="2009il_B" phi0="0.001014" kphi="10.000000" n="1.000000"/>
+        <Improper class1="opls_141" class2="opls_180" class3="opls_272" class4="opls_141" phi0="3.141593" kphi="62.760000" n="2.000000"/>
+        <Improper class1="opls_141" class2="opls_141" class3="opls_272" class4="opls_180" phi0="3.141593" kphi="62.760000" n="2.000000"/>
+        <Proper class1="opls_180" class2="2009il_B" class3="opls_180" class4="opls_141" phi0="-0.000226" kphi="10.000000" n="1.000000"/>
+        <Proper class1="2009il_FB" class2="2009il_B" class3="opls_180" class4="opls_141" phi0="2.080336" kphi="10.000000" n="1.000000"/>
+        <Proper class1="opls_141" class2="opls_141" class3="opls_180" class4="2009il_B" phi0="0.000201" kphi="10.000000" n="1.000000"/>
+        <Proper class1="opls_272" class2="opls_141" class3="opls_180" class4="2009il_B" phi0="-3.140988" kphi="10.000000" n="1.000000"/>
+        <Improper class1="opls_141" class2="opls_180" class3="opls_141" class4="opls_272" phi0="3.141593" kphi="62.760000" n="2.000000"/>
+        <Improper class1="opls_141" class2="opls_141" class3="opls_180" class4="opls_272" phi0="3.141593" kphi="62.760000" n="2.000000"/>
+    </CustomTorsionForce>
+    <CustomTorsionForce energy="C0-C1*cos(theta)+C2*(cos(theta))^2-C3*(cos(theta))^3+C4*(cos(theta))^4-C5*(cos(theta))^5">
+        <PerTorsionParameter name="C0"/>
+        <PerTorsionParameter name="C1"/>
+        <PerTorsionParameter name="C2"/>
+        <PerTorsionParameter name="C3"/>
+        <PerTorsionParameter name="C4"/>
+        <PerTorsionParameter name="C5"/>
+        <Proper class1="opls_272" class2="opls_141" class3="opls_141" class4="opls_180" C0="58.576000" C1="0.000000" C2="-58.576000" C3="0.000000" C4="0.000000" C5="0.000000"/>
+        <Proper class1="opls_272" class2="opls_141" class3="opls_141" class4="opls_272" C0="58.576000" C1="0.000000" C2="-58.576000" C3="0.000000" C4="0.000000" C5="0.000000"/>
+        <Proper class1="opls_180" class2="opls_141" class3="opls_141" class4="opls_180" C0="58.576000" C1="0.000000" C2="-58.576000" C3="0.000000" C4="0.000000" C5="0.000000"/>
+    </CustomTorsionForce>
+    <CustomTorsionForce energy="0.5*(C1*(1+cos(theta))+C2*(1-cos(2*theta))+C3*(1+cos(3*theta))+C4*(1-cos(4*theta)))">
+        <PerTorsionParameter name="C1"/>
+        <PerTorsionParameter name="C2"/>
+        <PerTorsionParameter name="C3"/>
+        <PerTorsionParameter name="C4"/>
+        <Proper class1="SBT" class2="NBT" class3="SBT" class4="OBT" C1="0.000000" C2="0.000000" C3="-0.015000" C4="0.000000"/>
+        <Proper class1="SBT" class2="NBT" class3="SBT" class4="FSI" C1="13.451000" C2="-12.337000" C3="-8.487000" C4="-2.865000"/>
+        <Proper class1="OBT" class2="SBT" class3="CBT" class4="F1" C1="0.000000" C2="0.000000" C3="1.451000" C4="0.000000"/>
+        <Proper class1="NBT" class2="SBT" class3="CBT" class4="F1" C1="0.000000" C2="0.000000" C3="1.322000" C4="0.000000"/>
+        <Proper class1="SBT" class2="NBT" class3="SBT" class4="CBT" C1="32.773000" C2="-10.420000" C3="-3.195000" C4="0.000000"/>
+    </CustomTorsionForce>
+    <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+        <UseAttributeFromResidue name="charge"/>
+        <Atom type="Li+" sigma="0.212600" epsilon="0.076480"/>
+        <Atom type="Na+" sigma="0.333000" epsilon="0.011600"/>
+        <Atom type="B" sigma="0.358140" epsilon="0.397480"/>
+        <Atom type="FB" sigma="0.311810" epsilon="0.251040"/>
+        <Atom type="2009il_B" sigma="0.358140" epsilon="0.397480"/>
+        <Atom type="opls_180" sigma="0.290000" epsilon="0.585760"/>
+        <Atom type="opls_141" sigma="0.355000" epsilon="0.317984"/>
+        <Atom type="opls_272" sigma="0.296000" epsilon="0.878640"/>
+        <Atom type="2009il_FB" sigma="0.311810" epsilon="0.251040"/>
+        <Atom type="NBT" sigma="0.325000" epsilon="0.711280"/>
+        <Atom type="SBT" sigma="0.355000" epsilon="1.046000"/>
+        <Atom type="OBT" sigma="0.296000" epsilon="0.878640"/>
+        <Atom type="FSI" sigma="0.295000" epsilon="0.221750"/>
+        <Atom type="FP1" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP1" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP3" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP4" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP5" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP6" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP7" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="FP" sigma="0.311810" epsilon="0.255220"/>
+        <Atom type="P" sigma="0.374000" epsilon="0.837000"/>
+        <Atom type="CBT" sigma="0.350000" epsilon="0.276140"/>
+        <Atom type="F1" sigma="0.295000" epsilon="0.221750"/>
+    </NonbondedForce>
+</ForceField>

@@ -1,0 +1,10 @@
+<ForceField>
+  <Residues>
+    <Residue name="CAT">
+      <Atom name="CA" type="E-CAT"/>
+    </Residue>
+    <Residue name="ANO">
+      <Atom name="AN" type="E-ANO"/>
+    </Residue>
+  </Residues>
+</ForceField>

@@ -1,0 +1,13 @@
+CRYST1   10.000   10.000   12.000  90.00  90.00  90.00 P 1           1
+HETATM    1 CA   CAT A   1       2.000   2.000   2.000  1.00  0.00           C
+HETATM    2 CA   CAT A   2       8.000   2.000   2.000  1.00  0.00           C
+HETATM    3 CA   CAT A   3       2.000   8.000   2.000  1.00  0.00           C
+HETATM    4 CA   CAT A   4       8.000   8.000   2.000  1.00  0.00           C
+HETATM    5 AN   ANO B   1       2.000   2.000  10.000  1.00  0.00           N
+HETATM    6 AN   ANO B   2       8.000   2.000  10.000  1.00  0.00           N
+HETATM    7 AN   ANO B   3       2.000   8.000  10.000  1.00  0.00           N
+HETATM    8 AN   ANO B   4       8.000   8.000  10.000  1.00  0.00           N
+HETATM    9 NA   SOD C   1       5.000   5.000   5.000  1.00  0.00          NA
+HETATM   10 CL   CLA C   2       6.500   5.000   7.000  1.00  0.00          CL
+TER
+END

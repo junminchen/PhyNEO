@@ -1,0 +1,67 @@
+{
+  "composition": {
+    "Li": 64,
+    "PF6": 64,
+    "EC": 256,
+    "DMC": 512
+  },
+  "cell": {
+    "box_x_angstrom": 55.0,
+    "box_y_angstrom": 55.0,
+    "box_z_angstrom": 90.0,
+    "z_liq_min_angstrom": 18.0,
+    "z_liq_max_angstrom": 72.0,
+    "z_cathode_angstrom": 15.0,
+    "z_anode_angstrom": 75.0
+  },
+  "electrode": {
+    "spacing_angstrom": 4.5,
+    "edge_margin_angstrom": 1.5,
+    "exclude_element": ["H"],
+    "voltage_v": 2.0,
+    "gaussian_width_nm": 0.20,
+    "thomas_fermi_scale_invnm": 5.0,
+    "cg_error_tol": 1e-4,
+    "use_charge_constraint": true,
+    "charge_constraint_target_e": 0.0
+  },
+  "packmol": {
+    "tolerance_angstrom": 2.0
+  },
+  "forcefield_xml": [
+    "../opls_salt.xml",
+    "../opls_solvent.xml",
+    "electrode_residues.xml",
+    "electrode_ff.xml"
+  ],
+  "openmm": {
+    "platform": "CPU",
+    "nonbonded_method": "PME",
+    "nonbonded_cutoff_nm": 1.0,
+    "constraints": "HBonds",
+    "rigid_water": false,
+    "ewald_error_tolerance": 0.0005
+  },
+  "md": {
+    "temperature_k": 298.15,
+    "pressure_bar": 1.0,
+    "timestep_fs": 2.0,
+    "friction_ps": 1.0,
+    "equil_steps": 5000,
+    "prod_steps": 10000,
+    "report_interval": 500
+  },
+  "mc_gap": {
+    "enabled": true,
+    "temperature_k": 298.15,
+    "pressure_bar": 1.0,
+    "n_trials": 200,
+    "max_shift_angstrom": 0.5,
+    "min_gap_angstrom": 40.0,
+    "max_gap_angstrom": 70.0,
+    "report_interval": 20,
+    "output_pdb": "start_with_electrodes_mc.pdb",
+    "output_log": "mc_gap.log",
+    "seed": 20260223
+  }
+}

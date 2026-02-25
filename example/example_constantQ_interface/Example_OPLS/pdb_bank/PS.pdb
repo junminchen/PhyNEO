@@ -1,0 +1,31 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  O00 PSA 1   1       0.975   0.788  -0.536  0.00  1.00      SYST O  
+ATOM      2  S01 PSA 1   1      -0.408   0.999  -0.042  0.00  1.00      SYST S  
+ATOM      3  O02 PSA 1   1      -0.707   1.060   1.403  0.00  1.00      SYST O  
+ATOM      4  C03 PSA 1   1      -1.165   2.362  -1.006  0.00  1.00      SYST C  
+ATOM      5  C04 PSA 1   1      -2.160   1.670  -1.953  0.00  1.00      SYST C  
+ATOM      6  C05 PSA 1   1      -1.701   0.205  -2.048  0.00  1.00      SYST C  
+ATOM      7  O06 PSA 1   1      -1.402  -0.200  -0.686  0.00  1.00      SYST O  
+ATOM      8  H07 PSA 1   1      -0.325   2.844  -1.523  0.00  1.00      SYST H  
+ATOM      9  H08 PSA 1   1      -1.626   3.043  -0.279  0.00  1.00      SYST H  
+ATOM     10  H09 PSA 1   1      -2.179   2.153  -2.942  0.00  1.00      SYST H  
+ATOM     11  H10 PSA 1   1      -3.170   1.699  -1.521  0.00  1.00      SYST H  
+ATOM     12  H11 PSA 1   1      -0.802   0.088  -2.676  0.00  1.00      SYST H  
+ATOM     13  H12 PSA 1   1      -2.493  -0.472  -2.394  0.00  1.00      SYST H  
+CONECT    1    2
+CONECT    2    1    3    4    7
+CONECT    3    2
+CONECT    4    2    5    8    9
+CONECT    5    4    6   10   11
+CONECT    6    5    7   12   13
+CONECT    7    2    6
+CONECT    8    4
+CONECT    9    4
+CONECT   10    5
+CONECT   11    5
+CONECT   12    6
+CONECT   13    6
+END
