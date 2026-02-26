@@ -651,10 +651,10 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
             id_vars=["formulation"],
             value_vars=["mean_first_shell_residence_ps", "mean_second_shell_residence_ps"],
             var_name="shell_metric",
-            value_name="mean_residence_ps",
+            value_name="mean_residence_by_shell_ps",
         )
         fig, ax = plt.subplots(figsize=(max(11.0, fig_w), 5.0))
-        sns.barplot(data=melted_tau, x="formulation", y="mean_residence_ps", hue="shell_metric", ax=ax)
+        sns.barplot(data=melted_tau, x="formulation", y="mean_residence_by_shell_ps", hue="shell_metric", ax=ax)
         ax.set_title("Mean Residence Time by Shell and Formulation")
         ax.set_xlabel("Formulation")
         ax.set_ylabel("Residence time (ps)")
