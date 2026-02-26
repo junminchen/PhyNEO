@@ -258,6 +258,47 @@ def compute_rdf_and_shells(
     return r, g, r1, r2
 
 
+def compute_min_atom_distance_profile_and_shells(
+    u: mda.Universe,
+    cation_sel: str,
+    target_sel: str,
+    start: int,
+    stop: Optional[int],
+    step: int,
+    nbins: int,
+) -> Tuple[np.ndarray, np.ndarray, float, float]:
+    cations = u.select_atoms(cation_sel)
+    target = u.select_atoms(target_sel)
+    if len(cations) == 0:
+        raise ValueError(f"No atoms in cation selection: {cation_sel}")
+    if len(target) == 0:
+        raise ValueError(f"No atoms in target selection: {target_sel}")
+
+    target_resindex = target.resindices.astype(int)
+    uniq_res = np.unique(target_resindex)
+    if len(uniq_res) == 0:
+        raise ValueError("No target residues found for nearest-atom profile.")
+    res_local_idx = [np.where(target_resindex == rid)[0] for rid in uniq_res]
+
+    max_r = min(u.dimensions[:3]) / 2.0
+    all_min_d = []
+
+    for ts in u.trajectory[start:stop:step]:
+        dist = distance_array(cations.positions, target.positions, box=ts.dimensions)
+        for idxs in res_local_idx:
+            dmin = np.min(dist[:, idxs], axis=1)
+            all_min_d.extend(dmin.tolist())
+
+    if len(all_min_d) == 0:
+        raise ValueError("No distance samples for nearest-atom profile.")
+
+    edges = np.linspace(0.0, max_r, int(nbins) + 1)
+    hist, _ = np.histogram(np.asarray(all_min_d), bins=edges, density=True)
+    centers = 0.5 * (edges[:-1] + edges[1:])
+    r1, r2 = find_shell_cutoffs(centers, hist)
+    return centers, hist, r1, r2
+
+
 def analyze_shell_dynamics(
     u: mda.Universe,
     cation_sel: str,
@@ -349,14 +390,14 @@ def save_formulation_plots(
     durations_ps: np.ndarray,
 ) -> None:
     fig, ax = plt.subplots(figsize=(7, 4.2))
-    ax.plot(r, g, lw=1.8, color="#2a9d8f", label="RDF")
+    ax.plot(r, g, lw=1.8, color="#2a9d8f", label="Distance profile")
     ax.axvline(r1, color="#e76f51", ls="--", lw=1.5, label=f"1st shell cutoff ({r1:.2f} A)")
     ax.axvline(r2, color="#264653", ls="--", lw=1.5, label=f"2nd shell cutoff ({r2:.2f} A)")
     ax.fill_between(r, 0, g, where=(r <= r1), color="#e76f51", alpha=0.12)
     ax.fill_between(r, 0, g, where=((r > r1) & (r <= r2)), color="#264653", alpha=0.10)
     ax.set_xlabel("r (A)")
-    ax.set_ylabel("g(r)")
-    ax.set_title(f"RDF and Shell Cutoffs: {name}")
+    ax.set_ylabel("Density / g(r)")
+    ax.set_title(f"Shell Distance Profile and Cutoffs: {name}")
     ax.legend()
     plt.tight_layout()
     plt.savefig(outdir / f"{name}_rdf_shells.png", dpi=220)
@@ -472,15 +513,26 @@ def run_analysis(args: argparse.Namespace) -> None:
             folder_dir = Path(top).resolve().parent
             target_sel, additive_name = resolve_analysis_selection(name, folder_dir, u, args)
             print(f"[Info] {name}: target={args.analysis_target} additive={additive_name} selection={target_sel}")
-            r, g, r1, r2 = compute_rdf_and_shells(
-                u=u,
-                cation_sel=args.cation_selection,
-                solvent_sel=target_sel,
-                start=args.start,
-                stop=args.stop,
-                step=args.step,
-                rdf_nbins=args.rdf_nbins,
-            )
+            if args.analysis_target == "additive":
+                r, g, r1, r2 = compute_min_atom_distance_profile_and_shells(
+                    u=u,
+                    cation_sel=args.cation_selection,
+                    target_sel=target_sel,
+                    start=args.start,
+                    stop=args.stop,
+                    step=args.step,
+                    nbins=args.rdf_nbins,
+                )
+            else:
+                r, g, r1, r2 = compute_rdf_and_shells(
+                    u=u,
+                    cation_sel=args.cation_selection,
+                    solvent_sel=target_sel,
+                    start=args.start,
+                    stop=args.stop,
+                    step=args.step,
+                    rdf_nbins=args.rdf_nbins,
+                )
             dyn = analyze_shell_dynamics(
                 u=u,
                 cation_sel=args.cation_selection,
@@ -604,7 +656,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument(
         "--additive-selection-template",
-        default="resname {additive} and (name O* or type O*)",
+        default="resname {additive}",
         help="Selection template for additive mode. '{additive}' will be replaced by detected residue name.",
     )
     p.add_argument(
