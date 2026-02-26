@@ -62,14 +62,38 @@ find_log_for_folder() {
     echo "$newest"
 }
 
+render_bar() {
+    local done="$1"
+    local total="$2"
+    local width=20
+    local fill=0
+    local i
+    local bar=""
+
+    if [ "$total" -gt 0 ]; then
+        fill=$((done * width / total))
+    else
+        fill="$width"
+    fi
+
+    for ((i = 0; i < width; i++)); do
+        if [ "$i" -lt "$fill" ]; then
+            bar+="#"
+        else
+            bar+="-"
+        fi
+    done
+    echo "$bar"
+}
+
 mapfile -t DIRS < <(find . -maxdepth 1 -type d -name "$FOLDER_PATTERN" | sort)
 if [ "${#DIRS[@]}" -eq 0 ]; then
     echo "[Error] No folders matching '$FOLDER_PATTERN' in $(pwd)"
     exit 1
 fi
 
-printf "%-24s %10s %10s %9s %10s %s\n" "Folder" "Need" "Done" "Progress" "Status" "Log"
-printf "%-24s %10s %10s %9s %10s %s\n" "------------------------" "----------" "----------" "---------" "----------" "---"
+printf "%-24s %10s %10s %22s %9s %10s %s\n" "Folder" "Need" "Done" "Bar" "Progress" "Status" "Log"
+printf "%-24s %10s %10s %22s %9s %10s %s\n" "------------------------" "----------" "----------" "----------------------" "---------" "----------" "---"
 
 sum_need=0
 sum_done=0
@@ -104,13 +128,14 @@ for folder in "${DIRS[@]}"; do
     else
         pct=100
     fi
+    bar="$(render_bar "$done" "$need")"
 
     log_name="-"
     if [ -n "${log_file:-}" ]; then
         log_name="$(basename "$log_file")"
     fi
 
-    printf "%-24s %10d %10d %8d%% %10s %s\n" "$folder_name" "$need" "$done" "$pct" "$status" "$log_name"
+    printf "%-24s %10d %10d [%s] %8d%% %10s %s\n" "$folder_name" "$need" "$done" "$bar" "$pct" "$status" "$log_name"
 done
 
 if [ "$sum_need" -gt 0 ]; then

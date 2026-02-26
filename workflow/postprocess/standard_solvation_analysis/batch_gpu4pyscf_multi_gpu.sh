@@ -30,6 +30,7 @@ declare -a FREE_GPUS=("${GPU_IDS[@]}")
 declare -A PID_TO_GPU
 declare -A PID_TO_DIR
 declare -A DIR_SELECTED_STRUCTS
+declare -A DIR_LOG_FILE
 success_count=0
 fail_count=0
 completed_count=0
@@ -60,6 +61,109 @@ count_selected_structures() {
     echo "$total"
 }
 
+progress_done_from_log() {
+    local log_file="$1"
+    if [ ! -f "$log_file" ]; then
+        echo 0
+        return
+    fi
+    grep -c "Progress:" "$log_file" 2>/dev/null || echo 0
+}
+
+status_from_log() {
+    local log_file="$1"
+    if [ ! -f "$log_file" ]; then
+        echo "PENDING"
+        return
+    fi
+    if grep -q "Finished calculation for" "$log_file"; then
+        echo "DONE"
+        return
+    fi
+    if grep -q "Traceback (most recent call last)" "$log_file"; then
+        echo "ERROR"
+        return
+    fi
+    echo "RUNNING"
+}
+
+render_bar() {
+    local done="$1"
+    local total="$2"
+    local width=20
+    local fill=0
+    local i
+    local bar=""
+
+    if [ "$total" -gt 0 ]; then
+        fill=$((done * width / total))
+    else
+        fill="$width"
+    fi
+
+    for ((i = 0; i < width; i++)); do
+        if [ "$i" -lt "$fill" ]; then
+            bar+="#"
+        else
+            bar+="-"
+        fi
+    done
+    echo "$bar"
+}
+
+print_folder_progress_snapshot() {
+    local sum_done=0
+    local sum_need=0
+    local done_folders=0
+    local runnable=0
+
+    echo "[Folder Progress]"
+    for folder in "${DIRS[@]}"; do
+        local folder_name
+        folder_name="$(basename "$folder")"
+        if [ ! -d "$folder/classified_structures" ]; then
+            continue
+        fi
+
+        runnable=$((runnable + 1))
+        local need="${DIR_SELECTED_STRUCTS[$folder_name]}"
+        local log_file="${DIR_LOG_FILE[$folder_name]:-}"
+        local done=0
+        local status="PENDING"
+
+        if [ -n "$log_file" ]; then
+            done="$(progress_done_from_log "$log_file")"
+            status="$(status_from_log "$log_file")"
+        fi
+
+        if [ "$need" -gt 0 ] && [ "$done" -gt "$need" ]; then
+            done="$need"
+        fi
+        if [ "$status" = "DONE" ]; then
+            done="$need"
+            done_folders=$((done_folders + 1))
+        fi
+
+        local pct=100
+        if [ "$need" -gt 0 ]; then
+            pct=$((100 * done / need))
+        fi
+        local bar
+        bar="$(render_bar "$done" "$need")"
+
+        sum_done=$((sum_done + done))
+        sum_need=$((sum_need + need))
+
+        printf "  - %-20s %5d/%-5d [%s] %3d%% %s\n" "$folder_name" "$done" "$need" "$bar" "$pct" "$status"
+    done
+
+    local sum_pct=100
+    if [ "$sum_need" -gt 0 ]; then
+        sum_pct=$((100 * sum_done / sum_need))
+    fi
+    echo "  Summary: folders_done=${done_folders}/${runnable} structures_done=${sum_done}/${sum_need} (${sum_pct}%)"
+}
+
 launch_job() {
     local folder="$1"
     local gpu="$2"
@@ -72,8 +176,10 @@ launch_job() {
     local pid=$!
     PID_TO_GPU["$pid"]="$gpu"
     PID_TO_DIR["$pid"]="$folder_name"
+    DIR_LOG_FILE["$folder_name"]="$log_file"
     launched_count=$((launched_count + 1))
     echo "[Queue ] launched=$launched_count/$total_jobs active=${#PID_TO_GPU[@]} free_gpu=${#FREE_GPUS[@]}"
+    print_folder_progress_snapshot
 }
 
 reap_one() {
@@ -100,6 +206,7 @@ reap_one() {
         echo "[Fail] $folder_name on GPU $gpu (exit=$exit_code)"
     fi
     echo "[Prog ] completed=$completed_count/$total_jobs success=$success_count fail=$fail_count active=${#PID_TO_GPU[@]}"
+    print_folder_progress_snapshot
 }
 
 echo "========================================="
