@@ -1,6 +1,7 @@
 import os
 import sys
 import glob
+import time
 from pathlib import Path
 import numpy as np
 
@@ -13,14 +14,20 @@ except ImportError:
     sys.exit(1)
 
 # ==================== 计算参数 ====================
-BASIS_SET = "6-31G**"
+BASIS_SET = "6-311++G(d,p)"
 FUNCTIONAL = "B3LYP"
-OUTPUT_CSV = "all_formulations_homolumo.csv"
+OUTPUT_DIR_NAME = "results"
+OUTPUT_CSV_TEMPLATE = "{folder}_homolumo.csv"
 MAX_STRUCTURES = 100
 # =================================================
 
 def run_quantum_calculation(target_dir):
     target_dir = target_dir.rstrip('/')
+    folder_tag = Path(target_dir).resolve().name
+    output_dir = Path(target_dir) / OUTPUT_DIR_NAME
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_csv = output_dir / OUTPUT_CSV_TEMPLATE.format(folder=folder_tag)
+
     # 搜索该目录下所有分类后的 xyz 文件（每个分类最多取 MAX_STRUCTURES 个）
     base_search_path = os.path.join(target_dir, "classified_structures")
     category_dirs = sorted(glob.glob(os.path.join(base_search_path, "*")))
@@ -51,11 +58,13 @@ def run_quantum_calculation(target_dir):
         f"Selected {len(xyz_files)} structures after per-category cap."
     )
 
-    # 如果汇总 CSV 不存在，先写表头
-    if not os.path.exists(OUTPUT_CSV):
-        with open(OUTPUT_CSV, "w") as f:
+    # 如果目标 CSV 不存在，先写表头
+    if not output_csv.exists():
+        with open(output_csv, "w") as f:
             f.write("Folder,Filename,Category,Additive,Charge,HOMO(eV),LUMO(eV),Gap(eV)\n")
+    print(f"Writing results to: {output_csv}")
 
+    start_time = time.time()
     for i, xyz_path in enumerate(xyz_files):
         try:
             # 1. 解析 XYZ 文件
@@ -131,15 +140,24 @@ def run_quantum_calculation(target_dir):
 
             # 5. 写入结果
             fname = os.path.basename(xyz_path)
-            with open(OUTPUT_CSV, "a") as f:
+            with open(output_csv, "a") as f:
                 f.write(
                     f"{folder_name},{fname},{category},{additive},{charge},"
                     f"{homo_ev:.4f},{lumo_ev:.4f},{gap_ev:.4f}\n"
                 )
             
-            # 简单的进度条
-            if (i + 1) % 10 == 0:
-                print(f"  Processed {i + 1}/{len(xyz_files)}...")
+            # 实时进度信息（百分比 + ETA）
+            done = i + 1
+            total = len(xyz_files)
+            elapsed = time.time() - start_time
+            avg = elapsed / done if done > 0 else 0.0
+            eta = avg * (total - done)
+            pct = 100.0 * done / total if total > 0 else 100.0
+            print(
+                f"  Progress: {done}/{total} ({pct:6.2f}%) | "
+                f"Elapsed: {elapsed/60:7.2f} min | ETA: {eta/60:7.2f} min",
+                flush=True,
+            )
 
             # 清理对象释放显存
             del mf
