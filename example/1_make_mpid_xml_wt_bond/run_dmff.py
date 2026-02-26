@@ -1,103 +1,96 @@
+#!/usr/bin/env python3
+import argparse
 
-import time 
-import optax
-import sys 
-import os 
-import numpy as np
-
-import jax
 import jax.numpy as jnp
-from jax import value_and_grad, vmap, jit
-
-from openmm.app import PDBFile
-from openmm.unit import angstrom
-from openmm.app import CutoffPeriodic
-from functools import partial
-import pickle
-
-from dmff.api import Hamiltonian
-from dmff.utils import jit_condition
-from dmff.common import nblist
-import jax.numpy as jnp
-from openmm.app import PDBFile, CutoffPeriodic, PME
-from openmm.unit import angstrom
 from dmff.api import Hamiltonian
 from dmff.common import nblist
+from openmm.app import CutoffPeriodic, NoCutoff, PDBFile
+from openmm.unit import angstrom
+
 
 class DMFFEnergyCalculator:
-    def __init__(self, ff_file, pdb_file):
+    def __init__(self, ff_file, pdb_file, method="cutoff", cutoff_angstrom=25.0, box_nm=6.0, step_pol=20):
         self.ff = ff_file
         self.pdb = PDBFile(pdb_file)
         self.positions = jnp.array(self.pdb.positions._value)
-        self.box = jnp.eye(3) * 6.0
-        self.rc = 2.5
 
-        # Build Hamiltonian and Potential
+        if self.pdb.topology.getPeriodicBoxVectors() is not None:
+            a, b, c = self.pdb.topology.getPeriodicBoxVectors()
+            self.box = jnp.array([a._value, b._value, c._value])
+        else:
+            self.box = jnp.eye(3) * box_nm
+
+        nb_method = CutoffPeriodic if method == "cutoff" else NoCutoff
+
         self.H = Hamiltonian(self.ff)
         self.potentials_obj = self.H.createPotential(
             self.pdb.topology,
-            nonbondedCutoff=25 * angstrom,
-            nonbondedMethod=CutoffPeriodic,
+            nonbondedCutoff=cutoff_angstrom * angstrom,
+            nonbondedMethod=nb_method,
             ethresh=1e-4,
-            step_pol=20
+            step_pol=step_pol,
         )
         self.params = self.H.getParameters()
 
-        # Neighbor list
-        self.nblist = nblist.NeighborList(
-            self.box,
-            self.rc,
-            self.potentials_obj.meta['cov_map']
-        )
+        rc_nm = cutoff_angstrom * 0.1
+        self.nblist = nblist.NeighborList(self.box, rc_nm, self.potentials_obj.meta["cov_map"])
         self.nblist.allocate(self.positions)
         self.pairs = self.nblist.pairs
         self.pairs = self.pairs[self.pairs[:, 0] < self.pairs[:, 1]]
 
-        # Define potential keys and mapping
-        self.potentials_keys = [
-            'espol', 'disp', 'ex', 'sr_es', 'sr_pol', 'sr_disp', 'dhf', 'dmp_es', 'dmp_disp'
-        ]
         self.potentials_mapping = {
-            'espol': 'ADMPPmeForce',
-            'disp': 'ADMPDispPmeForce',
-            'ex': 'SlaterExForce',
-            'sr_es': 'SlaterSrEsForce',
-            'sr_pol': 'SlaterSrPolForce',
-            'sr_disp': 'SlaterSrDispForce',
-            'dhf': 'SlaterDhfForce',
-            'dmp_es': 'QqTtDampingForce',
-            'dmp_disp': 'SlaterDampingForce'
+            "espol": "ADMPPmeForce",
+            "disp": "ADMPDispPmeForce",
+            "ex": "SlaterExForce",
+            "sr_es": "SlaterSrEsForce",
+            "sr_pol": "SlaterSrPolForce",
+            "sr_disp": "SlaterSrDispForce",
+            "dhf": "SlaterDhfForce",
+            "dmp_es": "QqTtDampingForce",
+            "dmp_disp": "SlaterDampingForce",
         }
 
     def compute_components(self):
         energy_dict = {}
-        for key in self.potentials_keys:
-            force_name = self.potentials_mapping[key]
-            potential_func = self.potentials_obj.getPotentialFunc(force_name)
-            energy = potential_func(self.positions, self.box, self.pairs, self.params)
-            energy_dict[key] = energy
+        for key, force_name in self.potentials_mapping.items():
+            try:
+                potential_func = self.potentials_obj.getPotentialFunc(force_name)
+                energy_dict[key] = potential_func(self.positions, self.box, self.pairs, self.params)
+            except Exception:
+                continue
         return energy_dict
 
     def compute_total(self):
-        etotal = self.potentials_obj.getPotentialFunc()
-        return etotal(self.positions, self.box, self.pairs, self.params)
+        return self.potentials_obj.getPotentialFunc()(self.positions, self.box, self.pairs, self.params)
 
-if __name__ == '__main__':
 
-    # 实例化并计算
-    # calc = DMFFEnergyCalculator('peo.xml', 'peo3.pdb')
-    # calc = DMFFEnergyCalculator('EC.xml', 'EC.pdb')
-    calc = DMFFEnergyCalculator('../EC_extracted.xml', 'EC.pdb')
+def main():
+    parser = argparse.ArgumentParser(description="Compute DMFF energy components")
+    parser.add_argument("--xml", default="EC.xml", help="DMFF XML file")
+    parser.add_argument("--pdb", default="EC.pdb", help="PDB file")
+    parser.add_argument("--method", choices=["cutoff", "nocutoff"], default="cutoff")
+    parser.add_argument("--cutoff-angstrom", type=float, default=25.0)
+    parser.add_argument("--box-nm", type=float, default=6.0)
+    parser.add_argument("--step-pol", type=int, default=20)
+    args = parser.parse_args()
 
-    # calc = DMFFEnergyCalculator('peo.xml', 'init.pdb')
+    calc = DMFFEnergyCalculator(
+        ff_file=args.xml,
+        pdb_file=args.pdb,
+        method=args.method,
+        cutoff_angstrom=args.cutoff_angstrom,
+        box_nm=args.box_nm,
+        step_pol=args.step_pol,
+    )
 
-    # 获取各项分能量
-    energy_components = calc.compute_components()
-    for k, v in energy_components.items():
+    components = calc.compute_components()
+    print("DMFF Energy Components:")
+    for k, v in components.items():
         print(f"{k}: {v}")
 
-    # 获取总能量（包含所有项）
-    total_energy = calc.compute_total()
-    print(f"Dispersion+Damping Energy: {total_energy - energy_components['espol']}")
+    total = calc.compute_total()
+    print(f"DMFF Total Energy: {total}")
 
-    print(f"Total Energy: {total_energy}")
+
+if __name__ == "__main__":
+    main()
