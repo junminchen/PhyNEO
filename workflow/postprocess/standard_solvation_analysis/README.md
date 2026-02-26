@@ -9,7 +9,7 @@
 1. 结构提取与分类（`classify_solvation_env.py`）
    - 从 `solvent_salt.pdb + transport_results/nvt.dcd` 中按间隔采样。
    - 以每个 Li+ 为中心，提取第一壳层簇结构。
-   - 按是否含阴离子（SSIP/CIP）与是否含添加剂（with_add/no_add）分类。
+   - 按是否含阴离子（SSIP/CIP/AGG）与是否含添加剂（with_add/no_add）分类。
 2. 量化计算（`run_gpu4pyscf.py`）
    - 读取上一步导出的 `.xyz`。
    - 构建 PySCF 分子对象并调用 GPU4PySCF 进行 DFT。
@@ -30,10 +30,10 @@ standard_solvation_analysis/
 
 ## 3. 输入数据约定
 
-在你执行 `batch_analysis.sh` 的当前目录下，应存在若干 `test*` 文件夹。每个文件夹内至少包含：
+在你执行 `batch_analysis.sh` 的当前目录下，应存在若干 `newer*` 文件夹。每个文件夹内至少包含：
 
 ```text
-test_xxx/
+newer_xxx/
 ├── solvent_salt.pdb
 └── transport_results/
     └── nvt.dcd
@@ -66,6 +66,8 @@ ADDITIVE_MAP = {
 }
 ```
 
+若某个文件夹不在 `ADDITIVE_MAP` 中，脚本会自动读取该文件夹下的 `topol.top`，在 `[ molecules ]` 段里选择“以 `A` 开头且数量最少”的分子名作为添加剂；若未找到 `A*` 分子则记为 `NONE`。
+
 3. 采样和截断参数
    - `CUTOFF`：第一壳层距离阈值（单位 Angstrom）。
    - `INTERVAL`：轨迹采样间隔。
@@ -80,19 +82,21 @@ ADDITIVE_MAP = {
 
 脚本会自动：
 
-1. 遍历所有 `test*` 文件夹；
+1. 遍历所有 `newer*` 文件夹；
 2. 运行 `classify_solvation_env.py`；
 3. 对成功提取的结构运行 `run_gpu4pyscf.py`。
 
 ## 7. 输出结果
 
-### 7.1 每个 `test*` 文件夹内
+### 7.1 每个 `newer*` 文件夹内
 
 - `classified_structures/`
   - `SSIP_no_add/`
   - `SSIP_with_add/`
   - `CIP_no_add/`
   - `CIP_with_add/`
+  - `AGG_no_add/`
+  - `AGG_with_add/`
 - `classified_structures.tar.gz`
 
 ### 7.2 运行目录下

@@ -10,8 +10,8 @@
 # 获取脚本所在目录，以便无论在哪里运行都能找到 python 文件
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# 匹配模式，可以根据需要修改，例如 "test*" 或 "run_*"
-FOLDER_PATTERN="test*"
+# 匹配模式，可以根据需要修改，例如 "newer*" 或 "run_*"
+FOLDER_PATTERN="newer*"
 
 echo "========================================="
 echo "   Batch Solvation Structure Analysis    "

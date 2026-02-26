@@ -1,10 +1,8 @@
 import os
 import sys
-import shutil
 import tarfile
 import numpy as np
 import MDAnalysis as mda
-from pathlib import Path
 
 # ==================== 用户配置区 ====================
 # 1. 阴离子列表：只要在其中的残基都会被识别为阴离子
@@ -28,6 +26,46 @@ CUTOFF = 3.0       # 第一溶剂化壳层截断半径 (Angstrom)
 INTERVAL = 50      # 采样间隔 (越小采样的结构越多)
 # ===================================================
 
+def infer_additive_from_topol(target_dir):
+    """Infer additive from topol.top: pick A* molecule with the smallest count."""
+    topol_file = os.path.join(target_dir, "topol.top")
+    if not os.path.exists(topol_file):
+        return "UNKNOWN"
+
+    molecules = []
+    in_molecules_block = False
+    try:
+        with open(topol_file, "r") as f:
+            for raw_line in f:
+                line = raw_line.split(";", 1)[0].strip()
+                if not line:
+                    continue
+                if line.startswith("[") and line.endswith("]"):
+                    block = line[1:-1].strip().lower()
+                    in_molecules_block = (block == "molecules")
+                    continue
+                if not in_molecules_block:
+                    continue
+                if line.startswith("#"):
+                    continue
+                parts = line.split()
+                if len(parts) < 2:
+                    continue
+                name = parts[0]
+                try:
+                    count = int(parts[1])
+                except ValueError:
+                    continue
+                molecules.append((name, count))
+    except Exception:
+        return "UNKNOWN"
+
+    a_molecules = [(name, count) for name, count in molecules if name.startswith("A")]
+    if not a_molecules:
+        return "NONE"
+    a_molecules.sort(key=lambda x: (x[1], x[0]))
+    return a_molecules[0][0]
+
 def extract_and_classify(target_dir):
     # 标准化路径并获取文件夹名
     target_dir = target_dir.rstrip('/')
@@ -42,8 +80,10 @@ def extract_and_classify(target_dir):
         return
 
     # 获取当前文件夹对应的添加剂名称
-    # 如果没在映射表中找到，默认设为 'UNKNOWN'
-    current_additive = ADDITIVE_MAP.get(folder_name, "UNKNOWN")
+    # 优先用手工映射；若缺失则自动从 topol.top 推断
+    current_additive = ADDITIVE_MAP.get(folder_name)
+    if current_additive is None:
+        current_additive = infer_additive_from_topol(target_dir)
     print(f"Processing: {folder_name} | Additive: {current_additive}")
 
     # 加载轨迹
@@ -57,7 +97,14 @@ def extract_and_classify(target_dir):
     output_dir = os.path.join(target_dir, "classified_structures")
 
     # 创建输出目录
-    categories = ["SSIP_no_add", "SSIP_with_add", "CIP_no_add", "CIP_with_add"]
+    categories = [
+        "SSIP_no_add",
+        "SSIP_with_add",
+        "CIP_no_add",
+        "CIP_with_add",
+        "AGG_no_add",
+        "AGG_with_add",
+    ]
     for cat in categories:
         os.makedirs(os.path.join(output_dir, cat), exist_ok=True)
 
@@ -84,13 +131,16 @@ def extract_and_classify(target_dir):
                 if current_additive in res_in_shell.resnames:
                     has_additive = True
             
-            # 4. 分类
+            # 4. 分类（与 ana_openmm_traj_rdf.py 口径一致）
             # SSIP: 阴离子数 = 0
-            # CIP:  阴离子数 >= 1
+            # CIP:  阴离子数 = 1
+            # AGG:  阴离子数 >= 2
             if n_anions == 0:
                 cat_base = "SSIP"
-            else:
+            elif n_anions == 1:
                 cat_base = "CIP"
+            else:
+                cat_base = "AGG"
             
             cat_suffix = "_with_add" if has_additive else "_no_add"
             category = cat_base + cat_suffix
@@ -98,9 +148,17 @@ def extract_and_classify(target_dir):
             count_stats[category] += 1
 
             # 5. 提取簇结构 (Li + 第一壳层)
-            cluster = li.residue.atoms + res_in_shell.atoms
-            # 简单的周期性处理
-            cluster.unwrap(reference='cog')
+            cluster = (li.residue.atoms + res_in_shell.atoms).unique
+            # 简单周期性处理：无键信息时 unwrap 可能失败，回退到中心平移
+            try:
+                cluster.unwrap(compound="residues", reference="cog")
+                positions = cluster.positions
+            except Exception:
+                positions = cluster.positions.copy()
+                box = u.dimensions[:3]
+                center = positions[0]
+                positions -= center
+                positions -= box * np.round(positions / box)
             
             # 6. 保存 XYZ
             # 文件名包含帧号和原子ID以防重名
@@ -108,11 +166,16 @@ def extract_and_classify(target_dir):
             save_path = os.path.join(output_dir, category, fname)
             
             with open(save_path, "w") as f:
-                f.write(f"{len(cluster)}")
+                f.write(f"{len(cluster)}\n")
                 # 注释行关键信息：用于后续电荷计算和归档
-                f.write(f"n_cations={n_cations} n_anions={n_anions} additive={current_additive} category={category} folder={folder_name}")
-                for atom in cluster:
-                    f.write(f"{atom.type:<3} {atom.position[0]:>10.5f} {atom.position[1]:>10.5f} {atom.position[2]:>10.5f}")
+                f.write(
+                    f"n_cations={n_cations} n_anions={n_anions} "
+                    f"additive={current_additive} category={category} folder={folder_name}\n"
+                )
+                for idx, atom in enumerate(cluster):
+                    x, y, z = positions[idx]
+                    symbol = atom.type.strip() if atom.type else atom.name.strip()
+                    f.write(f"{symbol:<3} {x:>10.5f} {y:>10.5f} {z:>10.5f}\n")
 
     # 打印统计
     print(f"  -> Stats for {folder_name}: {count_stats}")

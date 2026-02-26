@@ -33,8 +33,7 @@ def run_quantum_calculation(target_dir):
     # 如果汇总 CSV 不存在，先写表头
     if not os.path.exists(OUTPUT_CSV):
         with open(OUTPUT_CSV, "w") as f:
-            f.write("Folder,Filename,Category,Additive,Charge,HOMO(eV),LUMO(eV),Gap(eV)
-")
+            f.write("Folder,Filename,Category,Additive,Charge,HOMO(eV),LUMO(eV),Gap(eV)\n")
 
     for i, xyz_path in enumerate(xyz_files):
         try:
@@ -112,7 +111,10 @@ def run_quantum_calculation(target_dir):
             # 5. 写入结果
             fname = os.path.basename(xyz_path)
             with open(OUTPUT_CSV, "a") as f:
-                f.write(f"{folder_name},{fname},{category},{additive},{charge},{homo_ev:.4f},{lumo_ev:.4f},{gap_ev:.4f}")
+                f.write(
+                    f"{folder_name},{fname},{category},{additive},{charge},"
+                    f"{homo_ev:.4f},{lumo_ev:.4f},{gap_ev:.4f}\n"
+                )
             
             # 简单的进度条
             if (i + 1) % 10 == 0:
