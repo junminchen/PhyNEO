@@ -128,27 +128,33 @@ def discover_systems(
     top_patterns: List[str],
     traj_patterns: List[str],
 ) -> List[Tuple[str, Path, Path]]:
+    def find_first_file(base: Path, patterns: List[str]) -> Optional[Path]:
+        for pat in patterns:
+            pat = pat.strip()
+            if not pat:
+                continue
+            hits = sorted(base.glob(pat))
+            if hits:
+                return hits[0]
+            # fallback recursive search for nested trajectory folders
+            hits_r = sorted(base.rglob(pat))
+            if hits_r:
+                return hits_r[0]
+        return None
+
     systems = []
     for folder in sorted(Path(".").glob(folder_pattern)):
         if not folder.is_dir():
             continue
 
-        top_file = None
-        for pat in top_patterns:
-            hits = sorted(folder.glob(pat))
-            if hits:
-                top_file = hits[0]
-                break
-
-        traj_file = None
-        for pat in traj_patterns:
-            hits = sorted(folder.glob(pat))
-            if hits:
-                traj_file = hits[0]
-                break
+        top_file = find_first_file(folder, top_patterns)
+        traj_file = find_first_file(folder, traj_patterns)
 
         if top_file is None or traj_file is None:
-            print(f"[Skip] {folder.name}: topology/trajectory not found")
+            print(
+                f"[Skip] {folder.name}: topology/trajectory not found "
+                f"(top_patterns={top_patterns}, traj_patterns={traj_patterns})"
+            )
             continue
 
         systems.append((folder.name, top_file, traj_file))
@@ -574,8 +580,16 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--manifest", default="", help="CSV with columns: formulation,topology,trajectory")
     p.add_argument("--folder-pattern", default="newer*", help="Folder glob pattern for auto-discovery.")
-    p.add_argument("--top-patterns", default="*.pdb,*.gro,*.prmtop,*.psf", help="Comma-separated topology patterns.")
-    p.add_argument("--traj-patterns", default="*.dcd,*.xtc,*.nc,*.trr", help="Comma-separated trajectory patterns.")
+    p.add_argument(
+        "--top-patterns",
+        default="solvent_salt.pdb,*.pdb,*.gro,*.prmtop,*.psf",
+        help="Comma-separated topology patterns.",
+    )
+    p.add_argument(
+        "--traj-patterns",
+        default="transport_results/nvt.dcd,*.dcd,*.xtc,*.nc,*.trr",
+        help="Comma-separated trajectory patterns.",
+    )
     p.add_argument(
         "--analysis-target",
         choices=["additive", "manual"],
