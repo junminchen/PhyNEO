@@ -583,8 +583,15 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
         return
 
     sort_names = summary_df.sort_values("mean_residence_ps", ascending=False)["formulation"].tolist()
+    n_form = max(1, len(sort_names))
+    fig_w = max(10.0, 0.9 * n_form + 4.0)
 
-    fig, ax = plt.subplots(figsize=(9, 4.5))
+    def format_xlabels(ax: plt.Axes) -> None:
+        ax.tick_params(axis="x", rotation=45)
+        for tick in ax.get_xticklabels():
+            tick.set_horizontalalignment("right")
+
+    fig, ax = plt.subplots(figsize=(fig_w, 4.8))
     sns.barplot(data=summary_df, x="formulation", y="mean_residence_ps", order=sort_names, ax=ax, color="#1d3557")
     ax.errorbar(
         x=np.arange(len(summary_df)),
@@ -597,22 +604,22 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
     ax.set_title("First-Shell Mean Residence Time by Formulation")
     ax.set_xlabel("Formulation")
     ax.set_ylabel("Residence time (ps)")
-    ax.tick_params(axis="x", rotation=30)
+    format_xlabels(ax)
     plt.tight_layout()
     plt.savefig(outdir / "compare_mean_residence_time.png", dpi=220)
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(9, 4.5))
+    fig, ax = plt.subplots(figsize=(fig_w, 4.8))
     sns.barplot(data=summary_df, x="formulation", y="second_shell_presence_frac", order=sort_names, ax=ax, color="#e76f51")
     ax.set_title("Second-Shell Presence Fraction by Formulation")
     ax.set_xlabel("Formulation")
     ax.set_ylabel("Fraction of cation-frames in 2nd shell")
-    ax.tick_params(axis="x", rotation=30)
+    format_xlabels(ax)
     plt.tight_layout()
     plt.savefig(outdir / "compare_second_shell_presence.png", dpi=220)
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(9, 4.5))
+    fig, ax = plt.subplots(figsize=(fig_w, 4.8))
     melted = summary_df.melt(
         id_vars=["formulation"],
         value_vars=["mean_first_cn", "mean_second_cn"],
@@ -623,18 +630,18 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
     ax.set_title("Average Coordination Number by Formulation")
     ax.set_xlabel("Formulation")
     ax.set_ylabel("CN")
-    ax.tick_params(axis="x", rotation=30)
+    format_xlabels(ax)
     plt.tight_layout()
     plt.savefig(outdir / "compare_coordination_numbers.png", dpi=220)
     plt.close(fig)
 
     if not events_df.empty and "shell" not in events_df.columns:
-        fig, ax = plt.subplots(figsize=(10, 5))
+        fig, ax = plt.subplots(figsize=(max(11.0, fig_w), 5.2))
         sns.violinplot(data=events_df, x="formulation", y="residence_ps", cut=0, inner="quartile", ax=ax)
         ax.set_title("First-Shell Residence Time Distribution Across Formulations")
         ax.set_xlabel("Formulation")
         ax.set_ylabel("Residence time (ps)")
-        ax.tick_params(axis="x", rotation=30)
+        format_xlabels(ax)
         plt.tight_layout()
         plt.savefig(outdir / "compare_residence_time_violin.png", dpi=220)
         plt.close(fig)
@@ -646,23 +653,23 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
             var_name="shell_metric",
             value_name="mean_residence_ps",
         )
-        fig, ax = plt.subplots(figsize=(10, 4.8))
+        fig, ax = plt.subplots(figsize=(max(11.0, fig_w), 5.0))
         sns.barplot(data=melted_tau, x="formulation", y="mean_residence_ps", hue="shell_metric", ax=ax)
         ax.set_title("Mean Residence Time by Shell and Formulation")
         ax.set_xlabel("Formulation")
         ax.set_ylabel("Residence time (ps)")
-        ax.tick_params(axis="x", rotation=30)
+        format_xlabels(ax)
         plt.tight_layout()
         plt.savefig(outdir / "compare_mean_residence_time_by_shell.png", dpi=220)
         plt.close(fig)
 
     if not events_df.empty and "shell" in events_df.columns:
-        fig, ax = plt.subplots(figsize=(10.5, 5.2))
+        fig, ax = plt.subplots(figsize=(max(11.5, fig_w), 5.4))
         sns.violinplot(data=events_df, x="formulation", y="residence_ps", hue="shell", cut=0, inner="quartile", ax=ax)
         ax.set_title("Residence Time Distribution by Shell Across Formulations")
         ax.set_xlabel("Formulation")
         ax.set_ylabel("Residence time (ps)")
-        ax.tick_params(axis="x", rotation=30)
+        format_xlabels(ax)
         plt.tight_layout()
         plt.savefig(outdir / "compare_residence_time_violin_by_shell.png", dpi=220)
         plt.close(fig)
