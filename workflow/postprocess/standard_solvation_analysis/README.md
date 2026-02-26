@@ -13,7 +13,7 @@
 2. 量化计算（`run_gpu4pyscf.py`）
    - 读取上一步导出的 `.xyz`。
    - 构建 PySCF 分子对象并调用 GPU4PySCF 进行 DFT。
-   - 统计并写出 HOMO/LUMO/Gap 到总表 CSV。
+   - 统计并写出 HOMO/LUMO/Gap 到每个配方目录下的独立 CSV（`results/*.csv`）。
 
 批处理入口脚本：`batch_analysis.sh`。
 
@@ -21,10 +21,18 @@
 
 ```text
 standard_solvation_analysis/
-├── batch_analysis.sh           # 批处理入口（先提取，再量化）
-├── classify_solvation_env.py   # Li+ 壳层结构提取与分类
-├── run_gpu4pyscf.py            # GPU4PySCF 计算 HOMO/LUMO
-├── ana_openmm_traj_rdf.py      # RDF/CN 分析辅助脚本（可选）
+├── batch_analysis.sh                  # 批处理入口（先提取，再量化）
+├── batch_gpu4pyscf_multi_gpu.sh       # 多 GPU 并行量化
+├── monitor_gpu4pyscf_progress.sh      # 按文件夹进度监看（done/need + 进度条）
+├── debug_gpu4pyscf_perf.sh            # GPU4PySCF 性能诊断（H20/A800等）
+├── compare_gpu4pyscf_reports.sh       # 对比两份 debug 报告
+├── classify_solvation_env.py          # Li+ 壳层结构提取与分类
+├── run_gpu4pyscf.py                   # GPU4PySCF 计算 HOMO/LUMO（写入每个目录的results）
+├── analyze_solvation_results.py       # HOMO/LUMO 可视化与跨配方比较
+├── run_visual_analysis.sh             # 可视化分析入口
+├── analyze_solvation_shell_dynamics.py# 壳层动力学分析（停留时间/第二壳层）
+├── run_shell_dynamics_analysis.sh     # 壳层动力学分析入口
+├── ana_openmm_traj_rdf.py             # RDF/CN 分析辅助脚本（可选）
 └── README.md
 ```
 
@@ -94,12 +102,39 @@ ADDITIVE_MAP = {
 - `LOG_DIR`：日志目录，默认 `gpu4pyscf_logs`
 
 运行时会在终端打印全局进度（`completed/total`、`success/fail`、`active`）。
+并打印每个文件夹的 `done/need` 进度条快照。
 
 脚本会自动：
 
 1. 遍历所有 `newer*` 文件夹；
 2. 运行 `classify_solvation_env.py`；
 3. 对成功提取的结构运行 `run_gpu4pyscf.py`。
+
+实时监看建议：
+
+```bash
+watch -n 20 /path/to/standard_solvation_analysis/monitor_gpu4pyscf_progress.sh
+```
+
+性能诊断（慢任务排查）：
+
+```bash
+/path/to/standard_solvation_analysis/debug_gpu4pyscf_perf.sh
+```
+
+可选微基准：
+
+```bash
+DO_BENCH=1 CUDA_VISIBLE_DEVICES=0 \
+/path/to/standard_solvation_analysis/debug_gpu4pyscf_perf.sh
+```
+
+跨机器报告对比（例如 H20 vs A800）：
+
+```bash
+/path/to/standard_solvation_analysis/compare_gpu4pyscf_reports.sh \
+  h20_report.txt a800_report.txt H20 A800
+```
 
 ## 7. 输出结果
 
@@ -114,10 +149,14 @@ ADDITIVE_MAP = {
   - `AGG_with_add/`
 - `classified_structures.tar.gz`
 
-### 7.2 运行目录下
+### 7.2 每个 `newer*` 文件夹内
 
-- `all_formulations_homolumo.csv`
+- `results/<folder>_homolumo.csv`
   - 字段：`Folder, Filename, Category, Additive, Charge, HOMO(eV), LUMO(eV), Gap(eV)`
+
+### 7.3 运行目录下
+
+- `gpu4pyscf_logs/*.log`（多 GPU 运行日志）
 
 ## 8. 可选脚本：RDF 分析
 
@@ -129,7 +168,7 @@ ADDITIVE_MAP = {
 
 ```bash
 /path/to/standard_solvation_analysis/run_visual_analysis.sh \
-  all_formulations_homolumo.csv analysis_reports
+  /path/to/your_merged_results.csv analysis_reports
 ```
 
 主要输出（默认在 `analysis_reports/`）：
@@ -140,7 +179,43 @@ ADDITIVE_MAP = {
 - `compare_category_composition_heatmap.png`
 - `per_formulation/*_overview.png`
 
-## 10. 常见问题
+说明：当前 `run_gpu4pyscf.py` 默认按文件夹分散写出 `results/*.csv`。  
+如果要做全局可视化，请先把多个 `results/*.csv` 合并成一个总表后再传给 `run_visual_analysis.sh`。
+
+## 10. 可选脚本：溶剂化壳层动力学对比分析
+
+可直接比较不同配方在第一壳层停留时间和第二壳层占据情况，并输出图表：
+
+```bash
+/path/to/standard_solvation_analysis/run_shell_dynamics_analysis.sh
+```
+
+常用变量：
+- `FOLDER_PATTERN`：默认 `newer*`
+- `CATION_SELECTION`：默认 `resname LI`
+- `SOLVENT_SELECTION`：默认 `(resname EC EMC DMC FEC DEC PC) and (name O* or type O*)`
+- `OUTDIR`：默认 `shell_dynamics_reports`
+
+示例：
+
+```bash
+FOLDER_PATTERN="newer*" \
+CATION_SELECTION="resname LI" \
+SOLVENT_SELECTION="(resname EC EMC DMC FEC DEC PC) and (name O* or type O*)" \
+OUTDIR="shell_dynamics_reports" \
+/path/to/standard_solvation_analysis/run_shell_dynamics_analysis.sh
+```
+
+主要输出：
+- `shell_dynamics_reports/shell_dynamics_summary.csv`
+- `shell_dynamics_reports/all_residence_events.csv`
+- `shell_dynamics_reports/shell_dynamics_report.md`
+- `shell_dynamics_reports/compare_*.png`
+- `shell_dynamics_reports/per_formulation/*_rdf_shells.png`
+- `shell_dynamics_reports/per_formulation/*_residence_hist.png`
+- `shell_dynamics_reports/per_formulation/*_residence_events.csv`
+
+## 11. 常见问题
 
 1. 提示找不到 PDB 或 DCD
    - 检查每个 `newer*` 目录结构是否符合输入约定。
