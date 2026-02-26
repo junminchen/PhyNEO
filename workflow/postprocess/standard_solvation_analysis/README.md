@@ -121,7 +121,24 @@ ADDITIVE_MAP = {
 
 `ana_openmm_traj_rdf.py` 用于额外的 RDF/CN 分析与绘图，不是批处理主流程的一部分。
 
-## 9. 常见问题
+## 9. 可选脚本：可视化与初步统计分析
+
+完成量化计算后，可直接生成“单配方图 + 跨配方对比图 + 初步分析报告”：
+
+```bash
+/path/to/standard_solvation_analysis/run_visual_analysis.sh \
+  all_formulations_homolumo.csv analysis_reports
+```
+
+主要输出（默认在 `analysis_reports/`）：
+- `summary_by_formulation.csv`
+- `preliminary_analysis.md`
+- `compare_mean_gap_by_formulation.png`
+- `compare_gap_distribution_by_formulation.png`
+- `compare_category_composition_heatmap.png`
+- `per_formulation/*_overview.png`
+
+## 10. 常见问题
 
 1. 提示找不到 PDB 或 DCD
    - 检查每个 `newer*` 目录结构是否符合输入约定。
