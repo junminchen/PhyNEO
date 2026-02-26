@@ -35,7 +35,9 @@ progress_done_from_log() {
         echo 0
         return
     fi
-    grep -c "Progress:" "$log_file" 2>/dev/null || echo 0
+    local count
+    count=$(grep -c "Progress:" "$log_file" 2>/dev/null || true)
+    echo "${count:-0}"
 }
 
 status_from_log() {

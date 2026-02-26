@@ -67,7 +67,9 @@ progress_done_from_log() {
         echo 0
         return
     fi
-    grep -c "Progress:" "$log_file" 2>/dev/null || echo 0
+    local count
+    count=$(grep -c "Progress:" "$log_file" 2>/dev/null || true)
+    echo "${count:-0}"
 }
 
 status_from_log() {
@@ -126,7 +128,7 @@ print_folder_progress_snapshot() {
         fi
 
         runnable=$((runnable + 1))
-        local need="${DIR_SELECTED_STRUCTS[$folder_name]}"
+        local need="${DIR_SELECTED_STRUCTS[$folder_name]:-0}"
         local log_file="${DIR_LOG_FILE[$folder_name]:-}"
         local done=0
         local status="PENDING"
