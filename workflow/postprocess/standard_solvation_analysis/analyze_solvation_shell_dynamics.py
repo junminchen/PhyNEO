@@ -21,6 +21,108 @@ except Exception:
     savgol_filter = None
 
 
+def infer_additive_from_topol(folder_dir: Path) -> str:
+    topol_file = folder_dir / "topol.top"
+    if not topol_file.exists():
+        return "UNKNOWN"
+
+    molecules = []
+    in_molecules_block = False
+    try:
+        with open(topol_file, "r") as f:
+            for raw_line in f:
+                line = raw_line.split(";", 1)[0].strip()
+                if not line:
+                    continue
+                if line.startswith("[") and line.endswith("]"):
+                    block = line[1:-1].strip().lower()
+                    in_molecules_block = (block == "molecules")
+                    continue
+                if not in_molecules_block or line.startswith("#"):
+                    continue
+                parts = line.split()
+                if len(parts) < 2:
+                    continue
+                try:
+                    count = int(parts[1])
+                except ValueError:
+                    continue
+                molecules.append((parts[0], count))
+    except Exception:
+        return "UNKNOWN"
+
+    a_molecules = [(name, cnt) for name, cnt in molecules if name.startswith("A")]
+    if not a_molecules:
+        return "NONE"
+    a_molecules.sort(key=lambda x: (x[1], x[0]))
+    return a_molecules[0][0]
+
+
+def load_additive_map_from_classify() -> Dict[str, str]:
+    try:
+        from classify_solvation_env import ADDITIVE_MAP  # type: ignore
+        if isinstance(ADDITIVE_MAP, dict):
+            return {str(k): str(v) for k, v in ADDITIVE_MAP.items()}
+    except Exception:
+        pass
+    return {}
+
+
+def parse_additive_map_text(raw: str) -> Dict[str, str]:
+    mapping: Dict[str, str] = {}
+    txt = (raw or "").strip()
+    if not txt:
+        return mapping
+    for item in txt.split(","):
+        token = item.strip()
+        if not token or ":" not in token:
+            continue
+        key, val = token.split(":", 1)
+        key = key.strip()
+        val = val.strip()
+        if key:
+            mapping[key] = val
+    return mapping
+
+
+def resolve_analysis_selection(
+    formulation: str,
+    folder_dir: Path,
+    u: mda.Universe,
+    args: argparse.Namespace,
+) -> Tuple[str, str]:
+    if args.analysis_target != "additive":
+        sel = args.solvent_selection
+        if len(u.select_atoms(sel)) == 0:
+            raise ValueError(f"manual selection has no atoms: {sel}")
+        return sel, "MANUAL"
+
+    additive = args.additive_map_dict.get(formulation)
+    if additive is None:
+        additive = infer_additive_from_topol(folder_dir)
+
+    if additive in ("NONE", "UNKNOWN", ""):
+        if args.skip_no_additive:
+            raise ValueError(f"no additive detected for {formulation}")
+        fallback = args.additive_fallback_selection
+        if len(u.select_atoms(fallback)) == 0:
+            raise ValueError(f"fallback selection has no atoms: {fallback}")
+        return fallback, additive
+
+    additive_sel = args.additive_selection_template.format(additive=additive)
+    if len(u.select_atoms(additive_sel)) == 0:
+        if args.skip_no_additive:
+            raise ValueError(f"additive selection has no atoms: {additive_sel}")
+        fallback = args.additive_fallback_selection
+        if len(u.select_atoms(fallback)) == 0:
+            raise ValueError(
+                f"additive selection empty and fallback has no atoms: {additive_sel} | {fallback}"
+            )
+        return fallback, additive
+
+    return additive_sel, additive
+
+
 def discover_systems(
     folder_pattern: str,
     top_patterns: List[str],
@@ -334,6 +436,8 @@ def run_analysis(args: argparse.Namespace) -> None:
     per_dir.mkdir(parents=True, exist_ok=True)
 
     sns.set_theme(style="whitegrid", context="talk")
+    args.additive_map_dict = load_additive_map_from_classify()
+    args.additive_map_dict.update(parse_additive_map_text(args.additive_map))
 
     if args.manifest:
         systems = parse_manifest(Path(args.manifest))
@@ -359,10 +463,13 @@ def run_analysis(args: argparse.Namespace) -> None:
 
         try:
             u = mda.Universe(str(top), str(traj))
+            folder_dir = Path(top).resolve().parent
+            target_sel, additive_name = resolve_analysis_selection(name, folder_dir, u, args)
+            print(f"[Info] {name}: target={args.analysis_target} additive={additive_name} selection={target_sel}")
             r, g, r1, r2 = compute_rdf_and_shells(
                 u=u,
                 cation_sel=args.cation_selection,
-                solvent_sel=args.solvent_selection,
+                solvent_sel=target_sel,
                 start=args.start,
                 stop=args.stop,
                 step=args.step,
@@ -371,7 +478,7 @@ def run_analysis(args: argparse.Namespace) -> None:
             dyn = analyze_shell_dynamics(
                 u=u,
                 cation_sel=args.cation_selection,
-                solvent_sel=args.solvent_selection,
+                solvent_sel=target_sel,
                 r1=r1,
                 r2=r2,
                 start=args.start,
@@ -395,6 +502,9 @@ def run_analysis(args: argparse.Namespace) -> None:
         summary_rows.append(
             {
                 "formulation": name,
+                "analysis_target": args.analysis_target,
+                "additive": additive_name,
+                "target_selection": target_sel,
                 "topology": str(top),
                 "trajectory": str(traj),
                 "first_shell_cutoff_A": r1,
@@ -437,8 +547,14 @@ def run_analysis(args: argparse.Namespace) -> None:
         "# Solvation Shell Dynamics Report",
         "",
         f"- Systems analyzed: **{len(summary_df)}**",
+        f"- Analysis target: `{args.analysis_target}`",
         f"- Cation selection: `{args.cation_selection}`",
-        f"- Solvent selection: `{args.solvent_selection}`",
+        (
+            f"- Target selection strategy: additive template "
+            f"`{args.additive_selection_template}` + fallback `{args.additive_fallback_selection}`"
+            if args.analysis_target == "additive"
+            else f"- Target selection (manual): `{args.solvent_selection}`"
+        ),
         "",
         "## Ranking by Mean First-Shell Residence Time",
     ]
@@ -460,11 +576,37 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--folder-pattern", default="newer*", help="Folder glob pattern for auto-discovery.")
     p.add_argument("--top-patterns", default="*.pdb,*.gro,*.prmtop,*.psf", help="Comma-separated topology patterns.")
     p.add_argument("--traj-patterns", default="*.dcd,*.xtc,*.nc,*.trr", help="Comma-separated trajectory patterns.")
+    p.add_argument(
+        "--analysis-target",
+        choices=["additive", "manual"],
+        default="additive",
+        help="Analyze additive shell dynamics (default) or use manual selection.",
+    )
     p.add_argument("--cation-selection", default="resname LI", help="MDAnalysis selection for cations.")
     p.add_argument(
         "--solvent-selection",
         default="(resname EC EMC DMC FEC DEC PC) and (name O* or type O*)",
-        help="MDAnalysis selection representing solvent shell atoms.",
+        help="Manual target selection when --analysis-target manual.",
+    )
+    p.add_argument(
+        "--additive-selection-template",
+        default="resname {additive} and (name O* or type O*)",
+        help="Selection template for additive mode. '{additive}' will be replaced by detected residue name.",
+    )
+    p.add_argument(
+        "--additive-fallback-selection",
+        default="(resname EC EMC DMC FEC DEC PC) and (name O* or type O*)",
+        help="Fallback selection when additive is NONE/UNKNOWN or selection empty.",
+    )
+    p.add_argument(
+        "--additive-map",
+        default="",
+        help="Optional override map: 'folder1:FEC,folder2:VC'.",
+    )
+    p.add_argument(
+        "--skip-no-additive",
+        action="store_true",
+        help="In additive mode, skip formulations without detected additive.",
     )
     p.add_argument("--start", type=int, default=0, help="Start frame index.")
     p.add_argument("--stop", type=int, default=None, help="Stop frame index (exclusive).")
