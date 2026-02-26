@@ -25,7 +25,7 @@ ADDITIVE_MAP = {
 CATION_RES = "LI"
 CUTOFF = 3.0       # 第一溶剂化壳层截断半径 (Angstrom)
 INTERVAL = 50      # 采样间隔 (越小采样的结构越多)
-MAX_OUTPUT_PER_FOLDER = 100  # 每个目标文件夹最多导出结构数
+MAX_OUTPUT_PER_CATEGORY = 100  # 每个分类目录最多导出结构数
 # ===================================================
 
 def infer_additive_from_topol(target_dir):
@@ -115,14 +115,14 @@ def extract_and_classify(target_dir):
         os.makedirs(os.path.join(output_dir, cat), exist_ok=True)
 
     count_stats = {cat: 0 for cat in categories}
-    written_total = 0
+    reached_cap_categories = set()
 
     # 遍历轨迹
     for ts in u.trajectory[::INTERVAL]:
-        if written_total >= MAX_OUTPUT_PER_FOLDER:
+        if len(reached_cap_categories) == len(categories):
             break
         for li in citations:
-            if written_total >= MAX_OUTPUT_PER_FOLDER:
+            if len(reached_cap_categories) == len(categories):
                 break
             # 选区：Li 及其周围 CUTOFF 范围内的原子
             shell = u.select_atoms(f"around {CUTOFF} (index {li.index})", updating=True)
@@ -155,6 +155,9 @@ def extract_and_classify(target_dir):
             
             cat_suffix = "_with_add" if has_additive else "_no_add"
             category = cat_base + cat_suffix
+            if count_stats[category] >= MAX_OUTPUT_PER_CATEGORY:
+                reached_cap_categories.add(category)
+                continue
 
             # 5. 提取簇结构 (Li + 第一壳层)
             cluster = (li.residue.atoms + res_in_shell.atoms).unique
@@ -186,12 +189,14 @@ def extract_and_classify(target_dir):
                     symbol = atom.type.strip() if atom.type else atom.name.strip()
                     f.write(f"{symbol:<3} {x:>10.5f} {y:>10.5f} {z:>10.5f}\n")
             count_stats[category] += 1
-            written_total += 1
+            if count_stats[category] >= MAX_OUTPUT_PER_CATEGORY:
+                reached_cap_categories.add(category)
 
     # 打印统计
+    written_total = sum(count_stats.values())
     print(
         f"  -> Stats for {folder_name}: {count_stats} | "
-        f"written_total={written_total} cap={MAX_OUTPUT_PER_FOLDER}"
+        f"written_total={written_total} per_category_cap={MAX_OUTPUT_PER_CATEGORY}"
     )
     if written_total == 0:
         print(f"  -> No structures extracted for {folder_name}; generated empty classification folders.")

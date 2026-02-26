@@ -71,6 +71,7 @@ ADDITIVE_MAP = {
 3. 采样和截断参数
    - `CUTOFF`：第一壳层距离阈值（单位 Angstrom）。
    - `INTERVAL`：轨迹采样间隔。
+   - `MAX_OUTPUT_PER_CATEGORY`：每个分类目录最多导出结构数（默认 100）。
 
 ## 6. 运行方式
 
