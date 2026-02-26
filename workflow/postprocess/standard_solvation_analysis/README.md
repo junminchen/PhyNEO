@@ -93,6 +93,8 @@ ADDITIVE_MAP = {
 - `PYTHON_BIN`：Python 解释器，默认 `python`
 - `LOG_DIR`：日志目录，默认 `gpu4pyscf_logs`
 
+运行时会在终端打印全局进度（`completed/total`、`success/fail`、`active`）。
+
 脚本会自动：
 
 1. 遍历所有 `newer*` 文件夹；

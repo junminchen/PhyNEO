@@ -30,6 +30,9 @@ declare -A PID_TO_GPU
 declare -A PID_TO_DIR
 success_count=0
 fail_count=0
+completed_count=0
+launched_count=0
+total_jobs=0
 
 launch_job() {
     local folder="$1"
@@ -43,6 +46,8 @@ launch_job() {
     local pid=$!
     PID_TO_GPU["$pid"]="$gpu"
     PID_TO_DIR["$pid"]="$folder_name"
+    launched_count=$((launched_count + 1))
+    echo "[Queue ] launched=$launched_count/$total_jobs active=${#PID_TO_GPU[@]} free_gpu=${#FREE_GPUS[@]}"
 }
 
 reap_one() {
@@ -59,6 +64,7 @@ reap_one() {
     unset PID_TO_GPU["$finished_pid"]
     unset PID_TO_DIR["$finished_pid"]
     FREE_GPUS+=("$gpu")
+    completed_count=$((completed_count + 1))
 
     if [ "$exit_code" -eq 0 ]; then
         success_count=$((success_count + 1))
@@ -67,6 +73,7 @@ reap_one() {
         fail_count=$((fail_count + 1))
         echo "[Fail] $folder_name on GPU $gpu (exit=$exit_code)"
     fi
+    echo "[Prog ] completed=$completed_count/$total_jobs success=$success_count fail=$fail_count active=${#PID_TO_GPU[@]}"
 }
 
 echo "========================================="
@@ -75,6 +82,18 @@ echo "   GPUs: ${GPU_IDS[*]}"
 echo "   Pattern: $FOLDER_PATTERN"
 echo "   Folders: ${#DIRS[@]}"
 echo "========================================="
+
+for folder in "${DIRS[@]}"; do
+    if [ -d "$folder/classified_structures" ]; then
+        total_jobs=$((total_jobs + 1))
+    fi
+done
+
+if [ "$total_jobs" -eq 0 ]; then
+    echo "[Error] No folders with classified_structures found."
+    exit 1
+fi
+echo "[Info ] total runnable jobs: $total_jobs"
 
 for folder in "${DIRS[@]}"; do
     if [ ! -d "$folder/classified_structures" ]; then
@@ -103,4 +122,3 @@ echo "========================================="
 if [ "$fail_count" -gt 0 ]; then
     exit 1
 fi
-
