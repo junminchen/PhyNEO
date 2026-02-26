@@ -1,49 +1,114 @@
-# Standard Electrolyte Solvation Analysis Workflow
+# Standard Solvation Analysis Workflow
 
-这个工作流用于标准化地从 MD 轨迹中提取 Li+ 溶剂化结构，并进行量子化学（HOMO-LUMO）计算。
+用于批量分析电解液 MD 轨迹中的 Li+ 第一溶剂化结构，并对提取簇执行 GPU-DFT 计算（HOMO/LUMO）。
 
-## 目录结构
+## 1. 功能概览
+
+本流程分两步：
+
+1. 结构提取与分类（`classify_solvation_env.py`）
+   - 从 `solvent_salt.pdb + transport_results/nvt.dcd` 中按间隔采样。
+   - 以每个 Li+ 为中心，提取第一壳层簇结构。
+   - 按是否含阴离子（SSIP/CIP）与是否含添加剂（with_add/no_add）分类。
+2. 量化计算（`run_gpu4pyscf.py`）
+   - 读取上一步导出的 `.xyz`。
+   - 构建 PySCF 分子对象并调用 GPU4PySCF 进行 DFT。
+   - 统计并写出 HOMO/LUMO/Gap 到总表 CSV。
+
+批处理入口脚本：`batch_analysis.sh`。
+
+## 2. 目录结构
+
 ```text
 standard_solvation_analysis/
-├── batch_analysis.sh           # 主运行脚本（入口）
-├── classify_solvation_env.py   # 结构提取与分类脚本
-└── run_gpu4pyscf.py            # GPU 加速量子化学计算脚本
+├── batch_analysis.sh           # 批处理入口（先提取，再量化）
+├── classify_solvation_env.py   # Li+ 壳层结构提取与分类
+├── run_gpu4pyscf.py            # GPU4PySCF 计算 HOMO/LUMO
+├── ana_openmm_traj_rdf.py      # RDF/CN 分析辅助脚本（可选）
+└── README.md
 ```
 
-## 使用方法
+## 3. 输入数据约定
 
-### 1. 配置
-在开始之前，请根据您的项目情况修改 `classify_solvation_env.py` 文件顶部的配置区：
-- **ANIONS**: 确保列表中包含了您体系中所有的阴离子（如 `["PF6", "TFSI"]`）。
-- **ADDITIVE_MAP**: 这是一个字典，用于将文件夹名称映射到添加剂名称。例如：
-  ```python
-  ADDITIVE_MAP = {
-      "test_fec_1.0M": "FEC",
-      "test_vc_1.2M": "VC",
-      "test_base_electrolyte": "NONE"
-  }
-  ```
+在你执行 `batch_analysis.sh` 的当前目录下，应存在若干 `test*` 文件夹。每个文件夹内至少包含：
 
-### 2. 运行
-您可以在包含数据文件夹（如 `test_fec_1.0M`, `test_vc_1.2M` 等）的任何目录下运行此工作流。
+```text
+test_xxx/
+├── solvent_salt.pdb
+└── transport_results/
+    └── nvt.dcd
+```
 
-**步骤：**
-1. 进入您的数据目录：
-   ```bash
-   cd /path/to/your/simulation_data
-   ```
-2. 调用 `batch_analysis.sh`（使用绝对路径或相对路径）：
-   ```bash
-   # 假设工作流文件夹在上一级目录
-   ../standard_solvation_analysis/batch_analysis.sh
-   ```
+## 4. 依赖环境
 
-### 3. 输出结果
-- **结构提取**: 在每个数据文件夹内生成 `classified_structures/` 目录和对应的 `.tar.gz` 压缩包。
-- **计算结果**: 在您当前运行脚本的目录下生成 `all_formulations_homolumo.csv`，包含所有配方的 HOMO/LUMO 能量及能隙数据。
-
-## 依赖环境
 - Python 3.8+
 - MDAnalysis
-- NumPy, Pandas
-- GPU4PySCF (及 PySCF)
+- NumPy
+- PySCF
+- GPU4PySCF
+
+建议先在可用 GPU 环境中测试 `import gpu4pyscf` 是否成功。
+
+## 5. 使用前配置
+
+请先修改 `classify_solvation_env.py` 顶部配置区：
+
+1. `ANIONS`
+   - 填入体系中所有阴离子残基名，例如：`["PF6", "TFSI", "FSI"]`。
+2. `ADDITIVE_MAP`
+   - 将文件夹名映射到添加剂残基名，例如：
+
+```python
+ADDITIVE_MAP = {
+    "test_fec_1.0M": "FEC",
+    "test_vc_1.2M": "VC",
+    "test_no_add": "NONE",
+}
+```
+
+3. 采样和截断参数
+   - `CUTOFF`：第一壳层距离阈值（单位 Angstrom）。
+   - `INTERVAL`：轨迹采样间隔。
+
+## 6. 运行方式
+
+在包含 `test*` 数据目录的路径下执行：
+
+```bash
+/path/to/standard_solvation_analysis/batch_analysis.sh
+```
+
+脚本会自动：
+
+1. 遍历所有 `test*` 文件夹；
+2. 运行 `classify_solvation_env.py`；
+3. 对成功提取的结构运行 `run_gpu4pyscf.py`。
+
+## 7. 输出结果
+
+### 7.1 每个 `test*` 文件夹内
+
+- `classified_structures/`
+  - `SSIP_no_add/`
+  - `SSIP_with_add/`
+  - `CIP_no_add/`
+  - `CIP_with_add/`
+- `classified_structures.tar.gz`
+
+### 7.2 运行目录下
+
+- `all_formulations_homolumo.csv`
+  - 字段：`Folder, Filename, Category, Additive, Charge, HOMO(eV), LUMO(eV), Gap(eV)`
+
+## 8. 可选脚本：RDF 分析
+
+`ana_openmm_traj_rdf.py` 用于额外的 RDF/CN 分析与绘图，不是批处理主流程的一部分。
+
+## 9. 常见问题
+
+1. 提示找不到 PDB 或 DCD
+   - 检查每个 `test*` 目录结构是否符合输入约定。
+2. 提示 `gpu4pyscf or pyscf not installed`
+   - 确认环境中已安装 PySCF 与 GPU4PySCF，且 Python 路径一致。
+3. 没有发现 `test*` 文件夹
+   - 请在数据目录中运行脚本，或修改 `batch_analysis.sh` 中 `FOLDER_PATTERN`。
