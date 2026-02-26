@@ -16,19 +16,40 @@ except ImportError:
 BASIS_SET = "6-31G**"
 FUNCTIONAL = "B3LYP"
 OUTPUT_CSV = "all_formulations_homolumo.csv"
+MAX_STRUCTURES = 100
 # =================================================
 
 def run_quantum_calculation(target_dir):
     target_dir = target_dir.rstrip('/')
-    # 搜索该目录下所有分类后的 xyz 文件
+    # 搜索该目录下所有分类后的 xyz 文件（每个分类最多取 MAX_STRUCTURES 个）
     base_search_path = os.path.join(target_dir, "classified_structures")
-    xyz_files = glob.glob(f"{base_search_path}/**/*.xyz", recursive=True)
+    category_dirs = sorted(glob.glob(os.path.join(base_search_path, "*")))
+    xyz_files = []
+    total_found = 0
+
+    for cat_dir in category_dirs:
+        if not os.path.isdir(cat_dir):
+            continue
+        cat_files = sorted(glob.glob(os.path.join(cat_dir, "*.xyz")))
+        if not cat_files:
+            continue
+        total_found += len(cat_files)
+        if len(cat_files) > MAX_STRUCTURES:
+            print(
+                f"Category {os.path.basename(cat_dir)} has {len(cat_files)} structures. "
+                f"Capping to first {MAX_STRUCTURES}."
+            )
+            cat_files = cat_files[:MAX_STRUCTURES]
+        xyz_files.extend(cat_files)
     
     if not xyz_files:
         print(f"[Warning] No XYZ files found in {base_search_path}")
         return
 
-    print(f"Found {len(xyz_files)} structures in {target_dir}. Starting GPU calculation...")
+    print(
+        f"Found {total_found} structures in {target_dir}. "
+        f"Selected {len(xyz_files)} structures after per-category cap."
+    )
 
     # 如果汇总 CSV 不存在，先写表头
     if not os.path.exists(OUTPUT_CSV):

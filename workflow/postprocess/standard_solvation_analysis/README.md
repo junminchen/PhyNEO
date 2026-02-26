@@ -74,11 +74,23 @@ ADDITIVE_MAP = {
 
 ## 6. 运行方式
 
-在包含 `test*` 数据目录的路径下执行：
+在包含 `newer*` 数据目录的路径下执行：
 
 ```bash
 /path/to/standard_solvation_analysis/batch_analysis.sh
 ```
+
+若你有多张 GPU 并希望仅并行执行量化阶段，可使用：
+
+```bash
+/path/to/standard_solvation_analysis/batch_gpu4pyscf_multi_gpu.sh
+```
+
+可选环境变量：
+- `GPU_IDS`：GPU 编号列表，默认 `0,1,2`
+- `FOLDER_PATTERN`：目录匹配，默认 `newer*`
+- `PYTHON_BIN`：Python 解释器，默认 `python`
+- `LOG_DIR`：日志目录，默认 `gpu4pyscf_logs`
 
 脚本会自动：
 
@@ -111,8 +123,8 @@ ADDITIVE_MAP = {
 ## 9. 常见问题
 
 1. 提示找不到 PDB 或 DCD
-   - 检查每个 `test*` 目录结构是否符合输入约定。
+   - 检查每个 `newer*` 目录结构是否符合输入约定。
 2. 提示 `gpu4pyscf or pyscf not installed`
    - 确认环境中已安装 PySCF 与 GPU4PySCF，且 Python 路径一致。
-3. 没有发现 `test*` 文件夹
+3. 没有发现 `newer*` 文件夹
    - 请在数据目录中运行脚本，或修改 `batch_analysis.sh` 中 `FOLDER_PATTERN`。

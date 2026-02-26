@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 import tarfile
 import numpy as np
 import MDAnalysis as mda
@@ -24,6 +25,7 @@ ADDITIVE_MAP = {
 CATION_RES = "LI"
 CUTOFF = 3.0       # 第一溶剂化壳层截断半径 (Angstrom)
 INTERVAL = 50      # 采样间隔 (越小采样的结构越多)
+MAX_OUTPUT_PER_FOLDER = 100  # 每个目标文件夹最多导出结构数
 # ===================================================
 
 def infer_additive_from_topol(target_dir):
@@ -96,6 +98,10 @@ def extract_and_classify(target_dir):
     citations = u.select_atoms(f"resname {CATION_RES}")
     output_dir = os.path.join(target_dir, "classified_structures")
 
+    # 重新生成输出目录，避免与历史结果混杂
+    if os.path.isdir(output_dir):
+        shutil.rmtree(output_dir)
+
     # 创建输出目录
     categories = [
         "SSIP_no_add",
@@ -109,10 +115,15 @@ def extract_and_classify(target_dir):
         os.makedirs(os.path.join(output_dir, cat), exist_ok=True)
 
     count_stats = {cat: 0 for cat in categories}
+    written_total = 0
 
     # 遍历轨迹
     for ts in u.trajectory[::INTERVAL]:
+        if written_total >= MAX_OUTPUT_PER_FOLDER:
+            break
         for li in citations:
+            if written_total >= MAX_OUTPUT_PER_FOLDER:
+                break
             # 选区：Li 及其周围 CUTOFF 范围内的原子
             shell = u.select_atoms(f"around {CUTOFF} (index {li.index})", updating=True)
             res_in_shell = shell.residues
@@ -144,8 +155,6 @@ def extract_and_classify(target_dir):
             
             cat_suffix = "_with_add" if has_additive else "_no_add"
             category = cat_base + cat_suffix
-            
-            count_stats[category] += 1
 
             # 5. 提取簇结构 (Li + 第一壳层)
             cluster = (li.residue.atoms + res_in_shell.atoms).unique
@@ -176,9 +185,16 @@ def extract_and_classify(target_dir):
                     x, y, z = positions[idx]
                     symbol = atom.type.strip() if atom.type else atom.name.strip()
                     f.write(f"{symbol:<3} {x:>10.5f} {y:>10.5f} {z:>10.5f}\n")
+            count_stats[category] += 1
+            written_total += 1
 
     # 打印统计
-    print(f"  -> Stats for {folder_name}: {count_stats}")
+    print(
+        f"  -> Stats for {folder_name}: {count_stats} | "
+        f"written_total={written_total} cap={MAX_OUTPUT_PER_FOLDER}"
+    )
+    if written_total == 0:
+        print(f"  -> No structures extracted for {folder_name}; generated empty classification folders.")
 
     # 打包
     archive_name = os.path.join(target_dir, "classified_structures.tar.gz")
