@@ -10,6 +10,7 @@ FOLDER_PATTERN="${FOLDER_PATTERN:-newer*}"
 GPU_IDS_STR="${GPU_IDS:-0,1,2}"          # e.g. "0,1,2"
 PYTHON_BIN="${PYTHON_BIN:-python}"
 LOG_DIR="${LOG_DIR:-gpu4pyscf_logs}"
+MAX_STRUCTURES_PER_CATEGORY="${MAX_STRUCTURES_PER_CATEGORY:-100}"
 
 IFS=',' read -r -a GPU_IDS <<< "$GPU_IDS_STR"
 if [ "${#GPU_IDS[@]}" -eq 0 ]; then
@@ -28,11 +29,36 @@ fi
 declare -a FREE_GPUS=("${GPU_IDS[@]}")
 declare -A PID_TO_GPU
 declare -A PID_TO_DIR
+declare -A DIR_SELECTED_STRUCTS
 success_count=0
 fail_count=0
 completed_count=0
 launched_count=0
 total_jobs=0
+total_structures_selected=0
+
+count_selected_structures() {
+    local folder="$1"
+    local base="$folder/classified_structures"
+    local total=0
+
+    if [ ! -d "$base" ]; then
+        echo 0
+        return
+    fi
+
+    while IFS= read -r cat_dir; do
+        [ -d "$cat_dir" ] || continue
+        local n
+        n=$(find "$cat_dir" -maxdepth 1 -type f -name "*.xyz" | wc -l | tr -d ' ')
+        if [ "$n" -gt "$MAX_STRUCTURES_PER_CATEGORY" ]; then
+            n="$MAX_STRUCTURES_PER_CATEGORY"
+        fi
+        total=$((total + n))
+    done < <(find "$base" -mindepth 1 -maxdepth 1 -type d | sort)
+
+    echo "$total"
+}
 
 launch_job() {
     local folder="$1"
@@ -85,6 +111,10 @@ echo "========================================="
 
 for folder in "${DIRS[@]}"; do
     if [ -d "$folder/classified_structures" ]; then
+        selected="$(count_selected_structures "$folder")"
+        folder_name="$(basename "$folder")"
+        DIR_SELECTED_STRUCTS["$folder_name"]="$selected"
+        total_structures_selected=$((total_structures_selected + selected))
         total_jobs=$((total_jobs + 1))
     fi
 done
@@ -94,6 +124,14 @@ if [ "$total_jobs" -eq 0 ]; then
     exit 1
 fi
 echo "[Info ] total runnable jobs: $total_jobs"
+echo "[Info ] total selected structures: $total_structures_selected (per-category cap=$MAX_STRUCTURES_PER_CATEGORY)"
+echo "[Info ] per-folder selected structures:"
+for folder in "${DIRS[@]}"; do
+    folder_name="$(basename "$folder")"
+    if [ -d "$folder/classified_structures" ]; then
+        echo "        - $folder_name: ${DIR_SELECTED_STRUCTS[$folder_name]}"
+    fi
+done
 
 for folder in "${DIRS[@]}"; do
     if [ ! -d "$folder/classified_structures" ]; then
