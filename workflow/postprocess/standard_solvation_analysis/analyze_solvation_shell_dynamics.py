@@ -380,6 +380,151 @@ def analyze_shell_dynamics(
     }
 
 
+def analyze_residue_shell_residence(
+    u: mda.Universe,
+    cation_sel: str,
+    target_sel: str,
+    r1: float,
+    r2: float,
+    start: int,
+    stop: Optional[int],
+    step: int,
+    dt_ps: Optional[float],
+) -> Dict[str, object]:
+    cations = u.select_atoms(cation_sel)
+    target = u.select_atoms(target_sel)
+    if len(cations) == 0:
+        raise ValueError(f"No atoms in cation selection: {cation_sel}")
+    if len(target) == 0:
+        raise ValueError(f"No atoms in target selection: {target_sel}")
+
+    target_resindex = target.resindices.astype(int)
+    unique_res = np.unique(target_resindex)
+    if len(unique_res) == 0:
+        raise ValueError("No target residues found.")
+
+    res_local_idx = {int(rid): np.where(target_resindex == rid)[0] for rid in unique_res}
+    active_shell1: Dict[int, int] = {}
+    active_shell2: Dict[int, int] = {}
+    shell1_durations_frames: List[int] = []
+    shell2_durations_frames: List[int] = []
+    frame_ids: List[int] = []
+    shell1_counts_per_frame: List[int] = []
+    shell2_counts_per_frame: List[int] = []
+    events: List[Dict[str, object]] = []
+    state_counts = {0: 0, 1: 0, 2: 0}
+
+    def close_event(shell: int, rid: int, start_idx: int, end_idx: int) -> None:
+        duration_frames = end_idx - start_idx + 1
+        if duration_frames <= 0:
+            return
+        if shell == 1:
+            shell1_durations_frames.append(duration_frames)
+        elif shell == 2:
+            shell2_durations_frames.append(duration_frames)
+        events.append(
+            {
+                "resindex": int(rid),
+                "shell": int(shell),
+                "start_frame_local": int(start_idx),
+                "end_frame_local": int(end_idx),
+                "duration_frames": int(duration_frames),
+            }
+        )
+
+    for ts in u.trajectory[start:stop:step]:
+        frame_ids.append(ts.frame)
+        local_idx = len(frame_ids) - 1
+        dist = distance_array(cations.positions, target.positions, box=ts.dimensions)
+
+        n_shell1 = 0
+        n_shell2 = 0
+        for rid, idxs in res_local_idx.items():
+            dmin = float(np.min(dist[:, idxs]))
+            if dmin <= r1:
+                shell_state = 1
+            elif dmin <= r2:
+                shell_state = 2
+            else:
+                shell_state = 0
+            state_counts[shell_state] += 1
+
+            if shell_state == 1:
+                n_shell1 += 1
+                if rid in active_shell2:
+                    sidx = active_shell2.pop(rid)
+                    close_event(2, rid, sidx, local_idx - 1)
+                if rid not in active_shell1:
+                    active_shell1[rid] = local_idx
+            elif shell_state == 2:
+                n_shell2 += 1
+                if rid in active_shell1:
+                    sidx = active_shell1.pop(rid)
+                    close_event(1, rid, sidx, local_idx - 1)
+                if rid not in active_shell2:
+                    active_shell2[rid] = local_idx
+            else:
+                if rid in active_shell1:
+                    sidx = active_shell1.pop(rid)
+                    close_event(1, rid, sidx, local_idx - 1)
+                if rid in active_shell2:
+                    sidx = active_shell2.pop(rid)
+                    close_event(2, rid, sidx, local_idx - 1)
+
+        shell1_counts_per_frame.append(n_shell1)
+        shell2_counts_per_frame.append(n_shell2)
+
+    if len(frame_ids) == 0:
+        raise ValueError("No frames selected for analysis.")
+
+    last_idx = len(frame_ids) - 1
+    for rid, sidx in active_shell1.items():
+        close_event(1, rid, sidx, last_idx)
+    for rid, sidx in active_shell2.items():
+        close_event(2, rid, sidx, last_idx)
+
+    if dt_ps is None:
+        try:
+            base_dt = float(u.trajectory.dt)
+        except Exception:
+            base_dt = 1.0
+        dt_ps_eff = base_dt * step
+    else:
+        dt_ps_eff = float(dt_ps) * step
+
+    shell1_durations_ps = np.asarray(shell1_durations_frames, dtype=float) * dt_ps_eff
+    shell2_durations_ps = np.asarray(shell2_durations_frames, dtype=float) * dt_ps_eff
+    shell1_counts = np.asarray(shell1_counts_per_frame, dtype=float)
+    shell2_counts = np.asarray(shell2_counts_per_frame, dtype=float)
+    n_targets = float(len(unique_res))
+    state_total = max(1, sum(state_counts.values()))
+
+    events_df = pd.DataFrame(events)
+    if not events_df.empty:
+        events_df["duration_ps"] = events_df["duration_frames"].astype(float) * dt_ps_eff
+        events_df["shell_name"] = events_df["shell"].map({1: "first", 2: "second"}).fillna("unknown")
+    else:
+        events_df = pd.DataFrame(
+            columns=["resindex", "shell", "shell_name", "start_frame_local", "end_frame_local", "duration_frames", "duration_ps"]
+        )
+
+    return {
+        "first_shell_durations_ps": shell1_durations_ps,
+        "second_shell_durations_ps": shell2_durations_ps,
+        "first_counts": shell1_counts,
+        "second_counts": shell2_counts,
+        "first_fraction": shell1_counts / n_targets,
+        "second_fraction": shell2_counts / n_targets,
+        "frame_second_presence": (shell2_counts > 0).astype(float),
+        "state_fraction_first": float(state_counts[1]) / float(state_total),
+        "state_fraction_second": float(state_counts[2]) / float(state_total),
+        "events_df": events_df,
+        "n_frames": np.asarray([len(frame_ids)], dtype=int),
+        "n_cations": np.asarray([len(cations)], dtype=int),
+        "n_solvent_residues": np.asarray([len(unique_res)], dtype=int),
+    }
+
+
 def save_formulation_plots(
     outdir: Path,
     name: str,
@@ -387,7 +532,8 @@ def save_formulation_plots(
     g: np.ndarray,
     r1: float,
     r2: float,
-    durations_ps: np.ndarray,
+    first_durations_ps: np.ndarray,
+    second_durations_ps: np.ndarray,
 ) -> None:
     fig, ax = plt.subplots(figsize=(7, 4.2))
     ax.plot(r, g, lw=1.8, color="#2a9d8f", label="Distance profile")
@@ -403,12 +549,30 @@ def save_formulation_plots(
     plt.savefig(outdir / f"{name}_rdf_shells.png", dpi=220)
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(6.5, 4.0))
-    if len(durations_ps) > 0:
-        sns.histplot(durations_ps, bins=min(60, max(10, len(durations_ps) // 5)), kde=True, ax=ax, color="#4c78a8")
-    ax.set_xlabel("First-shell residence duration (ps)")
-    ax.set_ylabel("Count")
-    ax.set_title(f"Residence Time Distribution: {name}")
+    fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.0), sharey=False)
+    if len(first_durations_ps) > 0:
+        sns.histplot(
+            first_durations_ps,
+            bins=min(60, max(10, len(first_durations_ps) // 5)),
+            kde=True,
+            ax=axes[0],
+            color="#4c78a8",
+        )
+    axes[0].set_xlabel("1st-shell residence duration (ps)")
+    axes[0].set_ylabel("Count")
+    axes[0].set_title(f"{name}: First Shell")
+
+    if len(second_durations_ps) > 0:
+        sns.histplot(
+            second_durations_ps,
+            bins=min(60, max(10, len(second_durations_ps) // 5)),
+            kde=True,
+            ax=axes[1],
+            color="#f4a261",
+        )
+    axes[1].set_xlabel("2nd-shell residence duration (ps)")
+    axes[1].set_ylabel("Count")
+    axes[1].set_title(f"{name}: Second Shell")
     plt.tight_layout()
     plt.savefig(outdir / f"{name}_residence_hist.png", dpi=220)
     plt.close(fig)
@@ -464,7 +628,7 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
     plt.savefig(outdir / "compare_coordination_numbers.png", dpi=220)
     plt.close(fig)
 
-    if not events_df.empty:
+    if not events_df.empty and "shell" not in events_df.columns:
         fig, ax = plt.subplots(figsize=(10, 5))
         sns.violinplot(data=events_df, x="formulation", y="residence_ps", cut=0, inner="quartile", ax=ax)
         ax.set_title("First-Shell Residence Time Distribution Across Formulations")
@@ -473,6 +637,34 @@ def save_compare_plots(summary_df: pd.DataFrame, events_df: pd.DataFrame, outdir
         ax.tick_params(axis="x", rotation=30)
         plt.tight_layout()
         plt.savefig(outdir / "compare_residence_time_violin.png", dpi=220)
+        plt.close(fig)
+
+    if "mean_first_shell_residence_ps" in summary_df.columns and "mean_second_shell_residence_ps" in summary_df.columns:
+        melted_tau = summary_df.melt(
+            id_vars=["formulation"],
+            value_vars=["mean_first_shell_residence_ps", "mean_second_shell_residence_ps"],
+            var_name="shell_metric",
+            value_name="mean_residence_ps",
+        )
+        fig, ax = plt.subplots(figsize=(10, 4.8))
+        sns.barplot(data=melted_tau, x="formulation", y="mean_residence_ps", hue="shell_metric", ax=ax)
+        ax.set_title("Mean Residence Time by Shell and Formulation")
+        ax.set_xlabel("Formulation")
+        ax.set_ylabel("Residence time (ps)")
+        ax.tick_params(axis="x", rotation=30)
+        plt.tight_layout()
+        plt.savefig(outdir / "compare_mean_residence_time_by_shell.png", dpi=220)
+        plt.close(fig)
+
+    if not events_df.empty and "shell" in events_df.columns:
+        fig, ax = plt.subplots(figsize=(10.5, 5.2))
+        sns.violinplot(data=events_df, x="formulation", y="residence_ps", hue="shell", cut=0, inner="quartile", ax=ax)
+        ax.set_title("Residence Time Distribution by Shell Across Formulations")
+        ax.set_xlabel("Formulation")
+        ax.set_ylabel("Residence time (ps)")
+        ax.tick_params(axis="x", rotation=30)
+        plt.tight_layout()
+        plt.savefig(outdir / "compare_residence_time_violin_by_shell.png", dpi=220)
         plt.close(fig)
 
 
@@ -533,29 +725,85 @@ def run_analysis(args: argparse.Namespace) -> None:
                     step=args.step,
                     rdf_nbins=args.rdf_nbins,
                 )
-            dyn = analyze_shell_dynamics(
-                u=u,
-                cation_sel=args.cation_selection,
-                solvent_sel=target_sel,
-                r1=r1,
-                r2=r2,
-                start=args.start,
-                stop=args.stop,
-                step=args.step,
-                dt_ps=args.dt_ps,
-            )
+            if args.analysis_target == "additive":
+                dyn = analyze_residue_shell_residence(
+                    u=u,
+                    cation_sel=args.cation_selection,
+                    target_sel=target_sel,
+                    r1=r1,
+                    r2=r2,
+                    start=args.start,
+                    stop=args.stop,
+                    step=args.step,
+                    dt_ps=args.dt_ps,
+                )
+            else:
+                dyn = analyze_shell_dynamics(
+                    u=u,
+                    cation_sel=args.cation_selection,
+                    solvent_sel=target_sel,
+                    r1=r1,
+                    r2=r2,
+                    start=args.start,
+                    stop=args.stop,
+                    step=args.step,
+                    dt_ps=args.dt_ps,
+                )
         except Exception as e:
             print(f"[Fail] {name}: {e}")
             continue
 
-        durations_ps = dyn["durations_ps"]
-        mean_res = float(np.mean(durations_ps)) if len(durations_ps) > 0 else 0.0
-        med_res = float(np.median(durations_ps)) if len(durations_ps) > 0 else 0.0
-        p90_res = float(np.percentile(durations_ps, 90)) if len(durations_ps) > 0 else 0.0
-        std_res = float(np.std(durations_ps)) if len(durations_ps) > 0 else 0.0
-        mean_first_cn = float(np.mean(dyn["first_cn"])) if len(dyn["first_cn"]) > 0 else 0.0
-        mean_second_cn = float(np.mean(dyn["second_cn"])) if len(dyn["second_cn"]) > 0 else 0.0
-        second_presence = float(np.mean(dyn["second_presence"])) if len(dyn["second_presence"]) > 0 else 0.0
+        if args.analysis_target == "additive":
+            first_durations_ps = np.asarray(dyn["first_shell_durations_ps"], dtype=float)
+            second_durations_ps = np.asarray(dyn["second_shell_durations_ps"], dtype=float)
+            first_counts = np.asarray(dyn["first_counts"], dtype=float)
+            second_counts = np.asarray(dyn["second_counts"], dtype=float)
+            second_presence = float(np.mean(dyn["frame_second_presence"])) if len(dyn["frame_second_presence"]) > 0 else 0.0
+            state_fraction_first = float(dyn["state_fraction_first"])
+            state_fraction_second = float(dyn["state_fraction_second"])
+
+            mean_first_res = float(np.mean(first_durations_ps)) if len(first_durations_ps) > 0 else 0.0
+            med_first_res = float(np.median(first_durations_ps)) if len(first_durations_ps) > 0 else 0.0
+            p90_first_res = float(np.percentile(first_durations_ps, 90)) if len(first_durations_ps) > 0 else 0.0
+            std_first_res = float(np.std(first_durations_ps)) if len(first_durations_ps) > 0 else 0.0
+
+            mean_second_res = float(np.mean(second_durations_ps)) if len(second_durations_ps) > 0 else 0.0
+            med_second_res = float(np.median(second_durations_ps)) if len(second_durations_ps) > 0 else 0.0
+            p90_second_res = float(np.percentile(second_durations_ps, 90)) if len(second_durations_ps) > 0 else 0.0
+            std_second_res = float(np.std(second_durations_ps)) if len(second_durations_ps) > 0 else 0.0
+
+            mean_first_cn = float(np.mean(first_counts)) if len(first_counts) > 0 else 0.0
+            mean_second_cn = float(np.mean(second_counts)) if len(second_counts) > 0 else 0.0
+
+            n_residence_events = int(len(first_durations_ps))
+            mean_res = mean_first_res
+            med_res = med_first_res
+            p90_res = p90_first_res
+            std_res = std_first_res
+        else:
+            durations_ps = np.asarray(dyn["durations_ps"], dtype=float)
+            first_durations_ps = durations_ps
+            second_durations_ps = np.asarray([], dtype=float)
+
+            mean_res = float(np.mean(durations_ps)) if len(durations_ps) > 0 else 0.0
+            med_res = float(np.median(durations_ps)) if len(durations_ps) > 0 else 0.0
+            p90_res = float(np.percentile(durations_ps, 90)) if len(durations_ps) > 0 else 0.0
+            std_res = float(np.std(durations_ps)) if len(durations_ps) > 0 else 0.0
+            mean_first_cn = float(np.mean(dyn["first_cn"])) if len(dyn["first_cn"]) > 0 else 0.0
+            mean_second_cn = float(np.mean(dyn["second_cn"])) if len(dyn["second_cn"]) > 0 else 0.0
+            second_presence = float(np.mean(dyn["second_presence"])) if len(dyn["second_presence"]) > 0 else 0.0
+            state_fraction_first = np.nan
+            state_fraction_second = np.nan
+
+            mean_first_res = mean_res
+            med_first_res = med_res
+            p90_first_res = p90_res
+            std_first_res = std_res
+            mean_second_res = np.nan
+            med_second_res = np.nan
+            p90_second_res = np.nan
+            std_second_res = np.nan
+            n_residence_events = int(len(durations_ps))
 
         summary_rows.append(
             {
@@ -567,28 +815,57 @@ def run_analysis(args: argparse.Namespace) -> None:
                 "trajectory": str(traj),
                 "first_shell_cutoff_A": r1,
                 "second_shell_cutoff_A": r2,
-                "n_residence_events": int(len(durations_ps)),
+                "n_residence_events": n_residence_events,
                 "mean_residence_ps": mean_res,
                 "median_residence_ps": med_res,
                 "p90_residence_ps": p90_res,
                 "std_residence_ps": std_res,
+                "n_first_shell_events": int(len(first_durations_ps)),
+                "mean_first_shell_residence_ps": mean_first_res,
+                "median_first_shell_residence_ps": med_first_res,
+                "p90_first_shell_residence_ps": p90_first_res,
+                "std_first_shell_residence_ps": std_first_res,
+                "n_second_shell_events": int(len(second_durations_ps)),
+                "mean_second_shell_residence_ps": mean_second_res,
+                "median_second_shell_residence_ps": med_second_res,
+                "p90_second_shell_residence_ps": p90_second_res,
+                "std_second_shell_residence_ps": std_second_res,
+                "state_fraction_first_shell": state_fraction_first,
+                "state_fraction_second_shell": state_fraction_second,
                 "mean_first_cn": mean_first_cn,
                 "mean_second_cn": mean_second_cn,
                 "second_shell_presence_frac": second_presence,
                 "n_frames_used": int(dyn["n_frames"][0]),
                 "n_cations": int(dyn["n_cations"][0]),
+                "n_target_residues": int(dyn["n_solvent_residues"][0]),
             }
         )
 
-        if len(durations_ps) > 0:
-            all_events.append(pd.DataFrame({"formulation": name, "residence_ps": durations_ps}))
+        if args.analysis_target == "additive":
+            events_df = dyn["events_df"].copy()
+            if not events_df.empty:
+                events_df["formulation"] = name
+                events_df["residence_ps"] = events_df["duration_ps"]
+                all_events.append(
+                    events_df[["formulation", "shell_name", "resindex", "residence_ps", "duration_frames"]]
+                    .rename(columns={"shell_name": "shell"})
+                )
+            else:
+                all_events.append(pd.DataFrame(columns=["formulation", "shell", "resindex", "residence_ps", "duration_frames"]))
+            events_df.to_csv(per_dir / f"{name}_residence_events.csv", index=False)
+        else:
+            if len(first_durations_ps) > 0:
+                all_events.append(pd.DataFrame({"formulation": name, "residence_ps": first_durations_ps}))
+            pd.DataFrame({"formulation": name, "residence_ps": first_durations_ps}).to_csv(
+                per_dir / f"{name}_residence_events.csv", index=False
+            )
 
-        pd.DataFrame({"formulation": name, "residence_ps": durations_ps}).to_csv(
-            per_dir / f"{name}_residence_events.csv", index=False
-        )
         pd.DataFrame({"r_A": r, "g_r": g}).to_csv(per_dir / f"{name}_rdf.csv", index=False)
-        save_formulation_plots(per_dir, name, r, g, r1, r2, durations_ps)
-        print(f"[Done] {name}: r1={r1:.3f} A r2={r2:.3f} A mean_tau={mean_res:.3f} ps")
+        save_formulation_plots(per_dir, name, r, g, r1, r2, first_durations_ps, second_durations_ps)
+        print(
+            f"[Done] {name}: r1={r1:.3f} A r2={r2:.3f} A "
+            f"mean_tau1={mean_first_res:.3f} ps mean_tau2={0.0 if np.isnan(mean_second_res) else mean_second_res:.3f} ps"
+        )
 
     if len(summary_rows) == 0:
         print("[Error] No system completed successfully.")
@@ -597,7 +874,13 @@ def run_analysis(args: argparse.Namespace) -> None:
     summary_df = pd.DataFrame(summary_rows).sort_values("mean_residence_ps", ascending=False).reset_index(drop=True)
     summary_df.to_csv(outdir / "shell_dynamics_summary.csv", index=False)
 
-    events_df = pd.concat(all_events, ignore_index=True) if all_events else pd.DataFrame(columns=["formulation", "residence_ps"])
+    if all_events:
+        events_df = pd.concat(all_events, ignore_index=True)
+    else:
+        if args.analysis_target == "additive":
+            events_df = pd.DataFrame(columns=["formulation", "shell", "resindex", "residence_ps", "duration_frames"])
+        else:
+            events_df = pd.DataFrame(columns=["formulation", "residence_ps"])
     events_df.to_csv(outdir / "all_residence_events.csv", index=False)
     save_compare_plots(summary_df, events_df, outdir)
 
@@ -617,11 +900,19 @@ def run_analysis(args: argparse.Namespace) -> None:
         "## Ranking by Mean First-Shell Residence Time",
     ]
     for _, row in summary_df.iterrows():
-        md_lines.append(
-            f"- {row['formulation']}: mean={row['mean_residence_ps']:.3f} ps, "
-            f"median={row['median_residence_ps']:.3f} ps, "
-            f"2nd-shell frac={row['second_shell_presence_frac']:.3f}"
-        )
+        if "mean_second_shell_residence_ps" in row.index and not pd.isna(row["mean_second_shell_residence_ps"]):
+            md_lines.append(
+                f"- {row['formulation']}: "
+                f"tau1_mean={row['mean_first_shell_residence_ps']:.3f} ps, "
+                f"tau2_mean={row['mean_second_shell_residence_ps']:.3f} ps, "
+                f"2nd-shell frac={row['second_shell_presence_frac']:.3f}"
+            )
+        else:
+            md_lines.append(
+                f"- {row['formulation']}: mean={row['mean_residence_ps']:.3f} ps, "
+                f"median={row['median_residence_ps']:.3f} ps, "
+                f"2nd-shell frac={row['second_shell_presence_frac']:.3f}"
+            )
     (outdir / "shell_dynamics_report.md").write_text("\n".join(md_lines) + "\n")
     print(f"[Done] outputs written to: {outdir}")
 

@@ -196,6 +196,11 @@ DO_BENCH=1 CUDA_VISIBLE_DEVICES=0 \
 - `SOLVENT_SELECTION`：默认 `(resname EC EMC DMC FEC DEC PC) and (name O* or type O*)`
 - `OUTDIR`：默认 `shell_dynamics_reports`
 
+说明（添加剂模式关键更新）：
+- 当 `ANALYSIS_TARGET=additive`（默认）时，脚本会按“添加剂分子”为单位，在全轨迹逐帧跟踪其与任意 Li+ 的最小距离。
+- 每个添加剂分子在每一帧被判定为：壳外 / 第一壳层 / 第二壳层，并分别统计第一壳层与第二壳层的连续停留事件（residence events）。
+- 该口径适用于“添加剂数量很少（如 2-3 个）”的体系，避免仅看瞬时配位导致的统计偏差。
+
 示例：
 
 ```bash
@@ -215,6 +220,17 @@ OUTDIR="shell_dynamics_reports" \
 - `shell_dynamics_reports/per_formulation/*_residence_hist.png`
 - `shell_dynamics_reports/per_formulation/*_residence_events.csv`
 
+`shell_dynamics_summary.csv` 新增（或重点关注）字段：
+- `mean_first_shell_residence_ps`, `median_first_shell_residence_ps`
+- `mean_second_shell_residence_ps`, `median_second_shell_residence_ps`
+- `n_first_shell_events`, `n_second_shell_events`
+- `state_fraction_first_shell`, `state_fraction_second_shell`
+- `n_target_residues`
+
+新增对比图：
+- `compare_mean_residence_time_by_shell.png`
+- `compare_residence_time_violin_by_shell.png`
+
 ## 11. 常见问题
 
 1. 提示找不到 PDB 或 DCD
@@ -223,3 +239,73 @@ OUTDIR="shell_dynamics_reports" \
    - 确认环境中已安装 PySCF 与 GPU4PySCF，且 Python 路径一致。
 3. 没有发现 `newer*` 文件夹
    - 请在数据目录中运行脚本，或修改 `batch_analysis.sh` 中 `FOLDER_PATTERN`。
+
+## 12. 配方评价标准（统一口径）
+
+为避免只看单一指标，建议把本流程输出分为三组指标联合评价。
+
+### 12.1 结构组成指标（来自分类结果）
+
+- 数据来源：`classified_structures/*`（或后续汇总表中的 `Category` 字段）
+- 关键指标：
+  - `SSIP/CIP/AGG` 比例（`AGG` 过高通常不利）
+  - `with_add/no_add` 比例（观察添加剂是否真实进入第一壳层）
+- 判据建议：
+  - 优先选择 `AGG` 占比更低的配方；
+  - `SSIP` 与 `CIP` 处于合理平衡，而非单一极端。
+
+### 12.2 电子结构指标（来自 HOMO/LUMO）
+
+- 数据来源：`results/*_homolumo.csv`，或 `analysis_reports/summary_by_formulation.csv`
+- 关键指标：
+  - `mean_gap`（均值）
+  - `std_gap`（离散度）
+  - `n_structures`（样本量）
+- 判据建议：
+  - 在当前脚本口径下（`analyze_solvation_results.py`）按 `mean_gap` 升序比较；
+  - 若 `mean_gap` 接近，优先 `std_gap` 更小且 `n_structures` 更大的配方。
+
+### 12.3 壳层动力学指标（来自壳层分析）
+
+- 数据来源：`shell_dynamics_reports/shell_dynamics_summary.csv`
+- 关键指标：
+  - `mean_residence_ps`（第一壳层平均停留时间）
+  - `second_shell_presence_frac`（第二壳层出现分数）
+  - `mean_first_cn` / `mean_second_cn`（平均配位数）
+- 判据建议：
+  - `mean_residence_ps` 不能过低（壳层过于松散）；
+  - `second_shell_presence_frac` 不宜过高（过度拥挤）；
+  - `mean_first_cn` 建议在合理窗口（常见经验值约 3.5-5.0，需按体系校准）。
+
+## 13. 综合评分与“最合理配方”判定
+
+建议使用加权评分而不是单一排序，默认权重可设为：
+
+- 电子结构分：`35%`
+- 壳层动力学分：`30%`
+- 结构组成分：`25%`
+- 统计稳健分（样本量/覆盖度）：`10%`
+
+可用如下公式（归一化到 `0-100`）：
+
+```text
+TotalScore = 0.35 * S_gap + 0.30 * S_dyn + 0.25 * S_struct + 0.10 * S_robust
+```
+
+其中：
+- `S_gap`：`mean_gap` 越优、`std_gap` 越小得分越高；
+- `S_dyn`：`mean_residence_ps` 适中偏高、`second_shell_presence_frac` 更低得分更高；
+- `S_struct`：`AGG` 更低、`SSIP/CIP` 分布更合理得分更高；
+- `S_robust`：样本量更大、类别覆盖更完整得分更高。
+
+最终按 `TotalScore` 由高到低排序，第一名即“综合最合理配方”。
+
+## 14. 最小输入要求（用于最终排序）
+
+若需要直接给出最终配方排名，至少提供：
+
+1. `analysis_reports/summary_by_formulation.csv`
+2. `shell_dynamics_reports/shell_dynamics_summary.csv`
+
+若希望把 `SSIP/CIP/AGG` 显式纳入评分，建议额外提供合并后的全局明细
+（含 `Folder, Category` 字段），例如 `all_formulations_homolumo.csv`。
