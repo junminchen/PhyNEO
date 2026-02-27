@@ -2,6 +2,7 @@ import os
 import sys
 import glob
 import time
+import csv
 from pathlib import Path
 import numpy as np
 
@@ -21,6 +22,24 @@ OUTPUT_CSV_TEMPLATE = "{folder}_homolumo.csv"
 MAX_STRUCTURES = 100
 # =================================================
 
+
+def load_completed_keys(csv_path):
+    completed = set()
+    if not csv_path.exists():
+        return completed
+
+    try:
+        with open(csv_path, "r", newline="") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                category = (row.get("Category") or "").strip()
+                filename = (row.get("Filename") or "").strip()
+                if filename:
+                    completed.add((category, filename))
+    except Exception as e:
+        print(f"[Warning] Failed to read existing CSV {csv_path}: {e}")
+    return completed
+
 def run_quantum_calculation(target_dir):
     target_dir = target_dir.rstrip('/')
     folder_tag = Path(target_dir).resolve().name
@@ -31,7 +50,7 @@ def run_quantum_calculation(target_dir):
     # 搜索该目录下所有分类后的 xyz 文件（每个分类最多取 MAX_STRUCTURES 个）
     base_search_path = os.path.join(target_dir, "classified_structures")
     category_dirs = sorted(glob.glob(os.path.join(base_search_path, "*")))
-    xyz_files = []
+    xyz_entries = []
     total_found = 0
 
     for cat_dir in category_dirs:
@@ -47,25 +66,43 @@ def run_quantum_calculation(target_dir):
                 f"Capping to first {MAX_STRUCTURES}."
             )
             cat_files = cat_files[:MAX_STRUCTURES]
-        xyz_files.extend(cat_files)
+        category_name = os.path.basename(cat_dir)
+        for xyz_path in cat_files:
+            xyz_entries.append((category_name, xyz_path))
     
-    if not xyz_files:
+    if not xyz_entries:
         print(f"[Warning] No XYZ files found in {base_search_path}")
         return
 
     print(
         f"Found {total_found} structures in {target_dir}. "
-        f"Selected {len(xyz_files)} structures after per-category cap."
+        f"Selected {len(xyz_entries)} structures after per-category cap."
     )
 
     # 如果目标 CSV 不存在，先写表头
     if not output_csv.exists():
         with open(output_csv, "w") as f:
             f.write("Folder,Filename,Category,Additive,Charge,HOMO(eV),LUMO(eV),Gap(eV)\n")
+    completed_keys = load_completed_keys(output_csv)
+    pending_entries = []
+    for category_name, xyz_path in xyz_entries:
+        filename = os.path.basename(xyz_path)
+        if (category_name, filename) in completed_keys:
+            continue
+        pending_entries.append((category_name, xyz_path))
+
     print(f"Writing results to: {output_csv}")
+    print(
+        f"Resume check: completed={len(completed_keys)} "
+        f"pending={len(pending_entries)} total_selected={len(xyz_entries)}"
+    )
+    if not pending_entries:
+        print(f"All selected structures already completed for {target_dir}.")
+        print(f"Finished calculation for {target_dir}")
+        return
 
     start_time = time.time()
-    for i, xyz_path in enumerate(xyz_files):
+    for i, (category_name, xyz_path) in enumerate(pending_entries):
         try:
             # 1. 解析 XYZ 文件
             with open(xyz_path, 'r') as f:
@@ -88,7 +125,7 @@ def run_quantum_calculation(target_dir):
             n_ani = int(meta.get('n_anions', 0))
             charge = n_cat - n_ani
             
-            category = meta.get('category', 'unknown')
+            category = meta.get('category', category_name if category_name else 'unknown')
             additive = meta.get('additive', 'unknown')
             folder_name = meta.get('folder', os.path.basename(target_dir))
 
@@ -148,7 +185,7 @@ def run_quantum_calculation(target_dir):
             
             # 实时进度信息（百分比 + ETA）
             done = i + 1
-            total = len(xyz_files)
+            total = len(pending_entries)
             elapsed = time.time() - start_time
             avg = elapsed / done if done > 0 else 0.0
             eta = avg * (total - done)

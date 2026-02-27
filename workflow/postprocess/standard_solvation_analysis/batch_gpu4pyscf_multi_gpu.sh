@@ -80,9 +80,10 @@ count_done_from_csv() {
 
     awk -F',' '
         NR <= 1 { next }
-        NF >= 2 {
+        NF >= 3 {
+            gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3)
             gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-            if ($2 != "") seen[$2] = 1
+            if ($2 != "") seen[$3 "|" $2] = 1
         }
         END { print length(seen) + 0 }
     ' "$csv_file"
