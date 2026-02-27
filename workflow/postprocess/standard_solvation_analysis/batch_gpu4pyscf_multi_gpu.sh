@@ -11,6 +11,7 @@ GPU_IDS_STR="${GPU_IDS:-0,1,2}"          # e.g. "0,1,2"
 PYTHON_BIN="${PYTHON_BIN:-python}"
 LOG_DIR="${LOG_DIR:-gpu4pyscf_logs}"
 MAX_STRUCTURES_PER_CATEGORY="${MAX_STRUCTURES_PER_CATEGORY:-100}"
+FORCE_RERUN="${FORCE_RERUN:-0}"
 
 IFS=',' read -r -a GPU_IDS <<< "$GPU_IDS_STR"
 if [ "${#GPU_IDS[@]}" -eq 0 ]; then
@@ -41,6 +42,7 @@ completed_count=0
 launched_count=0
 total_jobs=0
 total_structures_selected=0
+skipped_completed_count=0
 
 count_selected_structures() {
     local folder="$1"
@@ -63,6 +65,27 @@ count_selected_structures() {
     done < <(find "$base" -mindepth 1 -maxdepth 1 -type d | sort)
 
     echo "$total"
+}
+
+count_done_from_csv() {
+    local folder="$1"
+    local folder_name
+    folder_name="$(basename "$folder")"
+    local csv_file="$folder/results/${folder_name}_homolumo.csv"
+
+    if [ ! -f "$csv_file" ]; then
+        echo 0
+        return
+    fi
+
+    awk -F',' '
+        NR <= 1 { next }
+        NF >= 2 {
+            gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
+            if ($2 != "") seen[$2] = 1
+        }
+        END { print length(seen) + 0 }
+    ' "$csv_file"
 }
 
 progress_done_from_log() {
@@ -275,12 +298,19 @@ echo "   Multi-GPU GPU4PySCF Batch Runner      "
 echo "   GPUs: ${GPU_IDS[*]}"
 echo "   Pattern: $FOLDER_PATTERN"
 echo "   Folders: ${#DIRS[@]}"
+echo "   FORCE_RERUN: $FORCE_RERUN"
 echo "========================================="
 
 for folder in "${DIRS[@]}"; do
     if [ -d "$folder/classified_structures" ]; then
         selected="$(count_selected_structures "$folder")"
+        done_count="$(count_done_from_csv "$folder")"
         folder_name="$(basename "$folder")"
+        if [ "$FORCE_RERUN" != "1" ] && [ "$selected" -gt 0 ] && [ "$done_count" -ge "$selected" ]; then
+            skipped_completed_count=$((skipped_completed_count + 1))
+            echo "[Skip] $folder_name: already completed ($done_count/$selected, set FORCE_RERUN=1 to rerun)"
+            continue
+        fi
         RUNNABLE_DIRS+=("$folder")
         DIR_SELECTED_STRUCTS["$folder_name"]="$selected"
         total_structures_selected=$((total_structures_selected + selected))
@@ -296,6 +326,9 @@ if [ "$total_jobs" -eq 0 ]; then
 fi
 echo "[Info ] total runnable jobs: $total_jobs"
 echo "[Info ] total selected structures: $total_structures_selected (per-category cap=$MAX_STRUCTURES_PER_CATEGORY)"
+if [ "$skipped_completed_count" -gt 0 ]; then
+    echo "[Info ] skipped completed jobs: $skipped_completed_count (use FORCE_RERUN=1 to include)"
+fi
 assign_jobs_to_gpus
 echo "[Plan ] static GPU assignment (balanced by selected structures):"
 for gpu in "${GPU_IDS[@]}"; do
