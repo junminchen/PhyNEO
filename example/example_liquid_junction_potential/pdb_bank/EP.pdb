@@ -1,0 +1,39 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  C00 EPA 1   1       1.005   0.971  -0.185  0.00  1.00      SYST C  
+ATOM      2  C01 EPA 1   1      -0.498   1.055   0.039  0.00  1.00      SYST C  
+ATOM      3  O02 EPA 1   1      -0.815   1.041   1.461  0.00  1.00      SYST O  
+ATOM      4  C03 EPA 1   1      -0.833  -0.196   2.033  0.00  1.00      SYST C  
+ATOM      5  O04 EPA 1   1      -0.629  -1.233   1.417  0.00  1.00      SYST O  
+ATOM      6  C05 EPA 1   1      -1.141  -0.097   3.513  0.00  1.00      SYST C  
+ATOM      7  C06 EPA 1   1      -1.177  -1.464   4.196  0.00  1.00      SYST C  
+ATOM      8  H07 EPA 1   1       1.221   1.049  -1.262  0.00  1.00      SYST H  
+ATOM      9  H08 EPA 1   1       1.396   0.011   0.180  0.00  1.00      SYST H  
+ATOM     10  H09 EPA 1   1       1.518   1.795   0.333  0.00  1.00      SYST H  
+ATOM     11  H10 EPA 1   1      -1.024   0.221  -0.448  0.00  1.00      SYST H  
+ATOM     12  H11 EPA 1   1      -0.909   2.010  -0.314  0.00  1.00      SYST H  
+ATOM     13  H12 EPA 1   1      -2.103   0.433   3.615  0.00  1.00      SYST H  
+ATOM     14  H13 EPA 1   1      -0.381   0.562   3.964  0.00  1.00      SYST H  
+ATOM     15  H14 EPA 1   1      -1.944  -2.107   3.741  0.00  1.00      SYST H  
+ATOM     16  H15 EPA 1   1      -1.405  -1.349   5.266  0.00  1.00      SYST H  
+ATOM     17  H16 EPA 1   1      -0.209  -1.976   4.096  0.00  1.00      SYST H  
+CONECT    1    2    8    9   10
+CONECT    2    1    3   11   12
+CONECT    3    2    4
+CONECT    4    3    5    6
+CONECT    5    4
+CONECT    6    4    7   13   14
+CONECT    7    6   15   16   17
+CONECT    8    1
+CONECT    9    1
+CONECT   10    1
+CONECT   11    2
+CONECT   12    2
+CONECT   13    6
+CONECT   14    6
+CONECT   15    7
+CONECT   16    7
+CONECT   17    7
+END

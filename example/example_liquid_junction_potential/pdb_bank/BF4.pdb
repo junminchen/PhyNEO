@@ -1,0 +1,14 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  B01 BF4 1   1       0.948   0.055  -0.065  1.00  0.00      SYST B  
+ATOM      2  F02 BF4 1   1       0.470  -1.289   0.059  1.00  0.00      SYST F  
+ATOM      3  F03 BF4 1   1       0.470   0.835   1.037  1.00  0.00      SYST F  
+ATOM      4  F04 BF4 1   1       0.470   0.619  -1.291  1.00  0.00      SYST F  
+ATOM      5  F05 BF4 1   1       2.379   0.055  -0.065  1.00  0.00      SYST F  
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+END

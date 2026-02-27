@@ -1,0 +1,41 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1   50.000   50.000   50.000  90.00  90.00  90.00 P 1           1
+ATOM      1  C00 DEC 1   1       0.921   0.706  -0.100  0.00  1.00      SYST C  
+ATOM      2  C01 DEC 1   1      -0.501   1.199   0.114  0.00  1.00      SYST C  
+ATOM      3  O02 DEC 1   1      -0.828   1.257   1.534  0.00  1.00      SYST O  
+ATOM      4  C03 DEC 1   1      -1.160   0.065   2.070  0.00  1.00      SYST C  
+ATOM      5  O04 DEC 1   1      -1.253  -0.997   1.471  0.00  1.00      SYST O  
+ATOM      6  O05 DEC 1   1      -1.373   0.261   3.387  0.00  1.00      SYST O  
+ATOM      7  C06 DEC 1   1      -1.813  -0.932   4.100  0.00  1.00      SYST C  
+ATOM      8  C07 DEC 1   1      -3.302  -1.169   3.904  0.00  1.00      SYST C  
+ATOM      9  H08 DEC 1   1       1.162   0.740  -1.175  0.00  1.00      SYST H  
+ATOM     10  H09 DEC 1   1       1.027  -0.331   0.247  0.00  1.00      SYST H  
+ATOM     11  H10 DEC 1   1       1.636   1.347   0.438  0.00  1.00      SYST H  
+ATOM     12  H11 DEC 1   1      -1.234   0.555  -0.392  0.00  1.00      SYST H  
+ATOM     13  H12 DEC 1   1      -0.626   2.237  -0.221  0.00  1.00      SYST H  
+ATOM     14  H13 DEC 1   1      -1.572  -0.708   5.147  0.00  1.00      SYST H  
+ATOM     15  H14 DEC 1   1      -1.217  -1.789   3.756  0.00  1.00      SYST H  
+ATOM     16  H15 DEC 1   1      -3.878  -0.289   4.227  0.00  1.00      SYST H  
+ATOM     17  H16 DEC 1   1      -3.618  -2.034   4.509  0.00  1.00      SYST H  
+ATOM     18  H17 DEC 1   1      -3.523  -1.384   2.849  0.00  1.00      SYST H  
+CONECT    1    2    9   10   11
+CONECT    2    1    3   12   13
+CONECT    3    2    4
+CONECT    4    3    5    6
+CONECT    5    4
+CONECT    6    4    7
+CONECT    7    6    8   14   15
+CONECT    8    7   16   17   18
+CONECT    9    1
+CONECT   10    1
+CONECT   11    1
+CONECT   12    2
+CONECT   13    2
+CONECT   14    7
+CONECT   15    7
+CONECT   16    8
+CONECT   17    8
+CONECT   18    8
+END
