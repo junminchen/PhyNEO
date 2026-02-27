@@ -35,3 +35,19 @@ Source data:
 
 - This is a minimal predictive model for trend interpretation, not a full electrochemical transient solver.
 - Absolute voltage matching may still require activity correction and explicit interfacial transient terms.
+
+## Theory (Short)
+
+- 液接电势（LJP）来自不同电解液接触后，阳/阴离子扩散速度不等造成的瞬时电荷分离与反向电场。
+- 本报告用了两个工程化近似。
+1. 静态端点项（两段近似）：`Delta_phi ~ (RT/F)*(1-2*t_plus)*ln(a2/a1)`，分别算 `ref->bridge` 和 `bridge->test` 后相加。
+2. 瞬态衰减项（一阶弛豫）：`V(t)=V_inf + (V0-V_inf)*exp(-t/tau)`，并令 `tau` 随扩散系数降低而变大（高浓更稳）。
+- 因此可解释实验现象：低浓度桥（D大）在 900 s 内明显掉压；高浓度桥（D小）在同一时间窗近似平台。
+
+## References
+
+- IUPAC Gold Book: Liquid Junction definition (L03584): https://old.goldbook.iupac.org/html/L/L03584.html
+- Perram, J. W. *Electrochimica Acta* 2006, 51(25), 5274-5279. DOI: https://doi.org/10.1016/j.electacta.2006.02.032
+- Bard, A. J.; Faulkner, L. R. *Electrochemical Methods: Fundamentals and Applications* (2nd ed., Wiley, 2001). (Section: Liquid Junction Potentials / Henderson equation)
+- Stewart, S. G.; Newman, J. *J. Electrochem. Soc.* 2008, 155(6), A458-A463. DOI: https://doi.org/10.1149/1.2904526
+- Li, T. et al. *JACS Au* 2022, 2(12), 2709-2726. DOI: https://doi.org/10.1021/jacsau.2c00590
