@@ -1,0 +1,10 @@
+# Simulation outputs
+em_output.pdb
+nvt_eq.pdb
+*.log
+
+# Generated reports and data
+voltage_decay_prediction_900s.svg
+voltage_decay_prediction_curve_900s.csv
+voltage_decay_prediction_timepoints_900s.csv
+voltage_decay_report_900s.md
