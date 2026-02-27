@@ -109,6 +109,8 @@ def main() -> None:
 
     nb = get_nonbonded(system)
     cath_atoms, ano_atoms = collect_electrode_atoms(pdb.topology)
+    for idx in cath_atoms + ano_atoms:
+        system.setParticleMass(int(idx), 0.0 * unit.dalton)
 
     cpf = mm.ConstantPotentialForce()
     cpf.setCutoffDistance(float(omm["nonbonded_cutoff_nm"]))
@@ -136,8 +138,12 @@ def main() -> None:
     cpf.addElectrode(set(ano_atoms), ano_pot, float(ele["gaussian_width_nm"]), float(ele["thomas_fermi_scale_invnm"]))
     system.addForce(cpf)
 
-    barostat = mm.MonteCarloBarostat(md["pressure_bar"] * unit.bar, md["temperature_k"] * unit.kelvin, 25)
-    system.addForce(barostat)
+    if bool(md.get("use_barostat", True)):
+        barostat = mm.MonteCarloBarostat(md["pressure_bar"] * unit.bar, md["temperature_k"] * unit.kelvin, 25)
+        system.addForce(barostat)
+        ensemble_label = "NPT"
+    else:
+        ensemble_label = "NVT"
 
     for i in range(system.getNumForces()):
         system.getForce(i).setForceGroup(i)
@@ -166,6 +172,7 @@ def main() -> None:
         charge_log.write(f"{sim.currentStep} {q_c:.10f} {q_a:.10f} {(q_c+q_a):.10f}\n")
         charge_log.flush()
 
+    print(f"Running ensemble: {ensemble_label}")
     print("Minimizing...")
     sim.minimizeEnergy(maxIterations=1000)
     log_charges()

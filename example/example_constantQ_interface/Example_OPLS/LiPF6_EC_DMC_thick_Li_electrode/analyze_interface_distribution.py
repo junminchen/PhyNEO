@@ -187,10 +187,11 @@ def main() -> None:
         if z.shape[0] != natom:
             raise ValueError(f"DCD natom mismatch: frame {iframe} has {z.shape[0]}, topology has {natom}")
 
+        # For multilayer electrodes, use physical surface planes (not slab mean z).
         if not np.isfinite(z_cath_A) and cath_atoms:
-            z_cath_A = float(np.mean(z[cath_atoms]))
+            z_cath_A = float(np.max(z[cath_atoms]))
         if not np.isfinite(z_ano_A) and ano_atoms:
-            z_ano_A = float(np.mean(z[ano_atoms]))
+            z_ano_A = float(np.min(z[ano_atoms]))
 
         frame_counts = {g: np.zeros(args.nbins, dtype=float) for g in RESIDUE_GROUPS}
         frame_charge = np.zeros(args.nbins, dtype=float)

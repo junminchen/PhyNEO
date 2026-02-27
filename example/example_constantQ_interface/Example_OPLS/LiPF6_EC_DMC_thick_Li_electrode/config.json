@@ -47,6 +47,7 @@
   "md": {
     "temperature_k": 298.15,
     "pressure_bar": 1.0,
+    "use_barostat": false,
     "timestep_fs": 2.0,
     "friction_ps": 1.0,
     "equil_steps": 5000,

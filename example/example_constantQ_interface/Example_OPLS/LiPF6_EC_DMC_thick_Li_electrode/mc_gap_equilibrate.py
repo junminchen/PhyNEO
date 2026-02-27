@@ -38,8 +38,13 @@ def collect_atoms(topology: app.Topology):
     return cath, ano, ele
 
 
-def mean_z_ang(pos_ang, idxs):
-    return sum(pos_ang[i][2] for i in idxs) / float(len(idxs))
+def surface_z_ang(pos_ang, idxs, which: str):
+    zvals = [pos_ang[i][2] for i in idxs]
+    if which == "cathode":
+        return max(zvals)
+    if which == "anode":
+        return min(zvals)
+    raise ValueError(f"Unknown electrode kind: {which}")
 
 
 def pick_platform(requested: str | None = None) -> mm.Platform:
@@ -173,8 +178,8 @@ def main() -> None:
     by = box[1][1].value_in_unit(unit.nanometer)
     area_nm2 = float(ax * by)
 
-    zc_old = mean_z_ang(pos, cath_atoms)
-    za_old = mean_z_ang(pos, ano_atoms)
+    zc_old = surface_z_ang(pos, cath_atoms, "cathode")
+    za_old = surface_z_ang(pos, ano_atoms, "anode")
     gap_old_ang = za_old - zc_old
 
     accepted = 0
