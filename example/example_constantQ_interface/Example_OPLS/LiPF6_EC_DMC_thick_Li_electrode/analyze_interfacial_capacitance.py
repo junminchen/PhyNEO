@@ -58,6 +58,7 @@ def main():
     parser = argparse.ArgumentParser(description="Compute interfacial capacitance from constant-potential electrode charge log.")
     parser.add_argument("--config", default="config.json")
     parser.add_argument("--charge-log", default="electrode_charges.log")
+    parser.add_argument("--voltage-v", type=float, default=None, help="Override voltage in config")
     parser.add_argument("--skip", type=int, default=0, help="Number of initial rows to skip as equilibration")
     parser.add_argument("--nblocks", type=int, default=5)
     parser.add_argument("--summary", default="results/interfacial_capacitance_summary.txt")
@@ -77,7 +78,7 @@ def main():
 
     area_A2 = float(cfg["cell"]["box_x_angstrom"]) * float(cfg["cell"]["box_y_angstrom"])
     area_m2 = area_A2 * ANGSTROM2_TO_M2
-    voltage_V = float(cfg["electrode"]["voltage_v"])
+    voltage_V = float(cfg["electrode"]["voltage_v"] if args.voltage_v is None else args.voltage_v)
     if voltage_V <= 0.0:
         raise RuntimeError("electrode.voltage_v must be > 0 for capacitance")
 

@@ -114,6 +114,7 @@ def main():
     parser.add_argument("--top", default="start_with_electrodes_mc.pdb")
     parser.add_argument("--traj", default="traj_thick_li.dcd")
     parser.add_argument("--config", default="config.json")
+    parser.add_argument("--voltage-v", type=float, default=None, help="Override voltage in config")
     parser.add_argument("--platform", choices=["CPU", "Reference", "OpenCL", "CUDA"], default=None)
     parser.add_argument("--xy-bins", type=int, default=40)
     parser.add_argument("--vlim", type=float, default=None, help="Fixed color scale limit in e/nm^2 (symmetric +/-vlim)")
@@ -174,7 +175,7 @@ def main():
         cpf.addException(int(p1), int(p2), float(qprod.value_in_unit(unit.elementary_charge**2)))
         nb.setExceptionParameters(j, p1, p2, 0.0 * unit.elementary_charge**2, sig, eps)
 
-    v = float(ele["voltage_v"])
+    v = float(ele["voltage_v"] if args.voltage_v is None else args.voltage_v)
     cpf.addElectrode(set(cath_atoms), v * KJMOL_PER_E_PER_VOLT, float(ele["gaussian_width_nm"]), float(ele["thomas_fermi_scale_invnm"]))
     cpf.addElectrode(set(ano_atoms), -v * KJMOL_PER_E_PER_VOLT, float(ele["gaussian_width_nm"]), float(ele["thomas_fermi_scale_invnm"]))
     system.addForce(cpf)

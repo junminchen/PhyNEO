@@ -56,15 +56,21 @@ def build_residue_templates(topology: app.Topology):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="OPLS LiPF6-EC-DMC with thick Li electrodes under native OpenMM84 CPF")
+    parser.add_argument("--config", default="config.json")
     parser.add_argument("--equil-steps", type=int, default=None)
     parser.add_argument("--prod-steps", type=int, default=None)
     parser.add_argument("--report-interval", type=int, default=None)
+    parser.add_argument("--voltage-v", type=float, default=None)
     parser.add_argument("--platform", choices=["CPU", "Reference", "OpenCL", "CUDA"], default=None)
     parser.add_argument("--pdb", default=None, help="Input PDB. Default: start_with_electrodes_mc.pdb if present, else start_with_electrodes.pdb")
+    parser.add_argument("--state-log", default="npt_thick_li.log")
+    parser.add_argument("--traj", default="traj_thick_li.dcd")
+    parser.add_argument("--charge-log", default="electrode_charges.log")
+    parser.add_argument("--final-pdb", default="final_thick_li.pdb")
     args = parser.parse_args()
 
     here = Path(__file__).resolve().parent
-    cfg = json.loads((here / "config.json").read_text())
+    cfg = json.loads((here / args.config).read_text())
     md = cfg["md"]
     omm = cfg["openmm"]
     ele = cfg["electrode"]
@@ -131,7 +137,7 @@ def main() -> None:
         cpf.addException(int(p1), int(p2), float(qprod.value_in_unit(unit.elementary_charge**2)))
         nb.setExceptionParameters(j, p1, p2, 0.0 * unit.elementary_charge**2, sig, eps)
 
-    v = float(ele["voltage_v"])
+    v = float(ele["voltage_v"] if args.voltage_v is None else args.voltage_v)
     cath_pot = v * KJMOL_PER_E_PER_VOLT
     ano_pot = -v * KJMOL_PER_E_PER_VOLT
     cpf.addElectrode(set(cath_atoms), cath_pot, float(ele["gaussian_width_nm"]), float(ele["thomas_fermi_scale_invnm"]))
@@ -157,12 +163,21 @@ def main() -> None:
     sim = app.Simulation(pdb.topology, system, integrator, platform)
     sim.context.setPositions(pdb.positions)
 
-    sim.reporters.append(app.StateDataReporter(str(here / "npt_thick_li.log"), report_interval,
+    state_log_path = (here / args.state_log).resolve()
+    traj_path = (here / args.traj).resolve()
+    charge_log_path = (here / args.charge_log).resolve()
+    final_pdb_path = (here / args.final_pdb).resolve()
+    state_log_path.parent.mkdir(parents=True, exist_ok=True)
+    traj_path.parent.mkdir(parents=True, exist_ok=True)
+    charge_log_path.parent.mkdir(parents=True, exist_ok=True)
+    final_pdb_path.parent.mkdir(parents=True, exist_ok=True)
+
+    sim.reporters.append(app.StateDataReporter(str(state_log_path), report_interval,
                                               step=True, potentialEnergy=True, kineticEnergy=True, totalEnergy=True,
                                               temperature=True, density=True, volume=True, speed=True))
-    sim.reporters.append(app.DCDReporter(str(here / "traj_thick_li.dcd"), report_interval))
+    sim.reporters.append(app.DCDReporter(str(traj_path), report_interval))
 
-    charge_log = open(here / "electrode_charges.log", "w")
+    charge_log = open(charge_log_path, "w")
     charge_log.write("# step Q_cathode(e) Q_anode(e) Q_total(e)\n")
 
     def log_charges():
@@ -198,7 +213,7 @@ def main() -> None:
         log_charges()
 
     state = sim.context.getState(getPositions=True)
-    with open(here / "final_thick_li.pdb", "w") as f:
+    with open(final_pdb_path, "w") as f:
         try:
             app.PDBFile.writeFile(sim.topology, state.getPositions(), f)
         except TypeError:
@@ -206,6 +221,11 @@ def main() -> None:
             app.PDBFile.writeFile(sim.topology, state.getPositions(), f)
 
     charge_log.close()
+    print(f"Voltage used: {v:.3f} V")
+    print(f"Wrote state log: {state_log_path}")
+    print(f"Wrote traj: {traj_path}")
+    print(f"Wrote charge log: {charge_log_path}")
+    print(f"Wrote final pdb: {final_pdb_path}")
     print("Done")
 
 

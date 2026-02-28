@@ -1,0 +1,5 @@
+__pycache__/
+*.dcd
+voltage_sweep_smoketest/
+voltage_sweep_5x10ns/
+voltage_sweep_5x10ns_prev_*/
