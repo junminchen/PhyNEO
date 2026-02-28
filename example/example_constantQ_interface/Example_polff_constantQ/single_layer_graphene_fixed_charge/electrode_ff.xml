@@ -1,0 +1,8 @@
+<ForceField>
+  <AtomTypes>
+    <Type name="E-CG" class="E-CG" element="C" mass="12.011"/>
+  </AtomTypes>
+  <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+    <Atom class="E-CG" charge="0.0" sigma="0.340" epsilon="0.360"/>
+  </NonbondedForce>
+</ForceField>

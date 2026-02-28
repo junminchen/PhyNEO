@@ -1,0 +1,14 @@
+# Large/generated MD outputs
+*.dcd
+*.chk
+*.log
+*charges*.log
+*charges*.dat
+final_*.pdb
+start_*.pdb
+
+# Keep only curated analysis outputs
+results/*
+!results/interface_distribution.png
+!results/interface_distribution_charge.png
+!results/interface_distribution_summary.txt

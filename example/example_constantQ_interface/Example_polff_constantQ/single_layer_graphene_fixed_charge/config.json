@@ -1,0 +1,44 @@
+{
+  "input": {
+    "electrolyte_pdb": "../LiPF6_EC_DMC_inert_electrode/electrolyte_start.pdb"
+  },
+  "cell": {
+    "box_x_angstrom": 55.0,
+    "box_y_angstrom": 55.0,
+    "box_z_angstrom": 90.0,
+    "z_cathode_angstrom": 16.0,
+    "z_anode_angstrom": 74.0
+  },
+  "electrode": {
+    "spacing_angstrom": 2.46,
+    "edge_margin_angstrom": 1.5,
+    "exclude_element": ["H"],
+    "fixed_charge_per_atom_e": 0.02,
+    "fix_electrode_positions": true
+  },
+  "forcefield_xml": [
+    "../../Example_OPLS/opls_salt.xml",
+    "../../Example_OPLS/opls_solvent.xml",
+    "electrode_residues.xml",
+    "electrode_ff.xml"
+  ],
+  "openmm": {
+    "platform": "CUDA",
+    "nonbonded_method": "PME",
+    "nonbonded_cutoff_nm": 1.0,
+    "constraints": "HBonds",
+    "rigid_water": false,
+    "ewald_error_tolerance": 0.0005,
+    "remove_cm_motion": true
+  },
+  "md": {
+    "temperature_k": 298.15,
+    "timestep_fs": 2.0,
+    "friction_ps": 1.0,
+    "equil_steps": 5000,
+    "prod_steps": 10000,
+    "report_interval": 500,
+    "use_barostat": false,
+    "pressure_bar": 1.0
+  }
+}
