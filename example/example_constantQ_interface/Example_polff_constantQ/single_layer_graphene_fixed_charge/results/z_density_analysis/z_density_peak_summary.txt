@@ -1,0 +1,38 @@
+Frames: 348
+Average box (A): Lx=55.0000, Ly=55.0000, Lz=90.0000
+Bins: 300, dz=0.3000 A
+
+Li+ (LiA)
+  peak z = 67.650 A, rho = 3.438776e-03 A^-3
+  peak z = 22.350 A, rho = 1.728888e-03 A^-3
+  peak z = 26.550 A, rho = 9.499383e-04 A^-3
+  peak z = 61.350 A, rho = 8.992749e-04 A^-3
+
+Anion (PF6)
+  peak z = 20.850 A, rho = 2.306767e-02 A^-3
+  peak z = 19.050 A, rho = 2.188024e-02 A^-3
+  peak z = 19.950 A, rho = 1.747886e-02 A^-3
+  peak z = 64.050 A, rho = 5.914949e-03 A^-3
+
+Solvent O (DMC+ECA)
+  peak z = 69.450 A, rho = 5.727178e-02 A^-3
+  peak z = 19.050 A, rho = 5.374117e-02 A^-3
+  peak z = 67.650 A, rho = 3.823501e-02 A^-3
+  peak z = 20.850 A, rho = 3.414711e-02 A^-3
+
+Solvent H (DMC+ECA)
+  peak z = 71.250 A, rho = 9.699186e-02 A^-3
+  peak z = 66.150 A, rho = 5.517558e-02 A^-3
+  peak z = 20.250 A, rho = 4.467243e-02 A^-3
+  peak z = 23.250 A, rho = 4.423229e-02 A^-3
+
+Electrode ANO
+  peak z = 73.950 A, rho = 5.333333e-01 A^-3
+
+Electrode CAT
+  peak z = 16.050 A, rho = 5.333333e-01 A^-3
+
+Electrode total
+  peak z = 73.950 A, rho = 5.333333e-01 A^-3
+  peak z = 16.050 A, rho = 5.333333e-01 A^-3
+
