@@ -1,0 +1,7 @@
+run_root: /home/am3-peichenzhong-group/Documents/project/PhyNEO/example/example_constantQ_interface/Example_polff_constantQ/single_layer_graphene_fixed_charge/runs/constantq_500ps_mc_prod
+bulk_density_avg_g_ml: 1.228098
+bulk_density_std_g_ml: 0.005097
+area_nm2: 30.250000
+constantQ_avg_abs_Qcath_e: 2.737600
+constantQ_avg_abs_sigma_e_per_nm2: 0.090499
+target_sigma_e_per_nm2_note: not directly constrained in this constant-potential run

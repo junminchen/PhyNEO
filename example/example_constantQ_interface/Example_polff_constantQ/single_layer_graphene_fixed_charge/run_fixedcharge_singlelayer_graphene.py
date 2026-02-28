@@ -60,13 +60,23 @@ def main() -> None:
     parser.add_argument("--report-interval", type=int, default=None)
     parser.add_argument("--platform", choices=["CPU", "Reference", "OpenCL", "CUDA"], default=None)
     parser.add_argument("--fixed-charge-per-atom-e", type=float, default=None)
+    parser.add_argument("--outdir", default=".", help="Output directory for logs/trajectory/final PDB")
+    parser.add_argument("--minimize-iters", type=int, default=1000)
     args = parser.parse_args()
 
     here = Path(__file__).resolve().parent
-    cfg = json.loads((here / args.config).read_text())
+    config_path = Path(args.config)
+    if not config_path.is_absolute():
+        config_path = (here / config_path).resolve()
+    cfg = json.loads(config_path.read_text())
+    cfg_dir = config_path.parent
     md = cfg["md"]
     omm = cfg["openmm"]
     ele = cfg["electrode"]
+    outdir = Path(args.outdir)
+    if not outdir.is_absolute():
+        outdir = (Path.cwd() / outdir).resolve()
+    outdir.mkdir(parents=True, exist_ok=True)
 
     equil_steps = int(md["equil_steps"] if args.equil_steps is None else args.equil_steps)
     prod_steps = int(md["prod_steps"] if args.prod_steps is None else args.prod_steps)
@@ -76,7 +86,9 @@ def main() -> None:
     platform = pick_platform(args.platform if args.platform else omm.get("platform", None))
     print(f"Using OpenMM platform: {platform.getName()}")
 
-    pdb_path = (here / args.pdb).resolve()
+    pdb_path = Path(args.pdb)
+    if not pdb_path.is_absolute():
+        pdb_path = (cfg_dir / pdb_path).resolve()
     if not pdb_path.exists():
         raise FileNotFoundError(f"{pdb_path.name} not found. Run assemble_singlelayer_graphene_system.py first.")
 
@@ -88,7 +100,13 @@ def main() -> None:
         c = mm.Vec3(0.0, 0.0, float(cell["box_z_angstrom"])) * unit.angstrom
         pdb.topology.setPeriodicBoxVectors((a, b, c))
 
-    ff = app.ForceField(*[str((here / p).resolve()) for p in cfg["forcefield_xml"]])
+    ff_paths = []
+    for p in cfg["forcefield_xml"]:
+        pth = Path(p)
+        if not pth.is_absolute():
+            pth = (cfg_dir / pth).resolve()
+        ff_paths.append(str(pth))
+    ff = app.ForceField(*ff_paths)
     residue_templates = build_residue_templates(pdb.topology)
 
     method = app.PME if str(omm["nonbonded_method"]).upper() == "PME" else app.NoCutoff
@@ -163,12 +181,12 @@ def main() -> None:
     sim = app.Simulation(pdb.topology, system, integrator, platform)
     sim.context.setPositions(pdb.positions)
 
-    sim.reporters.append(app.StateDataReporter(str(here / "nvt_fixedcharge.log"), report_interval,
+    sim.reporters.append(app.StateDataReporter(str(outdir / "nvt_fixedcharge.log"), report_interval,
                                               step=True, potentialEnergy=True, kineticEnergy=True, totalEnergy=True,
                                               temperature=True, density=True, volume=True, speed=True))
-    sim.reporters.append(app.DCDReporter(str(here / "traj_fixedcharge.dcd"), report_interval))
+    sim.reporters.append(app.DCDReporter(str(outdir / "traj_fixedcharge.dcd"), report_interval))
 
-    charge_log = open(here / "electrode_fixed_charges.log", "w")
+    charge_log = open(outdir / "electrode_fixed_charges.log", "w")
     charge_log.write("# step q_per_atom_e Q_cathode(e) Q_anode(e)\n")
 
     def log_charges():
@@ -179,7 +197,7 @@ def main() -> None:
 
     print(f"Fixed electrode charge per atom: cathode +{qfix:.6f} e, anode -{qfix:.6f} e")
     print("Minimizing...")
-    sim.minimizeEnergy(maxIterations=1000)
+    sim.minimizeEnergy(maxIterations=int(args.minimize_iters))
     log_charges()
 
     print("Equilibrating...")
@@ -203,7 +221,7 @@ def main() -> None:
         log_charges()
 
     state = sim.context.getState(getPositions=True)
-    with open(here / "final_fixedcharge.pdb", "w") as f:
+    with open(outdir / "final_fixedcharge.pdb", "w") as f:
         try:
             app.PDBFile.writeFile(sim.topology, state.getPositions(), f)
         except TypeError:

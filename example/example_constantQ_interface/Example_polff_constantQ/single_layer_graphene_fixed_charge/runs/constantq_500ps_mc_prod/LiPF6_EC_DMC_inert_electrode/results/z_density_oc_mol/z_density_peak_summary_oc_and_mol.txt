@@ -1,0 +1,29 @@
+frames: 350
+avg_box_A: Lx=45.3556, Ly=45.3556, Lz=74.2183
+bins: 300, dz=0.2474 A
+Oc definition: ECA O00, DMC O01
+
+LiA_molCOM
+  peak z=62.962 A, rho=1.594329e-03 A^-3
+  peak z=54.550 A, rho=1.591220e-03 A^-3
+  peak z=54.056 A, rho=1.476411e-03 A^-3
+  peak z=44.655 A, rho=1.247391e-03 A^-3
+
+PF6_molCOM
+  peak z=34.017 A, rho=1.494182e-03 A^-3
+  peak z=27.832 A, rho=1.483431e-03 A^-3
+  peak z=61.725 A, rho=1.045312e-03 A^-3
+  peak z=20.163 A, rho=1.030667e-03 A^-3
+
+EC_Oc(O00)
+  peak z=15.462 A, rho=3.822552e-03 A^-3
+  peak z=55.540 A, rho=3.656938e-03 A^-3
+  peak z=55.045 A, rho=3.643858e-03 A^-3
+  peak z=54.550 A, rho=3.415396e-03 A^-3
+
+DMC_Oc(O01)
+  peak z=65.931 A, rho=7.217240e-03 A^-3
+  peak z=31.295 A, rho=5.965328e-03 A^-3
+  peak z=16.699 A, rho=5.739742e-03 A^-3
+  peak z=35.006 A, rho=5.701815e-03 A^-3
+
