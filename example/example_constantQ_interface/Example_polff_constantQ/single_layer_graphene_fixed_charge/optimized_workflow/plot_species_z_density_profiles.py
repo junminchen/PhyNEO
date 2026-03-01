@@ -95,7 +95,7 @@ def species_density_from_traj(run_dir: Path, n_bins: int, stride: int, species: 
 def main() -> None:
     p = argparse.ArgumentParser(description="Plot species z-number-density profiles for sigma-series Stage3 runs.")
     p.add_argument("--run-root", default="runs/stage3_from_neutral_sigma_series_v2")
-    p.add_argument("--species", default="LiA,PF6,ECA,DMC,CAT,ANO")
+    p.add_argument("--species", default="LiA,PF6,ECA,DMC")
     p.add_argument("--n-bins", type=int, default=240)
     p.add_argument("--stride", type=int, default=20)
     args = p.parse_args()
@@ -122,6 +122,8 @@ def main() -> None:
         fig, ax = plt.subplots(figsize=(7.5, 4.5), dpi=150)
         for sp in species:
             ax.plot(z, dens[sp], label=sp, lw=1.8)
+        ax.axvline(0.0, color="k", ls="--", lw=1.0, alpha=0.8, label="Cathode")
+        ax.axvline(gap_ref, color="k", ls="--", lw=1.0, alpha=0.8, label="Anode")
         ax.set_xlabel("z from cathode to anode (Angstrom)")
         ax.set_ylabel("Number density (#/nm^3)")
         ax.set_title(f"Species z-density profile in electrolyte gap (sigma={sigma:.3f} e/nm^2)")
@@ -151,6 +153,8 @@ def main() -> None:
         fig, ax = plt.subplots(figsize=(7.5, 4.5), dpi=150)
         for sigma, y in sorted(all_data[sp], key=lambda t: t[0]):
             ax.plot(z_ref, y, label=f"sigma={sigma:.3f}", lw=1.8)
+        ax.axvline(float(z_ref[0]), color="k", ls="--", lw=1.0, alpha=0.8, label="Cathode")
+        ax.axvline(float(z_ref[-1]), color="k", ls="--", lw=1.0, alpha=0.8, label="Anode")
         ax.set_xlabel("z from cathode to anode (Angstrom)")
         ax.set_ylabel("Number density (#/nm^3)")
         ax.set_title(f"{sp} z-density profile across sigma")
