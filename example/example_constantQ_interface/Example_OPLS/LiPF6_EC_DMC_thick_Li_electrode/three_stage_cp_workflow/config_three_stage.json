@@ -1,0 +1,47 @@
+{
+  "input": {
+    "pdb": "../start_with_electrodes_packmol.pdb"
+  },
+  "cell": {
+    "box_x_angstrom": 55.0,
+    "box_y_angstrom": 55.0,
+    "box_z_angstrom": 90.0
+  },
+  "bulk_reference": {
+    "npt_log": "../../LiPF6_EC_DMC_minimal/npt.log"
+  },
+  "forcefield_xml": [
+    "../../opls_salt.xml",
+    "../../opls_solvent.xml",
+    "../electrode_residues.xml",
+    "../electrode_ff.xml"
+  ],
+  "openmm": {
+    "nonbonded_method": "PME",
+    "nonbonded_cutoff_nm": 1.0,
+    "constraints": "HBonds",
+    "rigid_water": false,
+    "remove_cm_motion": true,
+    "ewald_error_tolerance": 0.0005
+  },
+  "md": {
+    "temperature_k": 298.15,
+    "pressure_bar": 1.0,
+    "timestep_fs": 2.0,
+    "friction_ps": 1.0,
+    "barostat_interval": 25,
+    "report_interval": 1000,
+    "neutral_relax_steps": 200000,
+    "cp_activation_steps": 100000,
+    "production_steps": 500000
+  },
+  "electrode": {
+    "gaussian_width_nm": 0.20,
+    "thomas_fermi_scale_invnm": 5.0,
+    "cg_error_tol": 1e-4,
+    "use_charge_constraint": true,
+    "charge_constraint_target_e": 0.0,
+    "delta_phi_v": 2.0,
+    "phi_center_v": 0.0
+  }
+}
