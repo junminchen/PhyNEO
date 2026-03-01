@@ -1,0 +1,41 @@
+HEADER    
+TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
+REMARK     LIGPARGEN GENERATED PDB FILE
+CRYST1    1.000    1.000    1.000  90.00  90.00  90.00 P 1           1
+REMARK     285 UNITARY VALUES FOR THE UNIT CELL AUTOMATICALLY SET
+REMARK     285 BY MDANALYSIS PDBWRITER BECAUSE UNIT CELL INFORMATION
+REMARK     285 WAS MISSING.
+REMARK     285 PROTEIN DATA BANK CONVENTIONS REQUIRE THAT
+REMARK     285 CRYST1 RECORD IS INCLUDED, BUT THE VALUES ON
+REMARK     285 THIS RECORD ARE MEANINGLESS.
+ATOM      1  C00 FC3 X   1       1.000   1.000   0.000  0.00  1.00      SYST C  
+ATOM      2  F01 FC3 X   1      -0.349   1.000   0.000  0.00  1.00      SYST F  
+ATOM      3  F02 FC3 X   1       1.407   1.000  -1.292  0.00  1.00      SYST F  
+ATOM      4  F03 FC3 X   1       1.409  -0.168   0.549  0.00  1.00      SYST F  
+ATOM      5  C04 FC3 X   1       1.599   2.195   0.753  0.00  1.00      SYST C  
+ATOM      6  O05 FC3 X   1       0.603   3.071   1.305  0.00  1.00      SYST O  
+ATOM      7  C06 FC3 X   1       1.183   4.181   2.007  0.00  1.00      SYST C  
+ATOM      8  C07 FC3 X   1       0.138   5.130   2.604  0.00  1.00      SYST C  
+ATOM      9  F08 FC3 X   1      -1.129   4.711   2.402  0.00  1.00      SYST F  
+ATOM     10  F09 FC3 X   1       0.318   5.257   3.940  0.00  1.00      SYST F  
+ATOM     11  F10 FC3 X   1       0.252   6.366   2.062  0.00  1.00      SYST F  
+ATOM     12  H11 FC3 X   1       2.230   2.771   0.067  0.00  1.00      SYST H  
+ATOM     13  H12 FC3 X   1       2.232   1.823   1.567  0.00  1.00      SYST H  
+ATOM     14  H13 FC3 X   1       1.822   4.740   1.313  0.00  1.00      SYST H  
+ATOM     15  H14 FC3 X   1       1.816   3.792   2.813  0.00  1.00      SYST H  
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1    6   12   13
+CONECT    6    5    7
+CONECT    7    6    8   14   15
+CONECT    8    7    9   10   11
+CONECT    9    8
+CONECT   10    8
+CONECT   11    8
+CONECT   12    5
+CONECT   13    5
+CONECT   14    7
+CONECT   15    7
+END
