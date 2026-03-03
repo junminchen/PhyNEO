@@ -212,9 +212,11 @@ def main():
                 log(f"Skip {v:.1f} V (DONE.flag exists)", flog)
             else:
                 log(f"Start voltage {v:.1f} V", flog)
+                base_pdb = "start_with_electrodes_mc.pdb" if (here / "start_with_electrodes_mc.pdb").exists() else "start_with_electrodes.pdb"
+                log(f"Using input PDB: {base_pdb}", flog)
                 run_cmd([
                     "conda", "run", "-n", "mpid", "python", "run_openmm84_thick_li_electrode.py",
-                    "--pdb", "start_with_electrodes.pdb",
+                    "--pdb", base_pdb,
                     "--equil-steps", str(args.equil_steps),
                     "--prod-steps", str(args.prod_steps),
                     "--report-interval", str(args.report_interval),
@@ -228,7 +230,7 @@ def main():
 
                 run_cmd([
                     "conda", "run", "-n", "mpid", "python", "analyze_interface_distribution.py",
-                    "--top", "start_with_electrodes.pdb",
+                    "--top", base_pdb,
                     "--traj", str((vdir / "traj_thick_li.dcd").relative_to(here)),
                     "--between-electrodes-only",
                     "--electrode_margin", "1.0",
@@ -250,7 +252,7 @@ def main():
 
                 run_cmd([
                     "conda", "run", "-n", "mpid", "python", "visualize_last_frame_electrode_charge.py",
-                    "--top", "start_with_electrodes.pdb",
+                    "--top", base_pdb,
                     "--traj", str((vdir / "traj_thick_li.dcd").relative_to(here)),
                     "--voltage-v", f"{v}",
                     "--xy-bins", "40",

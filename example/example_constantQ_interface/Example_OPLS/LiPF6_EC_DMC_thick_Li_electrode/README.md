@@ -36,7 +36,17 @@ python visualize_last_frame_electrode_charge.py --xy-bins 40
 - `cell.z_cathode_surface_angstrom`
 - `cell.z_anode_surface_angstrom`
 
+## MC density matching controls (`config.json -> mc_gap`)
+- `use_bulk_density_target`: read target density from bulk log tail (`bulk_density_log`)
+- `initialize_to_target_gap`: affine initialize slab to target gap before MC refinement
+- `target_gap_bias_k_kj_mol_per_A2`, `target_gap_pull`: steer MC around target gap
+- `enforce_target_density`: fail fast if final slab density misses tolerance
+
 ## Default outputs
 - `npt_thick_li.log`, `traj_thick_li.dcd`, `final_thick_li.pdb`
 - `electrode_charges.log`
 - `results/*`
+
+## Density note
+- `npt_thick_li.log` reports full-box density (includes vacuum), so it is not suitable for bulk-density matching.
+- For pre-production density matching, use the slab density printed by `mc_gap_equilibrate.py` and `run_openmm84_thick_li_electrode.py`.

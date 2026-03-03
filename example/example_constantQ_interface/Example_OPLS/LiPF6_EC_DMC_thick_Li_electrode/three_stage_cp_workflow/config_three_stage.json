@@ -1,6 +1,6 @@
 {
   "input": {
-    "pdb": "../start_with_electrodes_packmol.pdb"
+    "pdb": "../start_with_electrodes.pdb"
   },
   "cell": {
     "box_x_angstrom": 55.0,

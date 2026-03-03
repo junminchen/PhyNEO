@@ -86,6 +86,6 @@ python analyze_electrode_total_charge.py
 ## 与原目录关系
 
 本目录复用了原工程的输入和力场：
-- 输入结构：`../start_with_electrodes_packmol.pdb`
+- 输入结构：`../start_with_electrodes.pdb`
 - 电极定义：`../electrode_residues.xml`, `../electrode_ff.xml`
 - OPLS：`../../opls_salt.xml`, `../../opls_solvent.xml`

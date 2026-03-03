@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -10,6 +11,8 @@ import openmm.app as app
 import openmm.unit as unit
 
 KJMOL_PER_E_PER_VOLT = 96.48533212331002
+AMU_TO_G = 1.66053906660e-24
+NM3_TO_ML = 1.0e-21
 
 
 def get_nonbonded(system: mm.System) -> mm.NonbondedForce:
@@ -31,6 +34,66 @@ def collect_electrode_atoms(topology: app.Topology, cathode_chain_idx: int = 0, 
     if not cath or not ano:
         raise RuntimeError("Could not find electrode atoms on chains 0/1")
     return cath, ano
+
+
+def collect_electrolyte_atoms(topology: app.Topology):
+    idx = []
+    for res in topology.residues():
+        if res.name in {"CAT", "ANO"}:
+            continue
+        idx.extend([a.index for a in res.atoms()])
+    return idx
+
+
+def electrolyte_mass_g(topology: app.Topology, atom_indices):
+    mass_amu = 0.0
+    atoms = list(topology.atoms())
+    for i in atom_indices:
+        e = atoms[i].element
+        if e is not None:
+            mass_amu += e.mass.value_in_unit(unit.dalton)
+    return mass_amu * AMU_TO_G
+
+
+def slab_density_g_ml(positions_ang, topology: app.Topology, cath_atoms, ano_atoms, electrolyte_indices):
+    box = topology.getPeriodicBoxVectors()
+    if box is None:
+        return float("nan"), float("nan")
+    ax_nm = box[0][0].value_in_unit(unit.nanometer)
+    by_nm = box[1][1].value_in_unit(unit.nanometer)
+    area_nm2 = float(ax_nm * by_nm)
+    zc = max(float(positions_ang[i][2]) for i in cath_atoms)
+    za = min(float(positions_ang[i][2]) for i in ano_atoms)
+    gap_ang = za - zc
+    if gap_ang <= 0:
+        return float("nan"), gap_ang
+    mass_g = electrolyte_mass_g(topology, electrolyte_indices)
+    vol_ml = area_nm2 * (gap_ang * 0.1) * NM3_TO_ML
+    return mass_g / vol_ml, gap_ang
+
+
+def parse_tail_density_from_bulk_log(path: Path):
+    if not path.exists():
+        return None
+    vals = []
+    with path.open() as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        cols = [h.replace("#", "").replace('"', "").strip() for h in header]
+        if "Density (g/mL)" not in cols:
+            return None
+        i = cols.index("Density (g/mL)")
+        for row in reader:
+            if not row:
+                continue
+            try:
+                vals.append(float(row[i]))
+            except (ValueError, IndexError):
+                continue
+    if not vals:
+        return None
+    n = max(5, len(vals) // 3)
+    return sum(vals[-n:]) / n
 
 
 def pick_platform(requested: str | None = None) -> mm.Platform:
@@ -115,6 +178,7 @@ def main() -> None:
 
     nb = get_nonbonded(system)
     cath_atoms, ano_atoms = collect_electrode_atoms(pdb.topology)
+    electrolyte_indices = collect_electrolyte_atoms(pdb.topology)
     for idx in cath_atoms + ano_atoms:
         system.setParticleMass(int(idx), 0.0 * unit.dalton)
 
@@ -162,6 +226,15 @@ def main() -> None:
 
     sim = app.Simulation(pdb.topology, system, integrator, platform)
     sim.context.setPositions(pdb.positions)
+    init_pos_ang = sim.context.getState(getPositions=True).getPositions(asNumpy=True).value_in_unit(unit.angstrom)
+    rho0, gap0 = slab_density_g_ml(init_pos_ang, pdb.topology, cath_atoms, ano_atoms, electrolyte_indices)
+    bulk_ref = parse_tail_density_from_bulk_log((here / "../LiPF6_EC_DMC_minimal/npt.log").resolve())
+    if bulk_ref is not None:
+        print(f"Bulk reference density (tail mean): {bulk_ref:.4f} g/mL")
+    if gap0 == gap0:
+        print(f"Initial slab gap: {gap0:.3f} A")
+    if rho0 == rho0:
+        print(f"Initial slab density: {rho0:.4f} g/mL")
 
     state_log_path = (here / args.state_log).resolve()
     traj_path = (here / args.traj).resolve()
@@ -213,6 +286,8 @@ def main() -> None:
         log_charges()
 
     state = sim.context.getState(getPositions=True)
+    final_pos_ang = state.getPositions(asNumpy=True).value_in_unit(unit.angstrom)
+    rho1, gap1 = slab_density_g_ml(final_pos_ang, pdb.topology, cath_atoms, ano_atoms, electrolyte_indices)
     with open(final_pdb_path, "w") as f:
         try:
             app.PDBFile.writeFile(sim.topology, state.getPositions(), f)
@@ -226,6 +301,12 @@ def main() -> None:
     print(f"Wrote traj: {traj_path}")
     print(f"Wrote charge log: {charge_log_path}")
     print(f"Wrote final pdb: {final_pdb_path}")
+    if gap1 == gap1:
+        print(f"Final slab gap: {gap1:.3f} A")
+    if rho1 == rho1:
+        print(f"Final slab density: {rho1:.4f} g/mL")
+        if bulk_ref is not None:
+            print(f"Final vs bulk density delta: {abs(rho1 - bulk_ref):.4f} g/mL")
     print("Done")
 
 
