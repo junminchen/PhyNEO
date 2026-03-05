@@ -424,7 +424,22 @@ def run_stage2_stage3_cp(
     right_set = set(right_atoms)
     residue_groups = build_electrolyte_residue_groups(pdb.topology)
     species = sorted(set(r.name for r in residue_groups))
-    accum_counts = {sp: [0.0] * z_density_bins for sp in species}
+    
+    # Identify carbonyl oxygen indices for ECA (O00) and DMC (O03)
+    # We will track these as extra virtual species: "ECA_O_carbonyl", "DMC_O_carbonyl"
+    carbonyl_map = {"ECA": "O00", "DMC": "O03"}
+    carbonyl_indices: dict[str, list[int]] = {f"{k}_O_carbonyl": [] for k in carbonyl_map}
+    for res in pdb.topology.residues():
+        rn = res.name.strip()
+        if rn in carbonyl_map:
+            target_name = carbonyl_map[rn]
+            for atom in res.atoms():
+                if atom.name == target_name:
+                    carbonyl_indices[f"{rn}_O_carbonyl"].append(atom.index)
+    
+    extra_species = sorted(carbonyl_indices.keys())
+    all_track_species = species + extra_species
+    accum_counts = {sp: [0.0] * z_density_bins for sp in all_track_species}
     n_density_frames = 0
 
     def accumulate_z_number_density_frame() -> None:
@@ -435,6 +450,8 @@ def run_stage2_stage3_cp(
         lz = float(box[2][2])
         if lz <= 0.0:
             raise RuntimeError(f"Invalid lz: {lz}")
+            
+        # 1. Residue COM density
         for group in residue_groups:
             mass_sum = sum(group.atom_masses_amu)
             if mass_sum > 0.0:
@@ -449,6 +466,17 @@ def run_stage2_stage3_cp(
             if bin_id >= z_density_bins:
                 bin_id = z_density_bins - 1
             accum_counts[group.name][bin_id] += 1.0
+            
+        # 2. Specific atom density (Carbonyl Oxygens)
+        for sp_name, indices in carbonyl_indices.items():
+            for idx in indices:
+                z = float(pos[idx][2])
+                z_wrapped = z % lz
+                bin_id = int(z_wrapped / lz * z_density_bins)
+                if bin_id >= z_density_bins:
+                    bin_id = z_density_bins - 1
+                accum_counts[sp_name][bin_id] += 1.0
+                
         n_density_frames += 1
 
     with total_charge_log.open("w") as f_total, atom_charge_log.open("w", newline="") as f_atom:
@@ -545,12 +573,12 @@ def run_stage2_stage3_cp(
 
         with z_density_profile.open("w", newline="") as fz:
             writer = csv.writer(fz)
-            writer.writerow(["z_center_angstrom", "number_density_total_nm^-3"] + [f"number_density_{sp}_nm^-3" for sp in species])
+            writer.writerow(["z_center_angstrom", "number_density_total_nm^-3"] + [f"number_density_{sp}_nm^-3" for sp in all_track_species])
             for i in range(z_density_bins):
                 z_center_a = (i + 0.5) * (lz_nm * 10.0) / float(z_density_bins)
                 total_rho = total_counts[i] / (n_density_frames * area_nm2 * dz_nm)
                 row = [f"{z_center_a:.6f}", f"{total_rho:.10f}"]
-                for sp in species:
+                for sp in all_track_species:
                     rho_sp = accum_counts[sp][i] / (n_density_frames * area_nm2 * dz_nm)
                     row.append(f"{rho_sp:.10f}")
                 writer.writerow(row)

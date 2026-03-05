@@ -1,0 +1,10 @@
+n_frames: 600
+step_start: 1000
+step_end: 600000
+Q_left_mean_e: -6.9531952316
+Q_left_std_e: 0.7678988650
+Q_right_mean_e: 6.9019951774
+Q_right_std_e: 0.7678988685
+Q_total_mean_e: -0.0512000542
+Q_total_std_e: 0.0000003274
+Q_total_drift_e: -0.0000004492

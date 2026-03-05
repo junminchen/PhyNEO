@@ -1,0 +1,8 @@
+{
+  "target_density_g_ml": 1.2035281732073855,
+  "picked_density_g_ml": 1.151121352452164,
+  "picked_step": 165000,
+  "density_abs_error_g_ml": 0.05240682075522152,
+  "fixed_lz_angstrom": 90.0,
+  "n_samples": 200
+}

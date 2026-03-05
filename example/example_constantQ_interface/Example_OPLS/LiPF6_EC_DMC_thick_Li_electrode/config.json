@@ -20,40 +20,40 @@
     "layers_per_electrode": 5,
     "interlayer_spacing_angstrom": 2.50,
     "exclude_element": ["H"],
-    "voltage_v": 2.0,
+    "voltage_v": 4.3,
     "gaussian_width_nm": 0.20,
     "thomas_fermi_scale_invnm": 5.0,
     "cg_error_tol": 1e-4,
     "use_charge_constraint": true,
     "charge_constraint_target_e": 0.0
-  },
-  "packmol": {
+    },
+    "packmol": {
     "tolerance_angstrom": 2.0
-  },
-  "forcefield_xml": [
+    },
+    "forcefield_xml": [
     "../opls_salt.xml",
     "../opls_solvent.xml",
     "electrode_residues.xml",
     "electrode_ff.xml"
-  ],
-  "openmm": {
-    "platform": "CPU",
+    ],
+    "openmm": {
+    "platform": "CUDA",
     "nonbonded_method": "PME",
     "nonbonded_cutoff_nm": 1.0,
     "constraints": "HBonds",
     "rigid_water": false,
     "ewald_error_tolerance": 0.0005
-  },
-  "md": {
+    },
+    "md": {
     "temperature_k": 298.15,
     "pressure_bar": 1.0,
     "use_barostat": false,
     "timestep_fs": 2.0,
     "friction_ps": 1.0,
-    "equil_steps": 5000,
-    "prod_steps": 10000,
-    "report_interval": 500
-  },
+    "equil_steps": 20000,
+    "prod_steps": 100000,
+    "report_interval": 1000
+    },
   "mc_gap": {
     "enabled": true,
     "temperature_k": 298.15,

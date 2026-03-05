@@ -209,7 +209,7 @@ def main() -> None:
     make_cpf(system, nb, cath_atoms, ano_atoms, cfg)
 
     integ = mm.VerletIntegrator(1.0 * unit.femtosecond)
-    platform = pick_platform(None)
+    platform = pick_platform(omm.get("platform", None))
     print(f"Using OpenMM platform: {platform.getName()}")
     sim = app.Simulation(pdb.topology, system, integ, platform)
 

@@ -1,0 +1,80 @@
+[INFO] start_time=2026-03-05 04:07:59
+[INFO] platform=CUDA
+[INFO] python_bin=python
+[INFO] neutral_steps=200000 activation_steps=100000 production_steps=500000
+[INFO] running voltage=3.0V output=sweep_V3p0 at 2026-03-05 04:07:59
+Using OpenMM platform: CUDA
+[Stage 1] Neutral Relaxation: CP off, density matching against bulk target
+  Target slab density: 1.203528 g/mL
+[Stage 1 Summary] picked step = 74000, target rho = 1.203528 g/mL, picked rho = 1.150723 g/mL, |drho| = 0.052805 g/mL, fixed Lz = 90.0000 A
+[Stage 2] CP-Activation: set DeltaPhi and run NVT
+  DeltaPhi = 3.0000 V, Phi_center = 0.0000 V
+[Stage 3] Production: keep NVT and collect CPF charges
+Three-stage workflow finished.
+Outputs directory: /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V3p0/outputs
+n_frames: 600
+step_start: 1000
+step_end: 600000
+Q_left_mean_e: -5.3337442367
+Q_left_std_e: 0.4753572786
+Q_right_mean_e: 5.2825442022
+Q_right_std_e: 0.4753572859
+Q_total_mean_e: -0.0512000345
+Q_total_std_e: 0.0000002563
+Q_total_drift_e: 0.0000002940
+Processing 500 frames from DCD...
+Updated /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V3p0/outputs/stage3_production/z_number_density_profile.csv with 500 frames.
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V3p0/outputs/charge_timeseries.png
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V3p0/outputs/z_density_profile.png
+[INFO] completed voltage=3.0V at 2026-03-05 04:25:46
+[INFO] running voltage=4.0V output=sweep_V4p0 at 2026-03-05 04:25:46
+Using OpenMM platform: CUDA
+[Stage 1] Neutral Relaxation: CP off, density matching against bulk target
+  Target slab density: 1.203528 g/mL
+[Stage 1 Summary] picked step = 165000, target rho = 1.203528 g/mL, picked rho = 1.151121 g/mL, |drho| = 0.052407 g/mL, fixed Lz = 90.0000 A
+[Stage 2] CP-Activation: set DeltaPhi and run NVT
+  DeltaPhi = 4.0000 V, Phi_center = 0.0000 V
+[Stage 3] Production: keep NVT and collect CPF charges
+Three-stage workflow finished.
+Outputs directory: /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V4p0/outputs
+n_frames: 600
+step_start: 1000
+step_end: 600000
+Q_left_mean_e: -6.9531952316
+Q_left_std_e: 0.7678988650
+Q_right_mean_e: 6.9019951774
+Q_right_std_e: 0.7678988685
+Q_total_mean_e: -0.0512000542
+Q_total_std_e: 0.0000003274
+Q_total_drift_e: -0.0000004492
+Processing 500 frames from DCD...
+Updated /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V4p0/outputs/stage3_production/z_number_density_profile.csv with 500 frames.
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V4p0/outputs/charge_timeseries.png
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V4p0/outputs/z_density_profile.png
+[INFO] completed voltage=4.0V at 2026-03-05 04:43:18
+[INFO] running voltage=5.0V output=sweep_V5p0 at 2026-03-05 04:43:18
+Using OpenMM platform: CUDA
+[Stage 1] Neutral Relaxation: CP off, density matching against bulk target
+  Target slab density: 1.203528 g/mL
+[Stage 1 Summary] picked step = 86000, target rho = 1.203528 g/mL, picked rho = 1.149884 g/mL, |drho| = 0.053644 g/mL, fixed Lz = 90.0000 A
+[Stage 2] CP-Activation: set DeltaPhi and run NVT
+  DeltaPhi = 5.0000 V, Phi_center = 0.0000 V
+[Stage 3] Production: keep NVT and collect CPF charges
+Three-stage workflow finished.
+Outputs directory: /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V5p0/outputs
+n_frames: 600
+step_start: 1000
+step_end: 600000
+Q_left_mean_e: -8.6113202851
+Q_left_std_e: 0.9084307631
+Q_right_mean_e: 8.5601202130
+Q_right_std_e: 0.9084307487
+Q_total_mean_e: -0.0512000721
+Q_total_std_e: 0.0000002950
+Q_total_drift_e: 0.0000009937
+Processing 500 frames from DCD...
+Updated /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V5p0/outputs/stage3_production/z_number_density_profile.csv with 500 frames.
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V5p0/outputs/charge_timeseries.png
+Saved /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V5p0/outputs/z_density_profile.png
+[INFO] completed voltage=5.0V at 2026-03-05 05:01:04
+[INFO] all_done at 2026-03-05 05:01:04

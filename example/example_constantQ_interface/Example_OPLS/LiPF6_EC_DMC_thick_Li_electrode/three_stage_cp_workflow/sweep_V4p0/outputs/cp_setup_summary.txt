@@ -1,0 +1,9 @@
+delta_phi_v: 4.000000
+phi_center_v: 0.000000
+phi_left_v: -2.000000
+phi_right_v: 2.000000
+fixed_lz_angstrom: 90.000000
+activation_steps: 100000
+production_steps: 500000
+z_density_bins: 180
+z_number_density_profile: /home/jmchen/shared/project_constant_potential/Example_OPLS/LiPF6_EC_DMC_thick_Li_electrode/three_stage_cp_workflow/sweep_V4p0/outputs/stage3_production/z_number_density_profile.csv
