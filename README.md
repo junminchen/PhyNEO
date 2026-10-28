@@ -32,18 +32,19 @@ From the repository root, check the XMLs and the supplied monomer/dimer/bulk PDB
 
 ```bash
 python scripts/normalize_xml_charges.py
+python scripts/update_xml_frames.py
 python -m unittest discover -s tests -v
 ```
 
 After generating new XMLs, apply the constraints with
-`python scripts/normalize_xml_charges.py --write`. The default command is read-only.
+`python scripts/normalize_xml_charges.py --write`. The default command is read-only. Frame updates use
+`python scripts/update_xml_frames.py --write`.
 Coverage is listed in `tests/charge_neutrality_cases.json` (28 force fields and
 17 PDB cases); legacy MPID/OPLS conversion stages and electrode/Drude models
 require their own representation-specific checks.
 
-This fixes charge conservation without refitting the force field. Dipoles,
-quadrupoles, local frames, polarizabilities, dispersion, fitted short-range A/B
-parameters and bonded terms are preserved. Energies do change with the corrected
+This fixes charge conservation without refitting the force field. Axial multipoles follow their native frame symmetry; polarizabilities,
+dispersion, fitted short-range A/B parameters and bonded terms are preserved. Energies do change with the corrected
 monopoles: regenerate long-range-subtracted training data before a new fit;
 existing parameter pickles and trajectories retain their original charge model.
 
@@ -129,7 +130,7 @@ The force field is like:
     <Atom type="11" kz="12" kx="13" c0="-0.03907558166666666667" dX="0.00033182" dY="0.00000048" dZ="0.00865776" qXX="-0.00005796" qXY="-0.00000009" qYY="-0.00012532" qXZ="0.00000085" qYZ="-0.00000004" qZZ="0.00018328"/>
     <Atom type="12" kz="13" kx="11" c0="-0.37025358166666666667" dX="0.00809055" dY="0.00000042" dZ="-0.00135041" qXX="0.00005658" qXY="-0.00000002" qYY="-0.00018218" qXZ="-0.00017535" qYZ="0.00000001" qZZ="0.00012560"/>
     <Atom type="13" kz="-12" kx="12" c0="0.93477291833333333333" dX="0.00001033" dY="-0.00000127" dZ="0.00176034" qXX="0.00005266" qXY="-0.00000005" qYY="-0.00002300" qXZ="0.00000001" qYZ="0.00000001" qZZ="-0.00002966"/>
-    <Atom type="14" kz="13" kx="0" c0="-0.64136208166666666667" dX="-0.00000413" dY="0.00000942" dZ="-0.00464310" qXX="-0.00003035" qXY="0.00000013" qYY="-0.00006016" qXZ="0.00000000" qYZ="0.00000008" qZZ="0.00009051"/>
+    <Atom type="14" kz="13" kx="" c0="-0.64136208166666666667" dX="0" dY="0" dZ="-0.00464310" qXX="-0.000045255" qXY="0" qYY="-0.000045255" qXZ="0.00000000" qYZ="0" qZZ="0.00009051"/>
     <Atom type="15" kz="11" kx="12" c0="0.08754124833333333333" dX="0.00041250" dY="-0.00000049" dZ="-0.00226565" qXX="0.00001204" qXY="-0.00000000" qYY="-0.00003004" qXZ="0.00000172" qYZ="0.00000001" qZZ="0.00001800"/>
     <Polarize type="11" polarizabilityXX="1.0526e-03" polarizabilityYY="1.0526e-03" polarizabilityZZ="1.0526e-03" thole="0.33"/>
     <Polarize type="12" polarizabilityXX="8.4683e-04" polarizabilityYY="8.4683e-04" polarizabilityZZ="8.4683e-04" thole="0.33"/>
