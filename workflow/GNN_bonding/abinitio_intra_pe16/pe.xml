@@ -42,10 +42,10 @@
     <Proper class1="HC" class2="CT" class3="CT" class4="HC" k1="0.000000" k2="0.000000" k3="0.627600" k4="0.000000" periodicity1="1" periodicity2="2" periodicity3="3" periodicity4="4" phase1="0.00" phase2="3.141592653589793" phase3="0.00" phase4="3.141592653589793"/>
   </PeriodicTorsionForce>
   <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
-    <Atom charge="-0.178900" epsilon="0.276144" sigma="0.350000" type="C3"/>
-    <Atom charge="0.080700" epsilon="0.125520" sigma="0.250000" type="H4"/>
-    <Atom charge="-0.238800" epsilon="0.276144" sigma="0.350000" type="C4"/>
-    <Atom charge="0.088600" epsilon="0.125520" sigma="0.250000" type="H3"/>
+    <Atom charge="-0.17833333333333333333" epsilon="0.276144" sigma="0.350000" type="C3"/>
+    <Atom charge="0.079875" epsilon="0.125520" sigma="0.250000" type="H4"/>
+    <Atom charge="-0.239625" epsilon="0.276144" sigma="0.350000" type="C4"/>
+    <Atom charge="0.08916666666666666667" epsilon="0.125520" sigma="0.250000" type="H3"/>
   </NonbondedForce>
 </ForceField>
 
