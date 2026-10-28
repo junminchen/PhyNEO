@@ -1,0 +1,102 @@
+{
+  "forcefields": [
+    "example/1_make_mpid_xml_wt_bond/EC.xml",
+    "example/1_make_mpid_xml_wt_bond/phyneo_ecl.xml",
+    "example/2_make_mpid_xml_wo_bond/EC_Li_extracted.xml",
+    "example/2_make_mpid_xml_wo_bond/EC_extracted.xml",
+    "example/3_load_ff_xml/ff_dmff_EC.xml",
+    "example/example_Li_PF6_DMC-EC/phyneo_ecl.xml",
+    "example/example_ase_water/ff.xml",
+    "example/example_ase_water/output.s215.xml",
+    "md_phyneo/ase-md-example/phyneo_ecl.xml",
+    "md_phyneo/old_dmff_backend/peo_cmd_old_dmff_backend/ff_files_peo/forcefield.xml",
+    "md_phyneo/old_dmff_backend/water_cmd_old_dmff_backend/forcefield.xml",
+    "md_phyneo/params_file/new_model/peg/forcefield.xml",
+    "md_phyneo/params_file/new_model/peg/output.xml",
+    "md_phyneo/params_file/new_model/peg/peg.xml",
+    "md_phyneo/params_file/new_model/peo/forcefield.xml",
+    "md_phyneo/params_file/new_model/peo/output.xml",
+    "md_phyneo/params_file/new_model/peo/peo.xml",
+    "md_phyneo/peg_cmd/peg.xml",
+    "md_phyneo/peo_cmd/peo.xml",
+    "notebook/peo/forcefield.xml",
+    "workflow/GNN_bonding/abinitio_intra/pe.xml",
+    "workflow/GNN_bonding/abinitio_intra_highT/pe.xml",
+    "workflow/GNN_bonding/abinitio_intra_pe16/pe.xml",
+    "workflow/GNN_bonding/output.xml",
+    "workflow/lr_param/dmff_forcefield.xml",
+    "workflow/md_pe/pe.xml",
+    "workflow/sr_param/dmff_forcefield.xml",
+    "workflow/sr_param/output.xml"
+  ],
+  "pdbs": [
+    {
+      "xml": "workflow/md_pe/pe.xml",
+      "pdb": "workflow/sr_param/monomer/pe6.pdb"
+    },
+    {
+      "xml": "workflow/md_pe/pe.xml",
+      "pdb": "workflow/sr_param/dimer/pe6_dimer.pdb"
+    },
+    {
+      "xml": "workflow/md_pe/pe.xml",
+      "pdb": "workflow/md_pe/pe8.pdb"
+    },
+    {
+      "xml": "workflow/md_pe/pe.xml",
+      "pdb": "workflow/GNN_bonding/pe16.pdb"
+    },
+    {
+      "xml": "workflow/md_pe/pe.xml",
+      "pdb": "workflow/md_pe/bulk.pdb"
+    },
+    {
+      "xml": "workflow/md_pe/test_bulk/pe.xml",
+      "pdb": "workflow/md_pe/test_bulk/pe8.pdb"
+    },
+    {
+      "xml": "workflow/GNN_bonding/abinitio_intra/pe.xml",
+      "pdb": "workflow/GNN_bonding/abinitio_intra/pe8.pdb"
+    },
+    {
+      "xml": "workflow/GNN_bonding/abinitio_intra_highT/pe.xml",
+      "pdb": "workflow/GNN_bonding/abinitio_intra_highT/pe8.pdb"
+    },
+    {
+      "xml": "workflow/GNN_bonding/abinitio_intra_pe16/pe.xml",
+      "pdb": "workflow/GNN_bonding/abinitio_intra_pe16/pe16.pdb"
+    },
+    {
+      "xml": "md_phyneo/peo_cmd/peo.xml",
+      "pdb": "md_phyneo/peo_cmd/init.pdb"
+    },
+    {
+      "xml": "md_phyneo/peg_cmd/peg.xml",
+      "pdb": "md_phyneo/peg_cmd/init.pdb"
+    },
+    {
+      "xml": "workflow/lr_param/dmff_forcefield.xml",
+      "pdb": "workflow/lr_param/DMC.pdb"
+    },
+    {
+      "xml": "example/example_Li_PF6_DMC-EC/phyneo_ecl.xml",
+      "pdb": "example/example_Li_PF6_DMC-EC/init.pdb"
+    },
+    {
+      "xml": "notebook/peo/forcefield.xml",
+      "pdb": "notebook/peo/peo1.pdb"
+    },
+    {
+      "xml": "notebook/peo/forcefield.xml",
+      "pdb": "notebook/peo/peo3.pdb"
+    },
+    {
+      "xml": "notebook/peo/forcefield.xml",
+      "pdb": "notebook/peo/peo7.pdb"
+    },
+    {
+      "xml": "notebook/peo/forcefield.xml",
+      "pdb": "notebook/peo/peo1_dimer.pdb"
+    }
+  ]
+}
