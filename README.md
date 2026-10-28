@@ -16,6 +16,37 @@ The project PhyNEO is licensed under [GNU LGPL v3.0](LICENSE). If you use this c
 
 + `md_example`: demos in papers interfaced i-Pi. backend: DMFF-devel branch
 
+### Force-field charge conservation
+
+The maintained DMFF examples and PE reference XMLs constrain complete neutral
+molecules to zero charge and ions to their formal charge (Li/Na +1, anions -1).
+PE/PEO repeat units and symmetric end pairs are neutral for arbitrary chain
+length; PEG also covers both methyl/hydroxyl and double-hydroxyl end pairs.
+Equivalent atom types remain tied, including alternative local-frame entries.
+The correction minimizes the atom-weighted squared charge change over distinct
+primitive residue compositions; redundant DME/TER templates share one weight so
+copies of the same PEO model agree. The same corrected values are used by
+`ADMPPmeForce.c0`, `SlaterSrEsForce.Q` and `QqTtDampingForce.Q`.
+
+From the repository root, check the XMLs and the supplied monomer/dimer/bulk PDBs:
+
+```bash
+python scripts/normalize_xml_charges.py
+python -m unittest discover -s tests -v
+```
+
+After generating new XMLs, apply the constraints with
+`python scripts/normalize_xml_charges.py --write`. The default command is read-only.
+Coverage is listed in `tests/charge_neutrality_cases.json` (28 force fields and
+17 PDB cases); legacy MPID/OPLS conversion stages and electrode/Drude models
+require their own representation-specific checks.
+
+This fixes charge conservation without refitting the force field. Dipoles,
+quadrupoles, local frames, polarizabilities, dispersion, fitted short-range A/B
+parameters and bonded terms are preserved. Energies do change with the corrected
+monopoles: regenerate long-range-subtracted training data before a new fit;
+existing parameter pickles and trajectories retain their original charge model.
+
 ### Long-range Parameters
 
 Dependency: 
@@ -95,11 +126,11 @@ The force field is like:
     </Residue>
   </Residues>
   <ADMPPmeForce lmax="2" mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00" pScale12="0.00" pScale13="0.00" pScale14="0.00" pScale15="0.00" pScale16="0.00" dScale12="1.00" dScale13="1.00" dScale14="1.00" dScale15="1.00" dScale16="1.00">
-    <Atom type="11" kz="12" kx="13" c0="-0.03898950" dX="0.00033182" dY="0.00000048" dZ="0.00865776" qXX="-0.00005796" qXY="-0.00000009" qYY="-0.00012532" qXZ="0.00000085" qYZ="-0.00000004" qZZ="0.00018328"/>
-    <Atom type="12" kz="13" kx="11" c0="-0.37016750" dX="0.00809055" dY="0.00000042" dZ="-0.00135041" qXX="0.00005658" qXY="-0.00000002" qYY="-0.00018218" qXZ="-0.00017535" qYZ="0.00000001" qZZ="0.00012560"/>
-    <Atom type="13" kz="-12" kx="12" c0="0.93485900" dX="0.00001033" dY="-0.00000127" dZ="0.00176034" qXX="0.00005266" qXY="-0.00000005" qYY="-0.00002300" qXZ="0.00000001" qYZ="0.00000001" qZZ="-0.00002966"/>
-    <Atom type="14" kz="13" kx="0" c0="-0.64127600" dX="-0.00000413" dY="0.00000942" dZ="-0.00464310" qXX="-0.00003035" qXY="0.00000013" qYY="-0.00006016" qXZ="0.00000000" qYZ="0.00000008" qZZ="0.00009051"/>
-    <Atom type="15" kz="11" kx="12" c0="0.08762733" dX="0.00041250" dY="-0.00000049" dZ="-0.00226565" qXX="0.00001204" qXY="-0.00000000" qYY="-0.00003004" qXZ="0.00000172" qYZ="0.00000001" qZZ="0.00001800"/>
+    <Atom type="11" kz="12" kx="13" c0="-0.03907558166666666667" dX="0.00033182" dY="0.00000048" dZ="0.00865776" qXX="-0.00005796" qXY="-0.00000009" qYY="-0.00012532" qXZ="0.00000085" qYZ="-0.00000004" qZZ="0.00018328"/>
+    <Atom type="12" kz="13" kx="11" c0="-0.37025358166666666667" dX="0.00809055" dY="0.00000042" dZ="-0.00135041" qXX="0.00005658" qXY="-0.00000002" qYY="-0.00018218" qXZ="-0.00017535" qYZ="0.00000001" qZZ="0.00012560"/>
+    <Atom type="13" kz="-12" kx="12" c0="0.93477291833333333333" dX="0.00001033" dY="-0.00000127" dZ="0.00176034" qXX="0.00005266" qXY="-0.00000005" qYY="-0.00002300" qXZ="0.00000001" qYZ="0.00000001" qZZ="-0.00002966"/>
+    <Atom type="14" kz="13" kx="0" c0="-0.64136208166666666667" dX="-0.00000413" dY="0.00000942" dZ="-0.00464310" qXX="-0.00003035" qXY="0.00000013" qYY="-0.00006016" qXZ="0.00000000" qYZ="0.00000008" qZZ="0.00009051"/>
+    <Atom type="15" kz="11" kx="12" c0="0.08754124833333333333" dX="0.00041250" dY="-0.00000049" dZ="-0.00226565" qXX="0.00001204" qXY="-0.00000000" qYY="-0.00003004" qXZ="0.00000172" qYZ="0.00000001" qZZ="0.00001800"/>
     <Polarize type="11" polarizabilityXX="1.0526e-03" polarizabilityYY="1.0526e-03" polarizabilityZZ="1.0526e-03" thole="0.33"/>
     <Polarize type="12" polarizabilityXX="8.4683e-04" polarizabilityYY="8.4683e-04" polarizabilityZZ="8.4683e-04" thole="0.33"/>
     <Polarize type="13" polarizabilityXX="4.4148e-04" polarizabilityYY="4.4148e-04" polarizabilityZZ="4.4148e-04" thole="0.33"/>
@@ -121,11 +152,11 @@ The force field is like:
     <Atom type="15" A="1.0" B="37.78372041"/>
   </SlaterExForce>
   <SlaterSrEsForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00">
-    <Atom type="11" A="1.0" B="34.37579209" Q="-0.03898950"/>
-    <Atom type="12" A="1.0" B="37.81250801" Q="-0.37016750"/>
-    <Atom type="13" A="1.0" B="34.37579209" Q="0.93485900"/>
-    <Atom type="14" A="1.0" B="37.81250801" Q="-0.64127600"/>
-    <Atom type="15" A="1.0" B="37.78372041" Q="0.08762733"/>
+    <Atom type="11" A="1.0" B="34.37579209" Q="-0.03907558166666666667"/>
+    <Atom type="12" A="1.0" B="37.81250801" Q="-0.37025358166666666667"/>
+    <Atom type="13" A="1.0" B="34.37579209" Q="0.93477291833333333333"/>
+    <Atom type="14" A="1.0" B="37.81250801" Q="-0.64136208166666666667"/>
+    <Atom type="15" A="1.0" B="37.78372041" Q="0.08754124833333333333"/>
   </SlaterSrEsForce>
   <SlaterSrPolForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00">
     <Atom type="11" A="1.0" B="34.37579209"/>
@@ -149,11 +180,11 @@ The force field is like:
     <Atom type="15" A="1.0" B="37.78372041"/>
   </SlaterDhfForce>
   <QqTtDampingForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00">
-    <Atom type="11" B="34.37579209" Q="-0.03898950"/>
-    <Atom type="12" B="37.81250801" Q="-0.37016750"/>
-    <Atom type="13" B="34.37579209" Q="0.93485900"/>
-    <Atom type="14" B="37.81250801" Q="-0.64127600"/>
-    <Atom type="15" B="37.78372041" Q="0.08762733"/>
+    <Atom type="11" B="34.37579209" Q="-0.03907558166666666667"/>
+    <Atom type="12" B="37.81250801" Q="-0.37025358166666666667"/>
+    <Atom type="13" B="34.37579209" Q="0.93477291833333333333"/>
+    <Atom type="14" B="37.81250801" Q="-0.64136208166666666667"/>
+    <Atom type="15" B="37.78372041" Q="0.08754124833333333333"/>
   </QqTtDampingForce>
   <SlaterDampingForce mScale12="0.00" mScale13="0.00" mScale14="0.00" mScale15="0.00" mScale16="0.00">
     <Atom type="11" B="34.37579209" C6="1.497383e-03" C8="1.101717e-04" C10="3.837074e-06"/>
